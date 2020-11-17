@@ -2,7 +2,7 @@
 
 ## Before sharing 
 
-* Finishe check chapter 11 and 12
+* Finish check chapter 11 and 12
 
 * Build full book and share the repo with AM and MS
 
