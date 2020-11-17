@@ -1,1 +1,7 @@
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Please see the page "Get Started" at https://bookdown.org/home/about/ for how to compile this example.
+This repository contains the first complete draft of the book:
+
+*Individual-based models of cultural evolution. A step-by-step guide using R*
+
+by 
+
+Alberto Acerbi, Marco Smolla, and Alex Mesoudi
