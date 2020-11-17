@@ -89,7 +89,7 @@ For the text, we use the following conventions:
 
 **TO DO**
 
-For more on the virtues of formal models for social scientists, see Paul Smaldino's 'Models are stupid, and we need more of them' (2017).
+For more on the virtues of formal models for social scientists, see Paul Smaldino's 'Models are stupid, and we need more of them' (2017). 
 
 If not, *Hands On Programming With R* by Garrett Grolemund is a good introduction.
 

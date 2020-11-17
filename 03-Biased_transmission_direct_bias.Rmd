@@ -12,7 +12,7 @@ With $s_a=s_b$, copying is unbiased, and individuals switch to the encountered a
 
 Let's first write the function, and then explore what happens in this case. Below is a function `biased_transmission_direct()` that implements all of these ideas.
 
-```{r 3.1, message = FALSE}
+```{r 3-1, message = FALSE}
 library(tidyverse)
 
 biased_transmission_direct <- function (N, s_a, s_b, p_0, t_max, r_max) {
@@ -69,7 +69,7 @@ Let's run our function `biased_transmission_direct()`. As before, to plot the re
 
 As noted above, the interesting case is when one trait is favoured over the other. We can assume, for example, $s_a=0.1$ and $s_b=0$. This means that when individuals encounter another individual with trait $A$ they copy them 1 out every 10 times, but when individuals encounter another individual with trait $B$, they never switch. We can also assume that the favoured trait, $A$, is initially rare in the population ($p_0=0.01$) to see how selection favours this initially-rare trait (Note that $p_0$ needs to be higher than 0; since there is no mutation in this model, we need to include at least some $A$s at the beginning of the simulation, otherwise it would never appear). 
 
-```{r 3.2, echo=FALSE}
+```{r 3-2, echo=FALSE}
 plot_multiple_runs <- function(data_model) {
   ggplot(data = data_model, aes(y = p, x = generation)) +
     geom_line(aes(colour = run)) +
@@ -80,7 +80,7 @@ plot_multiple_runs <- function(data_model) {
 }
 ```
 
-```{r 3.3, fig.cap = "Biased transmission generates an s-shaped diffusion curve"}
+```{r 3-3, fig.cap = "Biased transmission generates an s-shaped diffusion curve"}
 data_model <- biased_transmission_direct(N = 10000, s_a = 0.1, s_b = 0 , 
                                          p_0 = 0.01, t_max = 150, r_max = 5)
 plot_multiple_runs(data_model)
@@ -94,7 +94,7 @@ Note the difference from biased mutation. Where biased mutation was r-shaped, wi
 
 On what does the strength of selection depend? First, the strength is independent of the specific values of $s_a$ and $s_b$. What counts is their relative difference, which in the above case is $s_a-s_b = 0.1$. If we run a simulation with, say, $s_a=0.6$ and $s_b=0.5$, we see the same pattern, albeit with slightly more noise. That is, the single runs are more different from one another compared to the previous simulation. This is because switches from $A$ to $B$ are now also possible.
 
-```{r 3.4, fig.cap = "Biased transmission depends on the relative difference between the transmission parameters of each trait"}
+```{r 3-4, fig.cap = "Biased transmission depends on the relative difference between the transmission parameters of each trait"}
 data_model <- biased_transmission_direct(N = 10000, s_a = 0.6, s_b = 0.5 , 
                                          p_0 = 0.01, t_max = 150, r_max = 5)
 plot_multiple_runs(data_model)
@@ -102,7 +102,7 @@ plot_multiple_runs(data_model)
 
 To change the selection strength, we need to modify the difference between $s_a$ and $s_b$. We can double the strength by setting $s_a = 0.2$, and keeping $s_b=0$.
 
-```{r 3.5, fig.cap = "Increasing the relative difference between transmission parameters increases the rate at which the favoured trait spreads"}
+```{r 3-5, fig.cap = "Increasing the relative difference between transmission parameters increases the rate at which the favoured trait spreads"}
 data_model <- biased_transmission_direct(N = 10000, s_a = 0.2, s_b = 0 , 
                                          p_0 = 0.01, t_max = 150, r_max = 5)
 plot_multiple_runs(data_model)

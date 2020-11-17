@@ -6,7 +6,7 @@ In all previous models, individuals could possess one of only two cultural trait
 
 The first modification we need to make in the code concerns how traits are represented. Since we have an undetermined number of possible traits we cannot use the two letters $A$ and $B$. Instead we will use numbers, referring to trait "1", trait "2", trait "3", etc. How can we distribute the traits in the initial population? We can assume that there are $m$ possible traits at the beginning, with $m \leq N$ (as usual, $N$ is the population size). In all the following simulations, we will fix $m=N$, and effectively initialise each individual with a trait randomly chosen between "1" and "100".  
 
-```{r 7.1, message = FALSE}
+```{r 7-1, message = FALSE}
 library(tidyverse)
 N <- 100
 population <- tibble(trait = sample(1:N, N, replace = TRUE))
@@ -14,7 +14,7 @@ population <- tibble(trait = sample(1:N, N, replace = TRUE))
 
 You can inspect the `population` tibble by writing its name.
 
-```{r 7.2}
+```{r 7-2}
 population
 ```
 
@@ -22,7 +22,7 @@ The basic code of the simulation is similar to the code in the [first chapter][U
 
 Second, how do we measure the frequency of the traits in each generation? The base R function `tabulate()` does this for us. `tabulate()` counts the number of times each element of a vector (`population$trait` in our case) occurs in the bins that we also pass to the function. In our case the bins are $1$ to $N$. Since we want the frequencies, and not the absolute number, we divide the result by $N$.
 
-```{r 7.3}
+```{r 7-3}
 multiple_traits <- function(N, t_max) {
   
   output <- tibble(trait = as.factor(rep(1:N, each = t_max)), 
@@ -52,7 +52,7 @@ multiple_traits <- function(N, t_max) {
 
 Finally, the function to plot the output is similar to what we have already done when plotting multiple runs. The one difference is that now the colored lines do not represent different runs, but different traits, as indicated below by `aes(colour = trait)`. The new line `theme(legend.position = "none")` simply tells ggplot to not include the legend in the graph, as it is not informative. It would just show 100 or more colors, one for each trait.
 
-```{r 7.4}
+```{r 7-4}
 plot_multiple_traits <- function(data_model) {
   ggplot(data = data_model, aes(y = p, x = generation)) +
     geom_line(aes(colour = trait)) +
@@ -64,14 +64,14 @@ plot_multiple_traits <- function(data_model) {
 
 As usual, we can call the function and see what happens:
 
-```{r 7.5, fig.cap = "With small populations, the majority of traits disappear after few generations in a model with multiple traits and unbiased transmission."}
+```{r 7-5, fig.cap = "With small populations, the majority of traits disappear after few generations in a model with multiple traits and unbiased transmission."}
 data_model <- multiple_traits(N = 100, t_max = 200)
 plot_multiple_traits(data_model)
 ```
 
 Usually, only one or two traits are still present in the population after 200 generations, and, if we increase $t_\text{max}$ for example to 1000, virtually all runs end up with only a single trait reaching fixation:
 
-```{r 7.6, fig.cap = "With small populations, a single traits reach fixation if there are enough generations in a model with multiple traits and unbiased transmission."}
+```{r 7-6, fig.cap = "With small populations, a single traits reach fixation if there are enough generations in a model with multiple traits and unbiased transmission."}
 data_model <- multiple_traits(N = 100, t_max = 1000)
 plot_multiple_traits(data_model)
 ```
@@ -86,7 +86,7 @@ One option is to introduce new traits via innovation. We can imagine that, at ea
 
 The following code adds innovation to the multiple-trait code from above:
 
-```{r 7.7}
+```{r 7-7}
 mu <- 0.01
 # Record the last trait introduced in the population
 last_trait <- max(population) 
@@ -109,7 +109,7 @@ Second, we need to actually introduce the new traits, with the correct number la
 
 We can now, as usual, wrap everything in a function: 
 
-```{r 7.8}
+```{r 7-8}
 multiple_traits_2 <- function(N, t_max, mu) {
   max_traits <- N + N * mu * t_max
 
@@ -157,27 +157,27 @@ To be absolutely sure we do not exceed this estimate, we wrap the innovation ins
 
 Let's now run the function with an innovation rate $\mu=0.01$, a population of 100 individuals, and for 200 generations.
 
-```{r 7.9, fig.cap = "By adding innovations, more traits can be preserved in the population."}
+```{r 7-9, fig.cap = "By adding innovations, more traits can be preserved in the population."}
 data_model <- multiple_traits_2(N = 100, t_max = 200, mu = 0.01)
 plot_multiple_traits(data_model)
 ```
 
 With innovation, there should now be more traits at non-zero frequency at the end of the simulation than when innovation was not possible. We can check the exact number, by inspecting how many frequencies are higher than 0 in the last row of our matrix:
 
-```{r 7.10}
+```{r 7-10}
 sum(filter(data_model, generation==200)$p > 0)
 ```
 
 What happens if we increase the number of generations, or time steps, to 1000, as we did before?
 
-```{r 7.11, fig.cap = "By adding innovations, traits are preserved even when the model runs for several generations."}
+```{r 7-11, cache = TRUE, fig.cap = "By adding innovations, traits are preserved even when the model runs for several generations."}
 data_model <- multiple_traits_2(N = 100, t_max = 1000, mu = 0.01)
 plot_multiple_traits(data_model)
 ```
 
 As you can see in the plot, there should still be several traits that have frequencies higher than 0, even after 1000 generations. Again, we can find the exact number in the final generation:
 
-```{r 7.12}
+```{r 7-12}
 sum(filter(data_model, generation==1000)$p > 0)
 ```
 
@@ -187,7 +187,7 @@ Innovation, in sum, allows the maintenance of variation even in small population
 
 Now for a short technical digression. You may have noticed that running the function `multiple_traits_2()` is quite time consuming with a population of 1000 individuals. There is a quick way to check the exact time needed, using the function `Sys.time()`. This returns the current time at the point of its execution. Let's run the function again and calculate how long it takes.
 
-```{r 7.13}
+```{r 7-13, cache = TRUE}
 start_time <- Sys.time()
 data_model <- multiple_traits_2(N = 100, t_max = 1000, mu = 0.01)
 end_time <- Sys.time()
@@ -202,7 +202,7 @@ An alternative is to use vectors and matrices. A vector is a list of data points
 
 Let's rewrite our multiple trait function that runs exactly the same simulation, but using matrices instead of tibbles. The output is now a matrix with `t_max` rows and `max_traits` columns. This is initialised with NAs at the beginning. The population is a vector of integers, representing the trait held by each individual.  
 
-```{r 7.14}
+```{r 7-14}
 multiple_traits_matrix <- function(N, t_max, mu) {
   
   max_traits <- N + N * mu * t_max
@@ -240,7 +240,7 @@ multiple_traits_matrix <- function(N, t_max, mu) {
 
 To plot the output, we re-convert it into a tibble so that it can be handled by `ggplot()`. We first create a column that explicitly indicates the number of generations, and then we use the function `pivot_longer()` from the tidyverse to reassemble the columns of the matrix in trait-frequency pairs, the 'tidy' format consistent with the functioning of ggplot.
 
-```{r 7.15}
+```{r 7-15}
 plot_multiple_traits_matrix <- function(data_model) {
   generation <- rep(1:dim(data_model)[1], each = dim(data_model)[2])
   
@@ -258,7 +258,7 @@ plot_multiple_traits_matrix <- function(data_model) {
 
 We can now run the new function, checking that it gives the same output as the tibble version, and again calculating the time needed.
 
-```{r 7.16, warning=FALSE, fig.cap="We obtain qualitatively the same results of the previous code, in a model with unbiased transmission, multiple traits, and innovation."}
+```{r 7-16, warning = FALSE, fig.cap="We obtain qualitatively the same results of the previous code, in a model with unbiased transmission, multiple traits, and innovation."}
 start_time <- Sys.time()
 data_model <- multiple_traits_matrix(N = 100, t_max = 1000, mu = 0.01)
 end_time <- Sys.time()
@@ -272,14 +272,14 @@ The results are equivalent, but the simulation should be hundreds of times faste
 
 An interesting aspect of these simulations is that, even if all traits are functionally equivalent and transmission is unbiased, a few traits, for random reasons, are more successful than the others. A way to visualise this is to plot their cumulative popularity, i.e. the sum of their quantities over all generations. Given our matrix, it is easy to calculate this by summing each column and multiplying by *N* (remember they are frequencies, whereas now we want to visualise their actual quantities). We also need to keep only the values that are higher than zero: values equal to zero are in fact the empty slots created in the initial matrix that were never filled with actual traits.
 
-```{r 7.17}
+```{r 7-17}
 cumulative <- colSums(data_model) * N 
 cumulative <- cumulative[cumulative > 0]
 ```
 
 Let's sort them from the most to the least popular and plot the results.
 
-```{r 7.18, fig.cap = "The popularity distribution of traits with unbiased copying is long-tailed, with few very successful traits and many relatively unsuccessful ones."}
+```{r 7-18, fig.cap = "The popularity distribution of traits with unbiased copying is long-tailed, with few very successful traits and many relatively unsuccessful ones."}
 data_to_plot <- tibble(cumulative = sort(cumulative, decreasing = TRUE))
 
 ggplot(data = data_to_plot, aes(x = seq_along(cumulative), y = cumulative)) +
@@ -292,7 +292,7 @@ This is an example of a long-tailed distribution. The great majority of traits d
 
 It is common to plot these distributions by binning the data in intervals of exponentially increasing size. In other words, we want to know how many traits have a cumulative popularity between 1 and 2, then between 2 and 4, then between 4 and 8, and so on, until we reach the maximum value of cumulative popularity. The code below does that, using a `for` cycle to find how many traits fall in each bin and further normalising according to bin size. The size is increased 50 times, until an arbitrary maximum bin size of $2^{50}$, to be sure to include all cumulative popularities.
 
-```{r 7.19}
+```{r 7-19}
 bin <- rep(NA, 50)
 x <- rep(NA, 50)
 
@@ -305,7 +305,7 @@ for(i in 1:50){
 
 We can now visualise the data on a log-log plot, after filtering out the empty bins. A log-log plot is a graph that uses logarithmic scales on both axes. Using logarithmic axes is useful when, as in this case, the data are skewed towards large values. In the previous plot, we were not able to appreciate visually any difference in the great majority of data points, for example points that had cumulative popularity between 1 and 10, as they were all bunched up close to the x-axis. 
 
-```{r 7.20, message = FALSE, fig.cap = "Popularity distribution of traits on a log-log scale."}
+```{r 7-20, message = FALSE, fig.cap = "Popularity distribution of traits on a log-log scale."}
 data_to_plot <- tibble(bin = bin, x = x) 
 data_to_plot <- filter(data_to_plot, bin > 0)
 

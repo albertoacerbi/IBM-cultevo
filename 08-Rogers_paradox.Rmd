@@ -26,7 +26,7 @@ Finally, Rogers was interested in the effect of environmental change. Each gener
 
 This is a complex model but let's go step by step. First we create and initialise tibbles to store the output and the population of individuals, just like in previous chapters. The output here needs to be big enough to store data from $r_{max}$ runs and $t_{max}$ generations, like before. We then need to create NA placeholders for $p_{SL}$ (the proportion of social learners) and $W$ (the mean population fitness). The `population` tibble stores the characteristics of the individuals: learning strategy ('individual' or 'social'), behaviour (initially all NA) and fitness (initially all NA). Finally, we initialise the environment $E$ at zero, which will subsequently increment, meaning that the environment changes.
 
-```{r 8.1, message = FALSE}
+```{r 8-1, message = FALSE}
 library(tidyverse)
 
 N <- 100
@@ -59,7 +59,7 @@ Now let's go through each event that happens during a single generation. Later w
 
 First, social learning. The following code picks random individuals from the `previous_population` tibble (which we have yet to create, but will do later), to put into the social learner individuals in the current `population` tibble. This is similar to what we did in the previous chapters. It only does this if there is at least one social learner. As noted above, we start in the first generation with all individual learners and no social learners, so this will not be fulfilled until the second generation. For now, nothing happens.
 
-```{r 8.2, eval = FALSE}
+```{r 8-2, eval = FALSE}
 if (sum(population$learning == "social") > 0) {
   population$behaviour[population$learning == "social"] <- 
     sample(previous_population$behaviour, sum(population$learning == "social"), replace = TRUE)
@@ -68,7 +68,7 @@ if (sum(population$learning == "social") > 0) {
 
 The following code implements individual learning. This *does* apply to the first generation. We first create a vector of `TRUE` and `FALSE` values dependent on $p$, the probability of individual learning resulting in a correct match with the environment. With this probability, individual learners have their behaviour set to the correct $E$ value. Otherwise, they are given the incorrect behaviour $E-1$. Note the use of the `!` before `learn_correct` to give a match when this vector is `FALSE` (i.e. they do *not* learn the correct behaviour). 
 
-```{r 8.3, eval = FALSE}
+```{r 8-3, eval = FALSE}
 learn_correct <- sample(c(TRUE, FALSE), N, prob = c(p, 1 - p), replace = TRUE)
 population$behaviour[learn_correct & population$learning == "individual"] <- E
 population$behaviour[!learn_correct & population$learning == "individual"] <- E - 1
@@ -76,7 +76,7 @@ population$behaviour[!learn_correct & population$learning == "individual"] <- E 
 
 Now we obtain the fitnesses for each individual. First we give everyone the baseline fitness, $w$. Then we add or subtract $b$, based on whether the individual has the correct or incorrect behaviour. Finally we impose costs, which are different for social and individual learners. 
 
-```{r 8.4, eval = FALSE}
+```{r 8-4, eval = FALSE}
 # Baseline fitness
 population$fitness <- w  
 
@@ -97,7 +97,7 @@ population$fitness[population$learning == "social"] <-
 
 The fourth stage is recording the resulting data into the `output` tibble. First we calculate $p_{SL}$ as the number of social learners divided by the total population size. Then we calculate $W$, the mean fitness in the entire population. All of these are done with the standard R mean command. 
 
-```{r 8.5, eval = FALSE}
+```{r 8-5, eval = FALSE}
 output[output$generation == t & output$run == r, ]$p_SL <- mean(population$learning == "social")
 output[output$generation == t & output$run == r, ]$W <- mean(population$fitness)
 ```
@@ -106,7 +106,7 @@ The fifth stage is reproduction. Here we put the current `population` tibble int
 
 First we get `fitness_IL`, the fitness of individual learners relative to the fitness of the entire population (assuming there are any individual learners, otherwise we set this to zero). This then serves as the probability of setting new individuals as individual learners in the next generation. We use gain the function `sample()` to create `mutation`, denoting the probability of an individual mutating their learning strategy. Finally, we change the learning strategy of the 'mutant' individuals. Notice we need to create a temporary new tibble, `previous_poulation2`, to avoid to mutate twice the individuals that are changed from `individual` to `social` learning in the first mutation instruction.
 
-```{r 8.6, eval = FALSE}
+```{r 8-6, eval = FALSE}
 previous_population <- population
 population$behaviour <- NA
 population$fitness <- NA
@@ -136,13 +136,13 @@ population$learning[previous_population2$learning == "social" & mutation] <- "in
 
 The final stage is the easiest. With probability $u$, we increment the environmental state $E$ by one. Otherwise, it stays as it is. To do this we pick a random number between 0 and 1 using the $runif$ command, and if $u$ exceeds this, we increment $E$.
 
-```{r 8.7, eval = FALSE}
+```{r 8-7, eval = FALSE}
 if (runif(1) < u) E <- E + 1
 ```
 
 That covers the six stages that occur in each generation. We can now put them all together into a loop tracking runs, and a loop tracking generations. We can also put all this inside a function. This should all be familiar from previous chapters. Almost all the code is taken from above, and we numbered the different stages (you can find the comments to the specific lines of codes in the chunks above). We also add a parameter check at the start, to make sure that we don't get negative fitnesses. This uses the new function `stop()`, that tells R to terminate the execution of the function, and print on screen the message in the parenthesis. Another novelty is that we already set some of the parameters ($w$, $b$ and $s$) in the function call. In this way, the parameters are set to these default values if not specified when the function is called. The other parameters need to be instead specified.
 
-```{r 8.8}
+```{r 8-8}
 rogers_model <- function(N, t_max, r_max, w = 1, b = 0.5, c, s = 0, mu, p, u) {
   
   # Check parameters to avoid negative fitnesses
@@ -233,13 +233,13 @@ rogers_model <- function(N, t_max, r_max, w = 1, b = 0.5, c, s = 0, mu, p, u) {
 
 Now we can run the simulation for $10$ runs, and $200$ generations, with a population of $1000$ individuals. The other parameters we set are the cost associated to individual learning (`c = 0.9`); the mutation rate, i.e. the probability that an individual that inherit learning strategy (individual or social) will switch to the other (`mu = 0.001`); the accuracy of individual learning (`p = 1`); and, finally, the probability of environmental change (`u = 0.2`). We will later explore other values of these parameters, but feel free to change them and see what happens!
 
-```{r 8.9}
+```{r 8-9}
 data_model <- rogers_model(N = 1000, t_max = 200, r_max = 10, c = 0.9, mu = 0.01, p = 1, u = 0.2)
 ```
 
 You can inspect the `data_model` tibble, but so much data is hard to make sense of. Let's write a plotting function like in previous chapters. The only difference from our usual `plot_multiple_runs()` is that instead of plotting the frequency of traits, we want to visualise $p_{SL}$, the frequency of social learners, so we 
 
-```{r 8.10, fig.cap = "On average the proportion of social learners fluctuates around $0.5$ (black line). However, individual runs have a larger spread around this mean (overlapping colored runs)."}
+```{r 8-10, fig.cap = "On average the proportion of social learners fluctuates around $0.5$ (black line). However, individual runs have a larger spread around this mean (overlapping colored runs)."}
 plot_multiple_runs_p_SL <- function(data_model) {
   ggplot(data = data_model, aes(y = p_SL, x = generation)) +
     geom_line(aes(colour = run)) +
@@ -254,7 +254,7 @@ plot_multiple_runs_p_SL(data_model)
 
 Here we can see that, for these parameter values, the mean proportion of social learners quickly goes to $0.5$, but then remains fluctuating around this value. However, each run is quite erratic, with a large spread. More important for our understanding of Rogers' paradox, however, is the mean fitness of the population, and how this compares with a population entirely composed of individual learners. Consequently, we need to plot the mean population fitness over time. This is `W` in the output of the `rogers_model()` function. The function below plots this, along with a dotted line denoting the fitness of an individual learner, which by extension will be the same as the mean fitness of a population entirely composed of individual learners. We do not need to extract this from the output of the simulation: the fitness of individual learners is fixed, known a-priori, and can be calculated knowing the values of some of the parameters of the simulation. There are a few new elements in the plotting functions. First, we want to pass to the function, together with the `data_model` tibble, some other information on the parameters of out simulations, so that that fitness line for individual learners can be draw. As in the main `rogers_model()` function, `w` and `b` are hard coded, and we need to specify `c` and `p`. Second, we use the function `geom_hline()`. This is another ggplot 'geom' that plots, as the name suggest, an horizontal line that intercept the y axis where indicated by `yintervept`, in our case the fitness of individual learners. Finally, we set the upper limit of the y axis to NA, which ggplot interprets as the limit from the range of the data.
 
-```{r 8.11, fig.cap = "Populations with roughly 50% social learners have on average the same fitness (black line) as populations with only individual learners (dashed line). Even though populations with social learners sometimes exceed the average fitness of all-individual learner populations they also sometimes fall far below it."}
+```{r 8-11, fig.cap = "Populations with roughly 50% social learners have on average the same fitness (black line) as populations with only individual learners (dashed line). Even though populations with social learners sometimes exceed the average fitness of all-individual learner populations they also sometimes fall far below it."}
 plot_W <- function(data_model, w = 1, b = 0.5, c, p) {
   ggplot(data = data_model, aes(y = W, x = generation)) +
     geom_line(aes(color = run)) +
@@ -274,12 +274,12 @@ The reason for this result is that social learning is frequency-dependent in a c
 
 To explore this further, we can alter the parameters. First, we can reduce the cost of individual learning, from $c=0.9$ to $c=0.4$. 
 
-```{r 8.12, fig.cap="There are fewer social learners in a population where the cost of individaul learning is lower."}
+```{r 8-12, fig.cap="There are fewer social learners in a population where the cost of individaul learning is lower."}
 data_model <- rogers_model(N = 1000, t_max = 200, r_max = 10, c = 0.4, mu = 0.01, p = 1, u = 0.2)
 plot_multiple_runs_p_SL(data_model)
 ```
 
-```{r 8.13, fig.cap="The fitness of the mixed population remains equal to the fitness of individual learners in a population where the cost of individaul learning is lower."}
+```{r 8-13, fig.cap="The fitness of the mixed population remains equal to the fitness of individual learners in a population where the cost of individaul learning is lower."}
 plot_W(data_model, c = 0.4, p = 1)
 ```
 
@@ -287,12 +287,12 @@ As we might expect, this reduces the proportion of social learners, by giving in
 
 We can also reduce the accuracy of individual learning, reducing $p$ from $1$ to $0.7$.
 
-```{r 8.14, fig.cap="When individual learning is accurate, there are more social learners in populations."}
+```{r 8-14, fig.cap="When individual learning is accurate, there are more social learners in populations."}
 data_model <- rogers_model(N = 1000, t_max = 200, r_max = 10, c = 0.9, mu = 0.01, p = 0.7, u = 0.2)
 plot_multiple_runs_p_SL(data_model)
 ```
 
-```{r 8.15, fig.cap = "Even when individual learning is more accurate, the average fitness of mixed populations is close to the fitness of pure individual learners."}
+```{r 8-15, fig.cap = "Even when individual learning is more accurate, the average fitness of mixed populations is close to the fitness of pure individual learners."}
 plot_W(data_model, c = 0.9, p = 0.7)
 ```
 
@@ -300,12 +300,12 @@ Now there are a majority of social learners. Yet the paradox remains: the mostly
 
 If our explanation above is correct, then making the environment constant should remove the paradox. If the environment stays the same, then behaviour can never be outdated, and individual learners never regain the upper hand. Setting $u=0$ shows this.
 
-```{r 8.16, fig.cap = "When the environment is unchanging, social learners will outperform individual learners and take over in populations."}
+```{r 8-16, fig.cap = "When the environment is unchanging, social learners will outperform individual learners and take over in populations."}
 data_model <- rogers_model(N = 1000, t_max = 200, r_max = 10, c = 0.9, mu = 0.01, p = 1, u = 0)
 plot_multiple_runs_p_SL(data_model)
 ```
 
-```{r 8.17, fig.cap = "Their average fitness (black line) is now much higher than that of indiviudal learners (dashed line)."}
+```{r 8-17, fig.cap = "Their average fitness (black line) is now much higher than that of indiviudal learners (dashed line)."}
 plot_W(data_model, c = 0.9, p = 1)
 ```
 

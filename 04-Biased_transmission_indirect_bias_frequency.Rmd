@@ -40,7 +40,7 @@ Let's implement these assumptions in the kind of individual-based model we've be
 
 First, we'll specify our parameters, $N$ and $p_0$ as before, plus the new conformity parameter $D$. We also create the usual `population` tibble and fill it with $A$s and $B$s in the proportion specified by $p_0$, again exactly as before. 
 
-```{r 4.1, message = FALSE}
+```{r 4-1, message = FALSE}
 library(tidyverse)
 
 N <- 100
@@ -54,7 +54,7 @@ population <- tibble(trait = sample(c("A", "B"), N,
 
 Now we create another tibble called `demonstrators` that picks, for each new individual in the next generation, three demonstrators at random from the current population of individuals. It therefore needs three columns/variables, one for each of the demonstrators, and $N$ rows, one for each individual. We fill each column with randomly chosen traits from the`population` tibble. We can have a look at `demonstrators` by entering its name in the R console.
 
-```{r 4.2}
+```{r 4-2}
 # Create a tibble with a set of 3 randomly-picked demonstrators for each agent
 demonstrators <- tibble(dem1 = sample(population$trait, N, replace = TRUE), 
                         dem2 = sample(population$trait, N, replace = TRUE), 
@@ -68,7 +68,7 @@ Think of each row here as containing the traits of three randomly-chosen demonst
 
 First we need to get the number of $A$s in each combination. Then we can replace the traits in `population` based on the probabilities in Table 1. When all demonstrators have $A$, we set to $A$. When no demonstrators have $A$, we set to $B$. When two out of three demonstrators have $A$, we set to $A$ with probability $2/3 + D/3$ and $B$ otherwise. When one out of three demonstrators have $A$, we set to $A$ with probability $1/3 - D/3$ and $B$ otherwise.
 
-```{r 4.3}
+```{r 4-3}
 # Get the number of As in each 3-demonstrator combinations
 num_As <- rowSums(demonstrators == "A")
 
@@ -102,7 +102,7 @@ if (nrow(population[prob_minority == FALSE & num_As == 1, ]) > 0) {
 
 To check it works, we can add the new `population` tibble as a column to `demonstrators` and have a look at it. This will let us see the three demonstrators and the resulting new trait side by side.
 
-```{r 4.4}
+```{r 4-4}
 demonstrators <- add_column(demonstrators, new_trait = population$trait)
 
 # Visualise the tibble
@@ -111,7 +111,7 @@ demonstrators
 
 Because we set $D=1$ above, the new trait is always the majority trait among the three demonstrators. This is perfect conformity. We can weaken conformity by reducing $D$. Here is an example with $D=0.5$. All the code is the same as what we already discussed above.
 
-```{r 4.5}
+```{r 4-5}
 D <- 0.5
 
 # create first generation
@@ -164,7 +164,7 @@ Now that conformity is weaker, sometimes the new trait is not the majority among
 
 As in the previous chapters, we can put all this code together into a function to see what happens over multiple generations and in multiple runs. There is nothing new in the code below, which is a combination of the code we already wrote in ([Chapter 1][Unbiased transmission]) and the new bits of code for conformity introduced above.
 
-```{r 4.6}
+```{r 4-6}
 
 conformist_transmission <- function (N, p_0, D, t_max, r_max) {
   
@@ -229,7 +229,7 @@ conformist_transmission <- function (N, p_0, D, t_max, r_max) {
 
 We can test the function with perfect conformity ($D=1$) and plot it (again we use the function `plot_multiple_runs()` we wrote in [Chapter 1][Unbiased transmission]).
 
-```{r 4.7, echo=FALSE}
+```{r 4-7, echo=FALSE}
 plot_multiple_runs <- function(data_model) {
   ggplot(data = data_model, aes(y = p, x = generation)) +
     geom_line(aes(colour = run)) +
@@ -240,7 +240,7 @@ plot_multiple_runs <- function(data_model) {
 }
 ```
 
-```{r 4.8, fig.cap = "Conformity causes one trait to spread and replace the other by favouring whichever trait is initially most common"}
+```{r 4-8, fig.cap = "Conformity causes one trait to spread and replace the other by favouring whichever trait is initially most common"}
 data_model <- conformist_transmission(N = 1000, p_0 = 0.5, D = 1, t_max = 50, r_max = 10)
 plot_multiple_runs(data_model)
 ```
@@ -249,7 +249,7 @@ Here we should see some lines going to $p=1$, and some lines going to $p=0$. Con
 
 What happens if we set $D=0$?
 
-```{r 4.9, fig.cap = "Removing conformist bias recreates unbiased transmission, and does not systematically change trait frequencies"}
+```{r 4-9, fig.cap = "Removing conformist bias recreates unbiased transmission, and does not systematically change trait frequencies"}
 data_model <- conformist_transmission(N = 1000, p_0 = 0.5, D = 0, t_max = 50, r_max = 10)
 plot_multiple_runs(data_model)
 ```
@@ -260,14 +260,14 @@ As an aside, note that the last two graphs have roughly the same thick black mea
 
 Now let's explore the effect of changing the initial frequencies by changing $p_0$, and adding conformity back in.
 
-```{r 4.10, fig.cap = "When trait A is always initially in the majority, it is always favoured by conformity"}
+```{r 4-10, fig.cap = "When trait A is always initially in the majority, it is always favoured by conformity"}
 data_model <- conformist_transmission(N = 1000, p_0 = 0.55, D = 1, t_max = 50, r_max = 10)
 plot_multiple_runs(data_model)
 ```
 
 When $A$ starts with a slight majority ($p_0=0.55$), all (or almost all) of the runs result in $A$ going to fixation. Now let's try the reverse.
 
-```{r 4.11, fig.cap = "When trait B is always initially in the majority, it is always favoured by conformity"}
+```{r 4-11, fig.cap = "When trait B is always initially in the majority, it is always favoured by conformity"}
 data_model <- conformist_transmission(N = 1000, p_0 = 0.45, D = 1, t_max = 50, r_max = 10)
 plot_multiple_runs(data_model)
 ```

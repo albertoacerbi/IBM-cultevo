@@ -12,7 +12,7 @@ At each generation, however, there is a probability $\mu$ that each individual m
 
 We'll wrap this in a function called `unbiased_mutation()`, using much of the same code as `unbiased_transmission_3()`. As before, we need to call the tidyverse library in order to use the tibble command, and later commands like ggplot2.
 
-```{r 2.1, message = FALSE}
+```{r 2-1, message = FALSE}
 library(tidyverse)
 
 unbiased_mutation <- function(N, mu, p_0, t_max, r_max) {
@@ -66,7 +66,7 @@ In the subsequent lines we change the traits for the 'mutant' individuals. We ne
 
 To plot the results, we can use the same function `plot_multiple_runs()` we wrote in the [previous chapter][Unbiased transmission].
 
-```{r 2.2, echo=FALSE}
+```{r 2-2, echo=FALSE}
 plot_multiple_runs <- function(data_model) {
   ggplot(data = data_model, aes(y = p, x = generation)) +
     geom_line(aes(colour = run)) +
@@ -79,7 +79,7 @@ plot_multiple_runs <- function(data_model) {
 
 Let's now run and plot the model:
 
-```{r 2.3, fig.cap = "Trait frequencies fluctuate around 0.5 under unbiased mutation"}
+```{r 2-3, fig.cap = "Trait frequencies fluctuate around 0.5 under unbiased mutation"}
 data_model <- unbiased_mutation(N = 100, mu = 0.05, p_0 = 0.5, t_max = 200, r_max = 5)
 plot_multiple_runs(data_model)
 ```
@@ -92,7 +92,7 @@ But what if we were to start at different initial frequencies of $A$ and $B$? Sa
 
 To find out, let's change $p_0$, which specifies the initial probability of drawing an $A$ rather than a $B$ in the first generation.
 
-```{r 2.4, fig.cap = "Unbiased mutation causes trait frequencies to converge on 0.5, irrespective of starting frequencies"}
+```{r 2-4, fig.cap = "Unbiased mutation causes trait frequencies to converge on 0.5, irrespective of starting frequencies"}
 data_model <- unbiased_mutation(N = 100, mu = 0.05, p_0 = 0.1, t_max = 200, r_max = 5)
 plot_multiple_runs(data_model)
 ```
@@ -105,7 +105,7 @@ A more interesting case is biased mutation. Let's assume now that there is a pro
 
 The function `biased_mutation()` captures this unidirectional mutation.
 
-```{r 2.5}
+```{r 2-5}
 biased_mutation <- function(N, mu_b, p_0, t_max, r_max) {
    # Create the output tibble
   output <- tibble(generation = rep(1:t_max, r_max), 
@@ -144,21 +144,21 @@ There are just two changes in this code compared to `unbiased_mutation()`. First
 
 Let's see what effect this has by running `biased_mutation()`. We'll start with the population entirely composed of individuals with $B$, i.e. $p_0=0$, to see how quickly and in what manner $A$ spreads via biased mutation.
 
-```{r 2.6, fig.cap = "Biased mutation causes the favoured trait to replace the unfavoured trait"}
+```{r 2-6, fig.cap = "Biased mutation causes the favoured trait to replace the unfavoured trait"}
 data_model <- biased_mutation(N = 100, mu_b = 0.05, p_0 = 0, t_max = 200, r_max = 5)
 plot_multiple_runs(data_model)
 ```
 
 The plot shows a steep increase that slows and plateaus at $p=1$ by around generation $t=100$. There should be a bit of fluctuation in the different runs, but not much. Now let's try a larger sample size.
 
-```{r 2.7, fig.cap = "Increasing the population size does not change the rate at which biased mutation causes the favoured trait to increase in frequency"}
+```{r 2-7, fig.cap = "Increasing the population size does not change the rate at which biased mutation causes the favoured trait to increase in frequency"}
 data_model <- biased_mutation(N = 10000, mu_b = 0.05, p_0 = 0, t_max = 200, r_max = 5)
 plot_multiple_runs(data_model)
 ```
 
 With $N = 10000$ the line should be smooth with little (if any) fluctuation across the runs. But notice that it plateaus at about the same generation, around $t=100$. Population size has little effect on the rate at which a novel trait spreads via biased mutation. $\mu_b$, on the other hand, does affect this speed. Let's double the biased mutation rate to 0.1.
 
-```{r 2.8, fig.cap = "Increasing the mutation rate increases the rate at which biased mutation causes the favoured trait to increase in frequency"}
+```{r 2-8, fig.cap = "Increasing the mutation rate increases the rate at which biased mutation causes the favoured trait to increase in frequency"}
 data_model <- biased_mutation(N = 10000, mu_b = 0.1, p_0 = 0, t_max = 200, r_max = 5)
 plot_multiple_runs(data_model)
 ```

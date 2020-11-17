@@ -8,7 +8,7 @@ Whereas the simulations we created previously are fairly standard, indirect demo
 
 To implement a simple version of demonstrator-biased cultural transmission, we first need to assume that there are some intrinsic differences between individuals within the population. Up until now, our individuals have only been described by the traits they possess. We now want individuals to have some additional feature which others can use when deciding whether to copy that individual. We call this feature 'status'. For simplicity, an individual's status is a binary variable that could stand for whether they are prestigious or not, successful or not, and so on. We define a parameter $p_s$ that determines the probability that an individual has high status, as opposed to low status.
 
-```{r 5.1, message = FALSE}
+```{r 5-1, message = FALSE}
 library(tidyverse)
 
 N <- 100
@@ -23,7 +23,7 @@ population <- tibble(trait = sample(c("A", "B"), N,
 
 We can inspect the tibble by typing its name in the R console
 
-```{r 5.2}
+```{r 5-2}
 population
 ```
 
@@ -35,7 +35,7 @@ We assume that the probability if selecting low-status individuals is given by a
 
 To implement this, we first store in `p_demonstrator` the probabilities of being copied for each member of the population: 
 
-```{r 5.3}
+```{r 5-3}
 p_low <- 0.01
 p_demonstrator <- rep(1, N)
 p_demonstrator[population$status == "low"] <- p_low
@@ -44,7 +44,7 @@ p_demonstrator[population$status == "low"] <- p_low
 
 Then we sample the traits in the population using these probabilities. Notice the condition `if(sum(p_demonstrator) > 0)`. This is necessary in case there are no high-status individuals (for example when $p_s\approx0$) and the probability of selecting a low status demonstrator to copy is 0 ($p_\text{low}=0$). This would make the overall probability equal to 0, and without including this control the model would generate an error. 
 
-```{r 5.4}
+```{r 5-4}
 if(sum(p_demonstrator) > 0){
   
   demonstrator_index <- sample (N, prob = p_demonstrator, replace = TRUE)
@@ -55,7 +55,7 @@ if(sum(p_demonstrator) > 0){
 
 As usual, we can wrap everything in a function.
 
-```{r 5.5}
+```{r 5-5}
 biased_transmission_demonstrator <- function(N, p_0, p_s, p_low, t_max, r_max) {
   
   output <- tibble(generation = rep(1:t_max, r_max), 
@@ -99,7 +99,7 @@ biased_transmission_demonstrator <- function(N, p_0, p_s, p_low, t_max, r_max) {
 
 We can now test our simulation, assuming a very low, but not zero, probability of selecting low-status individuals as demonstrators. We are using the usual `plot_multiple_runs()` function to plot the results of the simulations.
 
-```{r 5.6, echo=FALSE}
+```{r 5-6, echo=FALSE}
 plot_multiple_runs <- function(data_model) {
   ggplot(data = data_model, aes(y = p, x = generation)) +
     geom_line(aes(colour = run)) +
@@ -110,7 +110,7 @@ plot_multiple_runs <- function(data_model) {
 }
 ```
 
-```{r 5.7, fig.cap = "Indirectly biased transmission causes one trait to spread and the other to be lost."}
+```{r 5-7, fig.cap = "Indirectly biased transmission causes one trait to spread and the other to be lost."}
 data_model <- biased_transmission_demonstrator(N = 100, p_s = 0.05, p_low=0.0001, 
                                                p_0 = 0.5, t_max = 50, r_max = 10)
 plot_multiple_runs(data_model)
@@ -120,7 +120,7 @@ The results are similar to what we saw in the [previous chapter][Biased transmis
 
 From this perspective, an indirect demonstrator-based bias is more similar to unbiased transmission. If you remember from the [first chapter][Unbiased transmission], simulations with unbiased transmission also generally ended up with one trait reaching fixation in small populations ($N=100$), but in bigger ones ($N=10000$) the frequencies of the two traits remained around $p=0.5$. What happens with demonstrator-based bias?
 
-```{r 5.8, fig.cap = "Indirectly biased transmission depends on the effective population size, not the overall population size."}
+```{r 5-8, fig.cap = "Indirectly biased transmission depends on the effective population size, not the overall population size."}
 data_model <- biased_transmission_demonstrator(N = 10000, p_s = 0.005, p_low=0.0001, 
                                                p_0 = 0.5, t_max = 200, r_max = 10)
 plot_multiple_runs(data_model)
@@ -136,7 +136,7 @@ With conformity, as just mentioned, the trait that reaches fixation is the one s
 
 Currently the output we obtain from the simulations is not suitable for this purpose. On the one hand, we do not have the crucial piece of information that we need: the proportion of each trait among the high-status individuals when the population is initialised. On the other hand, we have much information that we do not need, such as the frequency of the two traits at each time step. However, we just want to know which traits reach fixation. We can therefore rewrite the `biased_transmission_demonstrator()` function and change the `output` tibble to suit our needs.
 
-```{r 5.9}
+```{r 5-9}
 biased_transmission_demonstrator_2 <- function(N, p_0, p_s, p_low, t_max, r_max) {
   
   output <- tibble(status_A = as.numeric(rep(NA, r_max)), 
@@ -181,7 +181,7 @@ Here, `status_A` gives the starting frequency of A among the high status individ
 
 Let's run the new function, `biased_transmission_demonstrator_2()`, for 50 runs (setting `r_max = 50`) so that we have more independent data points, and inspect the output.
 
-```{r 5.10}
+```{r 5-10}
 data_model <- biased_transmission_demonstrator_2(N = 100, p_s = 0.05, p_low=0.0001, 
                                                  p_0 = 0.5, t_max = 50, r_max = 50)
 data_model
@@ -193,7 +193,7 @@ We want to know how the initial proportion of high-status individuals is related
 
 The main novelties in this code are the new ggplot 'geoms' `geom_boxplot()` and `geom_jitter()`. Whereas boxplots are useful to detect aggregate information on our simulations, `geom_jitter()` plots all of the data points, so we can get a better idea of how the proportions of high-status individuals are distributed in the various runs. We could have done this with our usual `geom_point()`, but `geom_jitter()` scatters randomly the points in the plot (at a distance specified by the parameter `width`). This avoids the overlapping of individual data points (known as overplotting). 
 
-```{r 5.11, fig.cap = "The trait reaching fixation tends to be the trait that was in majority among high-status individuals."}
+```{r 5-11, fig.cap = "The trait reaching fixation tends to be the trait that was in majority among high-status individuals."}
 # Filter only lines where p is equal to 1 or to 0
 data_model <- filter(data_model, p == 1 | p == 0)
 
@@ -214,7 +214,7 @@ ggplot(data = data_model, aes(x = p, y = status_A, fill = p)) +
 
 The plot shows that when trait $A$ reaches fixation there are more high-status individuals with trait $A$ at the beginning, and vice versa for $B$, confirming our intuition. However, this is far from being a safe bet. Runs with only a quarter of high-status individuals with $A$ ended up with all $A$s in the population and, conversely, runs with 80% of high-status individuals with $A$ ended up with the fixation of $B$. With bigger populations (e.g. with $N=10000$), it is even worse.
 
-```{r 5.12, fig.cap = "IWith bigger populations - and bigger pools of high-status demonstrators is more difficult to predict the winning trait."}
+```{r 5-12, cache = TRUE, fig.cap = "With bigger populations - and bigger pools of high-status demonstrators is more difficult to predict the winning trait."}
 data_model <- biased_transmission_demonstrator_2(N = 10000, p_s = 0.005, p_low=0.0001, 
                                                  p_0 = 0.5, t_max = 200, r_max = 50)
 

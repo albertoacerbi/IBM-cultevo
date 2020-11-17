@@ -8,7 +8,7 @@
 
 * Adjust all internal cross-references (to chapters)
 
-* Correct figure captions numbering
+* Correct figure captions numbering from chapter 11
 
 * References
 
