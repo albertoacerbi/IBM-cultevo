@@ -10,7 +10,7 @@
 
 * Correct figure captions numbering from chapter 11
 
-* References
+* References from chapter 11
 
 * How to share the book?
 

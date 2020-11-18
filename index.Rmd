@@ -18,7 +18,7 @@ link-citations: true
 
 The field of cultural evolution has emerged in the last few decades as a thriving, interdisciplinary effort to understand cultural change and cultural diversity within an evolutionary framework and using evolutionary tools, concepts and methods. Given its roots in evolutionary biology, much of cultural evolution is grounded in, or inspired by, formal models. Yet many researchers interested in cultural evolution come from backgrounds that lack training in formal models, such as psychology, anthropology or archaeology.
 
-The aim of this book is to partly address this gap by showing readers how to create Individual-Based Models (IBMs, also known as Agent-Based Models, or ABMs) of cultural evolution. We provide example code written in the programming language R, which has been widely adopted in the scientific community. We will go from very simple models of the basic processes of cultural evolution, such as biased transmission and cultural mutation, to more advanced topics such as the evolution of social learning, demographic effects, and social network analysis. Where possible we recreate existing models in the literature, so that readers can better understand those existing models, and perhaps even extend them to address questions of their own interest.
+The aim of this book is to partly address this gap by showing readers how to create individual-based models (IBMs, also known as agent-based models, or ABMs) of cultural evolution. We provide example code written in the programming language [R](https://www.r-project.org), which has been widely adopted in the scientific community. We will go from very simple models of the basic processes of cultural evolution, such as biased transmission and cultural mutation, to more advanced topics such as the evolution of social learning, demographic effects, and social network analysis. Where possible we recreate existing models in the literature, so that readers can better understand those existing models, and perhaps even extend them to address questions of their own interest.
 
 ## What is cultural evolution? {-}
 
@@ -50,7 +50,7 @@ Simulations have greater flexibility than analytical models. Due to their struct
 
 ## How to use this book - the programming {-}
 
-All of the code in this book is written in [R](https://www.r-project.org). Originally R had a strong focus on statistical data analysis. Its growing user-base has turned R into a more general-purpose programming language. While R is used less often for modelling, it is widely taught in many university departments and is the subject of lots of online tutorials and support forums. It is quite likely that many readers already have some experience in R for data analysis and visualisation which can be used also for IBMs, more easily than learning another programming language. Also, if your IBMs run in R, you can use the same language to analyse the output and plot the results.  
+All of the code in this book is written in R. Originally R had a strong focus on statistical data analysis. Its growing user-base has turned R into a more general-purpose programming language. While R is used less often for modelling, it is widely taught in many university departments and is the subject of lots of online tutorials and support forums. It is quite likely that many readers already have some experience in R for data analysis and visualisation which can be used also for IBMs, more easily than learning another programming language. Also, if your IBMs run in R, you can use the same language to analyse the output and plot the results.  
 
 We have used the [bookdown](https://bookdown.org) package to create an html version of the book, which you may well be reading now. This is created from RMarkdown (.Rmd) files, which are a mix of regular text and code. As a reader, you can therefore read the online book and, alongside, run the code using an Rmd file. Of course you can just read the book, but running the code as you go will give you more direct experience of how the code executes, and will allow you to play around with parameters and commands. The best way of learning - especially modelling! - is to try it out yourself.
 
@@ -87,16 +87,10 @@ For the text, we use the following conventions:
 
 ## Further reading {-}
 
-**TO DO**
+For some recent general books on cultural evolution, you can check @mesoudi_cultural_2011, @morin_how_2015, @henrich_secret_2016, @laland_darwins_2017, and @acerbi_cultural_2019-1.  
 
-For more on the virtues of formal models for social scientists, see Paul Smaldino's 'Models are stupid, and we need more of them' (2017). 
+The 'foundational' books referred in the test above are @cavalli-sforza_cultural_1981 and @boyd_culture_1985.
 
-If not, *Hands On Programming With R* by Garrett Grolemund is a good introduction.
+For more on the virtues of formal models for social scientists, with a cultural evolution perspective, see @smaldino_models_2017. @smaldino_how_2020 is dedicated to good practices to translate verbal theories into formal, especially individual-based, models.
 
-R for Data science
-
-B&R 1985
-
-general books on cultural evolution
-
-Other modelling intro
+A good introduction to R programming is @grolemund_hands-programming_2014. Another general introduction, with a specific focus on the tidyverse logic, is @wickham_r_2017.
