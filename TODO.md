@@ -2,13 +2,17 @@
 
 ## Before sharing 
 
-* Finish check chapter 11 and 12
+* Finish check chapter 11-12
 
-* Adjust all internal cross-references from chapter 11
+* Adjust all internal cross-references for chapters 11-12
 
-* Correct figure captions numbering from chapter 11
+* Correct figure captions numbering for chapters 11-12
 
-* References from chapter 11
+* References for chapters 11-12
+
+* Put back chapter 13-14-15
+
+* Rename references chapter to 16-References.Rmd
 
 * Build full book and share the repo with AM and MS
 
