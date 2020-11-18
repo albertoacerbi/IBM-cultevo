@@ -4,13 +4,13 @@
 
 * Finish check chapter 11 and 12
 
-* Build full book and share the repo with AM and MS
-
-* Adjust all internal cross-references (to chapters)
+* Adjust all internal cross-references from chapter 11
 
 * Correct figure captions numbering from chapter 11
 
 * References from chapter 11
+
+* Build full book and share the repo with AM and MS
 
 * How to share the book?
 

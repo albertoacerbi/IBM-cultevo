@@ -1,6 +1,6 @@
 # Multiple traits models
 
-In all previous models, individuals could possess one of only two cultural traits, $A$ or $B$. This is a useful simplification, and it represents cases in which cultural traits can be modeled as binary choices, such as voting Republican or Democrat, driving on the left or the right, or being vegetarian or meat-eating. In other cases, however, there are many options: in many countries there are multiple political parties to vote for, there may be many dietary choices (vegan, pescatarian, vegetarian, etc), and so on. What happens when we copy others' choices given more than two alternatives? To simplify this question, we again assume unbiased copying as in the [first chapter][Unbiased transmission]: all traits are functionally equivalent and other individuals are copied at random.
+In all previous models, individuals could possess one of only two cultural traits, $A$ or $B$. This is a useful simplification, and it represents cases in which cultural traits can be modeled as binary choices, such as voting Republican or Democrat, driving on the left or the right, or being vegetarian or meat-eating. In other cases, however, there are many options: in many countries there are multiple political parties to vote for, there may be many dietary choices (vegan, pescatarian, vegetarian, etc), and so on. What happens when we copy others' choices given more than two alternatives? To simplify this question, we again assume unbiased copying as in [Chapter 1][Unbiased transmission]: all traits are functionally equivalent and other individuals are copied at random.
 
 ## Unbiased transmission with multiple traits
 
@@ -82,7 +82,7 @@ As we already discussed, increasing $N$ reduces the effect of drift. You can exp
 
 ## Introducing innovation
 
-One option is to introduce new traits via innovation. We can imagine that, at each time step, a proportion of individuals, $\mu$, introduces a new trait in the population. We use the same notation that we used for mutation in [chapter 2][Unbiased and biased mutation]: you can think that 'mutation' is when an individual change its trait for one that is already present, whereas an 'innovation' happens when an individual introduces a new trait never seen before. The remaining proportion of individuals, $1-\mu$, copy at random from others, as before. We can start with a small value, such as $\mu=0.01$. Since $N=100$, this means that in each generation, on average, one new trait will be introduced into the population.
+One option is to introduce new traits via innovation. We can imagine that, at each time step, a proportion of individuals, $\mu$, introduces a new trait in the population. We use the same notation that we used for mutation in [Chapter 2][Unbiased and biased mutation]: you can think that 'mutation' is when an individual change its trait for one that is already present, whereas an 'innovation' happens when an individual introduces a new trait never seen before. The remaining proportion of individuals, $1-\mu$, copy at random from others, as before. We can start with a small value, such as $\mu=0.01$. Since $N=100$, this means that in each generation, on average, one new trait will be introduced into the population.
 
 The following code adds innovation to the multiple-trait code from above:
 

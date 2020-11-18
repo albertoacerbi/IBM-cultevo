@@ -1,6 +1,6 @@
 # Rogers' Paradox: A Solution
 
-In the previous chapter we saw how social learning does not increase the mean fitness of a population relative to a population entirely made up of individual learners, at least in a changing environment. This is colloquially known as Rogers' paradox, after Alan Rogers' model which originally showed this. It is a 'paradox' because it holds even though social learning is less costly than individual learning, and social learning is often argued to underpin our species' ecological success. The paradox occurs because social learning is frequency dependent: when environments change, the success of social learning depends on there being individual learners around to copy. Otherwise social learners are left copying each others' outdated behaviour.
+In the [previous chapter][Rogers' paradox] we saw how social learning does not increase the mean fitness of a population relative to a population entirely made up of individual learners, at least in a changing environment. This is colloquially known as Rogers' paradox, after Alan Rogers' model which originally showed this. It is a 'paradox' because it holds even though social learning is less costly than individual learning, and social learning is often argued to underpin our species' ecological success. The paradox occurs because social learning is frequency dependent: when environments change, the success of social learning depends on there being individual learners around to copy. Otherwise social learners are left copying each others' outdated behaviour.
 
 Several subsequent models have explored 'solutions' to Rogers' paradox. These involve relaxing the obviously unrealistic assumptions. One of these is that individuals in the model come in one of two fixed types: social learners (who always learn socially), and individual learners (who always learn individually). This is obviously unrealistic. Most organisms that can learn individually can also learn socially, and the two capacities likely rely on the same underlying mechanisms (e.g. associative learning, see e.g. @heyes_whats_2012).
 
@@ -154,7 +154,7 @@ rogers_model2 <- function(N, t_max, r_max, w = 1, b = 0.5, c, s = 0, mu, p, u) {
 }
 ```
 
-Now we can run `rogers_model2()`, with the same parameter values as we initially ran rogers_model in the last chapter.
+Now we can run `rogers_model2()`, with the same parameter values as we initially ran `rogers_model()` in the last chapter.
 
 ```{r 9-2, cache = TRUE}
 data_model <- rogers_model2(N = 1000, t_max = 200, r_max = 10, c = 0.9, mu = 0.01, p = 1, u = 0.2)

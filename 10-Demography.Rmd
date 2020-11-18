@@ -3,7 +3,7 @@
 
 # Demography
 
-In the previous chapters, we have looked at the transmission of information between individuals. We have seen that relatively simple mechanisms at the individual level can lead to population-level outcomes (e.g. the fixation of a rare cultural trait). We have also seen the importance of the characteristics of individuals (e.g. for success and prestige bias) in cultural processes. What we have not yet looked at is how the characteristics of the population may affect the outcome of cultural dynamics. In the following three chapters we will have a closer look at how population size (demography), population structure (social networks), and group structured populations (with migration) can influence cultural evolution.
+In the previous chapters, we have looked at the transmission of information between individuals. We have seen that relatively simple mechanisms at the individual level can lead to population-level outcomes (e.g. the fixation of a rare cultural trait). We have also seen the importance of the characteristics of individuals (e.g. for success and prestige bias) in cultural processes. What we have not yet looked at is how the characteristics of the population may affect the outcome of cultural dynamics. In the following three chapters we will have a closer look at how population size (demography, this chapter), population structure (social networks, [Chapter 11][Social wetwork structure]), and group structured populations with migration ([Chapter 12][Group structure populations and migration]) can influence cultural evolution.
 
 Why would demography matter to cultural evolution? As long as information is transmitted among individuals and between generations, the size of the population should not play a role. In theory, this statement is true but it relies on a crucial assumption: information transfer is not only complete (all information from the previous generation is transmitted to the next generation) but also error-free. However, from many lab experiments, we know that copying information is an error-prone process. In this chapter, we will look at how those errors affect information accumulation and how population size is augmenting this process. 
 
@@ -154,15 +154,15 @@ ggplot(data) +
   theme_bw()
 ```
 
-In Fig. \@ref(fig:10.7) we can see that, for simple skills, the change in average skill level becomes positive (see where it intercepts the x-axis at $0$) at much smaller population sizes than the complex skill. This means a simple skill can be maintained by much smaller populations, whereas larger populations of imitators are required for complex skills. 
+In the figure above we can see that, for simple skills, the change in average skill level becomes positive (see where it intercepts the x-axis at $0$) at much smaller population sizes than the complex skill. This means a simple skill can be maintained by much smaller populations, whereas larger populations of imitators are required for complex skills. 
 
 ## Calculating critical population sizes based on skill complexity
 
 Henrich calls the minimum population size required to maintain a skill the critical population size, $N^\star$. How can we calculate $N^\star$ for different skill complexities? We could run simulations for many more population sizes and find the one where $\Delta \bar z$ is closest to zero. Alternatively, here is a more elegant and less computationally intensive method, that we will use below. 
 
-When we plot the previous results over logarithmic population size the resulting graphs are almost linear (see \@ref(fig:10.8)). 
+When we plot the previous results over logarithmic population size the resulting graphs are almost linear.
 
-```{r 10-8, fig.cap = "The same results as in Fig. \\@ref(fig:effectivePopSize) but using log on population sizes."}
+```{r 10-8, fig.cap = "The same results as in Figure \\@ref(fig:10-7) but using log on population sizes."}
 ggplot(data) + 
   geom_line(aes(x = log(N), y = z_delta_bar, color=skill)) +
   xlab("log(effective population size)") +
@@ -195,7 +195,7 @@ fit <- lm(formula = z_delta_bar ~ log(N),
 N_star_complex <- exp(-(fit$coefficients[1] / fit$coefficients[2]))
 ```
 
-Note that we need to take the exponent (`exp()`) of the resulting value to revert the log function that we applied to the population size. We see that a simple skill with a low alpha to sigma ratio requires a minimum population size of about `r round(N_star_simple)`, whereas a much large population size is required to maintain a complex trait (about `r round(N_star_complex)`). (You can visualise those results by writing `N_star_simple` and `N_star_complex`.) When you go back to Fig. @ref(fig:10.7) you can see that these points correspond with the graphs of the simple and complex skill crossing the x-axis. 
+Note that we need to take the exponent (`exp()`) of the resulting value to revert the log function that we applied to the population size. We see that a simple skill with a low alpha to sigma ratio requires a minimum population size of about `r round(N_star_simple)`, whereas a much large population size is required to maintain a complex trait (about `r round(N_star_complex)`). (You can visualise those results by writing `N_star_simple` and `N_star_complex`.) When you go back to Figure \@ref(fig:10-7) you can see that these points correspond with the graphs of the simple and complex skill crossing the x-axis. 
 
 Let us now calculate the $N^\star$ values for different skill complexities and different population sizes. We first set up the parameter space using `expand.grid()`. This function essentially creates all possible combinations of input variables. In our case, we want all possible combinations of the different population sizes `N` and skill complexities, which we will vary using different values for $\alpha$. Therefore, executing this function will return a two column (for `N` and `alpha`) data structure, stored in `simulations`. We visualise the first lines with the function `head()`:
 
@@ -259,7 +259,7 @@ Similar to the model in the chapter on Rogers' paradox, the present model is ver
 In this chapter we also introduced several new R functions and programming styles. Most important, we used `lapply()` instead of the usual `for` loops to run multiple runs of the simulations. We used a different notation for function parameters (all capital letters) to distinguish them from the same values that are calculated within a function). At this point of the book, as long oyu know what you are doing, you may want to experiment with different options and choose the ones that works better for you!
 
 ## Further readings
-@henrich_demography_2004 provides a detailed analytical model of the simulation described in this chapter. @powell_late_2009 is an extension to Henrich's model that incorporates sub-populations with varying density.  A criticism of Henrich's Tasmanian model is @vaesen_population_2016. @shennan_demography_2001 is another modelling paper that suggests that innovations are far more successful in larger compared to smaller populations. @ghirlanda_sustainability_2010 investigate the interplay between cultural innovations and cultural loss. 
+@henrich_demography_2004 provides a detailed analytical model of the simulation described in this chapter. @powell_late_2009 is an extension to Henrich's model that incorporates sub-populations with varying density.  A criticism of Henrich's Tasmanian model is @vaesen_population_2016. @shennan_demography_2001 is another modelling paper that suggests that innovations are far more successful in larger compared to smaller populations. @ghirlanda_sustainability_2010 investigates the interplay between cultural innovations and cultural loss. 
 
 @shennan_demography_2015 provides a good overview of a variety of approaches and questions in studies of population effects in cultural evolution.
 
