@@ -2,13 +2,7 @@
 
 ## Before sharing 
 
-* Finish check chapter 11-12
-
-* Adjust all internal cross-references for chapters 11-12
-
-* Correct figure captions numbering for chapters 11-12
-
-* References for chapters 11-12
+* Chapter 12: check + cross-references + captions numbering + references
 
 * Put back chapter 13-14-15
 
