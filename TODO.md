@@ -8,9 +8,7 @@
 
 * Rename references chapter to 16-References.Rmd
 
-* Build full book and share the repo with AM and MS
-
-* How to share the book?
+* Share the repo with AM and MS / How to share the book?
 
 ## After sharing
 

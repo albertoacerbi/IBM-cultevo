@@ -10,4 +10,6 @@ by
 
 Alberto Acerbi, Marco Smolla, and Alex Mesoudi
 
-(Not ready yet!)
+The published version on the book is currently hosted at [https://acerbialberto.com/IBM-cultevo/](https://acerbialberto.com/IBM-cultevo/)
+
+Notice the book is not ready yet, the four last chapters are missing.
