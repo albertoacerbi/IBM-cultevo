@@ -10,7 +10,7 @@ by
 
 Alberto Acerbi, Marco Smolla, and Alex Mesoudi
 
-##Table of content
+# Table of content
 
 Introduction
 
