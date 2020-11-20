@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Biased transmission: demonstrator-based indirect bias | Individual-based models of cultural evolution</title>
+  <meta name="description" content="Chapter 5 Biased transmission: demonstrator-based indirect bias | Individual-based models of cultural evolution" />
+  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Biased transmission: demonstrator-based indirect bias | Individual-based models of cultural evolution" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Biased transmission: demonstrator-based indirect bias | Individual-based models of cultural evolution" />
+  
+  
+  
+
+<meta name="author" content="Alberto Acerbi" />
+<meta name="author" content="Marco Smolla" />
+<meta name="author" content="Alex Mesoudi" />
+
+
+<meta name="date" content="2020-11-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="biased-transmission-frequency-dependent-indirect-bias.html"/>
+<link rel="next" href="vertical-and-horizontal-transmission.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Individual-based models of cultural evolution</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#aim-of-the-book"><i class="fa fa-check"></i>Aim of the book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-is-cultural-evolution"><i class="fa fa-check"></i>What is cultural evolution?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-model"><i class="fa fa-check"></i>Why model?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-individual-based-models"><i class="fa fa-check"></i>Why individual-based models?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book---the-programming"><i class="fa fa-check"></i>How to use this book - the programming</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book---the-simulations"><i class="fa fa-check"></i>How to use this book - the simulations</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#conventions-and-formatting"><i class="fa fa-check"></i>Conventions and formatting</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
+</ul></li>
+<li class="part"><span><b>Basics</b></span></li>
+<li class="chapter" data-level="1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html"><i class="fa fa-check"></i><b>1</b> Unbiased transmission</a><ul>
+<li class="chapter" data-level="1.1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#initialising-the-simulation"><i class="fa fa-check"></i><b>1.1</b> Initialising the simulation</a></li>
+<li class="chapter" data-level="1.2" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#execute-generation-turn-over-many-times"><i class="fa fa-check"></i><b>1.2</b> Execute generation turn-over many times</a></li>
+<li class="chapter" data-level="1.3" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#plotting-the-model-results"><i class="fa fa-check"></i><b>1.3</b> Plotting the model results</a></li>
+<li class="chapter" data-level="1.4" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#write-a-function-to-wrap-the-model-code"><i class="fa fa-check"></i><b>1.4</b> Write a function to wrap the model code</a></li>
+<li class="chapter" data-level="1.5" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#run-several-independent-simulations-and-plot-their-results"><i class="fa fa-check"></i><b>1.5</b> Run several independent simulations and plot their results</a></li>
+<li class="chapter" data-level="1.6" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#varying-initial-conditions"><i class="fa fa-check"></i><b>1.6</b> Varying initial conditions</a></li>
+<li class="chapter" data-level="1.7" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#summary-of-the-model"><i class="fa fa-check"></i><b>1.7</b> Summary of the model</a></li>
+<li class="chapter" data-level="1.8" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#further-reading-1"><i class="fa fa-check"></i><b>1.8</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html"><i class="fa fa-check"></i><b>2</b> Unbiased and biased mutation</a><ul>
+<li class="chapter" data-level="2.1" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#unbiased-mutation"><i class="fa fa-check"></i><b>2.1</b> Unbiased mutation</a></li>
+<li class="chapter" data-level="2.2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#biased-mutation"><i class="fa fa-check"></i><b>2.2</b> Biased mutation</a></li>
+<li class="chapter" data-level="2.3" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#summary-of-the-model-1"><i class="fa fa-check"></i><b>2.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="2.4" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#further-reading-2"><i class="fa fa-check"></i><b>2.4</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html"><i class="fa fa-check"></i><b>3</b> Biased transmission: direct bias</a><ul>
+<li class="chapter" data-level="3.1" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#a-simple-model-of-directly-biased-transmission"><i class="fa fa-check"></i><b>3.1</b> A simple model of directly biased transmission</a></li>
+<li class="chapter" data-level="3.2" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#strength-of-selection"><i class="fa fa-check"></i><b>3.2</b> Strength of selection</a></li>
+<li class="chapter" data-level="3.3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#summary-of-the-model-2"><i class="fa fa-check"></i><b>3.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="3.4" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#further-reading-3"><i class="fa fa-check"></i><b>3.4</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html"><i class="fa fa-check"></i><b>4</b> Biased transmission: frequency-dependent indirect bias</a><ul>
+<li class="chapter" data-level="4.1" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#the-logic-of-conformity"><i class="fa fa-check"></i><b>4.1</b> The logic of conformity</a></li>
+<li class="chapter" data-level="4.2" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#testing-conformist-transmission"><i class="fa fa-check"></i><b>4.2</b> Testing conformist transmission</a></li>
+<li class="chapter" data-level="4.3" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#summary-of-the-model-3"><i class="fa fa-check"></i><b>4.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="4.4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#further-readings"><i class="fa fa-check"></i><b>4.4</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html"><i class="fa fa-check"></i><b>5</b> Biased transmission: demonstrator-based indirect bias</a><ul>
+<li class="chapter" data-level="5.1" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#a-simple-demonstrator-bias"><i class="fa fa-check"></i><b>5.1</b> A simple demonstrator bias</a></li>
+<li class="chapter" data-level="5.2" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#predicting-the-winning-trait"><i class="fa fa-check"></i><b>5.2</b> Predicting the ‘winning’ trait</a></li>
+<li class="chapter" data-level="5.3" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#summary-of-the-model-4"><i class="fa fa-check"></i><b>5.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="5.4" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#further-readings-1"><i class="fa fa-check"></i><b>5.4</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html"><i class="fa fa-check"></i><b>6</b> Vertical and horizontal transmission</a><ul>
+<li class="chapter" data-level="6.1" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#vertical-cultural-transmission"><i class="fa fa-check"></i><b>6.1</b> Vertical cultural transmission</a></li>
+<li class="chapter" data-level="6.2" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#horizontal-cultural-transmission"><i class="fa fa-check"></i><b>6.2</b> Horizontal cultural transmission</a></li>
+<li class="chapter" data-level="6.3" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#summary-of-the-model-5"><i class="fa fa-check"></i><b>6.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="6.4" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#further-reading-4"><i class="fa fa-check"></i><b>6.4</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html"><i class="fa fa-check"></i><b>7</b> Multiple traits models</a><ul>
+<li class="chapter" data-level="7.1" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#unbiased-transmission-with-multiple-traits"><i class="fa fa-check"></i><b>7.1</b> Unbiased transmission with multiple traits</a></li>
+<li class="chapter" data-level="7.2" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#introducing-innovation"><i class="fa fa-check"></i><b>7.2</b> Introducing innovation</a></li>
+<li class="chapter" data-level="7.3" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#optimising-the-code"><i class="fa fa-check"></i><b>7.3</b> Optimising the code</a></li>
+<li class="chapter" data-level="7.4" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#the-distribution-of-popularity"><i class="fa fa-check"></i><b>7.4</b> The distribution of popularity</a></li>
+<li class="chapter" data-level="7.5" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#summary-of-the-model-6"><i class="fa fa-check"></i><b>7.5</b> Summary of the model</a></li>
+<li class="chapter" data-level="7.6" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#further-readings-2"><i class="fa fa-check"></i><b>7.6</b> Further readings</a></li>
+</ul></li>
+<li class="part"><span><b>Advanced topics - The evolution of cultural evolution</b></span></li>
+<li class="chapter" data-level="8" data-path="rogers-paradox.html"><a href="rogers-paradox.html"><i class="fa fa-check"></i><b>8</b> Rogers’ Paradox</a><ul>
+<li class="chapter" data-level="8.1" data-path="rogers-paradox.html"><a href="rogers-paradox.html#modelling-rogers-paradox"><i class="fa fa-check"></i><b>8.1</b> Modelling Rogers’ Paradox</a></li>
+<li class="chapter" data-level="8.2" data-path="rogers-paradox.html"><a href="rogers-paradox.html#summary-of-the-model-7"><i class="fa fa-check"></i><b>8.2</b> Summary of the model</a></li>
+<li class="chapter" data-level="8.3" data-path="rogers-paradox.html"><a href="rogers-paradox.html#further-reading-5"><i class="fa fa-check"></i><b>8.3</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html"><i class="fa fa-check"></i><b>9</b> Rogers’ Paradox: A Solution</a><ul>
+<li class="chapter" data-level="9.1" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#modelling-critical-social-learners"><i class="fa fa-check"></i><b>9.1</b> Modelling critical social learners</a></li>
+<li class="chapter" data-level="9.2" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#summary-of-the-model-8"><i class="fa fa-check"></i><b>9.2</b> Summary of the model</a></li>
+<li class="chapter" data-level="9.3" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#further-reading-6"><i class="fa fa-check"></i><b>9.3</b> Further reading</a></li>
+</ul></li>
+<li class="part"><span><b>Advanced topics - Culture and populations</b></span></li>
+<li class="chapter" data-level="10" data-path="demography.html"><a href="demography.html"><i class="fa fa-check"></i><b>10</b> Demography</a><ul>
+<li class="chapter" data-level="10.1" data-path="demography.html"><a href="demography.html#the-tasmania-case"><i class="fa fa-check"></i><b>10.1</b> The Tasmania Case</a></li>
+<li class="chapter" data-level="10.2" data-path="demography.html"><a href="demography.html#modelling-the-tasmania-case"><i class="fa fa-check"></i><b>10.2</b> Modelling the Tasmania Case</a></li>
+<li class="chapter" data-level="10.3" data-path="demography.html"><a href="demography.html#calculating-critical-population-sizes-based-on-skill-complexity"><i class="fa fa-check"></i><b>10.3</b> Calculating critical population sizes based on skill complexity</a></li>
+<li class="chapter" data-level="10.4" data-path="demography.html"><a href="demography.html#summary-of-the-model-9"><i class="fa fa-check"></i><b>10.4</b> Summary of the model</a></li>
+<li class="chapter" data-level="10.5" data-path="demography.html"><a href="demography.html#further-readings-3"><i class="fa fa-check"></i><b>10.5</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="social-network-structure.html"><a href="social-network-structure.html"><i class="fa fa-check"></i><b>11</b> Social network structure</a><ul>
+<li class="chapter" data-level="11.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-basics"><i class="fa fa-check"></i><b>11.1</b> Network basics</a></li>
+<li class="chapter" data-level="11.2" data-path="social-network-structure.html"><a href="social-network-structure.html#generating-networks"><i class="fa fa-check"></i><b>11.2</b> Generating networks</a></li>
+<li class="chapter" data-level="11.3" data-path="social-network-structure.html"><a href="social-network-structure.html#plotting-networks"><i class="fa fa-check"></i><b>11.3</b> Plotting networks</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-layout"><i class="fa fa-check"></i><b>11.3.1</b> Network layout</a></li>
+<li class="chapter" data-level="11.3.2" data-path="social-network-structure.html"><a href="social-network-structure.html#network-styling"><i class="fa fa-check"></i><b>11.3.2</b> Network styling</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="social-network-structure.html"><a href="social-network-structure.html#analyse-social-networks"><i class="fa fa-check"></i><b>11.4</b> Analyse social networks</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-properties-and-characteristics"><i class="fa fa-check"></i><b>11.4.1</b> Network properties and characteristics</a></li>
+<li class="chapter" data-level="11.4.2" data-path="social-network-structure.html"><a href="social-network-structure.html#vertex-properties"><i class="fa fa-check"></i><b>11.4.2</b> Vertex properties</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="social-network-structure.html"><a href="social-network-structure.html#modelling-information-transmission-in-social-networks"><i class="fa fa-check"></i><b>11.5</b> Modelling information transmission in social networks</a><ul>
+<li class="chapter" data-level="11.5.1" data-path="social-network-structure.html"><a href="social-network-structure.html#gossip-diffusion-in-networked-populations"><i class="fa fa-check"></i><b>11.5.1</b> Gossip diffusion in networked populations</a></li>
+<li class="chapter" data-level="11.5.2" data-path="social-network-structure.html"><a href="social-network-structure.html#complex-versus-simple-contagion-information-transmission"><i class="fa fa-check"></i><b>11.5.2</b> Complex versus simple contagion information transmission</a></li>
+</ul></li>
+<li class="chapter" data-level="11.6" data-path="social-network-structure.html"><a href="social-network-structure.html#summary-of-the-model-10"><i class="fa fa-check"></i><b>11.6</b> Summary of the model</a></li>
+<li class="chapter" data-level="11.7" data-path="social-network-structure.html"><a href="social-network-structure.html#further-reading-7"><i class="fa fa-check"></i><b>11.7</b> Further Reading</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Individual-based models of cultural evolution</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="biased-transmission-demonstrator-based-indirect-bias" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Biased transmission: demonstrator-based indirect bias</h1>
+<p>In the previous two chapters we examined two forms of biased transmission, one where the bias arises due to characteristics of the traits (or <a href="biased-transmission-direct-bias.html#biased-transmission-direct-bias">direct bias</a>) and another where the bias arises due to the characteristics of the population (or indirect bias). In the previous chapter we examined frequency-dependent indirect bias which takes into account the frequency of the trait (or <a href="biased-transmission-frequency-dependent-indirect-bias.html#biased-transmission-frequency-dependent-indirect-bias">conformity</a>). Here we examine indirect bias that takes into account specific features of the demonstrators. This demonstrator-based bias is also called ‘model bias’ or ‘context bias’ in the cultural evolution literature.</p>
+<p>Whereas the simulations we created previously are fairly standard, indirect demonstrator-based biases can be implemented in several ways. Demonstrator biases result whenever individuals decide whether or not to copy by taking into account any features of the demonstrators, as long as it is not directly tied to the traits. The most studied demonstrator bias is prestige bias, where individuals are more likely to copy from demonstrators who are considered more ‘prestigious’ or high in subjective social status, for example because other individuals show deference to them. Alternatively, individuals can copy demonstrators who are more successful according to some objective criterion (e.g. wealth) independently from how others judge them, or they can copy individuals that are more similar to themselves, or older (or younger) than themselves, and so on. The key point is that the decision is not directly linked to the cultural trait itself, and relates to some characteristic of the demonstrator(s) from whom one is copying.</p>
+<div id="a-simple-demonstrator-bias" class="section level2">
+<h2><span class="header-section-number">5.1</span> A simple demonstrator bias</h2>
+<p>To implement a simple version of demonstrator-biased cultural transmission, we first need to assume that there are some intrinsic differences between individuals within the population. Up until now, our individuals have only been described by the traits they possess. We now want individuals to have some additional feature which others can use when deciding whether to copy that individual. We call this feature ‘status’. For simplicity, an individual’s status is a binary variable that could stand for whether they are prestigious or not, successful or not, and so on. We define a parameter <span class="math inline">\(p_s\)</span> that determines the probability that an individual has high status, as opposed to low status.</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb52-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb52-2"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb52-2"></a></span>
+<span id="cb52-3"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb52-3"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb52-4"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb52-4"></a>p_<span class="dv">0</span> &lt;-<span class="st"> </span><span class="fl">0.5</span></span>
+<span id="cb52-5"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb52-5"></a>p_s &lt;-<span class="st"> </span><span class="fl">0.05</span></span>
+<span id="cb52-6"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb52-6"></a></span>
+<span id="cb52-7"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb52-7"></a>population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, </span>
+<span id="cb52-8"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb52-8"></a>                                    <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_<span class="dv">0</span>, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_<span class="dv">0</span>)),</span>
+<span id="cb52-9"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb52-9"></a>                     <span class="dt">status =</span> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>), N, </span>
+<span id="cb52-10"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb52-10"></a>                                     <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_s, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_s))) </span></code></pre></div>
+<p>We can inspect the tibble by typing its name in the R console</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb53-1"></a>population</span></code></pre></div>
+<pre><code>## # A tibble: 100 x 2
+##    trait status
+##    &lt;chr&gt; &lt;chr&gt; 
+##  1 B     low   
+##  2 B     low   
+##  3 B     low   
+##  4 B     high  
+##  5 A     low   
+##  6 A     low   
+##  7 B     low   
+##  8 B     low   
+##  9 B     low   
+## 10 A     low   
+## # … with 90 more rows</code></pre>
+<p>With <span class="math inline">\(p_s=0.05\)</span> around 5 individuals in a population of 100 will have high status.</p>
+<p>We now need to make it so that these rare high status individuals are more likely to be copied. One way of doing this is to assume that the probabilities of picking high-status and low-status individuals as demonstrators are different. So far, when using the function <code>sample()</code> to select demonstrators, we did not include any specific probability. This meant that each individual of the previous generation had the same likelihood of being selected and copied. Instead, now we pass to the function a vector of probabilities to weight the choice.</p>
+<p>We assume that the probability if selecting low-status individuals is given by a further parameter, <span class="math inline">\(p_\text{low}\)</span>, that gives the proportion between the probabilities of choosing a low-status individual versus an high-status individual. When <span class="math inline">\(p_\text{low}=1\)</span>, the simulations correspond to unbiased transmission, as everybody has the same probability of being chosen. When <span class="math inline">\(p_\text{low}=0\)</span>, there is a strict status-based demonstrator bias, where only high-status individuals are ever selected as demonstrators.</p>
+<p>To implement this, we first store in <code>p_demonstrator</code> the probabilities of being copied for each member of the population:</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb55-1"></a>p_low &lt;-<span class="st"> </span><span class="fl">0.01</span></span>
+<span id="cb55-2"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb55-2"></a>p_demonstrator &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">1</span>, N)</span>
+<span id="cb55-3"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb55-3"></a>p_demonstrator[population<span class="op">$</span>status <span class="op">==</span><span class="st"> &quot;low&quot;</span>] &lt;-<span class="st"> </span>p_low</span></code></pre></div>
+<p>Then we sample the traits in the population using these probabilities. Notice the condition <code>if(sum(p_demonstrator) &gt; 0)</code>. This is necessary in case there are no high-status individuals (for example when <span class="math inline">\(p_s\approx0\)</span>) and the probability of selecting a low status demonstrator to copy is 0 (<span class="math inline">\(p_\text{low}=0\)</span>). This would make the overall probability equal to 0, and without including this control the model would generate an error.</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb56-1"></a><span class="cf">if</span>(<span class="kw">sum</span>(p_demonstrator) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>){</span>
+<span id="cb56-2"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb56-2"></a>  </span>
+<span id="cb56-3"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb56-3"></a>  demonstrator_index &lt;-<span class="st"> </span><span class="kw">sample</span> (N, <span class="dt">prob =</span> p_demonstrator, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb56-4"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb56-4"></a>  population<span class="op">$</span>trait &lt;-<span class="st"> </span>population<span class="op">$</span>trait[demonstrator_index]</span>
+<span id="cb56-5"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb56-5"></a>  </span>
+<span id="cb56-6"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb56-6"></a>}</span></code></pre></div>
+<p>As usual, we can wrap everything in a function.</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-1"></a>biased_transmission_demonstrator &lt;-<span class="st"> </span><span class="cf">function</span>(N, p_<span class="dv">0</span>, p_s, p_low, t_max, r_max) {</span>
+<span id="cb57-2"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-2"></a>  </span>
+<span id="cb57-3"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-3"></a>  output &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">generation =</span> <span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>t_max, r_max), </span>
+<span id="cb57-4"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-4"></a>                   <span class="dt">p =</span> <span class="kw">as.numeric</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, t_max <span class="op">*</span><span class="st"> </span>r_max)), </span>
+<span id="cb57-5"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-5"></a>                   <span class="dt">run =</span> <span class="kw">as.factor</span>(<span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>r_max, <span class="dt">each =</span> t_max)))</span>
+<span id="cb57-6"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-6"></a>  </span>
+<span id="cb57-7"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-7"></a>  <span class="cf">for</span> (r <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>r_max) {</span>
+<span id="cb57-8"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-8"></a>    <span class="co"># Create first generation</span></span>
+<span id="cb57-9"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-9"></a>    population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, </span>
+<span id="cb57-10"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-10"></a>                                        <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_<span class="dv">0</span>, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_<span class="dv">0</span>)),</span>
+<span id="cb57-11"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-11"></a>                         <span class="dt">status =</span> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>), N,</span>
+<span id="cb57-12"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-12"></a>                                         <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_s, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_s))) </span>
+<span id="cb57-13"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-13"></a>    </span>
+<span id="cb57-14"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-14"></a>    <span class="co"># Assign copying probabilities based on individuals&#39; status</span></span>
+<span id="cb57-15"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-15"></a>    p_demonstrator &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">1</span>,N)</span>
+<span id="cb57-16"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-16"></a>    p_demonstrator[population<span class="op">$</span>status <span class="op">==</span><span class="st"> &quot;low&quot;</span>] &lt;-<span class="st"> </span>p_low</span>
+<span id="cb57-17"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-17"></a>    </span>
+<span id="cb57-18"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-18"></a>    <span class="co"># Add first generation&#39;s p for run r</span></span>
+<span id="cb57-19"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-19"></a>    output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span><span class="dv">1</span> <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p &lt;-<span class="st"> </span></span>
+<span id="cb57-20"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-20"></a><span class="st">      </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N </span>
+<span id="cb57-21"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-21"></a>    </span>
+<span id="cb57-22"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-22"></a>    <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span>t_max) {</span>
+<span id="cb57-23"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-23"></a>      <span class="co"># Copy individuals to previous_population tibble</span></span>
+<span id="cb57-24"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-24"></a>      previous_population &lt;-<span class="st"> </span>population </span>
+<span id="cb57-25"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-25"></a>      </span>
+<span id="cb57-26"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-26"></a>      <span class="co"># Copy traits based on status</span></span>
+<span id="cb57-27"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-27"></a>      <span class="cf">if</span>(<span class="kw">sum</span>(p_demonstrator) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>){</span>
+<span id="cb57-28"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-28"></a>        demonstrator_index &lt;-<span class="st"> </span><span class="kw">sample</span> (N, <span class="dt">prob =</span> p_demonstrator, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb57-29"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-29"></a>        population<span class="op">$</span>trait &lt;-<span class="st"> </span>previous_population<span class="op">$</span>trait[demonstrator_index]</span>
+<span id="cb57-30"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-30"></a>      }</span>
+<span id="cb57-31"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-31"></a>      <span class="co"># Get p and put it into output slot for this generation t and run r</span></span>
+<span id="cb57-32"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-32"></a>      output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span>t <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p &lt;-<span class="st"> </span></span>
+<span id="cb57-33"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-33"></a><span class="st">        </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N </span>
+<span id="cb57-34"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-34"></a>    }</span>
+<span id="cb57-35"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-35"></a>    </span>
+<span id="cb57-36"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-36"></a>  }</span>
+<span id="cb57-37"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-37"></a>  <span class="co"># Export data from function</span></span>
+<span id="cb57-38"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-38"></a>  output </span>
+<span id="cb57-39"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb57-39"></a>}</span></code></pre></div>
+<p>We can now test our simulation, assuming a very low, but not zero, probability of selecting low-status individuals as demonstrators. We are using the usual <code>plot_multiple_runs()</code> function to plot the results of the simulations.</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb58-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">biased_transmission_demonstrator</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">p_s =</span> <span class="fl">0.05</span>, <span class="dt">p_low=</span><span class="fl">0.0001</span>, </span>
+<span id="cb58-2"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb58-2"></a>                                               <span class="dt">p_0 =</span> <span class="fl">0.5</span>, <span class="dt">t_max =</span> <span class="dv">50</span>, <span class="dt">r_max =</span> <span class="dv">10</span>)</span>
+<span id="cb58-3"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb58-3"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<div class="figure"><span id="fig:5-7"></span>
+<img src="IBM-cultevo_files/figure-html/5-7-1.png" alt="Indirectly biased transmission causes one trait to spread and the other to be lost." width="672" />
+<p class="caption">
+Figure 5.1: Indirectly biased transmission causes one trait to spread and the other to be lost.
+</p>
+</div>
+<p>The results are similar to what we saw in the <a href="biased-transmission-frequency-dependent-indirect-bias.html#biased-transmission-frequency-dependent-indirect-bias">previous chapter</a> for conformity: one of the two traits quickly reaches fixation. In the case of conformity, however, the trait reaching fixation was the one that happened to have a slightly higher frequency at the beginning, because of the random initialisation. With a demonstrator bias, this is not the case.</p>
+<p>From this perspective, an indirect demonstrator-based bias is more similar to unbiased transmission. If you remember from the <a href="unbiased-transmission.html#unbiased-transmission">first chapter</a>, simulations with unbiased transmission also generally ended up with one trait reaching fixation in small populations (<span class="math inline">\(N=100\)</span>), but in bigger ones (<span class="math inline">\(N=10000\)</span>) the frequencies of the two traits remained around <span class="math inline">\(p=0.5\)</span>. What happens with demonstrator-based bias?</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb59-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">biased_transmission_demonstrator</span>(<span class="dt">N =</span> <span class="dv">10000</span>, <span class="dt">p_s =</span> <span class="fl">0.005</span>, <span class="dt">p_low=</span><span class="fl">0.0001</span>, </span>
+<span id="cb59-2"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb59-2"></a>                                               <span class="dt">p_0 =</span> <span class="fl">0.5</span>, <span class="dt">t_max =</span> <span class="dv">200</span>, <span class="dt">r_max =</span> <span class="dv">10</span>)</span>
+<span id="cb59-3"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb59-3"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<div class="figure"><span id="fig:5-8"></span>
+<img src="IBM-cultevo_files/figure-html/5-8-1.png" alt="Indirectly biased transmission depends on the effective population size, not the overall population size." width="672" />
+<p class="caption">
+Figure 5.2: Indirectly biased transmission depends on the effective population size, not the overall population size.
+</p>
+</div>
+<p>Even with <span class="math inline">\(N=10000\)</span>, if the number of high-status individuals is sufficiently low, as in this case (<span class="math inline">\(p_s=0.005\)</span> means that, on average, 50 individuals are high-status in each run), traits reach fixation. By reducing the pool of demonstrators, demonstrator-based bias makes drift more important for the overall dynamics. The pool of high-status demonstrators (equal to <span class="math inline">\(Np_s\)</span>) is the effective population size, which is much smaller than the actual population size (<span class="math inline">\(N\)</span>).</p>
+<p>You can experiment with different values of <span class="math inline">\(p_s\)</span> and <span class="math inline">\(p_\text{low}\)</span>. How big can the pool of high-status demonstrators be before the dynamics become indistinguishable from unbiased transmission?</p>
+</div>
+<div id="predicting-the-winning-trait" class="section level2">
+<h2><span class="header-section-number">5.2</span> Predicting the ‘winning’ trait</h2>
+<p>With conformity, as just mentioned, the trait that reaches fixation is the one starting out in the majority. With unbiased transmission the trait that goes to fixation cannot be predicted at the beginning of the simulation. With a demonstrator-based bias, a reasonable guess would be that the ‘winning’ trait is the one that is, at the beginning, most common among the high-status individuals. Can we check this intuition with our model?</p>
+<p>Currently the output we obtain from the simulations is not suitable for this purpose. On the one hand, we do not have the crucial piece of information that we need: the proportion of each trait among the high-status individuals when the population is initialised. On the other hand, we have much information that we do not need, such as the frequency of the two traits at each time step. However, we just want to know which traits reach fixation. We can therefore rewrite the <code>biased_transmission_demonstrator()</code> function and change the <code>output</code> tibble to suit our needs.</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-1"></a>biased_transmission_demonstrator_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="cf">function</span>(N, p_<span class="dv">0</span>, p_s, p_low, t_max, r_max) {</span>
+<span id="cb60-2"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-2"></a>  </span>
+<span id="cb60-3"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-3"></a>  output &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">status_A =</span> <span class="kw">as.numeric</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, r_max)), </span>
+<span id="cb60-4"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-4"></a>                   <span class="dt">p =</span> <span class="kw">as.numeric</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, r_max)))</span>
+<span id="cb60-5"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-5"></a>  </span>
+<span id="cb60-6"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-6"></a>  <span class="cf">for</span> (r <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>r_max) {</span>
+<span id="cb60-7"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-7"></a>    </span>
+<span id="cb60-8"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-8"></a>    <span class="co"># Create first generation</span></span>
+<span id="cb60-9"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-9"></a>    population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, </span>
+<span id="cb60-10"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-10"></a>                                        <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_<span class="dv">0</span>, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_<span class="dv">0</span>)),</span>
+<span id="cb60-11"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-11"></a>                         <span class="dt">status =</span> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>), N, </span>
+<span id="cb60-12"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-12"></a>                                         <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_s, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_s))) </span>
+<span id="cb60-13"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-13"></a>    </span>
+<span id="cb60-14"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-14"></a>    <span class="co"># Assign copying probabilities based on individuals&#39; status</span></span>
+<span id="cb60-15"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-15"></a>    p_demonstrator &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">1</span>,N)</span>
+<span id="cb60-16"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-16"></a>    p_demonstrator[population<span class="op">$</span>status <span class="op">==</span><span class="st"> &quot;low&quot;</span>] &lt;-<span class="st"> </span>p_low</span>
+<span id="cb60-17"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-17"></a>    </span>
+<span id="cb60-18"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-18"></a>    <span class="co"># Add first generation&#39;s frequency of high-status individuals with traits A for run r  </span></span>
+<span id="cb60-19"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-19"></a>    output[r, ]<span class="op">$</span>status_A &lt;-<span class="st"> </span></span>
+<span id="cb60-20"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-20"></a><span class="st">      </span><span class="kw">sum</span>(population<span class="op">$</span>status <span class="op">==</span><span class="st"> &quot;high&quot;</span> <span class="op">&amp;</span><span class="st"> </span>population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span></span>
+<span id="cb60-21"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-21"></a><span class="st">      </span><span class="kw">sum</span>(population<span class="op">$</span>status <span class="op">==</span><span class="st"> &quot;high&quot;</span>)</span>
+<span id="cb60-22"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-22"></a>    </span>
+<span id="cb60-23"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-23"></a>    <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span>t_max) {</span>
+<span id="cb60-24"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-24"></a>      </span>
+<span id="cb60-25"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-25"></a>      <span class="co"># Copy individuals to previous_population tibble</span></span>
+<span id="cb60-26"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-26"></a>      previous_population &lt;-<span class="st"> </span>population </span>
+<span id="cb60-27"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-27"></a>      </span>
+<span id="cb60-28"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-28"></a>      <span class="co"># Copy traits based on status</span></span>
+<span id="cb60-29"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-29"></a>      <span class="cf">if</span>(<span class="kw">sum</span>(p_demonstrator) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>){</span>
+<span id="cb60-30"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-30"></a>        demonstrator_index &lt;-<span class="st"> </span><span class="kw">sample</span> (N, <span class="dt">prob =</span> p_demonstrator, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb60-31"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-31"></a>        population<span class="op">$</span>trait &lt;-<span class="st"> </span>previous_population<span class="op">$</span>trait[demonstrator_index]</span>
+<span id="cb60-32"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-32"></a>      }</span>
+<span id="cb60-33"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-33"></a>    }</span>
+<span id="cb60-34"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-34"></a>  <span class="co"># Get p at the end of the run </span></span>
+<span id="cb60-35"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-35"></a>  output[r, ]<span class="op">$</span>p &lt;-<span class="st"> </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N     </span>
+<span id="cb60-36"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-36"></a>  }</span>
+<span id="cb60-37"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-37"></a>  output <span class="co"># export data from function</span></span>
+<span id="cb60-38"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb60-38"></a>}</span></code></pre></div>
+<p>Here, <code>status_A</code> gives the starting frequency of A among the high status individuals. <span class="math inline">\(p\)</span>, as before, gives the frequency of <span class="math inline">\(A\)</span> in the entire population, but we only record this value at the very end of the simulation, to see if one trait has gone to fixation. The tibble <code>output</code>, as a consequence, has now only <span class="math inline">\(r_\text{max}\)</span> rows.</p>
+<p>Let’s run the new function, <code>biased_transmission_demonstrator_2()</code>, for 50 runs (setting <code>r_max = 50</code>) so that we have more independent data points, and inspect the output.</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb61-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">biased_transmission_demonstrator_2</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">p_s =</span> <span class="fl">0.05</span>, <span class="dt">p_low=</span><span class="fl">0.0001</span>, </span>
+<span id="cb61-2"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb61-2"></a>                                                 <span class="dt">p_0 =</span> <span class="fl">0.5</span>, <span class="dt">t_max =</span> <span class="dv">50</span>, <span class="dt">r_max =</span> <span class="dv">50</span>)</span>
+<span id="cb61-3"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb61-3"></a>data_model</span></code></pre></div>
+<pre><code>## # A tibble: 50 x 2
+##    status_A     p
+##       &lt;dbl&gt; &lt;dbl&gt;
+##  1    0.333     0
+##  2    0         0
+##  3    1         1
+##  4    0.2       1
+##  5    0.5       1
+##  6    0.4       1
+##  7    0         0
+##  8    0.571     1
+##  9    0.333     1
+## 10    0.5       1
+## # … with 40 more rows</code></pre>
+<p>Each line of the output is a run of the simulation. The first column (labelled <code>status_A</code>) gives the frequency of <span class="math inline">\(A\)</span> in the high-status individuals, and the second (labelled <code>p</code>) the frequency of <span class="math inline">\(A\)</span> at the end of the simulation. From a cursory inspection of the output, you should be able to see that our guess was correct, and when <code>status_A</code> is higher than 0.5, <code>p</code> should be generally 1, and when <code>status_A</code> is less than 0.5, <code>p</code> should be generally 0. But let’s visualise all the data to be sure.</p>
+<p>We want to know how the initial proportion of high-status individuals is related to the two possible outcomes (trait <span class="math inline">\(A\)</span> reaches fixation or trait <span class="math inline">\(B\)</span> reaches fixation). A convenient way is to use a boxplot. In the code below, we first eliminate the runs where the traits did not reach fixation (if they exist) using the new function <code>filter()</code>, and, for clarity, we assign the trait name <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> to each run according to which trait reached fixation. We can then plot our output.</p>
+<p>The main novelties in this code are the new ggplot ‘geoms’ <code>geom_boxplot()</code> and <code>geom_jitter()</code>. Whereas boxplots are useful to detect aggregate information on our simulations, <code>geom_jitter()</code> plots all of the data points, so we can get a better idea of how the proportions of high-status individuals are distributed in the various runs. We could have done this with our usual <code>geom_point()</code>, but <code>geom_jitter()</code> scatters randomly the points in the plot (at a distance specified by the parameter <code>width</code>). This avoids the overlapping of individual data points (known as overplotting).</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-1"></a><span class="co"># Filter only lines where p is equal to 1 or to 0</span></span>
+<span id="cb63-2"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-2"></a>data_model &lt;-<span class="st"> </span><span class="kw">filter</span>(data_model, p <span class="op">==</span><span class="st"> </span><span class="dv">1</span> <span class="op">|</span><span class="st"> </span>p <span class="op">==</span><span class="st"> </span><span class="dv">0</span>)</span>
+<span id="cb63-3"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-3"></a></span>
+<span id="cb63-4"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-4"></a>data_model<span class="op">$</span>p &lt;-<span class="st"> </span><span class="kw">as.character</span>(data_model<span class="op">$</span>p)</span>
+<span id="cb63-5"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-5"></a><span class="co"># Call &quot;A&quot; the runs where p is equal to 1 </span></span>
+<span id="cb63-6"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-6"></a>data_model[data_model<span class="op">$</span>p<span class="op">==</span><span class="dv">1</span>, ]<span class="op">$</span>p &lt;-<span class="st"> &quot;A&quot;</span></span>
+<span id="cb63-7"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-7"></a><span class="co"># Call &quot;B&quot; the runs where p is equal to 0</span></span>
+<span id="cb63-8"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-8"></a>data_model[data_model<span class="op">$</span>p<span class="op">==</span><span class="dv">0</span>, ]<span class="op">$</span>p &lt;-<span class="st"> &quot;B&quot;</span></span>
+<span id="cb63-9"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-9"></a></span>
+<span id="cb63-10"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-10"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> data_model, <span class="kw">aes</span>(<span class="dt">x =</span> p, <span class="dt">y =</span> status_A, <span class="dt">fill =</span> p)) <span class="op">+</span></span>
+<span id="cb63-11"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-11"></a><span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></span>
+<span id="cb63-12"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-12"></a><span class="st">  </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="fl">0.05</span>) <span class="op">+</span></span>
+<span id="cb63-13"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-13"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;proportion of high-status individuals with trait A&quot;</span>, </span>
+<span id="cb63-14"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-14"></a>       <span class="dt">x =</span> <span class="st">&quot;winning trait&quot;</span>) <span class="op">+</span></span>
+<span id="cb63-15"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-15"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb63-16"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-16"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>) </span></code></pre></div>
+<div class="figure"><span id="fig:5-11"></span>
+<img src="IBM-cultevo_files/figure-html/5-11-1.png" alt="The trait reaching fixation tends to be the trait that was in majority among high-status individuals." width="672" />
+<p class="caption">
+Figure 5.3: The trait reaching fixation tends to be the trait that was in majority among high-status individuals.
+</p>
+</div>
+<p>The plot shows that when trait <span class="math inline">\(A\)</span> reaches fixation there are more high-status individuals with trait <span class="math inline">\(A\)</span> at the beginning, and vice versa for <span class="math inline">\(B\)</span>, confirming our intuition. However, this is far from being a safe bet. Runs with only a quarter of high-status individuals with <span class="math inline">\(A\)</span> ended up with all <span class="math inline">\(A\)</span>s in the population and, conversely, runs with 80% of high-status individuals with <span class="math inline">\(A\)</span> ended up with the fixation of <span class="math inline">\(B\)</span>. With bigger populations (e.g. with <span class="math inline">\(N=10000\)</span>), it is even worse.</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">biased_transmission_demonstrator_2</span>(<span class="dt">N =</span> <span class="dv">10000</span>, <span class="dt">p_s =</span> <span class="fl">0.005</span>, <span class="dt">p_low=</span><span class="fl">0.0001</span>, </span>
+<span id="cb64-2"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-2"></a>                                                 <span class="dt">p_0 =</span> <span class="fl">0.5</span>, <span class="dt">t_max =</span> <span class="dv">200</span>, <span class="dt">r_max =</span> <span class="dv">50</span>)</span>
+<span id="cb64-3"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-3"></a></span>
+<span id="cb64-4"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-4"></a><span class="co"># Filter only lines where p is equal to 1 or to 0</span></span>
+<span id="cb64-5"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-5"></a>data_model &lt;-<span class="st"> </span><span class="kw">filter</span>(data_model, p <span class="op">==</span><span class="st"> </span><span class="dv">1</span> <span class="op">|</span><span class="st"> </span>p <span class="op">==</span><span class="st"> </span><span class="dv">0</span>)</span>
+<span id="cb64-6"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-6"></a></span>
+<span id="cb64-7"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-7"></a>data_model<span class="op">$</span>p &lt;-<span class="st"> </span><span class="kw">as.character</span>(data_model<span class="op">$</span>p)</span>
+<span id="cb64-8"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-8"></a><span class="co"># Call &quot;A&quot; the runs where p is equal to 1 </span></span>
+<span id="cb64-9"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-9"></a>data_model[data_model<span class="op">$</span>p<span class="op">==</span><span class="dv">1</span>, ]<span class="op">$</span>p &lt;-<span class="st"> &quot;A&quot;</span></span>
+<span id="cb64-10"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-10"></a><span class="co"># Call &quot;B&quot; the runs where p is equal to 0</span></span>
+<span id="cb64-11"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-11"></a>data_model[data_model<span class="op">$</span>p<span class="op">==</span><span class="dv">0</span>, ]<span class="op">$</span>p &lt;-<span class="st"> &quot;B&quot;</span></span>
+<span id="cb64-12"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-12"></a></span>
+<span id="cb64-13"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-13"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> data_model, <span class="kw">aes</span>(<span class="dt">x =</span> p, <span class="dt">y =</span> status_A, <span class="dt">fill =</span> p)) <span class="op">+</span></span>
+<span id="cb64-14"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-14"></a><span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></span>
+<span id="cb64-15"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-15"></a><span class="st">  </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="fl">0.05</span>) <span class="op">+</span></span>
+<span id="cb64-16"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-16"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;proportion of high-status individuals with trait A&quot;</span>, </span>
+<span id="cb64-17"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-17"></a>       <span class="dt">x =</span> <span class="st">&quot;winning trait&quot;</span>) <span class="op">+</span></span>
+<span id="cb64-18"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-18"></a><span class="st">  </span><span class="kw">ylim</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)) <span class="op">+</span></span>
+<span id="cb64-19"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-19"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb64-20"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-20"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>) </span></code></pre></div>
+<div class="figure"><span id="fig:5-12"></span>
+<img src="IBM-cultevo_files/figure-html/5-12-1.png" alt="With bigger populations - and bigger pools of high-status demonstrators is more difficult to predict the winning trait." width="672" />
+<p class="caption">
+Figure 5.4: With bigger populations - and bigger pools of high-status demonstrators is more difficult to predict the winning trait.
+</p>
+</div>
+<p>With <span class="math inline">\(N=10000\)</span> and around 50 high-status individuals, the traits are more equally distributed among ‘influential’ demonstrators at the beginning, and there is hardly any difference in the two outcomes.</p>
+</div>
+<div id="summary-of-the-model-4" class="section level2">
+<h2><span class="header-section-number">5.3</span> Summary of the model</h2>
+<p>In this chapter we modeled an example of indirectly-biased or demonstrator-biased transmission. We assumed that a fraction of individuals in the population were ‘high-status’ and thus more likely to be selected as demonstrators. The results show that in this situation a trait is likely to become predominant even when populations are large. This is due to the fact that a demonstrator bias effectively reduces the pool of demonstrators and accelerates convergence through a similar process as drift / unbiased transmission.</p>
+<p>We also saw that the possibility of predicting which trait will become predominant depends on the number of high-status demonstrators. When there are few high-status demonstrators, then the most common trait amongst these high-status demonstrators will likely go to fixation. When their number increases, it is more difficult to make such a prediction.</p>
+<p>We also saw how it is important to modify the output of a model depending on the question we are interested in. We used a novel ggplot aesthetic to produce a boxplot, a convenient way of displaying the distribution of data among different groups.</p>
+</div>
+<div id="further-readings-1" class="section level2">
+<h2><span class="header-section-number">5.4</span> Further readings</h2>
+<p>Examples of simulation models implementing indirect, demonstrator-based, biased transmission include <span class="citation">Mesoudi (<a href="references.html#ref-mesoudi_cultural_2009" role="doc-biblioref">2009</a>)</span>, an individual-based model that explores how prestige bias can generate clusters of recurring behaviours, applied to the case of copycat suicides. <span class="citation">Henrich Joseph, Chudek Maciej, and Boyd Robert (<a href="references.html#ref-henrich_joseph_big_2015" role="doc-biblioref">2015</a>)</span> presents a population-level model that links prestige to the emergence of within-group cooperation. <span class="citation">Henrich (<a href="references.html#ref-henrich_demography_2004" role="doc-biblioref">2004</a>)</span> describes an analytical, population-level, model, where individuals copy the most successful demonstrator in the population.</p>
+<p>An earlier analytical treatment of demonstrator-based bias, with extensions on the evolution of symbolic traits that may be associated to demonstrators is in Chapter 8 of <span class="citation">Boyd and Richerson (<a href="references.html#ref-boyd_culture_1985" role="doc-biblioref">1985</a>)</span>.</p>
+<p>Finally, <span class="citation">Henrich and Gil-White (<a href="references.html#ref-henrich_evolution_2001" role="doc-biblioref">2001</a>)</span> is the classic treatment of prestige bias, and a recent review of the empirical evidence supporting it is <span class="citation">Jiménez and Mesoudi (<a href="references.html#ref-jimenez_prestige-biased_2019" role="doc-biblioref">2019</a>)</span>.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="biased-transmission-frequency-dependent-indirect-bias.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="vertical-and-horizontal-transmission.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["IBM-cultevo.pdf", "IBM-cultevo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

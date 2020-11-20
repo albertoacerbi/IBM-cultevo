@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Individual-based models of cultural evolution</title>
+  <meta name="description" content="Individual-based models of cultural evolution" />
+  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Individual-based models of cultural evolution" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Individual-based models of cultural evolution" />
+  
+  
+  
+
+<meta name="author" content="Alberto Acerbi" />
+<meta name="author" content="Marco Smolla" />
+<meta name="author" content="Alex Mesoudi" />
+
+
+<meta name="date" content="2020-11-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="unbiased-transmission.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Individual-based models of cultural evolution</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#aim-of-the-book"><i class="fa fa-check"></i>Aim of the book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-is-cultural-evolution"><i class="fa fa-check"></i>What is cultural evolution?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-model"><i class="fa fa-check"></i>Why model?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-individual-based-models"><i class="fa fa-check"></i>Why individual-based models?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book---the-programming"><i class="fa fa-check"></i>How to use this book - the programming</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book---the-simulations"><i class="fa fa-check"></i>How to use this book - the simulations</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#conventions-and-formatting"><i class="fa fa-check"></i>Conventions and formatting</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
+</ul></li>
+<li class="part"><span><b>Basics</b></span></li>
+<li class="chapter" data-level="1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html"><i class="fa fa-check"></i><b>1</b> Unbiased transmission</a><ul>
+<li class="chapter" data-level="1.1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#initialising-the-simulation"><i class="fa fa-check"></i><b>1.1</b> Initialising the simulation</a></li>
+<li class="chapter" data-level="1.2" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#execute-generation-turn-over-many-times"><i class="fa fa-check"></i><b>1.2</b> Execute generation turn-over many times</a></li>
+<li class="chapter" data-level="1.3" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#plotting-the-model-results"><i class="fa fa-check"></i><b>1.3</b> Plotting the model results</a></li>
+<li class="chapter" data-level="1.4" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#write-a-function-to-wrap-the-model-code"><i class="fa fa-check"></i><b>1.4</b> Write a function to wrap the model code</a></li>
+<li class="chapter" data-level="1.5" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#run-several-independent-simulations-and-plot-their-results"><i class="fa fa-check"></i><b>1.5</b> Run several independent simulations and plot their results</a></li>
+<li class="chapter" data-level="1.6" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#varying-initial-conditions"><i class="fa fa-check"></i><b>1.6</b> Varying initial conditions</a></li>
+<li class="chapter" data-level="1.7" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#summary-of-the-model"><i class="fa fa-check"></i><b>1.7</b> Summary of the model</a></li>
+<li class="chapter" data-level="1.8" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#further-reading-1"><i class="fa fa-check"></i><b>1.8</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html"><i class="fa fa-check"></i><b>2</b> Unbiased and biased mutation</a><ul>
+<li class="chapter" data-level="2.1" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#unbiased-mutation"><i class="fa fa-check"></i><b>2.1</b> Unbiased mutation</a></li>
+<li class="chapter" data-level="2.2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#biased-mutation"><i class="fa fa-check"></i><b>2.2</b> Biased mutation</a></li>
+<li class="chapter" data-level="2.3" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#summary-of-the-model-1"><i class="fa fa-check"></i><b>2.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="2.4" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#further-reading-2"><i class="fa fa-check"></i><b>2.4</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html"><i class="fa fa-check"></i><b>3</b> Biased transmission: direct bias</a><ul>
+<li class="chapter" data-level="3.1" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#a-simple-model-of-directly-biased-transmission"><i class="fa fa-check"></i><b>3.1</b> A simple model of directly biased transmission</a></li>
+<li class="chapter" data-level="3.2" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#strength-of-selection"><i class="fa fa-check"></i><b>3.2</b> Strength of selection</a></li>
+<li class="chapter" data-level="3.3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#summary-of-the-model-2"><i class="fa fa-check"></i><b>3.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="3.4" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#further-reading-3"><i class="fa fa-check"></i><b>3.4</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html"><i class="fa fa-check"></i><b>4</b> Biased transmission: frequency-dependent indirect bias</a><ul>
+<li class="chapter" data-level="4.1" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#the-logic-of-conformity"><i class="fa fa-check"></i><b>4.1</b> The logic of conformity</a></li>
+<li class="chapter" data-level="4.2" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#testing-conformist-transmission"><i class="fa fa-check"></i><b>4.2</b> Testing conformist transmission</a></li>
+<li class="chapter" data-level="4.3" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#summary-of-the-model-3"><i class="fa fa-check"></i><b>4.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="4.4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#further-readings"><i class="fa fa-check"></i><b>4.4</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html"><i class="fa fa-check"></i><b>5</b> Biased transmission: demonstrator-based indirect bias</a><ul>
+<li class="chapter" data-level="5.1" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#a-simple-demonstrator-bias"><i class="fa fa-check"></i><b>5.1</b> A simple demonstrator bias</a></li>
+<li class="chapter" data-level="5.2" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#predicting-the-winning-trait"><i class="fa fa-check"></i><b>5.2</b> Predicting the ‘winning’ trait</a></li>
+<li class="chapter" data-level="5.3" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#summary-of-the-model-4"><i class="fa fa-check"></i><b>5.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="5.4" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#further-readings-1"><i class="fa fa-check"></i><b>5.4</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html"><i class="fa fa-check"></i><b>6</b> Vertical and horizontal transmission</a><ul>
+<li class="chapter" data-level="6.1" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#vertical-cultural-transmission"><i class="fa fa-check"></i><b>6.1</b> Vertical cultural transmission</a></li>
+<li class="chapter" data-level="6.2" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#horizontal-cultural-transmission"><i class="fa fa-check"></i><b>6.2</b> Horizontal cultural transmission</a></li>
+<li class="chapter" data-level="6.3" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#summary-of-the-model-5"><i class="fa fa-check"></i><b>6.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="6.4" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#further-reading-4"><i class="fa fa-check"></i><b>6.4</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html"><i class="fa fa-check"></i><b>7</b> Multiple traits models</a><ul>
+<li class="chapter" data-level="7.1" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#unbiased-transmission-with-multiple-traits"><i class="fa fa-check"></i><b>7.1</b> Unbiased transmission with multiple traits</a></li>
+<li class="chapter" data-level="7.2" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#introducing-innovation"><i class="fa fa-check"></i><b>7.2</b> Introducing innovation</a></li>
+<li class="chapter" data-level="7.3" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#optimising-the-code"><i class="fa fa-check"></i><b>7.3</b> Optimising the code</a></li>
+<li class="chapter" data-level="7.4" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#the-distribution-of-popularity"><i class="fa fa-check"></i><b>7.4</b> The distribution of popularity</a></li>
+<li class="chapter" data-level="7.5" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#summary-of-the-model-6"><i class="fa fa-check"></i><b>7.5</b> Summary of the model</a></li>
+<li class="chapter" data-level="7.6" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#further-readings-2"><i class="fa fa-check"></i><b>7.6</b> Further readings</a></li>
+</ul></li>
+<li class="part"><span><b>Advanced topics - The evolution of cultural evolution</b></span></li>
+<li class="chapter" data-level="8" data-path="rogers-paradox.html"><a href="rogers-paradox.html"><i class="fa fa-check"></i><b>8</b> Rogers’ Paradox</a><ul>
+<li class="chapter" data-level="8.1" data-path="rogers-paradox.html"><a href="rogers-paradox.html#modelling-rogers-paradox"><i class="fa fa-check"></i><b>8.1</b> Modelling Rogers’ Paradox</a></li>
+<li class="chapter" data-level="8.2" data-path="rogers-paradox.html"><a href="rogers-paradox.html#summary-of-the-model-7"><i class="fa fa-check"></i><b>8.2</b> Summary of the model</a></li>
+<li class="chapter" data-level="8.3" data-path="rogers-paradox.html"><a href="rogers-paradox.html#further-reading-5"><i class="fa fa-check"></i><b>8.3</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html"><i class="fa fa-check"></i><b>9</b> Rogers’ Paradox: A Solution</a><ul>
+<li class="chapter" data-level="9.1" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#modelling-critical-social-learners"><i class="fa fa-check"></i><b>9.1</b> Modelling critical social learners</a></li>
+<li class="chapter" data-level="9.2" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#summary-of-the-model-8"><i class="fa fa-check"></i><b>9.2</b> Summary of the model</a></li>
+<li class="chapter" data-level="9.3" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#further-reading-6"><i class="fa fa-check"></i><b>9.3</b> Further reading</a></li>
+</ul></li>
+<li class="part"><span><b>Advanced topics - Culture and populations</b></span></li>
+<li class="chapter" data-level="10" data-path="demography.html"><a href="demography.html"><i class="fa fa-check"></i><b>10</b> Demography</a><ul>
+<li class="chapter" data-level="10.1" data-path="demography.html"><a href="demography.html#the-tasmania-case"><i class="fa fa-check"></i><b>10.1</b> The Tasmania Case</a></li>
+<li class="chapter" data-level="10.2" data-path="demography.html"><a href="demography.html#modelling-the-tasmania-case"><i class="fa fa-check"></i><b>10.2</b> Modelling the Tasmania Case</a></li>
+<li class="chapter" data-level="10.3" data-path="demography.html"><a href="demography.html#calculating-critical-population-sizes-based-on-skill-complexity"><i class="fa fa-check"></i><b>10.3</b> Calculating critical population sizes based on skill complexity</a></li>
+<li class="chapter" data-level="10.4" data-path="demography.html"><a href="demography.html#summary-of-the-model-9"><i class="fa fa-check"></i><b>10.4</b> Summary of the model</a></li>
+<li class="chapter" data-level="10.5" data-path="demography.html"><a href="demography.html#further-readings-3"><i class="fa fa-check"></i><b>10.5</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="social-network-structure.html"><a href="social-network-structure.html"><i class="fa fa-check"></i><b>11</b> Social network structure</a><ul>
+<li class="chapter" data-level="11.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-basics"><i class="fa fa-check"></i><b>11.1</b> Network basics</a></li>
+<li class="chapter" data-level="11.2" data-path="social-network-structure.html"><a href="social-network-structure.html#generating-networks"><i class="fa fa-check"></i><b>11.2</b> Generating networks</a></li>
+<li class="chapter" data-level="11.3" data-path="social-network-structure.html"><a href="social-network-structure.html#plotting-networks"><i class="fa fa-check"></i><b>11.3</b> Plotting networks</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-layout"><i class="fa fa-check"></i><b>11.3.1</b> Network layout</a></li>
+<li class="chapter" data-level="11.3.2" data-path="social-network-structure.html"><a href="social-network-structure.html#network-styling"><i class="fa fa-check"></i><b>11.3.2</b> Network styling</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="social-network-structure.html"><a href="social-network-structure.html#analyse-social-networks"><i class="fa fa-check"></i><b>11.4</b> Analyse social networks</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-properties-and-characteristics"><i class="fa fa-check"></i><b>11.4.1</b> Network properties and characteristics</a></li>
+<li class="chapter" data-level="11.4.2" data-path="social-network-structure.html"><a href="social-network-structure.html#vertex-properties"><i class="fa fa-check"></i><b>11.4.2</b> Vertex properties</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="social-network-structure.html"><a href="social-network-structure.html#modelling-information-transmission-in-social-networks"><i class="fa fa-check"></i><b>11.5</b> Modelling information transmission in social networks</a><ul>
+<li class="chapter" data-level="11.5.1" data-path="social-network-structure.html"><a href="social-network-structure.html#gossip-diffusion-in-networked-populations"><i class="fa fa-check"></i><b>11.5.1</b> Gossip diffusion in networked populations</a></li>
+<li class="chapter" data-level="11.5.2" data-path="social-network-structure.html"><a href="social-network-structure.html#complex-versus-simple-contagion-information-transmission"><i class="fa fa-check"></i><b>11.5.2</b> Complex versus simple contagion information transmission</a></li>
+</ul></li>
+<li class="chapter" data-level="11.6" data-path="social-network-structure.html"><a href="social-network-structure.html#summary-of-the-model-10"><i class="fa fa-check"></i><b>11.6</b> Summary of the model</a></li>
+<li class="chapter" data-level="11.7" data-path="social-network-structure.html"><a href="social-network-structure.html#further-reading-7"><i class="fa fa-check"></i><b>11.7</b> Further Reading</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Individual-based models of cultural evolution</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Individual-based models of cultural evolution</h1>
+<h2 class="subtitle"><em>A step-by-step guide using R</em></h2>
+<p class="author"><em>Alberto Acerbi</em></p>
+<p class="author"><em>Marco Smolla</em></p>
+<p class="author"><em>Alex Mesoudi</em></p>
+<p class="date"><em>2020-11-20</em></p>
+</div>
+<div id="introduction" class="section level1 unnumbered">
+<h1>Introduction</h1>
+<div id="aim-of-the-book" class="section level2 unnumbered">
+<h2>Aim of the book</h2>
+<p>The field of cultural evolution has emerged in the last few decades as a thriving, interdisciplinary effort to understand cultural change and cultural diversity within an evolutionary framework and using evolutionary tools, concepts and methods. Given its roots in evolutionary biology, much of cultural evolution is grounded in, or inspired by, formal models. Yet many researchers interested in cultural evolution come from backgrounds that lack training in formal models, such as psychology, anthropology or archaeology.</p>
+<p>The aim of this book is to partly address this gap by showing readers how to create individual-based models (IBMs, also known as agent-based models, or ABMs) of cultural evolution. We provide example code written in the programming language <a href="https://www.r-project.org">R</a>, which has been widely adopted in the scientific community. We will go from very simple models of the basic processes of cultural evolution, such as biased transmission and cultural mutation, to more advanced topics such as the evolution of social learning, demographic effects, and social network analysis. Where possible we recreate existing models in the literature, so that readers can better understand those existing models, and perhaps even extend them to address questions of their own interest.</p>
+</div>
+<div id="what-is-cultural-evolution" class="section level2 unnumbered">
+<h2>What is cultural evolution?</h2>
+<p>The theory of evolution is typically applied to genetic change. Darwin pointed out that the diversity and complexity of living things can be explained in terms of a deceptively simple process: (1) organisms vary in their characteristics, (2) these characteristics are inherited from parent to offspring, and (3) those characteristics that make an organism more likely to survive and reproduce will tend to increase in frequency over time. That’s pretty much it. Since Darwin, biologists have filled in many of the details of this abstract idea. Geneticists have shown that heritable ‘characteristics’ are determined by genes, and worked out where genetic variation comes from (e.g. mutation, recombination) and how genetic inheritance works (e.g. via Mendel’s laws, and DNA). The details of selection have been explored, revealing the many reasons why some genes spread and others don’t. Others realised that not all biological change results from selection, it can also result from random processes like population bottlenecks (genetic drift).</p>
+<p>The modern theory of cultural evolution began from the observation that culture constitutes a similar evolutionary process to that outlined above. ‘Culture’ is defined as information that passes from one individual to another socially, rather than genetically. This could include things we colloquially call knowledge, beliefs, ideas, attitudes, customs, words, or values. These are all learned from others via various ‘social learning’ mechanisms such as imitation or spoken/written language. The key point is that social learning is an inheritance system. Cultural characteristics (or cultural traits) vary across individuals, they are passed from individual to individual, and in many cases some traits are more likely to spread than others. This is Darwin’s insight, applied to culture. Cultural evolution researchers think that we can use similar evolutionary concepts, tools and methods to explain the diversity and complexity of culture, just as biologists have done for the diversity and complexity of living forms. The models in this book will help you to understand many of the above principles, by creating simulations of various aspects of cultural evolution.</p>
+<p>Importantly, we do not need to assume that cultural evolution is identical to genetic evolution. Many of the details will be different. To take an obvious example, we get DNA only from our two parents, but we can get ideas from many sources: teachers, strangers on the internet, long-dead authors’ books, or even our parents. Cultural evolution researchers seek to build models and do research to fill in these details. In the last part of the book we will also explore models that go beyond a strict analogy with biological evolution, and focus on features such as the fact that the ‘rules’ that regulate transmission can themselves culturally evolve, or that other processes than inheritance can create and stabilise culture.</p>
+</div>
+<div id="why-model" class="section level2 unnumbered">
+<h2>Why model?</h2>
+<p>A formal model is a simplified version of reality, written in mathematical equations or computer code. Formal models are useful because reality is complex. We can observe changes in species or cultures over time, or particular patterns of biological or cultural diversity, but there are always a vast array of possible causes for any particular pattern or trend, and huge numbers of variables interacting in many different ways. A formal model is a highly simplified recreation of a small part of this complex reality, containing a few elements or processes that the modeller suspects are important. A model, unlike reality, can be manipulated and probed in order to better understand how each part works. No model is ever a complete recreation of reality. That would be pointless: we would have replaced a complex, incomprehensible reality with a complex, incomprehensible model. Instead, models are useful <em>because</em> of their simplicity.</p>
+<p>Formal modelling is rare in the social sciences (with some exceptions, such as economics). Social scientists tend to be sceptical that very simple models can tell us anything useful about something as immensely complex as human culture. But the clear lesson from biology is that models are extremely useful in precisely this situation. Biologists face similarly immense complexity in the natural world. Despite this, models are useful. Population genetics models of the early 20th century helped to reconcile new findings in genetics with Darwin’s theory of evolution. Ecological models helped understand interactions between species, such as predator-prey cycles. These models are hugely simplified: population genetics models typically make ridiculous assumptions like infinitely large populations and random mating. But they are useful because they precisely specify each part of a complex system, improving understanding of reality.</p>
+<p>Another way to look at this is that all social scientists use models, but only some use <em>formal</em> models. Most theories in social sciences are verbal models, written in words. The problem is that words can be imprecise, and verbal models contain all kinds of hidden or unstated assumptions. The advantage of formal modelling is that we are forced to precisely specify every element and process that we propose, and make all of our assumptions explicit. Maths and code do not accept any ambiguity: they must be told absolutely everything.</p>
+<p>Models can also help to understand the consequences of our theories. Social systems, like many others, are typically under the influence of several different interacting forces. In isolation the effects of these forces can be easy to predict. However, when several forces interact the resulting dynamics quickly become non-trivial. This is the basic idea behind defining these systems as ‘complex’ systems. With verbal descriptions, figuring out the effects of interactions is left to our insights. With formal models, we can set up systems with these forces and observe the dynamics of their interactions.</p>
+</div>
+<div id="why-individual-based-models" class="section level2 unnumbered">
+<h2>Why individual-based models?</h2>
+<p>There are several different types of formal models. Some models describe the behaviour of a system at the population-level, tracking overall frequencies or other descriptive statistics of traits without explicitly modelling individuals. For example, a model can specify that the frequency of a cultural trait <span class="math inline">\(A\)</span> at time <span class="math inline">\(t\)</span> depends on its frequency at time <span class="math inline">\(t-1\)</span>. Perhaps it doubles at each time step. Other models, instead, describe the behaviour of a system at the individual-level, explicitly modelling the individual entities that possess the traits. Imagine the same question, but now we specify that, in a population of <span class="math inline">\(N\)</span> individuals, each individual observes each time a random number of other individuals and, if at least one of them has trait <span class="math inline">\(A\)</span>, it copies that trait.</p>
+<p>Another distinction concerns models that are analytically tractable and models that are not. The former are mathematical models that consist of sets of equations that can be solved to find specific answers (e.g. equilibria points). Our population-level model described above would fit this description. A big advantage of these models is that they can provide insight into the dynamics of a system for a wide range of parameters, or exact results for specific questions. However, this approach requires the studied dynamics to be rather simple. It would be more difficult (or perhaps impossible) to write and analytically solve the systems of equations necessary to describe the behaviours of the single individuals in the second model.</p>
+<p>Often, when we want or need to describe the behaviour at the individual level - if, for example, individuals differ in their characteristics, exhibit learning or adaptation, or are embedded in social networks - trying to write a system of equations may not be the best strategy. Instead, we need to write code and let the computer program run. These are individual-based models (IBMs). These models are both individual-level (i.e. they specifies the characteristics of the individuals and some rules by which those individuals interact or change over time) and simulations (i.e. they are not solved analytically, but simulated through a computer program).</p>
+<p>Simulations have greater flexibility than analytical models. Due to their structure they are often more intuitive to understand, especially for people with little training in mathematics. However, it is also important to be aware of their downsides. For example, generalisations are often not possible and statements only hold for parameters (or sets thereof) that have been simulated. Another potential downside is that the high flexibility of simulations can quickly lead to models that are <em>too</em> complex, and it can be hard to understand what is happening inside the model. That’s why, hopefully, our IBMs are simple enough to understand, and provide a gateway into cultural evolution modelling.</p>
+</div>
+<div id="how-to-use-this-book---the-programming" class="section level2 unnumbered">
+<h2>How to use this book - the programming</h2>
+<p>All of the code in this book is written in R. Originally R had a strong focus on statistical data analysis. Its growing user-base has turned R into a more general-purpose programming language. While R is used less often for modelling, it is widely taught in many university departments and is the subject of lots of online tutorials and support forums. It is quite likely that many readers already have some experience in R for data analysis and visualisation which can be used also for IBMs, more easily than learning another programming language. Also, if your IBMs run in R, you can use the same language to analyse the output and plot the results.</p>
+<p>We have used the <a href="https://bookdown.org">bookdown</a> package to create an html version of the book, which you may well be reading now. This is created from RMarkdown (.Rmd) files, which are a mix of regular text and code. As a reader, you can therefore read the online book and, alongside, run the code using an Rmd file. Of course you can just read the book, but running the code as you go will give you more direct experience of how the code executes, and will allow you to play around with parameters and commands. The best way of learning - especially modelling! - is to try it out yourself.</p>
+<p>We assume that the reader has basic knowledge of R (and <a href="https://rstudio.com">RStudio</a>, which provides a powerful user-interface for R), including installing it, setting it up, updating it, installing packages and running code. We strived to proceed from very simple to more complex code in a gradual way, and to explain all the non-obvious newly introduced programming techniques, but a basic knowledge of R as a programming language, e.g. the use of variables, dataframes, functions, subsetting and loops, will greatly facilitate the reading.</p>
+<p>We use the <a href="https://www.tidyverse.org">tidyverse</a> package and follow the underlying logic. For example, we use the tidyverse-typical data structures (tibbles rather than dataframes) and the <a href="https://ggplot2.tidyverse.org">ggplot</a> graphic system (rather than the base R plot function). These are user-friendly and widely used, and they will make it easier to manipulate data and create professional-looking visualisations. The tidyverse, however, has not been created with IBMs in mind. We have therefore not religiously stuck to tidyverse, and we also use functions, data structures, and programming styles that go beyond the tidyverse (in chapter <a href="LINK">seven</a>, for example, we show how matrices are more effective than tibbles in computationally-heavy simulations).</p>
+<p>Beside the tidyverse package, we have limited as much as possible the number of additional packages needed to run the simulations. The few packages needed to compile some of the code are explicitly introduced in the book when needed.</p>
+</div>
+<div id="how-to-use-this-book---the-simulations" class="section level2 unnumbered">
+<h2>How to use this book - the simulations</h2>
+<p>The book is intended - as the title says - as a step-by-step guide. If you are interested in modelling cultural evolution, or in modelling in general, and you do not have previous experience, you should go through the simulations we describe chapter by chapter. The chapters build in complexity both from the programming and from the conceptual point of view. Alternatively, if you are interested in specific models then you can go straight to the relevant chapter. In this case, however, you will need previous programming experience. (And you will have to figure out by yourself at least some of our programming choices!)</p>
+<p>The book is organised as follows. We start by presenting IBM versions of some of the now-classic mathematical and population-level models described in the foundational cultural evolution books, such as Robert Boyd and Peter Richerson’s <em>Culture and the Evolutionary Process</em> and Luigi-Luca Cavalli-Sforza and Marc Feldman’s <em>Cultural Transmission and Evolution</em>. The models do not add conceptually to the original analytical treatments, but they show how to use them to develop IBMs, and they provide several basic tools to build models that describe cultural evolution. Some of the subsequent chapters develop aspects that are possible only with IBMs, for example, simulating cultural dynamics with many different traits (<a href="multiple-traits-models.html#multiple-traits-models">Chapter 7</a>).</p>
+<p>We then move to what we call ‘Advanced topics’. These chapters deal with more recent work in cultural evolution and include different perspectives, or they concern analyses that are not customary in cultural evolution modelling (for example network analysis in <a href="social-network-structure.html#social-network-structure">Chapter 11</a>).</p>
+<p>The book does not present <em>new</em> models, views or findings on cultural evolution. We are trying to provide as much as possible an up-to-date reflection of the field and, mostly, to show some of the possibilities that IBMs offer to cultural evolutionists. If, while reading this book, you are suddenly struck by an idea for a new model or an alteration of one of the models we present here, we have succeeded in our mission.</p>
+</div>
+<div id="conventions-and-formatting" class="section level2 unnumbered">
+<h2>Conventions and formatting</h2>
+<p>In general, we follow the <a href="https://style.tidyverse.org">tidyverse style guide</a> for naming functions and variables, and code formatting.</p>
+<p>Names of functions and variables use underscores to separate words and lowercase letters, e.g. <code>previous_population</code>, <code>biased_mutation</code>. If in the same chapter we have more than one function for the same model (for example because we gradually add parameters), they are numbered as <code>unbiased_transmission_1()</code>, <code>unbiased_transmission_2()</code>, etc.</p>
+<p>For the text, we use the following conventions:</p>
+<ul>
+<li><p>names of functions and data structures: <code>unbiased_transmission()</code>, <code>population</code>, <code>output</code></p></li>
+<li><p>technical terms: ‘geoms’, ‘chr’</p></li>
+<li><p>names of variables: <span class="math inline">\(p\)</span>, <span class="math inline">\(generation\)</span></p></li>
+</ul>
+</div>
+<div id="further-reading" class="section level2 unnumbered">
+<h2>Further reading</h2>
+<p>For some recent general books on cultural evolution, you can check <span class="citation">Mesoudi (<a href="references.html#ref-mesoudi_cultural_2011" role="doc-biblioref">2011</a>)</span>, <span class="citation">Morin (<a href="references.html#ref-morin_how_2015" role="doc-biblioref">2015</a>)</span>, <span class="citation">Henrich (<a href="references.html#ref-henrich_secret_2016" role="doc-biblioref">2016</a>)</span>, <span class="citation">Laland (<a href="references.html#ref-laland_darwins_2017" role="doc-biblioref">2017</a>)</span>, and <span class="citation">Acerbi (<a href="references.html#ref-acerbi_cultural_2019-1" role="doc-biblioref">2019</a>)</span>.</p>
+<p>The ‘foundational’ books referred in the test above are <span class="citation">Cavalli-Sforza and Feldman (<a href="references.html#ref-cavalli-sforza_cultural_1981" role="doc-biblioref">1981</a>)</span> and <span class="citation">Boyd and Richerson (<a href="references.html#ref-boyd_culture_1985" role="doc-biblioref">1985</a>)</span>.</p>
+<p>For more on the virtues of formal models for social scientists, with a cultural evolution perspective, see <span class="citation">Smaldino (<a href="references.html#ref-smaldino_models_2017" role="doc-biblioref">2017</a>)</span>. <span class="citation">Smaldino (<a href="references.html#ref-smaldino_how_2020" role="doc-biblioref">2020</a>)</span> is dedicated to good practices to translate verbal theories into formal, especially individual-based, models.</p>
+<p>A good introduction to R programming is <span class="citation">Grolemund (<a href="references.html#ref-grolemund_hands-programming_2014" role="doc-biblioref">2014</a>)</span>. Another general introduction, with a specific focus on the tidyverse logic, is <span class="citation">Wickham and Grolemund (<a href="references.html#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span>.</p>
+
+</div>
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="unbiased-transmission.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["IBM-cultevo.pdf", "IBM-cultevo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

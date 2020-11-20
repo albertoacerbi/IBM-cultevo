@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 Unbiased transmission | Individual-based models of cultural evolution</title>
+  <meta name="description" content="Chapter 1 Unbiased transmission | Individual-based models of cultural evolution" />
+  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 Unbiased transmission | Individual-based models of cultural evolution" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 Unbiased transmission | Individual-based models of cultural evolution" />
+  
+  
+  
+
+<meta name="author" content="Alberto Acerbi" />
+<meta name="author" content="Marco Smolla" />
+<meta name="author" content="Alex Mesoudi" />
+
+
+<meta name="date" content="2020-11-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="unbiased-and-biased-mutation.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Individual-based models of cultural evolution</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#aim-of-the-book"><i class="fa fa-check"></i>Aim of the book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-is-cultural-evolution"><i class="fa fa-check"></i>What is cultural evolution?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-model"><i class="fa fa-check"></i>Why model?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-individual-based-models"><i class="fa fa-check"></i>Why individual-based models?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book---the-programming"><i class="fa fa-check"></i>How to use this book - the programming</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book---the-simulations"><i class="fa fa-check"></i>How to use this book - the simulations</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#conventions-and-formatting"><i class="fa fa-check"></i>Conventions and formatting</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
+</ul></li>
+<li class="part"><span><b>Basics</b></span></li>
+<li class="chapter" data-level="1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html"><i class="fa fa-check"></i><b>1</b> Unbiased transmission</a><ul>
+<li class="chapter" data-level="1.1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#initialising-the-simulation"><i class="fa fa-check"></i><b>1.1</b> Initialising the simulation</a></li>
+<li class="chapter" data-level="1.2" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#execute-generation-turn-over-many-times"><i class="fa fa-check"></i><b>1.2</b> Execute generation turn-over many times</a></li>
+<li class="chapter" data-level="1.3" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#plotting-the-model-results"><i class="fa fa-check"></i><b>1.3</b> Plotting the model results</a></li>
+<li class="chapter" data-level="1.4" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#write-a-function-to-wrap-the-model-code"><i class="fa fa-check"></i><b>1.4</b> Write a function to wrap the model code</a></li>
+<li class="chapter" data-level="1.5" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#run-several-independent-simulations-and-plot-their-results"><i class="fa fa-check"></i><b>1.5</b> Run several independent simulations and plot their results</a></li>
+<li class="chapter" data-level="1.6" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#varying-initial-conditions"><i class="fa fa-check"></i><b>1.6</b> Varying initial conditions</a></li>
+<li class="chapter" data-level="1.7" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#summary-of-the-model"><i class="fa fa-check"></i><b>1.7</b> Summary of the model</a></li>
+<li class="chapter" data-level="1.8" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#further-reading-1"><i class="fa fa-check"></i><b>1.8</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html"><i class="fa fa-check"></i><b>2</b> Unbiased and biased mutation</a><ul>
+<li class="chapter" data-level="2.1" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#unbiased-mutation"><i class="fa fa-check"></i><b>2.1</b> Unbiased mutation</a></li>
+<li class="chapter" data-level="2.2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#biased-mutation"><i class="fa fa-check"></i><b>2.2</b> Biased mutation</a></li>
+<li class="chapter" data-level="2.3" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#summary-of-the-model-1"><i class="fa fa-check"></i><b>2.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="2.4" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#further-reading-2"><i class="fa fa-check"></i><b>2.4</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html"><i class="fa fa-check"></i><b>3</b> Biased transmission: direct bias</a><ul>
+<li class="chapter" data-level="3.1" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#a-simple-model-of-directly-biased-transmission"><i class="fa fa-check"></i><b>3.1</b> A simple model of directly biased transmission</a></li>
+<li class="chapter" data-level="3.2" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#strength-of-selection"><i class="fa fa-check"></i><b>3.2</b> Strength of selection</a></li>
+<li class="chapter" data-level="3.3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#summary-of-the-model-2"><i class="fa fa-check"></i><b>3.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="3.4" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#further-reading-3"><i class="fa fa-check"></i><b>3.4</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html"><i class="fa fa-check"></i><b>4</b> Biased transmission: frequency-dependent indirect bias</a><ul>
+<li class="chapter" data-level="4.1" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#the-logic-of-conformity"><i class="fa fa-check"></i><b>4.1</b> The logic of conformity</a></li>
+<li class="chapter" data-level="4.2" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#testing-conformist-transmission"><i class="fa fa-check"></i><b>4.2</b> Testing conformist transmission</a></li>
+<li class="chapter" data-level="4.3" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#summary-of-the-model-3"><i class="fa fa-check"></i><b>4.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="4.4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#further-readings"><i class="fa fa-check"></i><b>4.4</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html"><i class="fa fa-check"></i><b>5</b> Biased transmission: demonstrator-based indirect bias</a><ul>
+<li class="chapter" data-level="5.1" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#a-simple-demonstrator-bias"><i class="fa fa-check"></i><b>5.1</b> A simple demonstrator bias</a></li>
+<li class="chapter" data-level="5.2" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#predicting-the-winning-trait"><i class="fa fa-check"></i><b>5.2</b> Predicting the ‘winning’ trait</a></li>
+<li class="chapter" data-level="5.3" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#summary-of-the-model-4"><i class="fa fa-check"></i><b>5.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="5.4" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#further-readings-1"><i class="fa fa-check"></i><b>5.4</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html"><i class="fa fa-check"></i><b>6</b> Vertical and horizontal transmission</a><ul>
+<li class="chapter" data-level="6.1" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#vertical-cultural-transmission"><i class="fa fa-check"></i><b>6.1</b> Vertical cultural transmission</a></li>
+<li class="chapter" data-level="6.2" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#horizontal-cultural-transmission"><i class="fa fa-check"></i><b>6.2</b> Horizontal cultural transmission</a></li>
+<li class="chapter" data-level="6.3" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#summary-of-the-model-5"><i class="fa fa-check"></i><b>6.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="6.4" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#further-reading-4"><i class="fa fa-check"></i><b>6.4</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html"><i class="fa fa-check"></i><b>7</b> Multiple traits models</a><ul>
+<li class="chapter" data-level="7.1" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#unbiased-transmission-with-multiple-traits"><i class="fa fa-check"></i><b>7.1</b> Unbiased transmission with multiple traits</a></li>
+<li class="chapter" data-level="7.2" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#introducing-innovation"><i class="fa fa-check"></i><b>7.2</b> Introducing innovation</a></li>
+<li class="chapter" data-level="7.3" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#optimising-the-code"><i class="fa fa-check"></i><b>7.3</b> Optimising the code</a></li>
+<li class="chapter" data-level="7.4" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#the-distribution-of-popularity"><i class="fa fa-check"></i><b>7.4</b> The distribution of popularity</a></li>
+<li class="chapter" data-level="7.5" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#summary-of-the-model-6"><i class="fa fa-check"></i><b>7.5</b> Summary of the model</a></li>
+<li class="chapter" data-level="7.6" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#further-readings-2"><i class="fa fa-check"></i><b>7.6</b> Further readings</a></li>
+</ul></li>
+<li class="part"><span><b>Advanced topics - The evolution of cultural evolution</b></span></li>
+<li class="chapter" data-level="8" data-path="rogers-paradox.html"><a href="rogers-paradox.html"><i class="fa fa-check"></i><b>8</b> Rogers’ Paradox</a><ul>
+<li class="chapter" data-level="8.1" data-path="rogers-paradox.html"><a href="rogers-paradox.html#modelling-rogers-paradox"><i class="fa fa-check"></i><b>8.1</b> Modelling Rogers’ Paradox</a></li>
+<li class="chapter" data-level="8.2" data-path="rogers-paradox.html"><a href="rogers-paradox.html#summary-of-the-model-7"><i class="fa fa-check"></i><b>8.2</b> Summary of the model</a></li>
+<li class="chapter" data-level="8.3" data-path="rogers-paradox.html"><a href="rogers-paradox.html#further-reading-5"><i class="fa fa-check"></i><b>8.3</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html"><i class="fa fa-check"></i><b>9</b> Rogers’ Paradox: A Solution</a><ul>
+<li class="chapter" data-level="9.1" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#modelling-critical-social-learners"><i class="fa fa-check"></i><b>9.1</b> Modelling critical social learners</a></li>
+<li class="chapter" data-level="9.2" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#summary-of-the-model-8"><i class="fa fa-check"></i><b>9.2</b> Summary of the model</a></li>
+<li class="chapter" data-level="9.3" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#further-reading-6"><i class="fa fa-check"></i><b>9.3</b> Further reading</a></li>
+</ul></li>
+<li class="part"><span><b>Advanced topics - Culture and populations</b></span></li>
+<li class="chapter" data-level="10" data-path="demography.html"><a href="demography.html"><i class="fa fa-check"></i><b>10</b> Demography</a><ul>
+<li class="chapter" data-level="10.1" data-path="demography.html"><a href="demography.html#the-tasmania-case"><i class="fa fa-check"></i><b>10.1</b> The Tasmania Case</a></li>
+<li class="chapter" data-level="10.2" data-path="demography.html"><a href="demography.html#modelling-the-tasmania-case"><i class="fa fa-check"></i><b>10.2</b> Modelling the Tasmania Case</a></li>
+<li class="chapter" data-level="10.3" data-path="demography.html"><a href="demography.html#calculating-critical-population-sizes-based-on-skill-complexity"><i class="fa fa-check"></i><b>10.3</b> Calculating critical population sizes based on skill complexity</a></li>
+<li class="chapter" data-level="10.4" data-path="demography.html"><a href="demography.html#summary-of-the-model-9"><i class="fa fa-check"></i><b>10.4</b> Summary of the model</a></li>
+<li class="chapter" data-level="10.5" data-path="demography.html"><a href="demography.html#further-readings-3"><i class="fa fa-check"></i><b>10.5</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="social-network-structure.html"><a href="social-network-structure.html"><i class="fa fa-check"></i><b>11</b> Social network structure</a><ul>
+<li class="chapter" data-level="11.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-basics"><i class="fa fa-check"></i><b>11.1</b> Network basics</a></li>
+<li class="chapter" data-level="11.2" data-path="social-network-structure.html"><a href="social-network-structure.html#generating-networks"><i class="fa fa-check"></i><b>11.2</b> Generating networks</a></li>
+<li class="chapter" data-level="11.3" data-path="social-network-structure.html"><a href="social-network-structure.html#plotting-networks"><i class="fa fa-check"></i><b>11.3</b> Plotting networks</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-layout"><i class="fa fa-check"></i><b>11.3.1</b> Network layout</a></li>
+<li class="chapter" data-level="11.3.2" data-path="social-network-structure.html"><a href="social-network-structure.html#network-styling"><i class="fa fa-check"></i><b>11.3.2</b> Network styling</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="social-network-structure.html"><a href="social-network-structure.html#analyse-social-networks"><i class="fa fa-check"></i><b>11.4</b> Analyse social networks</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-properties-and-characteristics"><i class="fa fa-check"></i><b>11.4.1</b> Network properties and characteristics</a></li>
+<li class="chapter" data-level="11.4.2" data-path="social-network-structure.html"><a href="social-network-structure.html#vertex-properties"><i class="fa fa-check"></i><b>11.4.2</b> Vertex properties</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="social-network-structure.html"><a href="social-network-structure.html#modelling-information-transmission-in-social-networks"><i class="fa fa-check"></i><b>11.5</b> Modelling information transmission in social networks</a><ul>
+<li class="chapter" data-level="11.5.1" data-path="social-network-structure.html"><a href="social-network-structure.html#gossip-diffusion-in-networked-populations"><i class="fa fa-check"></i><b>11.5.1</b> Gossip diffusion in networked populations</a></li>
+<li class="chapter" data-level="11.5.2" data-path="social-network-structure.html"><a href="social-network-structure.html#complex-versus-simple-contagion-information-transmission"><i class="fa fa-check"></i><b>11.5.2</b> Complex versus simple contagion information transmission</a></li>
+</ul></li>
+<li class="chapter" data-level="11.6" data-path="social-network-structure.html"><a href="social-network-structure.html#summary-of-the-model-10"><i class="fa fa-check"></i><b>11.6</b> Summary of the model</a></li>
+<li class="chapter" data-level="11.7" data-path="social-network-structure.html"><a href="social-network-structure.html#further-reading-7"><i class="fa fa-check"></i><b>11.7</b> Further Reading</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Individual-based models of cultural evolution</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="unbiased-transmission" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Unbiased transmission</h1>
+<p>We start by simulating a simple case of unbiased cultural transmission. We will detail each step of the simulation and explain the code line-by-line. In the following chapters, we will reuse most of this initial model, building up the complexity of our simulations.</p>
+<div id="initialising-the-simulation" class="section level2">
+<h2><span class="header-section-number">1.1</span> Initialising the simulation</h2>
+<p>Here we will simulate a case where <span class="math inline">\(N\)</span> individuals each possess one of two mutually exclusive cultural traits. These alternative traits are denoted <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>. For example, <span class="math inline">\(A\)</span> might be eating a vegetarian diet, and <span class="math inline">\(B\)</span> might be eating a non-vegetarian diet. In reality, traits are seldom clear-cut (e.g. what about pescatarians?), but models are designed to cut away all the complexity to give tractable answers to simplified situations.</p>
+<p>Our model has non-overlapping generations. In each generation, all <span class="math inline">\(N\)</span> individuals are replaced with <span class="math inline">\(N\)</span> new individuals. Again, this is unlike any real biological group but provides a simple way of simulating change over time. Generations here could correspond to biological generations, but could equally be ‘cultural generations’ (or learning episodes), which might be much shorter.</p>
+<p>Each new individual of each new generation picks a member of the previous generation at random and copies their cultural trait. This is known as unbiased oblique cultural transmission. ‘Unbiased’ refers to the fact that traits are copied entirely at random. The term ‘oblique’ means that members of one generation learn from those of the previous, non-overlapping, generation. This is different from, for example, horizontal cultural transmission, where individuals copy members of the same generation, and vertical cultural transmission, where offspring copy their biological parents.</p>
+<p>If we assume that the two cultural traits are transmitted in an unbiased way, what does that mean for the average trait frequency in the population? To answer this question, we must track the proportion of individuals who possess trait <span class="math inline">\(A\)</span> over successive generations. We will call this proportion <span class="math inline">\(p\)</span>. We could also track the proportion who possess trait <span class="math inline">\(B\)</span>, but this will always be <span class="math inline">\(1 - p\)</span> given that the two traits are mutually exclusive. For example, if <span class="math inline">\(70\%\)</span> of the population have trait <span class="math inline">\(A\)</span> <span class="math inline">\((p=0.7)\)</span>, then the remaining <span class="math inline">\(30\%\)</span> must have trait <span class="math inline">\(B\)</span> (i.e. <span class="math inline">\(1-p=1-0.7=0.3\)</span>).</p>
+<p>The output of the model will be a plot showing <span class="math inline">\(p\)</span> over all generations up to the last generation. Generations (or time steps) are denoted by <span class="math inline">\(t\)</span>, where generation one is <span class="math inline">\(t=1\)</span>, generation two is <span class="math inline">\(t=2\)</span>, up to the last generation <span class="math inline">\(t=t_{\text{max}}\)</span>.</p>
+<p>First, we need to specify the fixed parameters of the model. These are quantities that we decide on at the start and do not change during the simulation. In this model these are <code>N</code> (the number of individuals) and <code>t_max</code> (the number of generations). Let’s start with <code>N = 100</code> and <code>t_max = 200</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="unbiased-transmission.html#cb1-1"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb1-2"><a href="unbiased-transmission.html#cb1-2"></a>t_max &lt;-<span class="st"> </span><span class="dv">200</span></span></code></pre></div>
+<p>Now we need to create our individuals. The only information we need to keep about our individuals is their cultural trait (<span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span>). We’ll call <code>population</code> the data structure containing the individuals. The type of data structure we have chosen here is a tibble. This is a more user-friendly version of a dataframe. Tibbles, and the tibble command, are part of the <code>tidyverse</code> library, which we need to call before creating the tibble. We will use other commands from the <code>tidyverse</code> throughout the book.</p>
+<p>Initially, we’ll give each individual either an <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> at random, using the <code>sample()</code> command. This can be seen in the code chunk below. The <code>sample()</code> command takes three arguments (i.e. inputs or options). The first argument lists the elements to pick at random, in our case, the traits <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>. The second argument gives the number of times to pick, in our case <span class="math inline">\(N\)</span> times, once for each individual. The final argument says to replace or reuse the elements specified in the first argument after they’ve been picked (otherwise there would only be one copy of <span class="math inline">\(A\)</span> and one copy of <span class="math inline">\(B\)</span>, so we could only give two individuals traits before running out). Within the tibble command, the word <code>trait</code> denotes the name of the variable within the tibble that contains the random <span class="math inline">\(A\)</span>s and <span class="math inline">\(B\)</span>s, and the whole tibble is assigned the name <code>population</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="unbiased-transmission.html#cb2-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb2-2"><a href="unbiased-transmission.html#cb2-2"></a>population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, <span class="dt">replace =</span> <span class="ot">TRUE</span>))</span></code></pre></div>
+<p>We can see the cultural traits of our population by simply entering its name in the R console:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="unbiased-transmission.html#cb3-1"></a>population</span></code></pre></div>
+<pre><code>## # A tibble: 100 x 1
+##    trait
+##    &lt;chr&gt;
+##  1 A    
+##  2 B    
+##  3 A    
+##  4 B    
+##  5 A    
+##  6 B    
+##  7 B    
+##  8 B    
+##  9 B    
+## 10 A    
+## # … with 90 more rows</code></pre>
+<p>As expected, there is a single column called <code>trait</code> containing <span class="math inline">\(A\)</span>s and <span class="math inline">\(B\)</span>s. The type of the column, in this case ‘<chr>’ (i.e. character), is reported below the name.</p>
+<p>A specific individual’s trait can be retrieved using the square bracket notation in R. For example, individual 4’s trait can be retrieved by typing:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="unbiased-transmission.html#cb5-1"></a>population<span class="op">$</span>trait[<span class="dv">4</span>]</span></code></pre></div>
+<pre><code>## [1] &quot;B&quot;</code></pre>
+<p>This should match the fourth row in the table above.</p>
+<p>We also need a tibble to record the output of our simulation, that is, to track the trait frequency <span class="math inline">\(p\)</span> in each generation. This will have two columns with <span class="math inline">\(t_{\text{max}}\)</span> rows, one row for each generation. The first column is simply a counter of the generations, from 1 to <span class="math inline">\(t_{\text{max}}\)</span>. This will be useful for plotting the output later. The other column should contain the values of <span class="math inline">\(p\)</span> for each generation.</p>
+<p>At this stage we don’t know what <span class="math inline">\(p\)</span> will be in each generation, so for now let’s fill the <code>output</code> tibble with lots of NAs, which is R’s symbol for Not Available, or missing value. We can use the <code>rep()</code> (repeat) command to repeat NA <span class="math inline">\(t_{\text{max}}\)</span> times. We’re using NA rather than, say, zero, because zero could be misinterpreted as <span class="math inline">\(p=0\)</span>, which would mean that all individuals have trait <span class="math inline">\(B\)</span>. This would be misleading, because at the moment we haven’t yet calculated <span class="math inline">\(p\)</span>, so it’s nonexistent, rather than zero.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="unbiased-transmission.html#cb7-1"></a>output &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">generation =</span> <span class="dv">1</span><span class="op">:</span>t_max, <span class="dt">p =</span> <span class="kw">rep</span>(<span class="ot">NA</span>, t_max))</span></code></pre></div>
+<p>We can, however, fill in the first value of <code>p</code> for our already-created first generation of individuals, held in <code>population</code>. The command below sums the number of <span class="math inline">\(A\)</span>s in <code>population</code> and divides by <span class="math inline">\(N\)</span> to get a proportion out of 1 rather than an absolute number. It then puts this proportion in the first slot of <code>p</code> in <code>output</code>, the one for the first generation, <span class="math inline">\(t=1\)</span>. We can again write the name of the tibble, <code>output</code>, to see that it worked.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="unbiased-transmission.html#cb8-1"></a>output<span class="op">$</span>p[<span class="dv">1</span>] &lt;-<span class="st"> </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N</span>
+<span id="cb8-2"><a href="unbiased-transmission.html#cb8-2"></a>output</span></code></pre></div>
+<pre><code>## # A tibble: 200 x 2
+##    generation     p
+##         &lt;int&gt; &lt;dbl&gt;
+##  1          1   0.5
+##  2          2  NA  
+##  3          3  NA  
+##  4          4  NA  
+##  5          5  NA  
+##  6          6  NA  
+##  7          7  NA  
+##  8          8  NA  
+##  9          9  NA  
+## 10         10  NA  
+## # … with 190 more rows</code></pre>
+<p>This first value of <code>p</code> should be around <span class="math inline">\(0.5\)</span>, meaning that around 50 individuals have trait <span class="math inline">\(A\)</span>, and 50 have trait <span class="math inline">\(B\)</span>. Even though <code>sample()</code> returns either trait with equal probability, this does not necessarily mean that we will get exactly 50 <span class="math inline">\(A\)</span>s and 50 <span class="math inline">\(B\)</span>s. This happens with simulations and finite population sizes: they are probabilistic (or stochastic), not deterministic. Analogously, flipping a coin 100 times will not always give exactly 50 heads and 50 tails. Sometimes we will get 51 heads, sometimes 49, etc. To see this in our simulation, you can re-run all of the above code and you should get a different <span class="math inline">\(p\)</span>.</p>
+</div>
+<div id="execute-generation-turn-over-many-times" class="section level2">
+<h2><span class="header-section-number">1.2</span> Execute generation turn-over many times</h2>
+<p>Now that we have built the population, we can simulate what individuals do in each generation. We iterate these actions over <span class="math inline">\(t_{\text{max}}\)</span> generations. In each generation, we need to:</p>
+<ul>
+<li><p>copy the current individuals to a separate tibble called <code>previous_population</code> to use as demonstrators for the new individuals; this allows us to implement oblique transmission with its non-overlapping generations, rather than mixing up the generations</p></li>
+<li><p>create a new generation of individuals, each of whose trait is picked at random from the <code>previous_population</code> tibble</p></li>
+<li><p>calculate <span class="math inline">\(p\)</span> for this new generation and store it in the appropriate slot in <code>output</code></p></li>
+</ul>
+<p>To iterate, we’ll use a for-loop, using <code>t</code> to track the generation. We’ve already done generation 1 so we’ll start at generation 2. The random picking of models is done with <code>sample()</code> again, but this time picking from the traits held in <code>previous_population</code>. Note that we have added comments briefly explaining what each line does. This is perhaps superfluous when the code is this simple, but it’s always good practice. Code often gets cut-and-pasted into other places and loses its context. Explaining what each line does lets other people - and a future, forgetful you - know what’s going on.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="unbiased-transmission.html#cb10-1"></a><span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span>t_max) {</span>
+<span id="cb10-2"><a href="unbiased-transmission.html#cb10-2"></a>  <span class="co"># Copy the population tibble to previous_population tibble</span></span>
+<span id="cb10-3"><a href="unbiased-transmission.html#cb10-3"></a>  previous_population &lt;-<span class="st"> </span>population </span>
+<span id="cb10-4"><a href="unbiased-transmission.html#cb10-4"></a>  </span>
+<span id="cb10-5"><a href="unbiased-transmission.html#cb10-5"></a>  <span class="co"># Randomly copy from previous generation&#39;s individuals</span></span>
+<span id="cb10-6"><a href="unbiased-transmission.html#cb10-6"></a>  population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(previous_population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)) </span>
+<span id="cb10-7"><a href="unbiased-transmission.html#cb10-7"></a>  </span>
+<span id="cb10-8"><a href="unbiased-transmission.html#cb10-8"></a>  <span class="co"># Get p and put it into the output slot for this generation t</span></span>
+<span id="cb10-9"><a href="unbiased-transmission.html#cb10-9"></a>  output<span class="op">$</span>p[t] &lt;-<span class="st"> </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N </span>
+<span id="cb10-10"><a href="unbiased-transmission.html#cb10-10"></a>}</span></code></pre></div>
+<p>Now we should have 200 values of <code>p</code> stored in <code>output</code>, one for each generation. You can list them by typing <code>output</code>, but more effective is to plot them.</p>
+</div>
+<div id="plotting-the-model-results" class="section level2">
+<h2><span class="header-section-number">1.3</span> Plotting the model results</h2>
+<p>We use <code>ggplot()</code> to plot our data. The syntax of ggplot may be slightly obscure at first, but it forces us to have a clear picture of the data before plotting.</p>
+<p>In the first line in the code below, we are telling ggplot that the data we want to plot is in the tibble <code>output</code>. Then, with the command <code>aes()</code> we declare the ‘aesthetics’ of the plot, that is, how we want our data mapped in our plot. In this case, we want the values of <code>p</code> on the y-axis, and the values of <code>generation</code> on the x-axis (this is why earlier we created, in the tibble <code>output</code>, a column to keep the count of generations).</p>
+<p>We then use <code>geom_line()</code>. In ggplot, ‘geoms’ describe what kind of visual representation should be plotted: lines, bars, boxes and so on. This visual representation is independent of the mapping that we declared before with <code>aes()</code>. The same data, with the same mapping, can be visually represented in many different ways. In this case, we are asking ggplot to represent the data as a line. You can change <code>geom_line()</code> in the code below to <code>geom_point()</code> and see what happens (other geoms have less obvious effects, and we will see some of them in later chapters).</p>
+<p>The other commands are mainly to make the plot look nicer. We want the y-axis to span all the possible values of <span class="math inline">\(p\)</span>, from 0 to 1, and we use a particular ‘theme’ for our plot, in this case, a simple black and white (<code>theme_bw</code>) theme. With the command <code>labs()</code> we can provide a more informative label for the y-axis. ggplot automatically labels the axis with the name of the tibble columns that are plotted: this is good for <code>generation</code>, but less so for <code>p</code>.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="unbiased-transmission.html#cb11-1"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> output, <span class="kw">aes</span>(<span class="dt">y =</span> p, <span class="dt">x =</span> generation)) <span class="op">+</span></span>
+<span id="cb11-2"><a href="unbiased-transmission.html#cb11-2"></a><span class="st">  </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb11-3"><a href="unbiased-transmission.html#cb11-3"></a><span class="st">  </span><span class="kw">ylim</span>(<span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>)) <span class="op">+</span></span>
+<span id="cb11-4"><a href="unbiased-transmission.html#cb11-4"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb11-5"><a href="unbiased-transmission.html#cb11-5"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;p (proportion of individuals with trait A)&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:1-8"></span>
+<img src="IBM-cultevo_files/figure-html/1-8-1.png" alt="Random fluctuations of the proportion of trait A under unbiased cultural transmission" width="672" />
+<p class="caption">
+Figure 1.1: Random fluctuations of the proportion of trait A under unbiased cultural transmission
+</p>
+</div>
+<p>The proportion of individuals with trait <span class="math inline">\(A\)</span> should start off hovering around 0.5, and then oscillate randomly (it may, in some cases, also reach 0, meaning that all <span class="math inline">\(A\)</span>s have disappeared, or 1, meaning that all <span class="math inline">\(B\)</span>s have disappeared). Unbiased transmission, or random copying, is by definition random, so different runs of this simulation will generate different plots. If you rerun all the code you will get something different. In all likelihood, <span class="math inline">\(p\)</span> might go to 0 or 1 at some point. At <span class="math inline">\(p = 0\)</span> there are no <span class="math inline">\(A\)</span>s and every individual possesses <span class="math inline">\(B\)</span>. At <span class="math inline">\(p=1\)</span> there are no <span class="math inline">\(B\)</span>s and every individual possesses <span class="math inline">\(A\)</span>. This is a typical feature of cultural drift, analogous to genetic drift: in small populations, with no selection or other directional processes operating, traits can be lost purely by chance after some generations.</p>
+</div>
+<div id="write-a-function-to-wrap-the-model-code" class="section level2">
+<h2><span class="header-section-number">1.4</span> Write a function to wrap the model code</h2>
+<p>Ideally, we would like to repeat the simulation to explore this idea in more detail, perhaps changing some of the parameters. For example, if we increase <span class="math inline">\(N\)</span>, are we more or less likely to lose one of the traits? As noted above, individual-based models like this one are probabilistic or stochastic, thus it is essential to run simulations many times to understand what happens. With our code scattered about in chunks, it is hard to quickly repeat the simulation. Instead, we can wrap it all up in a function:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="unbiased-transmission.html#cb12-1"></a>unbiased_transmission_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="cf">function</span>(N, t_max) {</span>
+<span id="cb12-2"><a href="unbiased-transmission.html#cb12-2"></a>  population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, <span class="dt">replace =</span> <span class="ot">TRUE</span>))</span>
+<span id="cb12-3"><a href="unbiased-transmission.html#cb12-3"></a></span>
+<span id="cb12-4"><a href="unbiased-transmission.html#cb12-4"></a>  output &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">generation =</span> <span class="dv">1</span><span class="op">:</span>t_max, <span class="dt">p =</span> <span class="kw">rep</span>(<span class="ot">NA</span>, t_max))</span>
+<span id="cb12-5"><a href="unbiased-transmission.html#cb12-5"></a></span>
+<span id="cb12-6"><a href="unbiased-transmission.html#cb12-6"></a>  output<span class="op">$</span>p[<span class="dv">1</span>] &lt;-<span class="st"> </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N</span>
+<span id="cb12-7"><a href="unbiased-transmission.html#cb12-7"></a></span>
+<span id="cb12-8"><a href="unbiased-transmission.html#cb12-8"></a>  <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span>t_max) {</span>
+<span id="cb12-9"><a href="unbiased-transmission.html#cb12-9"></a>    <span class="co"># Copy individuals to previous_population tibble</span></span>
+<span id="cb12-10"><a href="unbiased-transmission.html#cb12-10"></a>    previous_population &lt;-<span class="st"> </span>population </span>
+<span id="cb12-11"><a href="unbiased-transmission.html#cb12-11"></a>    </span>
+<span id="cb12-12"><a href="unbiased-transmission.html#cb12-12"></a>    <span class="co"># Randomly copy from previous generation</span></span>
+<span id="cb12-13"><a href="unbiased-transmission.html#cb12-13"></a>    population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(previous_population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>))</span>
+<span id="cb12-14"><a href="unbiased-transmission.html#cb12-14"></a>    </span>
+<span id="cb12-15"><a href="unbiased-transmission.html#cb12-15"></a>    <span class="co"># Get p and put it into output slot for this generation t</span></span>
+<span id="cb12-16"><a href="unbiased-transmission.html#cb12-16"></a>    output<span class="op">$</span>p[t] &lt;-<span class="st"> </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N </span>
+<span id="cb12-17"><a href="unbiased-transmission.html#cb12-17"></a>  }</span>
+<span id="cb12-18"><a href="unbiased-transmission.html#cb12-18"></a>  <span class="co"># Export data from function</span></span>
+<span id="cb12-19"><a href="unbiased-transmission.html#cb12-19"></a>  output</span>
+<span id="cb12-20"><a href="unbiased-transmission.html#cb12-20"></a>}</span></code></pre></div>
+<p>This is just all of the code snippets that we already ran above, but all within a function with parameters <span class="math inline">\(N\)</span> and <span class="math inline">\(t_{\text{max}}\)</span> as arguments to the function. In addition, <code>unbiased_transmission_1()</code> ends with the line <code>output</code>. This means that this tibble will be exported from the function when it is run. This is useful for storing data from simulations wrapped in functions, otherwise that data is lost after the function is executed.</p>
+<p>Nothing will happen when you run the above code, because all you have done is define the function and not actually run it. The point is that we can now call the function in one go, easily changing the values of <span class="math inline">\(N\)</span> and <span class="math inline">\(t_{\text{max}}\)</span>. Let’s try first with the same values of <span class="math inline">\(N\)</span> and <span class="math inline">\(t_{\text{max}}\)</span> as before, and save the output from the simulation into <code>data_model</code>, as a record of what happened.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="unbiased-transmission.html#cb13-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">unbiased_transmission_1</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">t_max =</span> <span class="dv">200</span>)</span></code></pre></div>
+<p>We also need to create another function to plot the data, so we do not need to rewrite all the plotting instructions each time. Whereas this may seem impractical now, it is convenient to separate the function that runs the simulation and the function that plots the data for various reasons. With more complicated models, we do not want to rerun a simulation just because we want to change some detail in the plot. It also makes conceptual sense to keep separate the raw output of the model from the various ways we can visualise it, or the further analysis we want to perform on it. As above, the code is identical to what we already wrote:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="unbiased-transmission.html#cb14-1"></a>plot_single_run &lt;-<span class="st"> </span><span class="cf">function</span>(data_model) {</span>
+<span id="cb14-2"><a href="unbiased-transmission.html#cb14-2"></a>  <span class="kw">ggplot</span>(<span class="dt">data =</span> data_model, <span class="kw">aes</span>(<span class="dt">y =</span> p, <span class="dt">x =</span> generation)) <span class="op">+</span></span>
+<span id="cb14-3"><a href="unbiased-transmission.html#cb14-3"></a><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb14-4"><a href="unbiased-transmission.html#cb14-4"></a><span class="st">    </span><span class="kw">ylim</span>(<span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>)) <span class="op">+</span></span>
+<span id="cb14-5"><a href="unbiased-transmission.html#cb14-5"></a><span class="st">    </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb14-6"><a href="unbiased-transmission.html#cb14-6"></a><span class="st">    </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;p (proportion of individuals with trait A)&quot;</span>)</span>
+<span id="cb14-7"><a href="unbiased-transmission.html#cb14-7"></a>}</span></code></pre></div>
+<p>At this point, we can visualise the results:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="unbiased-transmission.html#cb15-1"></a><span class="kw">plot_single_run</span>(data_model)</span></code></pre></div>
+<div class="figure"><span id="fig:1-12"></span>
+<img src="IBM-cultevo_files/figure-html/1-12-1.png" alt="Random fluctuations of the proportion of trait A under unbiased cultural transmission" width="672" />
+<p class="caption">
+Figure 1.2: Random fluctuations of the proportion of trait A under unbiased cultural transmission
+</p>
+</div>
+<p>As anticipated, the plot is different from the simulation we ran before, even though the code is exactly the same. This is due to the stochastic nature of the simulation.</p>
+<p>Now let’s try changing the parameters. We can call the simulation and the plotting functions together. The code below reruns and plots the simulation with a much larger <span class="math inline">\(N\)</span>.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="unbiased-transmission.html#cb16-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">unbiased_transmission_1</span>(<span class="dt">N =</span> <span class="dv">10000</span>, <span class="dt">t_max =</span> <span class="dv">200</span>)</span>
+<span id="cb16-2"><a href="unbiased-transmission.html#cb16-2"></a><span class="kw">plot_single_run</span>(data_model)</span></code></pre></div>
+<div class="figure"><span id="fig:1-13"></span>
+<img src="IBM-cultevo_files/figure-html/1-13-1.png" alt="Random fluctuations of the proportion of trait A under unbiased cultural transmission and a large population size" width="672" />
+<p class="caption">
+Figure 1.3: Random fluctuations of the proportion of trait A under unbiased cultural transmission and a large population size
+</p>
+</div>
+<p>You should see much less fluctuation. Rarely in a population of <span class="math inline">\(N = 10000\)</span> will either trait go to fixation. Try re-running the previous code chunk to explore the effect of <span class="math inline">\(N\)</span> on long-term dynamics.</p>
+</div>
+<div id="run-several-independent-simulations-and-plot-their-results" class="section level2">
+<h2><span class="header-section-number">1.5</span> Run several independent simulations and plot their results</h2>
+<p>Wrapping a simulation in a function like this is good because we can easily re-run it with just a single command. However, it’s a bit laborious to manually re-run it. Say we wanted to re-run the simulation 10 times with the same parameter values to see how many times <span class="math inline">\(A\)</span> goes to fixation, and how many times <span class="math inline">\(B\)</span> goes to fixation. Currently, we’d have to manually run the <code>unbiased_transmission_1()</code> function 10 times and record somewhere else what happened in each run. It would be better to automatically re-run the simulation several times and plot each run as a separate line on the same plot. We could also add a line showing the mean value of <span class="math inline">\(p\)</span> across all runs.</p>
+<p>Let’s use a new parameter <span class="math inline">\(r_{\text{max}}\)</span> to specify the number of independent runs, and use another for-loop to cycle over the <span class="math inline">\(r_{\text{max}}\)</span> runs. Let’s rewrite the <code>unbiased_transmission_1()</code> function to handle multiple runs. We will call the new function <code>unbiased_transmission_2()</code>.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="unbiased-transmission.html#cb17-1"></a>unbiased_transmission_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="cf">function</span>(N, t_max, r_max) {</span>
+<span id="cb17-2"><a href="unbiased-transmission.html#cb17-2"></a>  output &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">generation =</span> <span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>t_max, r_max), </span>
+<span id="cb17-3"><a href="unbiased-transmission.html#cb17-3"></a>                   <span class="dt">p =</span> <span class="kw">as.numeric</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, t_max <span class="op">*</span><span class="st"> </span>r_max)), </span>
+<span id="cb17-4"><a href="unbiased-transmission.html#cb17-4"></a>                   <span class="dt">run =</span> <span class="kw">as.factor</span>(<span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>r_max, <span class="dt">each =</span> t_max))) </span>
+<span id="cb17-5"><a href="unbiased-transmission.html#cb17-5"></a>  <span class="co"># For each run</span></span>
+<span id="cb17-6"><a href="unbiased-transmission.html#cb17-6"></a>  <span class="cf">for</span> (r <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>r_max) { </span>
+<span id="cb17-7"><a href="unbiased-transmission.html#cb17-7"></a>    <span class="co"># Create first generation</span></span>
+<span id="cb17-8"><a href="unbiased-transmission.html#cb17-8"></a>    population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, <span class="dt">replace =</span> <span class="ot">TRUE</span>))</span>
+<span id="cb17-9"><a href="unbiased-transmission.html#cb17-9"></a>    </span>
+<span id="cb17-10"><a href="unbiased-transmission.html#cb17-10"></a>    <span class="co"># Add first generation&#39;s p for run r</span></span>
+<span id="cb17-11"><a href="unbiased-transmission.html#cb17-11"></a>    output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span><span class="dv">1</span> <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p &lt;-</span>
+<span id="cb17-12"><a href="unbiased-transmission.html#cb17-12"></a><span class="st">      </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N </span>
+<span id="cb17-13"><a href="unbiased-transmission.html#cb17-13"></a>    </span>
+<span id="cb17-14"><a href="unbiased-transmission.html#cb17-14"></a>    <span class="co"># For each generation</span></span>
+<span id="cb17-15"><a href="unbiased-transmission.html#cb17-15"></a>    <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span>t_max) {</span>
+<span id="cb17-16"><a href="unbiased-transmission.html#cb17-16"></a>      <span class="co"># Copy individuals to previous_population tibble</span></span>
+<span id="cb17-17"><a href="unbiased-transmission.html#cb17-17"></a>      previous_population &lt;-<span class="st"> </span>population </span>
+<span id="cb17-18"><a href="unbiased-transmission.html#cb17-18"></a>      </span>
+<span id="cb17-19"><a href="unbiased-transmission.html#cb17-19"></a>      <span class="co"># Randomly copy from previous generation</span></span>
+<span id="cb17-20"><a href="unbiased-transmission.html#cb17-20"></a>      population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(previous_population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>))</span>
+<span id="cb17-21"><a href="unbiased-transmission.html#cb17-21"></a>      </span>
+<span id="cb17-22"><a href="unbiased-transmission.html#cb17-22"></a>      <span class="co"># Get p and put it into output slot for this generation t and run r</span></span>
+<span id="cb17-23"><a href="unbiased-transmission.html#cb17-23"></a>      output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span>t <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p &lt;-<span class="st"> </span></span>
+<span id="cb17-24"><a href="unbiased-transmission.html#cb17-24"></a><span class="st">        </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N </span>
+<span id="cb17-25"><a href="unbiased-transmission.html#cb17-25"></a>    }</span>
+<span id="cb17-26"><a href="unbiased-transmission.html#cb17-26"></a>  }</span>
+<span id="cb17-27"><a href="unbiased-transmission.html#cb17-27"></a>  <span class="co"># Export data from function</span></span>
+<span id="cb17-28"><a href="unbiased-transmission.html#cb17-28"></a>  output </span>
+<span id="cb17-29"><a href="unbiased-transmission.html#cb17-29"></a>}</span></code></pre></div>
+<p>There are a few changes here. First, we need a different <code>output</code> tibble, because we need to store data for all the runs. For that, we initialise the same <code>generation</code> and <code>p</code> columns as before, but with space for all the runs. <code>generation</code> is now built by repeating the count of each generation <span class="math inline">\(r_{\text{max}}\)</span> times, and <code>p</code> is NA repeated for all generations, for all runs.</p>
+<p>We also need a new column called <code>run</code> that keeps track of which run the data in the other two columns belongs to. Note that the definition of <code>run</code> is preceded by <code>as.factor()</code>. This specifies the type of data to put in the <code>run</code> column. We want <code>run</code> to be a ‘factor’ or categorical variable so that, even if runs are labelled with numbers (1, 2, 3…), this should not be misinterpreted as a continuous, real number: there is no sense in which run 2 is twice as ‘runny’ as run 1, or run 3 half as ‘runny’ as run 6. Runs could equally have been labelled using letters, or any other arbitrary scheme. While omitting <code>as.factor()</code> does not make any difference when running the simulation, it would create problems when plotting the data because ggplot would treat runs as continuous real numbers rather than discrete categories (you can see this yourself by modifying the definition of <code>output</code> in the previous code chunk). This is a good example of how it is important to have a clear understanding of your data before trying to plot or analyse them.</p>
+<p>Going back to the function, we then set up a loop which executes once for each run. The code within this loop is mostly the same as before, except that we now use the <code>[output$generation == t &amp; output$run == r, ]</code> notation to put <span class="math inline">\(p\)</span> into the right place in <code>output</code>.</p>
+<p>The plotting function is also changed to handle multiple runs:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="unbiased-transmission.html#cb18-1"></a>plot_multiple_runs &lt;-<span class="st"> </span><span class="cf">function</span>(data_model) {</span>
+<span id="cb18-2"><a href="unbiased-transmission.html#cb18-2"></a>  <span class="kw">ggplot</span>(<span class="dt">data =</span> data_model, <span class="kw">aes</span>(<span class="dt">y =</span> p, <span class="dt">x =</span> generation)) <span class="op">+</span></span>
+<span id="cb18-3"><a href="unbiased-transmission.html#cb18-3"></a><span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">colour =</span> run)) <span class="op">+</span></span>
+<span id="cb18-4"><a href="unbiased-transmission.html#cb18-4"></a><span class="st">    </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;line&quot;</span>, <span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span></span>
+<span id="cb18-5"><a href="unbiased-transmission.html#cb18-5"></a><span class="st">    </span><span class="kw">ylim</span>(<span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>)) <span class="op">+</span></span>
+<span id="cb18-6"><a href="unbiased-transmission.html#cb18-6"></a><span class="st">    </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb18-7"><a href="unbiased-transmission.html#cb18-7"></a><span class="st">    </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;p (proportion of individuals with trait A)&quot;</span>)</span>
+<span id="cb18-8"><a href="unbiased-transmission.html#cb18-8"></a>}</span></code></pre></div>
+<p>To understand how the above code works, we need to explain the general functioning of ggplot. As explained above, <code>aes()</code> specifies the ‘aesthetics’, or how the data are mapped in the plot. This is independent from the possible visual representations of this mapping, or ‘geoms’. If we declare specific aesthetics when we call <code>ggplot()</code>, these aesthetics will be applied to all geoms we call afterwards. Alternatively, we can specify the aesthetics in the geom itself. For example this:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="unbiased-transmission.html#cb19-1"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> output, <span class="kw">aes</span>(<span class="dt">y =</span> p, <span class="dt">x =</span> generation)) <span class="op">+</span></span>
+<span id="cb19-2"><a href="unbiased-transmission.html#cb19-2"></a><span class="st">  </span><span class="kw">geom_line</span>()</span></code></pre></div>
+<p>is equivalent to this:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="unbiased-transmission.html#cb20-1"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> output) <span class="op">+</span></span>
+<span id="cb20-2"><a href="unbiased-transmission.html#cb20-2"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">y =</span> p, <span class="dt">x =</span> generation))</span></code></pre></div>
+<p>We can use this property to make more complex plots. The plot created in <code>plot_multiple_runs()</code> has a first geom, <code>geom_line()</code>. This inherits the aesthetics specified in the initial call to <code>ggplot()</code> but also has a new mapping specific to <code>geom_line()</code>, <code>colour = run</code>. This tells ggplot to plot each run line with a different colour. The next command, <code>stat_summary()</code>, calculates the mean of all runs. However, this only inherits the mapping specified in the initial <code>ggplot()</code> call. If in the aesthetic of <code>stat_summary()</code> we had also specified <code>colour = run</code>, it would separate the data by run, and it would calculate the mean of each run. This, though, is just the lines we have already plotted with the <code>geom_line()</code> command. For this reason, we did not put <code>colour = run</code> in the <code>ggplot()</code> call, only in <code>geom_line()</code>. As always, there are various ways to obtain the same result. This code:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="unbiased-transmission.html#cb21-1"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> output) <span class="op">+</span></span>
+<span id="cb21-2"><a href="unbiased-transmission.html#cb21-2"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">y =</span> p, <span class="dt">x =</span> generation, <span class="dt">colour =</span> run)) <span class="op">+</span></span>
+<span id="cb21-3"><a href="unbiased-transmission.html#cb21-3"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="kw">aes</span>(<span class="dt">y =</span> p, <span class="dt">x =</span> generation), <span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;line&quot;</span>, <span class="dt">size =</span> <span class="dv">1</span>)</span></code></pre></div>
+<p>is equivalent to the code we wrapped in the function above. However, the original code is clearer, as it distinguishes the global mapping, and the mappings specific to each visual representation.</p>
+<p><code>stat_summary()</code> is a generic ggplot function which can be used to plot different statistics to summarise our data. In this case, we want to calculate the mean of the data mapped in <span class="math inline">\(y\)</span>, we want to plot them with a line, and we want this line to be thicker than the lines for the single runs. The default line size for geom_line is 0.5, so <code>size = 1</code> doubles the thickness.</p>
+<p>Let’s now run the function and plot the results for five runs with the same parameters we used at the beginning (<span class="math inline">\(N=100\)</span> and <span class="math inline">\(t_{\text{max}}=200\)</span>):</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="unbiased-transmission.html#cb22-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">unbiased_transmission_2</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">t_max =</span> <span class="dv">200</span>, <span class="dt">r_max =</span> <span class="dv">5</span>)</span>
+<span id="cb22-2"><a href="unbiased-transmission.html#cb22-2"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<div class="figure"><span id="fig:1-19"></span>
+<img src="IBM-cultevo_files/figure-html/1-19-1.png" alt="Unbiased cultural transmission generates different dynamics in multiple runs" width="672" />
+<p class="caption">
+Figure 1.4: Unbiased cultural transmission generates different dynamics in multiple runs
+</p>
+</div>
+<p>You should be able to see five independent runs of our simulation shown as regular thin lines, along with a thicker line showing the mean of these lines. Some runs have probably gone to 0 or 1, and the mean should be somewhere in between. The data is stored in <code>data_model</code>, which we can inspect by writing its name.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="unbiased-transmission.html#cb23-1"></a>data_model</span></code></pre></div>
+<pre><code>## # A tibble: 1,000 x 3
+##    generation     p run  
+##         &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;
+##  1          1 0.570 1    
+##  2          2 0.570 1    
+##  3          3 0.62  1    
+##  4          4 0.68  1    
+##  5          5 0.73  1    
+##  6          6 0.7   1    
+##  7          7 0.72  1    
+##  8          8 0.76  1    
+##  9          9 0.79  1    
+## 10         10 0.73  1    
+## # … with 990 more rows</code></pre>
+<p>Now let’s run the <code>unbiased_transmission_2()</code> model with <span class="math inline">\(N = 10000\)</span>, to compare with <span class="math inline">\(N = 100\)</span>.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="unbiased-transmission.html#cb25-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">unbiased_transmission_2</span>(<span class="dt">N =</span> <span class="dv">10000</span>, <span class="dt">t_max =</span> <span class="dv">200</span>, <span class="dt">r_max =</span> <span class="dv">5</span>)</span>
+<span id="cb25-2"><a href="unbiased-transmission.html#cb25-2"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<div class="figure"><span id="fig:1-21"></span>
+<img src="IBM-cultevo_files/figure-html/1-21-1.png" alt="Unbiased cultural transmission generates similar dynamics in multiple runs when population sizes are very large" width="672" />
+<p class="caption">
+Figure 1.5: Unbiased cultural transmission generates similar dynamics in multiple runs when population sizes are very large
+</p>
+</div>
+<p>The mean line should be almost exactly at <span class="math inline">\(p=0.5\)</span> now, with the five independent runs fairly close to it.</p>
+</div>
+<div id="varying-initial-conditions" class="section level2">
+<h2><span class="header-section-number">1.6</span> Varying initial conditions</h2>
+<p>Let’s add one final modification. So far the starting frequencies of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have been the same, roughly 0.5 each. But what if we were to start at different initial frequencies of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>? Say, <span class="math inline">\(p=0.2\)</span> or <span class="math inline">\(p=0.9\)</span>? Would unbiased transmission keep <span class="math inline">\(p\)</span> at these initial values, or would it go to <span class="math inline">\(p=0.5\)</span> as we have found so far?</p>
+<p>To find out, we can add another parameter, <code>p_0</code>, which specifies the initial probability of an individual having an <span class="math inline">\(A\)</span> rather than a <span class="math inline">\(B\)</span> in the first generation. Previously this was always <code>p_0 = 0.5</code>, but in the new function below we add it to the <code>sample()</code> function to weight the initial allocation of traits.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="unbiased-transmission.html#cb26-1"></a>unbiased_transmission_<span class="dv">3</span> &lt;-<span class="st"> </span><span class="cf">function</span>(N, p_<span class="dv">0</span>, t_max, r_max) {</span>
+<span id="cb26-2"><a href="unbiased-transmission.html#cb26-2"></a>  output &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">generation =</span> <span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>t_max, r_max), </span>
+<span id="cb26-3"><a href="unbiased-transmission.html#cb26-3"></a>                   <span class="dt">p =</span> <span class="kw">as.numeric</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, t_max <span class="op">*</span><span class="st"> </span>r_max)), </span>
+<span id="cb26-4"><a href="unbiased-transmission.html#cb26-4"></a>                   <span class="dt">run =</span> <span class="kw">as.factor</span>(<span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>r_max, <span class="dt">each =</span> t_max)))</span>
+<span id="cb26-5"><a href="unbiased-transmission.html#cb26-5"></a>  <span class="co"># For each run</span></span>
+<span id="cb26-6"><a href="unbiased-transmission.html#cb26-6"></a>  <span class="cf">for</span> (r <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>r_max) {</span>
+<span id="cb26-7"><a href="unbiased-transmission.html#cb26-7"></a>    <span class="co"># Create first generation</span></span>
+<span id="cb26-8"><a href="unbiased-transmission.html#cb26-8"></a>    population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, <span class="dt">replace =</span> <span class="ot">TRUE</span>, </span>
+<span id="cb26-9"><a href="unbiased-transmission.html#cb26-9"></a>                                        <span class="dt">prob =</span> <span class="kw">c</span>(p_<span class="dv">0</span>, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_<span class="dv">0</span>)))</span>
+<span id="cb26-10"><a href="unbiased-transmission.html#cb26-10"></a>    </span>
+<span id="cb26-11"><a href="unbiased-transmission.html#cb26-11"></a>    <span class="co"># Add first generation&#39;s p for run r</span></span>
+<span id="cb26-12"><a href="unbiased-transmission.html#cb26-12"></a>    output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span><span class="dv">1</span> <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p &lt;-<span class="st"> </span></span>
+<span id="cb26-13"><a href="unbiased-transmission.html#cb26-13"></a><span class="st">      </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N </span>
+<span id="cb26-14"><a href="unbiased-transmission.html#cb26-14"></a></span>
+<span id="cb26-15"><a href="unbiased-transmission.html#cb26-15"></a>    <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span>t_max) {</span>
+<span id="cb26-16"><a href="unbiased-transmission.html#cb26-16"></a>      <span class="co"># Copy individuals to previous_population tibble</span></span>
+<span id="cb26-17"><a href="unbiased-transmission.html#cb26-17"></a>      previous_population &lt;-<span class="st"> </span>population </span>
+<span id="cb26-18"><a href="unbiased-transmission.html#cb26-18"></a>      </span>
+<span id="cb26-19"><a href="unbiased-transmission.html#cb26-19"></a>      <span class="co"># Randomly copy from previous generation</span></span>
+<span id="cb26-20"><a href="unbiased-transmission.html#cb26-20"></a>      population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(previous_population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>))</span>
+<span id="cb26-21"><a href="unbiased-transmission.html#cb26-21"></a>      </span>
+<span id="cb26-22"><a href="unbiased-transmission.html#cb26-22"></a>      <span class="co"># Get p and put it into output slot for this generation t and run r</span></span>
+<span id="cb26-23"><a href="unbiased-transmission.html#cb26-23"></a>      output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span>t <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p &lt;-<span class="st"> </span></span>
+<span id="cb26-24"><a href="unbiased-transmission.html#cb26-24"></a><span class="st">        </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N  </span>
+<span id="cb26-25"><a href="unbiased-transmission.html#cb26-25"></a>    }</span>
+<span id="cb26-26"><a href="unbiased-transmission.html#cb26-26"></a>  }</span>
+<span id="cb26-27"><a href="unbiased-transmission.html#cb26-27"></a>  <span class="co"># Export data from function</span></span>
+<span id="cb26-28"><a href="unbiased-transmission.html#cb26-28"></a>  output </span>
+<span id="cb26-29"><a href="unbiased-transmission.html#cb26-29"></a>}</span></code></pre></div>
+<p><code>unbiased_transmission_3()</code> is almost identical to the previous function. The only changes are the addition of <span class="math inline">\(p_0\)</span> as an argument to the function, and the <span class="math inline">\(prob\)</span> argument in the <code>sample()</code> command. The <span class="math inline">\(prob\)</span> argument gives the probability of picking each option, in our case <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, in the first generation. The probability of <span class="math inline">\(A\)</span> is now <span class="math inline">\(p_0\)</span>, and the probability of <span class="math inline">\(B\)</span> is now <span class="math inline">\(1-p_0\)</span>. We can use the same plotting function as before to visualise the result. Let’s see what happens with a different value of <span class="math inline">\(p_0\)</span>, for example <span class="math inline">\(p_0=0.2\)</span>.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="unbiased-transmission.html#cb27-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">unbiased_transmission_3</span>(<span class="dt">N =</span> <span class="dv">10000</span>, <span class="dt">p_0 =</span> <span class="fl">0.2</span>, <span class="dt">t_max =</span> <span class="dv">200</span>, <span class="dt">r_max =</span> <span class="dv">5</span>)</span>
+<span id="cb27-2"><a href="unbiased-transmission.html#cb27-2"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<div class="figure"><span id="fig:1-23"></span>
+<img src="IBM-cultevo_files/figure-html/1-23-1.png" alt="Unbiased transmission does not change trait frequencies from the starting conditions, barring random fluctuations" width="672" />
+<p class="caption">
+Figure 1.6: Unbiased transmission does not change trait frequencies from the starting conditions, barring random fluctuations
+</p>
+</div>
+<p>With <span class="math inline">\(p_0=0.2\)</span>, trait frequencies stay at <span class="math inline">\(p=0.2\)</span>. Unbiased transmission is truly non-directional: it maintains trait frequencies at whatever they were in the previous generation, barring random fluctuations caused by small population sizes.</p>
+</div>
+<div id="summary-of-the-model" class="section level2">
+<h2><span class="header-section-number">1.7</span> Summary of the model</h2>
+<p>Even this extremely simple model provides some valuable insights. First, unbiased transmission does not in itself change trait frequencies. As long as populations are large, trait frequencies remain the same.</p>
+<p>Second, the smaller the population size, the more likely traits are to be lost by chance. This is a basic insight from population genetics, known there as genetic drift, but it can also be applied to cultural evolution. Many studies have tested (and some supported) the idea that population size and other demographic factors can shape cultural diversity.</p>
+<p>Furthermore, generating expectations about cultural change under simple assumptions like random cultural drift can be useful for detecting non-random patterns like selection. If we don’t have a baseline, we won’t know selection or other directional processes when we see them.</p>
+<p>We have also introduced several programming techniques that will be useful in later simulations. We have seen how to use tibbles to hold characteristics of individuals and the outputs of simulations, how to use loops to cycle through generations and simulation runs, how to use <code>sample()</code> to pick randomly from sets of elements, how to wrap simulations in functions to easily re-run them with different parameter values, and how to use <code>ggplot()</code> to plot the results of simulations.</p>
+</div>
+<div id="further-reading-1" class="section level2">
+<h2><span class="header-section-number">1.8</span> Further reading</h2>
+<p><span class="citation">Cavalli-Sforza and Feldman (<a href="references.html#ref-cavalli-sforza_cultural_1981" role="doc-biblioref">1981</a>)</span> explored how cultural drift affects cultural evolution, which was extended by <span class="citation">Neiman (<a href="references.html#ref-neiman_stylistic_1995" role="doc-biblioref">1995</a>)</span> in an archaeological context. <span class="citation">Bentley, Hahn, and Shennan (<a href="references.html#ref-bentley_random_2004" role="doc-biblioref">2004</a>)</span> present models of unbiased transmission for several cultural datasets. <span class="citation">Lansing and Cox (<a href="references.html#ref-lansing_domain_2011" role="doc-biblioref">2011</a>)</span> and commentaries explore the underlying assumptions of applying random drift to cultural evolution.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="unbiased-and-biased-mutation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["IBM-cultevo.pdf", "IBM-cultevo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

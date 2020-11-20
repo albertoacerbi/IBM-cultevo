@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 9 Rogers’ Paradox: A Solution | Individual-based models of cultural evolution</title>
+  <meta name="description" content="Chapter 9 Rogers’ Paradox: A Solution | Individual-based models of cultural evolution" />
+  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 9 Rogers’ Paradox: A Solution | Individual-based models of cultural evolution" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 Rogers’ Paradox: A Solution | Individual-based models of cultural evolution" />
+  
+  
+  
+
+<meta name="author" content="Alberto Acerbi" />
+<meta name="author" content="Marco Smolla" />
+<meta name="author" content="Alex Mesoudi" />
+
+
+<meta name="date" content="2020-11-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="rogers-paradox.html"/>
+<link rel="next" href="demography.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Individual-based models of cultural evolution</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#aim-of-the-book"><i class="fa fa-check"></i>Aim of the book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-is-cultural-evolution"><i class="fa fa-check"></i>What is cultural evolution?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-model"><i class="fa fa-check"></i>Why model?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-individual-based-models"><i class="fa fa-check"></i>Why individual-based models?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book---the-programming"><i class="fa fa-check"></i>How to use this book - the programming</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book---the-simulations"><i class="fa fa-check"></i>How to use this book - the simulations</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#conventions-and-formatting"><i class="fa fa-check"></i>Conventions and formatting</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
+</ul></li>
+<li class="part"><span><b>Basics</b></span></li>
+<li class="chapter" data-level="1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html"><i class="fa fa-check"></i><b>1</b> Unbiased transmission</a><ul>
+<li class="chapter" data-level="1.1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#initialising-the-simulation"><i class="fa fa-check"></i><b>1.1</b> Initialising the simulation</a></li>
+<li class="chapter" data-level="1.2" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#execute-generation-turn-over-many-times"><i class="fa fa-check"></i><b>1.2</b> Execute generation turn-over many times</a></li>
+<li class="chapter" data-level="1.3" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#plotting-the-model-results"><i class="fa fa-check"></i><b>1.3</b> Plotting the model results</a></li>
+<li class="chapter" data-level="1.4" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#write-a-function-to-wrap-the-model-code"><i class="fa fa-check"></i><b>1.4</b> Write a function to wrap the model code</a></li>
+<li class="chapter" data-level="1.5" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#run-several-independent-simulations-and-plot-their-results"><i class="fa fa-check"></i><b>1.5</b> Run several independent simulations and plot their results</a></li>
+<li class="chapter" data-level="1.6" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#varying-initial-conditions"><i class="fa fa-check"></i><b>1.6</b> Varying initial conditions</a></li>
+<li class="chapter" data-level="1.7" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#summary-of-the-model"><i class="fa fa-check"></i><b>1.7</b> Summary of the model</a></li>
+<li class="chapter" data-level="1.8" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#further-reading-1"><i class="fa fa-check"></i><b>1.8</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html"><i class="fa fa-check"></i><b>2</b> Unbiased and biased mutation</a><ul>
+<li class="chapter" data-level="2.1" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#unbiased-mutation"><i class="fa fa-check"></i><b>2.1</b> Unbiased mutation</a></li>
+<li class="chapter" data-level="2.2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#biased-mutation"><i class="fa fa-check"></i><b>2.2</b> Biased mutation</a></li>
+<li class="chapter" data-level="2.3" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#summary-of-the-model-1"><i class="fa fa-check"></i><b>2.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="2.4" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#further-reading-2"><i class="fa fa-check"></i><b>2.4</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html"><i class="fa fa-check"></i><b>3</b> Biased transmission: direct bias</a><ul>
+<li class="chapter" data-level="3.1" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#a-simple-model-of-directly-biased-transmission"><i class="fa fa-check"></i><b>3.1</b> A simple model of directly biased transmission</a></li>
+<li class="chapter" data-level="3.2" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#strength-of-selection"><i class="fa fa-check"></i><b>3.2</b> Strength of selection</a></li>
+<li class="chapter" data-level="3.3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#summary-of-the-model-2"><i class="fa fa-check"></i><b>3.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="3.4" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#further-reading-3"><i class="fa fa-check"></i><b>3.4</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html"><i class="fa fa-check"></i><b>4</b> Biased transmission: frequency-dependent indirect bias</a><ul>
+<li class="chapter" data-level="4.1" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#the-logic-of-conformity"><i class="fa fa-check"></i><b>4.1</b> The logic of conformity</a></li>
+<li class="chapter" data-level="4.2" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#testing-conformist-transmission"><i class="fa fa-check"></i><b>4.2</b> Testing conformist transmission</a></li>
+<li class="chapter" data-level="4.3" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#summary-of-the-model-3"><i class="fa fa-check"></i><b>4.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="4.4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#further-readings"><i class="fa fa-check"></i><b>4.4</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html"><i class="fa fa-check"></i><b>5</b> Biased transmission: demonstrator-based indirect bias</a><ul>
+<li class="chapter" data-level="5.1" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#a-simple-demonstrator-bias"><i class="fa fa-check"></i><b>5.1</b> A simple demonstrator bias</a></li>
+<li class="chapter" data-level="5.2" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#predicting-the-winning-trait"><i class="fa fa-check"></i><b>5.2</b> Predicting the ‘winning’ trait</a></li>
+<li class="chapter" data-level="5.3" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#summary-of-the-model-4"><i class="fa fa-check"></i><b>5.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="5.4" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#further-readings-1"><i class="fa fa-check"></i><b>5.4</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html"><i class="fa fa-check"></i><b>6</b> Vertical and horizontal transmission</a><ul>
+<li class="chapter" data-level="6.1" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#vertical-cultural-transmission"><i class="fa fa-check"></i><b>6.1</b> Vertical cultural transmission</a></li>
+<li class="chapter" data-level="6.2" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#horizontal-cultural-transmission"><i class="fa fa-check"></i><b>6.2</b> Horizontal cultural transmission</a></li>
+<li class="chapter" data-level="6.3" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#summary-of-the-model-5"><i class="fa fa-check"></i><b>6.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="6.4" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#further-reading-4"><i class="fa fa-check"></i><b>6.4</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html"><i class="fa fa-check"></i><b>7</b> Multiple traits models</a><ul>
+<li class="chapter" data-level="7.1" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#unbiased-transmission-with-multiple-traits"><i class="fa fa-check"></i><b>7.1</b> Unbiased transmission with multiple traits</a></li>
+<li class="chapter" data-level="7.2" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#introducing-innovation"><i class="fa fa-check"></i><b>7.2</b> Introducing innovation</a></li>
+<li class="chapter" data-level="7.3" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#optimising-the-code"><i class="fa fa-check"></i><b>7.3</b> Optimising the code</a></li>
+<li class="chapter" data-level="7.4" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#the-distribution-of-popularity"><i class="fa fa-check"></i><b>7.4</b> The distribution of popularity</a></li>
+<li class="chapter" data-level="7.5" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#summary-of-the-model-6"><i class="fa fa-check"></i><b>7.5</b> Summary of the model</a></li>
+<li class="chapter" data-level="7.6" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#further-readings-2"><i class="fa fa-check"></i><b>7.6</b> Further readings</a></li>
+</ul></li>
+<li class="part"><span><b>Advanced topics - The evolution of cultural evolution</b></span></li>
+<li class="chapter" data-level="8" data-path="rogers-paradox.html"><a href="rogers-paradox.html"><i class="fa fa-check"></i><b>8</b> Rogers’ Paradox</a><ul>
+<li class="chapter" data-level="8.1" data-path="rogers-paradox.html"><a href="rogers-paradox.html#modelling-rogers-paradox"><i class="fa fa-check"></i><b>8.1</b> Modelling Rogers’ Paradox</a></li>
+<li class="chapter" data-level="8.2" data-path="rogers-paradox.html"><a href="rogers-paradox.html#summary-of-the-model-7"><i class="fa fa-check"></i><b>8.2</b> Summary of the model</a></li>
+<li class="chapter" data-level="8.3" data-path="rogers-paradox.html"><a href="rogers-paradox.html#further-reading-5"><i class="fa fa-check"></i><b>8.3</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html"><i class="fa fa-check"></i><b>9</b> Rogers’ Paradox: A Solution</a><ul>
+<li class="chapter" data-level="9.1" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#modelling-critical-social-learners"><i class="fa fa-check"></i><b>9.1</b> Modelling critical social learners</a></li>
+<li class="chapter" data-level="9.2" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#summary-of-the-model-8"><i class="fa fa-check"></i><b>9.2</b> Summary of the model</a></li>
+<li class="chapter" data-level="9.3" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#further-reading-6"><i class="fa fa-check"></i><b>9.3</b> Further reading</a></li>
+</ul></li>
+<li class="part"><span><b>Advanced topics - Culture and populations</b></span></li>
+<li class="chapter" data-level="10" data-path="demography.html"><a href="demography.html"><i class="fa fa-check"></i><b>10</b> Demography</a><ul>
+<li class="chapter" data-level="10.1" data-path="demography.html"><a href="demography.html#the-tasmania-case"><i class="fa fa-check"></i><b>10.1</b> The Tasmania Case</a></li>
+<li class="chapter" data-level="10.2" data-path="demography.html"><a href="demography.html#modelling-the-tasmania-case"><i class="fa fa-check"></i><b>10.2</b> Modelling the Tasmania Case</a></li>
+<li class="chapter" data-level="10.3" data-path="demography.html"><a href="demography.html#calculating-critical-population-sizes-based-on-skill-complexity"><i class="fa fa-check"></i><b>10.3</b> Calculating critical population sizes based on skill complexity</a></li>
+<li class="chapter" data-level="10.4" data-path="demography.html"><a href="demography.html#summary-of-the-model-9"><i class="fa fa-check"></i><b>10.4</b> Summary of the model</a></li>
+<li class="chapter" data-level="10.5" data-path="demography.html"><a href="demography.html#further-readings-3"><i class="fa fa-check"></i><b>10.5</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="social-network-structure.html"><a href="social-network-structure.html"><i class="fa fa-check"></i><b>11</b> Social network structure</a><ul>
+<li class="chapter" data-level="11.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-basics"><i class="fa fa-check"></i><b>11.1</b> Network basics</a></li>
+<li class="chapter" data-level="11.2" data-path="social-network-structure.html"><a href="social-network-structure.html#generating-networks"><i class="fa fa-check"></i><b>11.2</b> Generating networks</a></li>
+<li class="chapter" data-level="11.3" data-path="social-network-structure.html"><a href="social-network-structure.html#plotting-networks"><i class="fa fa-check"></i><b>11.3</b> Plotting networks</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-layout"><i class="fa fa-check"></i><b>11.3.1</b> Network layout</a></li>
+<li class="chapter" data-level="11.3.2" data-path="social-network-structure.html"><a href="social-network-structure.html#network-styling"><i class="fa fa-check"></i><b>11.3.2</b> Network styling</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="social-network-structure.html"><a href="social-network-structure.html#analyse-social-networks"><i class="fa fa-check"></i><b>11.4</b> Analyse social networks</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-properties-and-characteristics"><i class="fa fa-check"></i><b>11.4.1</b> Network properties and characteristics</a></li>
+<li class="chapter" data-level="11.4.2" data-path="social-network-structure.html"><a href="social-network-structure.html#vertex-properties"><i class="fa fa-check"></i><b>11.4.2</b> Vertex properties</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="social-network-structure.html"><a href="social-network-structure.html#modelling-information-transmission-in-social-networks"><i class="fa fa-check"></i><b>11.5</b> Modelling information transmission in social networks</a><ul>
+<li class="chapter" data-level="11.5.1" data-path="social-network-structure.html"><a href="social-network-structure.html#gossip-diffusion-in-networked-populations"><i class="fa fa-check"></i><b>11.5.1</b> Gossip diffusion in networked populations</a></li>
+<li class="chapter" data-level="11.5.2" data-path="social-network-structure.html"><a href="social-network-structure.html#complex-versus-simple-contagion-information-transmission"><i class="fa fa-check"></i><b>11.5.2</b> Complex versus simple contagion information transmission</a></li>
+</ul></li>
+<li class="chapter" data-level="11.6" data-path="social-network-structure.html"><a href="social-network-structure.html#summary-of-the-model-10"><i class="fa fa-check"></i><b>11.6</b> Summary of the model</a></li>
+<li class="chapter" data-level="11.7" data-path="social-network-structure.html"><a href="social-network-structure.html#further-reading-7"><i class="fa fa-check"></i><b>11.7</b> Further Reading</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Individual-based models of cultural evolution</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="rogers-paradox-a-solution" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> Rogers’ Paradox: A Solution</h1>
+<p>In the <a href="rogers-paradox.html#rogers-paradox">previous chapter</a> we saw how social learning does not increase the mean fitness of a population relative to a population entirely made up of individual learners, at least in a changing environment. This is colloquially known as Rogers’ paradox, after Alan Rogers’ model which originally showed this. It is a ‘paradox’ because it holds even though social learning is less costly than individual learning, and social learning is often argued to underpin our species’ ecological success. The paradox occurs because social learning is frequency dependent: when environments change, the success of social learning depends on there being individual learners around to copy. Otherwise social learners are left copying each others’ outdated behaviour.</p>
+<p>Several subsequent models have explored ‘solutions’ to Rogers’ paradox. These involve relaxing the obviously unrealistic assumptions. One of these is that individuals in the model come in one of two fixed types: social learners (who always learn socially), and individual learners (who always learn individually). This is obviously unrealistic. Most organisms that can learn individually can also learn socially, and the two capacities likely rely on the same underlying mechanisms (e.g. associative learning, see e.g. <span class="citation">Heyes (<a href="references.html#ref-heyes_whats_2012" role="doc-biblioref">2012</a>)</span>).</p>
+<div id="modelling-critical-social-learners" class="section level2">
+<h2><span class="header-section-number">9.1</span> Modelling critical social learners</h2>
+<p>To explore how a mixed learning strategy would compete with pure strategies (only social or only individual learning), <span class="citation">Enquist, Eriksson, and Ghirlanda (<a href="references.html#ref-enquist_critical_2007" role="doc-biblioref">2007</a>)</span> added another type of individual to Rogers’ model: a critical social learner. These individuals first try social learning, and if the result is unsatisfactory, they then try individual learning.</p>
+<p>The following function modifies the <code>rogers_model()</code> function from the <a href="rogers-paradox.html#rogers-paradox">last chapter</a> to include critical learners. We need to change the code in a few places, but the modifications should be all easy to understand at this point. To start with, in the output tibble, we need to take track also of the number of individual learners (before they were simply the individuals that were <em>not</em> social learners) and of the number of the individuals adopting the new strategy, critical social learning. We have now two more variables for this: <code>P_IL</code> and <code>P_CL</code>. Next, we need to add a learning routine for critical learners. This involves repeating the social learning code originally written for the social learners. We then apply the individual learning code to those critical learners who copied the incorrect behaviour, i.e. if their behaviour is different from <code>E</code> (this makes them ‘unsatisfied’). To make it easier to follow, we now insert the fitness updates into the learning section. This is because only those critical learners who are unsatisfied will suffer the costs of individual learning. If we left it to afterwards, it’s easy to lose track of who is paying what fitness costs.</p>
+<p>Reproduction and mutation are changed to account for the three learning strategies. We now need to get the relative fitness of social and individual learners, and reproduce based on those fitnesses. Individuals left over become critical learners. We could calculate the relative fitness of critical learners, but it’s not really necessary given that the proportion of critical learners will always be 1 minus the proportion of social and individual learners. Similarly, mutation now needs to specify that individuals can mutate into either of the two other learning strategies. We assume this mutation is unbiased, and mutation is equally likely to result in the two other strategies. Notice the use of the function <code>sample()</code> when we set the learning strategies of the new population. So far we always used for binary choices, now we are using it with three elements (<code>c("individual", "social", "critical"</code>) and three probabilities (<code>prob = c(fitness_IL, fitness_SL, 1 - (fitness_SL + fitness_IL))</code>).</p>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="rogers-paradox-a-solution.html#cb117-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb117-2"><a href="rogers-paradox-a-solution.html#cb117-2"></a></span>
+<span id="cb117-3"><a href="rogers-paradox-a-solution.html#cb117-3"></a>rogers_model2 &lt;-<span class="st"> </span><span class="cf">function</span>(N, t_max, r_max, <span class="dt">w =</span> <span class="dv">1</span>, <span class="dt">b =</span> <span class="fl">0.5</span>, c, <span class="dt">s =</span> <span class="dv">0</span>, mu, p, u) {</span>
+<span id="cb117-4"><a href="rogers-paradox-a-solution.html#cb117-4"></a>  </span>
+<span id="cb117-5"><a href="rogers-paradox-a-solution.html#cb117-5"></a>  <span class="co"># Check parameters to avoid negative fitnesses</span></span>
+<span id="cb117-6"><a href="rogers-paradox-a-solution.html#cb117-6"></a>  <span class="cf">if</span> (b <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">+</span><span class="st"> </span>c) <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span> <span class="op">||</span><span class="st"> </span>b <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">+</span><span class="st"> </span>s) <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>) {</span>
+<span id="cb117-7"><a href="rogers-paradox-a-solution.html#cb117-7"></a>    <span class="kw">stop</span>(<span class="st">&quot;Invalid parameter values: ensure b*(1+c) &lt; 1 and b*(1+s) &lt; 1&quot;</span>)</span>
+<span id="cb117-8"><a href="rogers-paradox-a-solution.html#cb117-8"></a>  }</span>
+<span id="cb117-9"><a href="rogers-paradox-a-solution.html#cb117-9"></a>  </span>
+<span id="cb117-10"><a href="rogers-paradox-a-solution.html#cb117-10"></a>  <span class="co"># Create output tibble</span></span>
+<span id="cb117-11"><a href="rogers-paradox-a-solution.html#cb117-11"></a>  output &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">generation =</span> <span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>t_max, r_max), </span>
+<span id="cb117-12"><a href="rogers-paradox-a-solution.html#cb117-12"></a>                   <span class="dt">run =</span> <span class="kw">as.factor</span>(<span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>r_max, <span class="dt">each =</span> t_max)), </span>
+<span id="cb117-13"><a href="rogers-paradox-a-solution.html#cb117-13"></a>                   <span class="dt">p_SL =</span> <span class="kw">as.numeric</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, t_max <span class="op">*</span><span class="st"> </span>r_max)), </span>
+<span id="cb117-14"><a href="rogers-paradox-a-solution.html#cb117-14"></a>                   <span class="dt">p_IL =</span> <span class="kw">as.numeric</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, t_max <span class="op">*</span><span class="st"> </span>r_max)), </span>
+<span id="cb117-15"><a href="rogers-paradox-a-solution.html#cb117-15"></a>                   <span class="dt">p_CL =</span> <span class="kw">as.numeric</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, t_max <span class="op">*</span><span class="st"> </span>r_max)), </span>
+<span id="cb117-16"><a href="rogers-paradox-a-solution.html#cb117-16"></a>                   <span class="dt">W =</span> <span class="kw">as.numeric</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, t_max <span class="op">*</span><span class="st"> </span>r_max)))</span>
+<span id="cb117-17"><a href="rogers-paradox-a-solution.html#cb117-17"></a>  </span>
+<span id="cb117-18"><a href="rogers-paradox-a-solution.html#cb117-18"></a>  <span class="cf">for</span> (r <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>r_max) {</span>
+<span id="cb117-19"><a href="rogers-paradox-a-solution.html#cb117-19"></a>    </span>
+<span id="cb117-20"><a href="rogers-paradox-a-solution.html#cb117-20"></a>    <span class="co"># Create a population of individuals</span></span>
+<span id="cb117-21"><a href="rogers-paradox-a-solution.html#cb117-21"></a>    population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">learning =</span> <span class="kw">rep</span>(<span class="st">&quot;individual&quot;</span>, N), </span>
+<span id="cb117-22"><a href="rogers-paradox-a-solution.html#cb117-22"></a>                         <span class="dt">behaviour =</span> <span class="kw">rep</span>(<span class="ot">NA</span>, N), <span class="dt">fitness =</span> <span class="kw">rep</span>(<span class="ot">NA</span>, N))</span>
+<span id="cb117-23"><a href="rogers-paradox-a-solution.html#cb117-23"></a>    </span>
+<span id="cb117-24"><a href="rogers-paradox-a-solution.html#cb117-24"></a>    <span class="co"># Initialise the environment</span></span>
+<span id="cb117-25"><a href="rogers-paradox-a-solution.html#cb117-25"></a>    E &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb117-26"><a href="rogers-paradox-a-solution.html#cb117-26"></a>    </span>
+<span id="cb117-27"><a href="rogers-paradox-a-solution.html#cb117-27"></a>    <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>t_max) {</span>
+<span id="cb117-28"><a href="rogers-paradox-a-solution.html#cb117-28"></a>      </span>
+<span id="cb117-29"><a href="rogers-paradox-a-solution.html#cb117-29"></a>      <span class="co"># Now we integrate fitnesses into the learning stage</span></span>
+<span id="cb117-30"><a href="rogers-paradox-a-solution.html#cb117-30"></a>      population<span class="op">$</span>fitness &lt;-<span class="st"> </span>w  </span>
+<span id="cb117-31"><a href="rogers-paradox-a-solution.html#cb117-31"></a>      </span>
+<span id="cb117-32"><a href="rogers-paradox-a-solution.html#cb117-32"></a>      <span class="co"># 1. Social learning</span></span>
+<span id="cb117-33"><a href="rogers-paradox-a-solution.html#cb117-33"></a>      <span class="cf">if</span> (<span class="kw">sum</span>(population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;social&quot;</span>) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
+<span id="cb117-34"><a href="rogers-paradox-a-solution.html#cb117-34"></a>        <span class="co"># Subtract cost b*s from fitness of social learners</span></span>
+<span id="cb117-35"><a href="rogers-paradox-a-solution.html#cb117-35"></a>        population<span class="op">$</span>fitness[population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;social&quot;</span>] &lt;-<span class="st"> </span></span>
+<span id="cb117-36"><a href="rogers-paradox-a-solution.html#cb117-36"></a><span class="st">          </span>population<span class="op">$</span>fitness[population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;social&quot;</span>] <span class="op">-</span><span class="st"> </span>b<span class="op">*</span>s</span>
+<span id="cb117-37"><a href="rogers-paradox-a-solution.html#cb117-37"></a>        <span class="co"># Update behaviour</span></span>
+<span id="cb117-38"><a href="rogers-paradox-a-solution.html#cb117-38"></a>        population<span class="op">$</span>behaviour[population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;social&quot;</span>] &lt;-<span class="st"> </span></span>
+<span id="cb117-39"><a href="rogers-paradox-a-solution.html#cb117-39"></a><span class="st">          </span><span class="kw">sample</span>(previous_population<span class="op">$</span>behaviour, <span class="kw">sum</span>(population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;social&quot;</span>), <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb117-40"><a href="rogers-paradox-a-solution.html#cb117-40"></a></span>
+<span id="cb117-41"><a href="rogers-paradox-a-solution.html#cb117-41"></a>      }</span>
+<span id="cb117-42"><a href="rogers-paradox-a-solution.html#cb117-42"></a>      </span>
+<span id="cb117-43"><a href="rogers-paradox-a-solution.html#cb117-43"></a>      <span class="co"># 2. Individual learning</span></span>
+<span id="cb117-44"><a href="rogers-paradox-a-solution.html#cb117-44"></a>      <span class="co"># Subtract cost b*c from fitness of individual learners</span></span>
+<span id="cb117-45"><a href="rogers-paradox-a-solution.html#cb117-45"></a>      population<span class="op">$</span>fitness[population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;individual&quot;</span>] &lt;-<span class="st"> </span></span>
+<span id="cb117-46"><a href="rogers-paradox-a-solution.html#cb117-46"></a><span class="st">        </span>population<span class="op">$</span>fitness[population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;individual&quot;</span>] <span class="op">-</span><span class="st"> </span>b<span class="op">*</span>c</span>
+<span id="cb117-47"><a href="rogers-paradox-a-solution.html#cb117-47"></a>      <span class="co"># Update behaviour</span></span>
+<span id="cb117-48"><a href="rogers-paradox-a-solution.html#cb117-48"></a>      learn_correct &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), N, <span class="dt">prob =</span> <span class="kw">c</span>(p, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p), <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb117-49"><a href="rogers-paradox-a-solution.html#cb117-49"></a>      population<span class="op">$</span>behaviour[learn_correct <span class="op">&amp;</span><span class="st"> </span>population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;individual&quot;</span>] &lt;-<span class="st"> </span>E</span>
+<span id="cb117-50"><a href="rogers-paradox-a-solution.html#cb117-50"></a>      population<span class="op">$</span>behaviour[<span class="op">!</span>learn_correct <span class="op">&amp;</span><span class="st"> </span>population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;individual&quot;</span>] &lt;-<span class="st"> </span>E <span class="op">-</span><span class="st"> </span><span class="dv">1</span></span>
+<span id="cb117-51"><a href="rogers-paradox-a-solution.html#cb117-51"></a>      </span>
+<span id="cb117-52"><a href="rogers-paradox-a-solution.html#cb117-52"></a>      </span>
+<span id="cb117-53"><a href="rogers-paradox-a-solution.html#cb117-53"></a>      <span class="co"># 3. Critical social learning</span></span>
+<span id="cb117-54"><a href="rogers-paradox-a-solution.html#cb117-54"></a>      <span class="cf">if</span> (<span class="kw">sum</span>(population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;critical&quot;</span>) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
+<span id="cb117-55"><a href="rogers-paradox-a-solution.html#cb117-55"></a>        </span>
+<span id="cb117-56"><a href="rogers-paradox-a-solution.html#cb117-56"></a>        <span class="co"># Subtract b*s from fitness of socially learning critical learners</span></span>
+<span id="cb117-57"><a href="rogers-paradox-a-solution.html#cb117-57"></a>        population<span class="op">$</span>fitness[population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;critical&quot;</span>] &lt;-<span class="st"> </span></span>
+<span id="cb117-58"><a href="rogers-paradox-a-solution.html#cb117-58"></a><span class="st">          </span>population<span class="op">$</span>fitness[population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;critical&quot;</span>] <span class="op">-</span><span class="st"> </span>b<span class="op">*</span>s</span>
+<span id="cb117-59"><a href="rogers-paradox-a-solution.html#cb117-59"></a>        </span>
+<span id="cb117-60"><a href="rogers-paradox-a-solution.html#cb117-60"></a>        <span class="co"># First critical learners socially learn</span></span>
+<span id="cb117-61"><a href="rogers-paradox-a-solution.html#cb117-61"></a>        population<span class="op">$</span>behaviour[population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;critical&quot;</span>] &lt;-<span class="st"> </span></span>
+<span id="cb117-62"><a href="rogers-paradox-a-solution.html#cb117-62"></a><span class="st">          </span><span class="kw">sample</span>(previous_population<span class="op">$</span>behaviour, </span>
+<span id="cb117-63"><a href="rogers-paradox-a-solution.html#cb117-63"></a>                 <span class="kw">sum</span>(population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;critical&quot;</span>), <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb117-64"><a href="rogers-paradox-a-solution.html#cb117-64"></a>        </span>
+<span id="cb117-65"><a href="rogers-paradox-a-solution.html#cb117-65"></a>        <span class="co"># Subtract b*c from fitness of individually learning critical learners</span></span>
+<span id="cb117-66"><a href="rogers-paradox-a-solution.html#cb117-66"></a>        population<span class="op">$</span>fitness[population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;critical&quot;</span> <span class="op">&amp;</span><span class="st"> </span>population<span class="op">$</span>behaviour <span class="op">!=</span><span class="st"> </span>E] &lt;-<span class="st"> </span></span>
+<span id="cb117-67"><a href="rogers-paradox-a-solution.html#cb117-67"></a><span class="st">          </span>population<span class="op">$</span>fitness[population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;critical&quot;</span> <span class="op">&amp;</span><span class="st"> </span>population<span class="op">$</span>behaviour <span class="op">!=</span><span class="st"> </span>E] <span class="op">-</span><span class="st"> </span>b<span class="op">*</span>c</span>
+<span id="cb117-68"><a href="rogers-paradox-a-solution.html#cb117-68"></a>        </span>
+<span id="cb117-69"><a href="rogers-paradox-a-solution.html#cb117-69"></a>        <span class="co"># Individual learning for those critical learners who did not copy correct behaviour</span></span>
+<span id="cb117-70"><a href="rogers-paradox-a-solution.html#cb117-70"></a>        population<span class="op">$</span>behaviour[learn_correct <span class="op">&amp;</span><span class="st"> </span>population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;critical&quot;</span> <span class="op">&amp;</span><span class="st"> </span>population<span class="op">$</span>behaviour <span class="op">!=</span><span class="st"> </span>E] &lt;-<span class="st"> </span>E</span>
+<span id="cb117-71"><a href="rogers-paradox-a-solution.html#cb117-71"></a>        population<span class="op">$</span>behaviour[<span class="op">!</span>learn_correct <span class="op">&amp;</span><span class="st"> </span>population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;critical&quot;</span> <span class="op">&amp;</span><span class="st"> </span>population<span class="op">$</span>behaviour <span class="op">!=</span><span class="st"> </span>E] &lt;-<span class="st"> </span>E <span class="op">-</span><span class="st"> </span><span class="dv">1</span></span>
+<span id="cb117-72"><a href="rogers-paradox-a-solution.html#cb117-72"></a>      }</span>
+<span id="cb117-73"><a href="rogers-paradox-a-solution.html#cb117-73"></a>      </span>
+<span id="cb117-74"><a href="rogers-paradox-a-solution.html#cb117-74"></a>      <span class="co"># 4. Calculate fitnesses (now only need to do the b bonus or penalty)</span></span>
+<span id="cb117-75"><a href="rogers-paradox-a-solution.html#cb117-75"></a>      population<span class="op">$</span>fitness[population<span class="op">$</span>behaviour <span class="op">==</span><span class="st"> </span>E] &lt;-</span>
+<span id="cb117-76"><a href="rogers-paradox-a-solution.html#cb117-76"></a><span class="st">        </span>population<span class="op">$</span>fitness[population<span class="op">$</span>behaviour <span class="op">==</span><span class="st"> </span>E] <span class="op">+</span><span class="st"> </span>b  </span>
+<span id="cb117-77"><a href="rogers-paradox-a-solution.html#cb117-77"></a>      population<span class="op">$</span>fitness[population<span class="op">$</span>behaviour <span class="op">!=</span><span class="st"> </span>E] &lt;-</span>
+<span id="cb117-78"><a href="rogers-paradox-a-solution.html#cb117-78"></a><span class="st">        </span>population<span class="op">$</span>fitness[population<span class="op">$</span>behaviour <span class="op">!=</span><span class="st"> </span>E] <span class="op">-</span><span class="st"> </span>b</span>
+<span id="cb117-79"><a href="rogers-paradox-a-solution.html#cb117-79"></a>      </span>
+<span id="cb117-80"><a href="rogers-paradox-a-solution.html#cb117-80"></a>      <span class="co"># 5. store population characteristics in output</span></span>
+<span id="cb117-81"><a href="rogers-paradox-a-solution.html#cb117-81"></a>      output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span>t <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p_SL &lt;-<span class="st"> </span></span>
+<span id="cb117-82"><a href="rogers-paradox-a-solution.html#cb117-82"></a><span class="st">        </span><span class="kw">mean</span>(population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;social&quot;</span>)</span>
+<span id="cb117-83"><a href="rogers-paradox-a-solution.html#cb117-83"></a>      output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span>t <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p_IL &lt;-<span class="st"> </span></span>
+<span id="cb117-84"><a href="rogers-paradox-a-solution.html#cb117-84"></a><span class="st">        </span><span class="kw">mean</span>(population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;individual&quot;</span>)</span>
+<span id="cb117-85"><a href="rogers-paradox-a-solution.html#cb117-85"></a>      output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span>t <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p_CL &lt;-<span class="st"> </span></span>
+<span id="cb117-86"><a href="rogers-paradox-a-solution.html#cb117-86"></a><span class="st">        </span><span class="kw">mean</span>(population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;critical&quot;</span>)</span>
+<span id="cb117-87"><a href="rogers-paradox-a-solution.html#cb117-87"></a>      output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span>t <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>W &lt;-<span class="st"> </span></span>
+<span id="cb117-88"><a href="rogers-paradox-a-solution.html#cb117-88"></a><span class="st">        </span><span class="kw">mean</span>(population<span class="op">$</span>fitness)</span>
+<span id="cb117-89"><a href="rogers-paradox-a-solution.html#cb117-89"></a>      </span>
+<span id="cb117-90"><a href="rogers-paradox-a-solution.html#cb117-90"></a>      <span class="co"># 6. Reproduction</span></span>
+<span id="cb117-91"><a href="rogers-paradox-a-solution.html#cb117-91"></a>      previous_population &lt;-<span class="st"> </span>population</span>
+<span id="cb117-92"><a href="rogers-paradox-a-solution.html#cb117-92"></a>      population<span class="op">$</span>behaviour &lt;-<span class="st"> </span><span class="ot">NA</span></span>
+<span id="cb117-93"><a href="rogers-paradox-a-solution.html#cb117-93"></a>      population<span class="op">$</span>fitness &lt;-<span class="st"> </span><span class="ot">NA</span></span>
+<span id="cb117-94"><a href="rogers-paradox-a-solution.html#cb117-94"></a>      </span>
+<span id="cb117-95"><a href="rogers-paradox-a-solution.html#cb117-95"></a>      <span class="co"># Individual learners</span></span>
+<span id="cb117-96"><a href="rogers-paradox-a-solution.html#cb117-96"></a>      <span class="cf">if</span> (<span class="kw">sum</span>(previous_population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;individual&quot;</span>) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
+<span id="cb117-97"><a href="rogers-paradox-a-solution.html#cb117-97"></a>        fitness_IL &lt;-<span class="st"> </span><span class="kw">sum</span>(previous_population<span class="op">$</span>fitness[previous_population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;individual&quot;</span>]) <span class="op">/</span><span class="st"> </span></span>
+<span id="cb117-98"><a href="rogers-paradox-a-solution.html#cb117-98"></a><span class="st">          </span><span class="kw">sum</span>(previous_population<span class="op">$</span>fitness)</span>
+<span id="cb117-99"><a href="rogers-paradox-a-solution.html#cb117-99"></a>      } <span class="cf">else</span> {</span>
+<span id="cb117-100"><a href="rogers-paradox-a-solution.html#cb117-100"></a>        fitness_IL &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb117-101"><a href="rogers-paradox-a-solution.html#cb117-101"></a>      }</span>
+<span id="cb117-102"><a href="rogers-paradox-a-solution.html#cb117-102"></a>      </span>
+<span id="cb117-103"><a href="rogers-paradox-a-solution.html#cb117-103"></a>      <span class="co"># Social learners</span></span>
+<span id="cb117-104"><a href="rogers-paradox-a-solution.html#cb117-104"></a>      <span class="cf">if</span> (<span class="kw">sum</span>(previous_population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;social&quot;</span>) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
+<span id="cb117-105"><a href="rogers-paradox-a-solution.html#cb117-105"></a>        fitness_SL &lt;-<span class="st"> </span><span class="kw">sum</span>(previous_population<span class="op">$</span>fitness[previous_population<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;social&quot;</span>]) <span class="op">/</span><span class="st"> </span></span>
+<span id="cb117-106"><a href="rogers-paradox-a-solution.html#cb117-106"></a><span class="st">          </span><span class="kw">sum</span>(previous_population<span class="op">$</span>fitness)</span>
+<span id="cb117-107"><a href="rogers-paradox-a-solution.html#cb117-107"></a>      } <span class="cf">else</span> {</span>
+<span id="cb117-108"><a href="rogers-paradox-a-solution.html#cb117-108"></a>        fitness_SL &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb117-109"><a href="rogers-paradox-a-solution.html#cb117-109"></a>      }</span>
+<span id="cb117-110"><a href="rogers-paradox-a-solution.html#cb117-110"></a>      </span>
+<span id="cb117-111"><a href="rogers-paradox-a-solution.html#cb117-111"></a>      population<span class="op">$</span>learning &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;individual&quot;</span>, <span class="st">&quot;social&quot;</span>, <span class="st">&quot;critical&quot;</span>), <span class="dt">size =</span> N, </span>
+<span id="cb117-112"><a href="rogers-paradox-a-solution.html#cb117-112"></a>             <span class="dt">prob =</span> <span class="kw">c</span>(fitness_IL, fitness_SL, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>(fitness_SL <span class="op">+</span><span class="st"> </span>fitness_IL)), <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb117-113"><a href="rogers-paradox-a-solution.html#cb117-113"></a>      </span>
+<span id="cb117-114"><a href="rogers-paradox-a-solution.html#cb117-114"></a>      mutation &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), N, <span class="dt">prob =</span> <span class="kw">c</span>(mu, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>mu), <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb117-115"><a href="rogers-paradox-a-solution.html#cb117-115"></a>      </span>
+<span id="cb117-116"><a href="rogers-paradox-a-solution.html#cb117-116"></a>      previous_population2 &lt;-<span class="st"> </span>population</span>
+<span id="cb117-117"><a href="rogers-paradox-a-solution.html#cb117-117"></a>      </span>
+<span id="cb117-118"><a href="rogers-paradox-a-solution.html#cb117-118"></a>      population<span class="op">$</span>learning[mutation <span class="op">&amp;</span><span class="st"> </span>previous_population2<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;individual&quot;</span>] &lt;-<span class="st"> </span></span>
+<span id="cb117-119"><a href="rogers-paradox-a-solution.html#cb117-119"></a><span class="st">        </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;critical&quot;</span>, <span class="st">&quot;social&quot;</span>), </span>
+<span id="cb117-120"><a href="rogers-paradox-a-solution.html#cb117-120"></a>               <span class="kw">sum</span>(mutation <span class="op">&amp;</span><span class="st"> </span>previous_population2<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;individual&quot;</span>), </span>
+<span id="cb117-121"><a href="rogers-paradox-a-solution.html#cb117-121"></a>               <span class="dt">prob =</span> <span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>), <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb117-122"><a href="rogers-paradox-a-solution.html#cb117-122"></a>      </span>
+<span id="cb117-123"><a href="rogers-paradox-a-solution.html#cb117-123"></a>      population<span class="op">$</span>learning[mutation <span class="op">&amp;</span><span class="st"> </span>previous_population2<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;social&quot;</span>] &lt;-<span class="st"> </span></span>
+<span id="cb117-124"><a href="rogers-paradox-a-solution.html#cb117-124"></a><span class="st">        </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;critical&quot;</span>, <span class="st">&quot;individual&quot;</span>), </span>
+<span id="cb117-125"><a href="rogers-paradox-a-solution.html#cb117-125"></a>               <span class="kw">sum</span>(mutation <span class="op">&amp;</span><span class="st"> </span>previous_population2<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;social&quot;</span>), </span>
+<span id="cb117-126"><a href="rogers-paradox-a-solution.html#cb117-126"></a>               <span class="dt">prob =</span> <span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>), <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb117-127"><a href="rogers-paradox-a-solution.html#cb117-127"></a>      </span>
+<span id="cb117-128"><a href="rogers-paradox-a-solution.html#cb117-128"></a>      population<span class="op">$</span>learning[mutation <span class="op">&amp;</span><span class="st"> </span>previous_population2<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;critical&quot;</span>] &lt;-<span class="st"> </span></span>
+<span id="cb117-129"><a href="rogers-paradox-a-solution.html#cb117-129"></a><span class="st">        </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;individual&quot;</span>, <span class="st">&quot;social&quot;</span>), </span>
+<span id="cb117-130"><a href="rogers-paradox-a-solution.html#cb117-130"></a>               <span class="kw">sum</span>(mutation <span class="op">&amp;</span><span class="st"> </span>previous_population2<span class="op">$</span>learning <span class="op">==</span><span class="st"> &quot;critical&quot;</span>), </span>
+<span id="cb117-131"><a href="rogers-paradox-a-solution.html#cb117-131"></a>               <span class="dt">prob =</span> <span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>), <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb117-132"><a href="rogers-paradox-a-solution.html#cb117-132"></a>    </span>
+<span id="cb117-133"><a href="rogers-paradox-a-solution.html#cb117-133"></a>      <span class="co"># 7. Potential environmental change</span></span>
+<span id="cb117-134"><a href="rogers-paradox-a-solution.html#cb117-134"></a>      <span class="cf">if</span> (<span class="kw">runif</span>(<span class="dv">1</span>) <span class="op">&lt;</span><span class="st"> </span>u) E &lt;-<span class="st"> </span>E <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
+<span id="cb117-135"><a href="rogers-paradox-a-solution.html#cb117-135"></a>    }</span>
+<span id="cb117-136"><a href="rogers-paradox-a-solution.html#cb117-136"></a>  }</span>
+<span id="cb117-137"><a href="rogers-paradox-a-solution.html#cb117-137"></a>  <span class="co"># Export data from function</span></span>
+<span id="cb117-138"><a href="rogers-paradox-a-solution.html#cb117-138"></a>  output</span>
+<span id="cb117-139"><a href="rogers-paradox-a-solution.html#cb117-139"></a>}</span></code></pre></div>
+<p>Now we can run <code>rogers_model2()</code>, with the same parameter values as we initially ran <code>rogers_model()</code> in the last chapter.</p>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="rogers-paradox-a-solution.html#cb118-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">rogers_model2</span>(<span class="dt">N =</span> <span class="dv">1000</span>, <span class="dt">t_max =</span> <span class="dv">200</span>, <span class="dt">r_max =</span> <span class="dv">10</span>, <span class="dt">c =</span> <span class="fl">0.9</span>, <span class="dt">mu =</span> <span class="fl">0.01</span>, <span class="dt">p =</span> <span class="dv">1</span>, <span class="dt">u =</span> <span class="fl">0.2</span>)</span></code></pre></div>
+<p>As before, it’s difficult to see what’s happening unless we plot the data. The following function <code>plot_prop()</code> now plots the proportion of all three learning strategies. To do this we need to convert our wide <code>data_model</code> tibble (where each strategy is in a different column) to long format (where all proportions are in a single column, and a new column indexes the strategy). To do this we use <code>pivot_longer()</code>, similarly to what we did in <a href="multiple-traits-models.html#multiple-traits-models">Chapter 7</a>. For visualisation purposes, we also rename the variables that keep track of the frequencies of the strategies (<code>p_IL</code>, <code>p_SL</code>, <code>p_CL</code>) with full words. For this plot, we only visualise the averages of all run with the <code>stat_summary()</code> function.</p>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="rogers-paradox-a-solution.html#cb119-1"></a>plot_prop &lt;-<span class="st"> </span><span class="cf">function</span>(data_model) {</span>
+<span id="cb119-2"><a href="rogers-paradox-a-solution.html#cb119-2"></a>  </span>
+<span id="cb119-3"><a href="rogers-paradox-a-solution.html#cb119-3"></a>  <span class="kw">names</span>(data_model)[<span class="dv">3</span><span class="op">:</span><span class="dv">5</span>] &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;social&quot;</span>, <span class="st">&quot;individual&quot;</span>, <span class="st">&quot;critical&quot;</span>)</span>
+<span id="cb119-4"><a href="rogers-paradox-a-solution.html#cb119-4"></a>  data_model_long &lt;-<span class="st"> </span><span class="kw">pivot_longer</span>(data_model, <span class="op">-</span><span class="kw">c</span>(W, generation, run), </span>
+<span id="cb119-5"><a href="rogers-paradox-a-solution.html#cb119-5"></a>                                  <span class="dt">names_to =</span> <span class="st">&quot;learning&quot;</span>, </span>
+<span id="cb119-6"><a href="rogers-paradox-a-solution.html#cb119-6"></a>                                  <span class="dt">values_to =</span> <span class="st">&quot;proportion&quot;</span>)</span>
+<span id="cb119-7"><a href="rogers-paradox-a-solution.html#cb119-7"></a></span>
+<span id="cb119-8"><a href="rogers-paradox-a-solution.html#cb119-8"></a>  <span class="kw">ggplot</span>(<span class="dt">data =</span> data_model_long, <span class="kw">aes</span>(<span class="dt">y =</span> proportion, <span class="dt">x =</span> generation, <span class="dt">colour =</span> learning)) <span class="op">+</span></span>
+<span id="cb119-9"><a href="rogers-paradox-a-solution.html#cb119-9"></a><span class="st">    </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;line&quot;</span>, <span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span></span>
+<span id="cb119-10"><a href="rogers-paradox-a-solution.html#cb119-10"></a><span class="st">    </span><span class="kw">ylim</span>(<span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>)) <span class="op">+</span></span>
+<span id="cb119-11"><a href="rogers-paradox-a-solution.html#cb119-11"></a><span class="st">    </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb119-12"><a href="rogers-paradox-a-solution.html#cb119-12"></a><span class="st">    </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;proportion of learners&quot;</span>)</span>
+<span id="cb119-13"><a href="rogers-paradox-a-solution.html#cb119-13"></a>}</span>
+<span id="cb119-14"><a href="rogers-paradox-a-solution.html#cb119-14"></a></span>
+<span id="cb119-15"><a href="rogers-paradox-a-solution.html#cb119-15"></a><span class="kw">plot_prop</span>(data_model)</span></code></pre></div>
+<div class="figure"><span id="fig:9-3"></span>
+<img src="IBM-cultevo_files/figure-html/9-3-1.png" alt="Critical learners quickly spread in populations of social learners and indiviual learners." width="672" />
+<p class="caption">
+Figure 9.1: Critical learners quickly spread in populations of social learners and indiviual learners.
+</p>
+</div>
+<p>Here we can see that critical learners have a clear advantage over the other two learning strategies. Critical learners go virtually to fixation, barring mutation which prevents it from going to 100%. It pays off being a flexible, discerning learner who only learns individually when social learning does not work.</p>
+<p>What about Rogers’ paradox? Do critical learners exceed the mean fitness of a population entirely composed of individual learners? We can use the <code>plot_W()</code> function from the last chapter to find out:</p>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="rogers-paradox-a-solution.html#cb120-1"></a><span class="kw">plot_W</span>(data_model, <span class="dt">c =</span> <span class="fl">0.9</span>, <span class="dt">p =</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:9-5"></span>
+<img src="IBM-cultevo_files/figure-html/9-5-1.png" alt="The average fitness of critical learners (black line) clearly exceeds the average fitness of populations entirely comprised of individual learners." width="672" />
+<p class="caption">
+Figure 9.2: The average fitness of critical learners (black line) clearly exceeds the average fitness of populations entirely comprised of individual learners.
+</p>
+</div>
+<p>Yes: Even if there is still some noise, critical learners clearly outperform the dotted line indicating a hypothetical 100% individual learning population. Rogers’ paradox is solved.</p>
+</div>
+<div id="summary-of-the-model-8" class="section level2">
+<h2><span class="header-section-number">9.2</span> Summary of the model</h2>
+<p>Several ‘solutions’ have been demonstrated to Rogers’ paradox. Here we have explored one of them. Critical learners can flexibly employ both social and individual learning, and do this in an adaptive manner (i.e. only individually learn if social learning is unsuccessful). Critical learners outperform the pure individual learning and pure social learning strategies. They therefore solve Rogers’ paradox by exceeding the mean fitness of a population entirely composed of individual learning.</p>
+<p>One might complain that all this is obvious. Of course real organisms can learn both socially and individually, and adaptively employ both during their lifetimes. But hindsight is a wonderful thing. Before Rogers’ model, scholars did not fully recognise this, and simply argued that social learning is adaptive because it has lower costs than individual learning. We now know this argument is faulty. But it took a simple model to realise it, and to realise the reasons why.</p>
+</div>
+<div id="further-reading-6" class="section level2">
+<h2><span class="header-section-number">9.3</span> Further reading</h2>
+<p>There are several other solutions to Rogers’ paradox in the literature. <span class="citation">Boyd and Richerson (<a href="references.html#ref-boyd_why_1995" role="doc-biblioref">1995</a>)</span> suggested individuals who initially learn individually and then if unsatisfied learn socially - the reverse of <span class="citation">Enquist, Eriksson, and Ghirlanda (<a href="references.html#ref-enquist_critical_2007" role="doc-biblioref">2007</a>)</span>‘s critical learners. <span class="citation">Boyd and Richerson (<a href="references.html#ref-boyd_why_1995" role="doc-biblioref">1995</a>)</span> also suggested that if culture is cumulative, i.e. each generation builds on the beneficial modifications of the previous generations, then Rogers’ paradox is resolved.</p>
+
+</div>
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="rogers-paradox.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="demography.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["IBM-cultevo.pdf", "IBM-cultevo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
