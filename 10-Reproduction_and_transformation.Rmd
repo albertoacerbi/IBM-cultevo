@@ -135,7 +135,7 @@ When we see cultural traits in real life, we are observing systems in a state an
 
 One possibility is to track how similar are the traits that the observers reproduce, with respect to the traits they use as a starting point. If reproduction is the driving force, they should be fairly similar and the measure should be always the same, as the distance between the trait produced and the trait copied is fixed, and given by the parameter $\mu$. If transformation is the driving force, instead, we should expect similarity being lower when traits are far from the optimal value (i.e. at the beginning of the simulations), and higher when traits are close to the optimal value.
 
-We can rewrite the `reproduction()` and `transformation()` functions adding as a further output this measure of similarity, that is, how distant are the traits that the new generation show versus the traits that they had copied from the previous. We thus add a variable `d` (as in 'distance;) in our `output` tibble, and we calculate this value at the end of each generation as `sum(abs(population$P - copy)) / N`.
+We can rewrite the `reproduction()` and `transformation()` functions adding as a further output this measure of similarity, that is, how distant are the traits that the new generation show versus the traits that they had copied from the previous. We thus add a variable `d` (as in 'distance') in our `output` tibble, and we calculate this value at the end of each generation as `sum(abs(population$P - copy)) / N`.
 
 ```{r 10-7}
 reproduction <- function(N, t_max, r_max, mu) {

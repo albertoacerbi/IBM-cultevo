@@ -8,7 +8,7 @@ We can start by assuming that, when an observer meets a demonstrator, the observ
 
 We can imagine a simple scenario when there are only two possible relationships between two traits: they are compatible, meaning that the presence of one trait will reinforce the presence of the other, or incompatible, meaning the opposite. In addition, the relationship is symmetric: if trait A favours trait B, and conversely if trait B favours trait A (the same holds for the case of incompatibility). Finally, we assume that each trait is compatible with itself, simply meaning that, if both the observer and the demonstrator have trait A the probability to copy trait B will increase.
 
-In a simple "world" with only four traits, we can represent trait relationships with a symmetric matrix, as the one below, where $+1$ denotes compatibility, and $-1$ denotes incompatibility.
+In a simple world with only four traits, we can represent trait relationships with a symmetric matrix, as the one below, where $+1$ denotes compatibility, and $-1$ denotes incompatibility.
 
 Traits    |  A |  B |  C |  D 
 ----------|---:|---:|---:|---:
@@ -27,7 +27,7 @@ my_world <- matrix(c(1,1,-1,-1,1,1,-1,-1,-1,-1,1,1,-1,-1,1,1), nrow = 4, ncol = 
 my_world
 ```
 
-Given this simple way of representing a "world" of compatibilities among traits, we can write our model. 
+Given this simple way of representing a world of compatibilities among traits, we can write our model. 
 
 ```{r 12-2}
 traits_inter_dependence <- function(N, t_max, k, mu, p_death, world){

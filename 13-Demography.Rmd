@@ -162,7 +162,7 @@ Henrich calls the minimum population size required to maintain a skill the criti
 
 When we plot the previous results over logarithmic population size the resulting graphs are almost linear.
 
-```{r 13-8, fig.cap = "The same results as in Figure \\@ref(fig:10-7) but using log on population sizes."}
+```{r 13-8, fig.cap = "The same results as in Figure \\@ref(fig:13-7) but using log on population sizes."}
 ggplot(data) + 
   geom_line(aes(x = log(N), y = z_delta_bar, color=skill)) +
   xlab("log(effective population size)") +
@@ -195,7 +195,7 @@ fit <- lm(formula = z_delta_bar ~ log(N),
 N_star_complex <- exp(-(fit$coefficients[1] / fit$coefficients[2]))
 ```
 
-Note that we need to take the exponent (`exp()`) of the resulting value to revert the log function that we applied to the population size. We see that a simple skill with a low alpha to sigma ratio requires a minimum population size of about `r round(N_star_simple)`, whereas a much large population size is required to maintain a complex trait (about `r round(N_star_complex)`). (You can visualise those results by writing `N_star_simple` and `N_star_complex`.) When you go back to Figure \@ref(fig:10-7) you can see that these points correspond with the graphs of the simple and complex skill crossing the x-axis. 
+Note that we need to take the exponent (`exp()`) of the resulting value to revert the log function that we applied to the population size. We see that a simple skill with a low alpha to sigma ratio requires a minimum population size of about `r round(N_star_simple)`, whereas a much large population size is required to maintain a complex trait (about `r round(N_star_complex)`). (You can visualise those results by writing `N_star_simple` and `N_star_complex`.) When you go back to Figure \@ref(fig:13-7) you can see that these points correspond with the graphs of the simple and complex skill crossing the x-axis. 
 
 Let us now calculate the $N^\star$ values for different skill complexities and different population sizes. We first set up the parameter space using `expand.grid()`. This function essentially creates all possible combinations of input variables. In our case, we want all possible combinations of the different population sizes `N` and skill complexities, which we will vary using different values for $\alpha$. Therefore, executing this function will return a two column (for `N` and `alpha`) data structure, stored in `simulations`. We visualise the first lines with the function `head()`:
 
