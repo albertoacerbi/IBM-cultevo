@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 12 Traits inter-dependence | Individual-based models of cultural evolution</title>
+  <meta name="description" content="Chapter 12 Traits inter-dependence | Individual-based models of cultural evolution" />
+  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 12 Traits inter-dependence | Individual-based models of cultural evolution" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 12 Traits inter-dependence | Individual-based models of cultural evolution" />
+  
+  
+  
+
+<meta name="author" content="Alberto Acerbi" />
+<meta name="author" content="Marco Smolla" />
+<meta name="author" content="Alex Mesoudi" />
+
+
+<meta name="date" content="2020-11-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="social-learning-of-social-learning-rules.html"/>
+<link rel="next" href="demography.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Individual-based models of cultural evolution</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#aim-of-the-book"><i class="fa fa-check"></i>Aim of the book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-is-cultural-evolution"><i class="fa fa-check"></i>What is cultural evolution?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-model"><i class="fa fa-check"></i>Why model?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-individual-based-models"><i class="fa fa-check"></i>Why individual-based models?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book---the-programming"><i class="fa fa-check"></i>How to use this book - the programming</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book---the-simulations"><i class="fa fa-check"></i>How to use this book - the simulations</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#conventions-and-formatting"><i class="fa fa-check"></i>Conventions and formatting</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
+</ul></li>
+<li class="part"><span><b>Basics</b></span></li>
+<li class="chapter" data-level="1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html"><i class="fa fa-check"></i><b>1</b> Unbiased transmission</a><ul>
+<li class="chapter" data-level="1.1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#initialising-the-simulation"><i class="fa fa-check"></i><b>1.1</b> Initialising the simulation</a></li>
+<li class="chapter" data-level="1.2" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#execute-generation-turn-over-many-times"><i class="fa fa-check"></i><b>1.2</b> Execute generation turn-over many times</a></li>
+<li class="chapter" data-level="1.3" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#plotting-the-model-results"><i class="fa fa-check"></i><b>1.3</b> Plotting the model results</a></li>
+<li class="chapter" data-level="1.4" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#write-a-function-to-wrap-the-model-code"><i class="fa fa-check"></i><b>1.4</b> Write a function to wrap the model code</a></li>
+<li class="chapter" data-level="1.5" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#run-several-independent-simulations-and-plot-their-results"><i class="fa fa-check"></i><b>1.5</b> Run several independent simulations and plot their results</a></li>
+<li class="chapter" data-level="1.6" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#varying-initial-conditions"><i class="fa fa-check"></i><b>1.6</b> Varying initial conditions</a></li>
+<li class="chapter" data-level="1.7" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#summary-of-the-model"><i class="fa fa-check"></i><b>1.7</b> Summary of the model</a></li>
+<li class="chapter" data-level="1.8" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#further-reading-1"><i class="fa fa-check"></i><b>1.8</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html"><i class="fa fa-check"></i><b>2</b> Unbiased and biased mutation</a><ul>
+<li class="chapter" data-level="2.1" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#unbiased-mutation"><i class="fa fa-check"></i><b>2.1</b> Unbiased mutation</a></li>
+<li class="chapter" data-level="2.2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#biased-mutation"><i class="fa fa-check"></i><b>2.2</b> Biased mutation</a></li>
+<li class="chapter" data-level="2.3" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#summary-of-the-model-1"><i class="fa fa-check"></i><b>2.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="2.4" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#further-reading-2"><i class="fa fa-check"></i><b>2.4</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html"><i class="fa fa-check"></i><b>3</b> Biased transmission: direct bias</a><ul>
+<li class="chapter" data-level="3.1" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#a-simple-model-of-directly-biased-transmission"><i class="fa fa-check"></i><b>3.1</b> A simple model of directly biased transmission</a></li>
+<li class="chapter" data-level="3.2" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#strength-of-selection"><i class="fa fa-check"></i><b>3.2</b> Strength of selection</a></li>
+<li class="chapter" data-level="3.3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#summary-of-the-model-2"><i class="fa fa-check"></i><b>3.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="3.4" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#further-reading-3"><i class="fa fa-check"></i><b>3.4</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html"><i class="fa fa-check"></i><b>4</b> Biased transmission: frequency-dependent indirect bias</a><ul>
+<li class="chapter" data-level="4.1" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#the-logic-of-conformity"><i class="fa fa-check"></i><b>4.1</b> The logic of conformity</a></li>
+<li class="chapter" data-level="4.2" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#testing-conformist-transmission"><i class="fa fa-check"></i><b>4.2</b> Testing conformist transmission</a></li>
+<li class="chapter" data-level="4.3" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#summary-of-the-model-3"><i class="fa fa-check"></i><b>4.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="4.4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#further-readings"><i class="fa fa-check"></i><b>4.4</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html"><i class="fa fa-check"></i><b>5</b> Biased transmission: demonstrator-based indirect bias</a><ul>
+<li class="chapter" data-level="5.1" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#a-simple-demonstrator-bias"><i class="fa fa-check"></i><b>5.1</b> A simple demonstrator bias</a></li>
+<li class="chapter" data-level="5.2" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#predicting-the-winning-trait"><i class="fa fa-check"></i><b>5.2</b> Predicting the ‘winning’ trait</a></li>
+<li class="chapter" data-level="5.3" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#summary-of-the-model-4"><i class="fa fa-check"></i><b>5.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="5.4" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#further-readings-1"><i class="fa fa-check"></i><b>5.4</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html"><i class="fa fa-check"></i><b>6</b> Vertical and horizontal transmission</a><ul>
+<li class="chapter" data-level="6.1" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#vertical-cultural-transmission"><i class="fa fa-check"></i><b>6.1</b> Vertical cultural transmission</a></li>
+<li class="chapter" data-level="6.2" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#horizontal-cultural-transmission"><i class="fa fa-check"></i><b>6.2</b> Horizontal cultural transmission</a></li>
+<li class="chapter" data-level="6.3" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#summary-of-the-model-5"><i class="fa fa-check"></i><b>6.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="6.4" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#further-reading-4"><i class="fa fa-check"></i><b>6.4</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html"><i class="fa fa-check"></i><b>7</b> Multiple traits models</a><ul>
+<li class="chapter" data-level="7.1" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#unbiased-transmission-with-multiple-traits"><i class="fa fa-check"></i><b>7.1</b> Unbiased transmission with multiple traits</a></li>
+<li class="chapter" data-level="7.2" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#introducing-innovation"><i class="fa fa-check"></i><b>7.2</b> Introducing innovation</a></li>
+<li class="chapter" data-level="7.3" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#optimising-the-code"><i class="fa fa-check"></i><b>7.3</b> Optimising the code</a></li>
+<li class="chapter" data-level="7.4" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#the-distribution-of-popularity"><i class="fa fa-check"></i><b>7.4</b> The distribution of popularity</a></li>
+<li class="chapter" data-level="7.5" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#summary-of-the-model-6"><i class="fa fa-check"></i><b>7.5</b> Summary of the model</a></li>
+<li class="chapter" data-level="7.6" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#further-readings-2"><i class="fa fa-check"></i><b>7.6</b> Further readings</a></li>
+</ul></li>
+<li class="part"><span><b>Advanced topics - The evolution of cultural evolution</b></span></li>
+<li class="chapter" data-level="8" data-path="rogers-paradox.html"><a href="rogers-paradox.html"><i class="fa fa-check"></i><b>8</b> Rogers’ Paradox</a><ul>
+<li class="chapter" data-level="8.1" data-path="rogers-paradox.html"><a href="rogers-paradox.html#modelling-rogers-paradox"><i class="fa fa-check"></i><b>8.1</b> Modelling Rogers’ Paradox</a></li>
+<li class="chapter" data-level="8.2" data-path="rogers-paradox.html"><a href="rogers-paradox.html#summary-of-the-model-7"><i class="fa fa-check"></i><b>8.2</b> Summary of the model</a></li>
+<li class="chapter" data-level="8.3" data-path="rogers-paradox.html"><a href="rogers-paradox.html#further-reading-5"><i class="fa fa-check"></i><b>8.3</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html"><i class="fa fa-check"></i><b>9</b> Rogers’ Paradox: A Solution</a><ul>
+<li class="chapter" data-level="9.1" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#modelling-critical-social-learners"><i class="fa fa-check"></i><b>9.1</b> Modelling critical social learners</a></li>
+<li class="chapter" data-level="9.2" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#summary-of-the-model-8"><i class="fa fa-check"></i><b>9.2</b> Summary of the model</a></li>
+<li class="chapter" data-level="9.3" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#further-reading-6"><i class="fa fa-check"></i><b>9.3</b> Further reading</a></li>
+</ul></li>
+<li class="part"><span><b>Advanced topics - Cultural inheritance</b></span></li>
+<li class="chapter" data-level="10" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html"><i class="fa fa-check"></i><b>10</b> Reproduction and transformation</a><ul>
+<li class="chapter" data-level="10.1" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#copying-and-selection"><i class="fa fa-check"></i><b>10.1</b> Copying and selection</a></li>
+<li class="chapter" data-level="10.2" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#convergent-transformation"><i class="fa fa-check"></i><b>10.2</b> Convergent transformation</a></li>
+<li class="chapter" data-level="10.3" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#emergent-similarity"><i class="fa fa-check"></i><b>10.3</b> Emergent similarity</a></li>
+<li class="chapter" data-level="10.4" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#cultural-fitness"><i class="fa fa-check"></i><b>10.4</b> Cultural fitness</a></li>
+<li class="chapter" data-level="10.5" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#summary-of-the-model-9"><i class="fa fa-check"></i><b>10.5</b> Summary of the model</a></li>
+<li class="chapter" data-level="10.6" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#further-readings-3"><i class="fa fa-check"></i><b>10.6</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html"><i class="fa fa-check"></i><b>11</b> Social learning of social learning rules</a><ul>
+<li class="chapter" data-level="11.1" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#openness-and-conservatism"><i class="fa fa-check"></i><b>11.1</b> Openness and conservatism</a></li>
+<li class="chapter" data-level="11.2" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#maintaining-open-populations"><i class="fa fa-check"></i><b>11.2</b> Maintaining open populations</a></li>
+<li class="chapter" data-level="11.3" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#summary-of-the-model-10"><i class="fa fa-check"></i><b>11.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="11.4" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#further-readings-4"><i class="fa fa-check"></i><b>11.4</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html"><i class="fa fa-check"></i><b>12</b> Traits inter-dependence</a><ul>
+<li class="chapter" data-level="12.1" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#compatible-and-incompatible-traits"><i class="fa fa-check"></i><b>12.1</b> Compatible and incompatible traits</a></li>
+<li class="chapter" data-level="12.2" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#many-traits-model"><i class="fa fa-check"></i><b>12.2</b> Many-traits model</a></li>
+<li class="chapter" data-level="12.3" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#summary-of-the-model-11"><i class="fa fa-check"></i><b>12.3</b> Summary of the model</a></li>
+<li class="chapter" data-level="12.4" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#further-readings-5"><i class="fa fa-check"></i><b>12.4</b> Further readings</a></li>
+</ul></li>
+<li class="part"><span><b>Advanced topics - Culture and populations</b></span></li>
+<li class="chapter" data-level="13" data-path="demography.html"><a href="demography.html"><i class="fa fa-check"></i><b>13</b> Demography</a><ul>
+<li class="chapter" data-level="13.1" data-path="demography.html"><a href="demography.html#the-tasmania-case"><i class="fa fa-check"></i><b>13.1</b> The Tasmania Case</a></li>
+<li class="chapter" data-level="13.2" data-path="demography.html"><a href="demography.html#modelling-the-tasmania-case"><i class="fa fa-check"></i><b>13.2</b> Modelling the Tasmania Case</a></li>
+<li class="chapter" data-level="13.3" data-path="demography.html"><a href="demography.html#calculating-critical-population-sizes-based-on-skill-complexity"><i class="fa fa-check"></i><b>13.3</b> Calculating critical population sizes based on skill complexity</a></li>
+<li class="chapter" data-level="13.4" data-path="demography.html"><a href="demography.html#summary-of-the-model-12"><i class="fa fa-check"></i><b>13.4</b> Summary of the model</a></li>
+<li class="chapter" data-level="13.5" data-path="demography.html"><a href="demography.html#further-readings-6"><i class="fa fa-check"></i><b>13.5</b> Further readings</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="social-network-structure.html"><a href="social-network-structure.html"><i class="fa fa-check"></i><b>14</b> Social network structure</a><ul>
+<li class="chapter" data-level="14.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-basics"><i class="fa fa-check"></i><b>14.1</b> Network basics</a></li>
+<li class="chapter" data-level="14.2" data-path="social-network-structure.html"><a href="social-network-structure.html#generating-networks"><i class="fa fa-check"></i><b>14.2</b> Generating networks</a></li>
+<li class="chapter" data-level="14.3" data-path="social-network-structure.html"><a href="social-network-structure.html#plotting-networks"><i class="fa fa-check"></i><b>14.3</b> Plotting networks</a><ul>
+<li class="chapter" data-level="14.3.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-layout"><i class="fa fa-check"></i><b>14.3.1</b> Network layout</a></li>
+<li class="chapter" data-level="14.3.2" data-path="social-network-structure.html"><a href="social-network-structure.html#network-styling"><i class="fa fa-check"></i><b>14.3.2</b> Network styling</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="social-network-structure.html"><a href="social-network-structure.html#analyse-social-networks"><i class="fa fa-check"></i><b>14.4</b> Analyse social networks</a><ul>
+<li class="chapter" data-level="14.4.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-properties-and-characteristics"><i class="fa fa-check"></i><b>14.4.1</b> Network properties and characteristics</a></li>
+<li class="chapter" data-level="14.4.2" data-path="social-network-structure.html"><a href="social-network-structure.html#vertex-properties"><i class="fa fa-check"></i><b>14.4.2</b> Vertex properties</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="social-network-structure.html"><a href="social-network-structure.html#modelling-information-transmission-in-social-networks"><i class="fa fa-check"></i><b>14.5</b> Modelling information transmission in social networks</a><ul>
+<li class="chapter" data-level="14.5.1" data-path="social-network-structure.html"><a href="social-network-structure.html#gossip-diffusion-in-networked-populations"><i class="fa fa-check"></i><b>14.5.1</b> Gossip diffusion in networked populations</a></li>
+<li class="chapter" data-level="14.5.2" data-path="social-network-structure.html"><a href="social-network-structure.html#complex-versus-simple-contagion-information-transmission"><i class="fa fa-check"></i><b>14.5.2</b> Complex versus simple contagion information transmission</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="social-network-structure.html"><a href="social-network-structure.html#summary-of-the-model-13"><i class="fa fa-check"></i><b>14.6</b> Summary of the model</a></li>
+<li class="chapter" data-level="14.7" data-path="social-network-structure.html"><a href="social-network-structure.html#further-reading-7"><i class="fa fa-check"></i><b>14.7</b> Further Reading</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Individual-based models of cultural evolution</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="traits-inter-dependence" class="section level1">
+<h1><span class="header-section-number">Chapter 12</span> Traits inter-dependence</h1>
+<p>In real life, the relationship a cultural trait has with other, coexisting, cultural traits, is important to determine its success. Nails will enjoy much cultural success in a world where hammers are present, and less in a world where they are not. Being against abortion in contemporary US is strongly correlated to being religious, which, in turn, is (less strongly) correlated with not supporting same-sex marriage. Of course, not all these relationships are stable in time, and they can also be themselves subject to cultural change. In this chapter, we will explore how simple relationships between traits can be modelled, and how they can influence cultural evolution.</p>
+<div id="compatible-and-incompatible-traits" class="section level2">
+<h2><span class="header-section-number">12.1</span> Compatible and incompatible traits</h2>
+<p>We can start by assuming that, when an observer meets a demonstrator, the observer evaluates the relationships of the traits of the demonstrator with its own traits, and use this information to decide whether to copy or not. For example, if the observer has the trait ‘being religious’ and the demonstrator the trait ‘being pro abortion’, copying will be less likely to happen than if the demonstrator has the trait “being against abortion”.</p>
+<p>We can imagine a simple scenario when there are only two possible relationships between two traits: they are compatible, meaning that the presence of one trait will reinforce the presence of the other, or incompatible, meaning the opposite. In addition, the relationship is symmetric: if trait A favours trait B, and conversely if trait B favours trait A (the same holds for the case of incompatibility). Finally, we assume that each trait is compatible with itself, simply meaning that, if both the observer and the demonstrator have trait A the probability to copy trait B will increase.</p>
+<p>In a simple “world” with only four traits, we can represent trait relationships with a symmetric matrix, as the one below, where <span class="math inline">\(+1\)</span> denotes compatibility, and <span class="math inline">\(-1\)</span> denotes incompatibility.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Traits</th>
+<th align="right">A</th>
+<th align="right">B</th>
+<th align="right">C</th>
+<th align="right">D</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A</strong></td>
+<td align="right">+1</td>
+<td align="right">+1</td>
+<td align="right">-1</td>
+<td align="right">-1</td>
+</tr>
+<tr class="even">
+<td><strong>B</strong></td>
+<td align="right">+1</td>
+<td align="right">+1</td>
+<td align="right">-1</td>
+<td align="right">-1</td>
+</tr>
+<tr class="odd">
+<td><strong>C</strong></td>
+<td align="right">-1</td>
+<td align="right">-1</td>
+<td align="right">+1</td>
+<td align="right">+1</td>
+</tr>
+<tr class="even">
+<td><strong>D</strong></td>
+<td align="right">-1</td>
+<td align="right">-1</td>
+<td align="right">+1</td>
+<td align="right">+1</td>
+</tr>
+</tbody>
+</table>
+<p>In this case, traits A and B are compatible with each other but incompatible with C and D. The same is true for C and D, which are compatible with each other but incompatible with A and B.</p>
+<p>We can construct this matrix in R, by indicating one-by-one the values we want to fill in, and the number of rows and columns the matrix needs to have. As usual, we can check the resulting matrix by writing its name and hitting the return key.</p>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="traits-inter-dependence.html#cb147-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb147-2"><a href="traits-inter-dependence.html#cb147-2"></a>my_world &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>), <span class="dt">nrow =</span> <span class="dv">4</span>, <span class="dt">ncol =</span> <span class="dv">4</span>)</span>
+<span id="cb147-3"><a href="traits-inter-dependence.html#cb147-3"></a>my_world</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    1   -1   -1
+## [2,]    1    1   -1   -1
+## [3,]   -1   -1    1    1
+## [4,]   -1   -1    1    1</code></pre>
+<p>Given this simple way of representing a “world” of compatibilities among traits, we can write our model.</p>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="traits-inter-dependence.html#cb149-1"></a>traits_inter_dependence &lt;-<span class="st"> </span><span class="cf">function</span>(N, t_max, k, mu, p_death, world){</span>
+<span id="cb149-2"><a href="traits-inter-dependence.html#cb149-2"></a>  output &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>,<span class="st">&quot;D&quot;</span>), <span class="dt">each =</span> t_max), </span>
+<span id="cb149-3"><a href="traits-inter-dependence.html#cb149-3"></a>                   <span class="dt">generation =</span> <span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>t_max, <span class="dv">4</span>), </span>
+<span id="cb149-4"><a href="traits-inter-dependence.html#cb149-4"></a>                   <span class="dt">p =</span> <span class="kw">as.numeric</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, t_max <span class="op">*</span><span class="st"> </span><span class="dv">4</span>)))    </span>
+<span id="cb149-5"><a href="traits-inter-dependence.html#cb149-5"></a>  </span>
+<span id="cb149-6"><a href="traits-inter-dependence.html#cb149-6"></a>  population &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">ncol =</span> <span class="dv">4</span>, <span class="dt">nrow =</span> N)</span>
+<span id="cb149-7"><a href="traits-inter-dependence.html#cb149-7"></a>  </span>
+<span id="cb149-8"><a href="traits-inter-dependence.html#cb149-8"></a>  output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span><span class="dv">1</span> ,]<span class="op">$</span>p &lt;-<span class="st"> </span><span class="kw">colSums</span>(population) <span class="op">/</span><span class="st"> </span>N</span>
+<span id="cb149-9"><a href="traits-inter-dependence.html#cb149-9"></a>  </span>
+<span id="cb149-10"><a href="traits-inter-dependence.html#cb149-10"></a>  <span class="cf">for</span>(t <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span>t_max){</span>
+<span id="cb149-11"><a href="traits-inter-dependence.html#cb149-11"></a>    </span>
+<span id="cb149-12"><a href="traits-inter-dependence.html#cb149-12"></a>    <span class="co"># Innovations</span></span>
+<span id="cb149-13"><a href="traits-inter-dependence.html#cb149-13"></a>    innovators &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), N, <span class="dt">prob =</span> <span class="kw">c</span>(mu, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>mu), <span class="dt">replace =</span> <span class="ot">TRUE</span>) </span>
+<span id="cb149-14"><a href="traits-inter-dependence.html#cb149-14"></a>    innovations &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, <span class="kw">sum</span>(innovators), <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb149-15"><a href="traits-inter-dependence.html#cb149-15"></a>    population[<span class="kw">cbind</span>(<span class="kw">which</span>(innovators <span class="op">==</span><span class="st"> </span><span class="ot">TRUE</span>), innovations)] &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb149-16"><a href="traits-inter-dependence.html#cb149-16"></a>    </span>
+<span id="cb149-17"><a href="traits-inter-dependence.html#cb149-17"></a>    <span class="co"># Copying</span></span>
+<span id="cb149-18"><a href="traits-inter-dependence.html#cb149-18"></a>    demonstrators &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span>N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb149-19"><a href="traits-inter-dependence.html#cb149-19"></a>    demonstrators_traits &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb149-20"><a href="traits-inter-dependence.html#cb149-20"></a>    </span>
+<span id="cb149-21"><a href="traits-inter-dependence.html#cb149-21"></a>    <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>N){</span>
+<span id="cb149-22"><a href="traits-inter-dependence.html#cb149-22"></a>      <span class="cf">if</span>(population[demonstrators[i], demonstrators_traits[i]]){</span>
+<span id="cb149-23"><a href="traits-inter-dependence.html#cb149-23"></a>        compatibility_score &lt;-<span class="st"> </span><span class="kw">sum</span>(world[demonstrators_traits[i], population[i, ] <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>])</span>
+<span id="cb149-24"><a href="traits-inter-dependence.html#cb149-24"></a>        copy &lt;-<span class="st"> </span>(<span class="dv">1</span> <span class="op">/</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">+</span><span class="st"> </span><span class="kw">exp</span>(<span class="op">-</span>k<span class="op">*</span>compatibility_score))) <span class="op">&gt;</span><span class="st"> </span><span class="kw">runif</span>(<span class="dv">1</span>)</span>
+<span id="cb149-25"><a href="traits-inter-dependence.html#cb149-25"></a>        population[i,demonstrators_traits[i]] &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">*</span><span class="st"> </span>copy</span>
+<span id="cb149-26"><a href="traits-inter-dependence.html#cb149-26"></a>      }</span>
+<span id="cb149-27"><a href="traits-inter-dependence.html#cb149-27"></a>    }</span>
+<span id="cb149-28"><a href="traits-inter-dependence.html#cb149-28"></a>    </span>
+<span id="cb149-29"><a href="traits-inter-dependence.html#cb149-29"></a>    <span class="co"># Birth/death</span></span>
+<span id="cb149-30"><a href="traits-inter-dependence.html#cb149-30"></a>    replace &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), N, <span class="dt">prob =</span> <span class="kw">c</span>(p_death, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_death), <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb149-31"><a href="traits-inter-dependence.html#cb149-31"></a>    population[replace, ] &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb149-32"><a href="traits-inter-dependence.html#cb149-32"></a>    </span>
+<span id="cb149-33"><a href="traits-inter-dependence.html#cb149-33"></a>    <span class="co"># Output</span></span>
+<span id="cb149-34"><a href="traits-inter-dependence.html#cb149-34"></a>    output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span>t ,]<span class="op">$</span>p &lt;-<span class="st"> </span><span class="kw">colSums</span>(population) <span class="op">/</span><span class="st"> </span>N</span>
+<span id="cb149-35"><a href="traits-inter-dependence.html#cb149-35"></a>  }</span>
+<span id="cb149-36"><a href="traits-inter-dependence.html#cb149-36"></a>  <span class="co"># Export data from function</span></span>
+<span id="cb149-37"><a href="traits-inter-dependence.html#cb149-37"></a>  output</span>
+<span id="cb149-38"><a href="traits-inter-dependence.html#cb149-38"></a>}</span></code></pre></div>
+<p>As in the <a href="social-learning-of-social-learning-rules.html#social-learning-of-social-learning-rules">previous chapter</a>, the simulation starts with no traits, and individuals introduce them with random innovations, the rate of which is regulated by the parameter <span class="math inline">\(\mu\)</span>. Individuals are replaced by culturally-naive newborns with a probability <span class="math inline">\(p_\text{death}\)</span>. There are two major differences from the previous model. One is that the function accepts a parameter, called <code>world</code>, a four-by-four matrix of compatibilities between traits (thus the compatibilities can change, but not the actual number of traits). The second is in the copying procedure.</p>
+<p>As in the previous chapter, one trait is randomly selected to be observed from a demonstrator and, if the demonstrator <em>i</em> has it (<code>population[demonstrators[i], demonstrators_traits[i]]</code>), we calculate the ‘compatibility score’. The compatibility score is the sum of the compatibilities of all the traits of the observer towards the traits of the demonstrator, using the <code>world</code> matrix. If, for example, both observer and demonstrator have A and B (and only A and B), the compatibility would be <span class="math inline">\(2\)</span>, if the observer has A and B and the demonstrator C and D, the compatibility would be <span class="math inline">\(-2\)</span> and so on. In the next line, the compatibility score is transformed in the actual probability to copy with a logistic function. This is a useful trick to transform possibly unbounded positive and negative values to be between <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>:</p>
+<p><span class="math display">\[P_\text{copy} = \frac{1}{1 + e^{-kC}}         \hspace{30 mm}(15.1)\]</span>
+where <em>C</em> represents the compatibility score between observer and demonstrator, and <em>k</em> is a parameter of the simulation, that controls the steepness of the logistic curve, i.e. how fast positive values of the compatibility score produce a probability to copy equal to <span class="math inline">\(1\)</span>, and negative values a probability equal to <span class="math inline">\(0\)</span>.</p>
+<p>We can now run the function, using the <code>plot_multiple_traits()</code> function to plot the result. We use a value of <span class="math inline">\(k=10\)</span>, and a small probability of innovation <span class="math inline">\(\mu=0.0005\)</span>, so that the dynamics are mainly generated by cultural transmission.</p>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="traits-inter-dependence.html#cb150-1"></a>my_world &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>), <span class="dt">nrow =</span> <span class="dv">4</span>, <span class="dt">ncol =</span> <span class="dv">4</span>)</span>
+<span id="cb150-2"><a href="traits-inter-dependence.html#cb150-2"></a>data_model &lt;-<span class="st"> </span><span class="kw">traits_inter_dependence</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">t_max =</span> <span class="dv">1000</span>, <span class="dt">k =</span> <span class="dv">10</span>, </span>
+<span id="cb150-3"><a href="traits-inter-dependence.html#cb150-3"></a>                                      <span class="dt">mu =</span> <span class="fl">0.0005</span>, <span class="dt">p_death =</span> <span class="fl">0.01</span>, <span class="dt">world =</span> my_world)</span>
+<span id="cb150-4"><a href="traits-inter-dependence.html#cb150-4"></a><span class="kw">plot_multiple_traits</span>(data_model)</span></code></pre></div>
+<div class="figure"><span id="fig:12-4"></span>
+<img src="IBM-cultevo_files/figure-html/12-4-1.png" alt="Frequency of traits in a world with four traits and pairwise compatibilities." width="672" />
+<p class="caption">
+Figure 12.1: Frequency of traits in a world with four traits and pairwise compatibilities.
+</p>
+</div>
+<p>In the great majority of the runs, two out of the four traits diffuse in the population. We can check whether these are in fact one of the couple of compatible traits, having a look at the last line of the output produced by the simulation.</p>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="traits-inter-dependence.html#cb151-1"></a>data_model[data_model<span class="op">$</span>generation<span class="op">==</span><span class="dv">1000</span>, ]</span></code></pre></div>
+<pre><code>## # A tibble: 4 x 3
+##   trait generation     p
+##   &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt;
+## 1 A           1000  0   
+## 2 B           1000  0.02
+## 3 C           1000  0.92
+## 4 D           1000  0.89</code></pre>
+<p>Depending on random factors, the successful traits will be A and B or C and D. If you run the simulation again and again you would see that in around half of the simulations A and B are the successful traits, and in another half C and D are, and very few other possible cases with this “world” of compatibilities.</p>
+<p>What happens if we change the world? We can run a new simulation where the traits A, B, and C are all compatible, but not D (remember, you can visualise the matrix of compatibilities by typing its name to be sure to have entered the compatibilities correctly).</p>
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="traits-inter-dependence.html#cb153-1"></a>my_world &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="dt">nrow =</span> <span class="dv">4</span>, <span class="dt">ncol =</span> <span class="dv">4</span>)</span>
+<span id="cb153-2"><a href="traits-inter-dependence.html#cb153-2"></a>data_model &lt;-<span class="st"> </span><span class="kw">traits_inter_dependence</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">t_max =</span> <span class="dv">1000</span>, <span class="dt">k =</span> <span class="dv">10</span>, </span>
+<span id="cb153-3"><a href="traits-inter-dependence.html#cb153-3"></a>                                      <span class="dt">mu =</span> <span class="fl">0.0005</span>, <span class="dt">p_death =</span> <span class="fl">0.01</span>, <span class="dt">world =</span> my_world)</span>
+<span id="cb153-4"><a href="traits-inter-dependence.html#cb153-4"></a><span class="kw">plot_multiple_traits</span>(data_model)</span></code></pre></div>
+<div class="figure"><span id="fig:12-6"></span>
+<img src="IBM-cultevo_files/figure-html/12-6-1.png" alt="Frequency of traits in a world with four traits and three traits compatibile with each other, but not compatible with the fourth." width="672" />
+<p class="caption">
+Figure 12.2: Frequency of traits in a world with four traits and three traits compatibile with each other, but not compatible with the fourth.
+</p>
+</div>
+<p>As expected, now three traits have high frequencies in the population, while one is unsuccessful. As before, you can check that the unsuccessful trait is actually D by inspecting manually the last line of the output.</p>
+<p>Not surprisingly, if all traits are compatible, they all spread equally in the population.</p>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="traits-inter-dependence.html#cb154-1"></a>my_world &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>), <span class="dt">nrow =</span> <span class="dv">4</span>, <span class="dt">ncol =</span> <span class="dv">4</span>)</span>
+<span id="cb154-2"><a href="traits-inter-dependence.html#cb154-2"></a>data_model &lt;-<span class="st"> </span><span class="kw">traits_inter_dependence</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">t_max =</span> <span class="dv">1000</span>, <span class="dt">k =</span> <span class="dv">10</span>, </span>
+<span id="cb154-3"><a href="traits-inter-dependence.html#cb154-3"></a>                                      <span class="dt">mu =</span> <span class="fl">0.0005</span>, <span class="dt">p_death =</span> <span class="fl">0.01</span>, <span class="dt">world =</span> my_world)</span>
+<span id="cb154-4"><a href="traits-inter-dependence.html#cb154-4"></a><span class="kw">plot_multiple_traits</span>(data_model)</span></code></pre></div>
+<div class="figure"><span id="fig:12-7"></span>
+<img src="IBM-cultevo_files/figure-html/12-7-1.png" alt="Frequency of traits in a world with four traits all compatibles with each other." width="672" />
+<p class="caption">
+Figure 12.3: Frequency of traits in a world with four traits all compatibles with each other.
+</p>
+</div>
+</div>
+<div id="many-traits-model" class="section level2">
+<h2><span class="header-section-number">12.2</span> Many-traits model</h2>
+<p>Building the compatibility matrix by hand is not very practical, especially if we want to test our model with more traits. We will now extend the basic model above in order to be able to customise the maximum number of traits and to automatically generate the compatibility worlds.</p>
+<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="traits-inter-dependence.html#cb155-1"></a>M &lt;-<span class="st"> </span><span class="dv">7</span></span>
+<span id="cb155-2"><a href="traits-inter-dependence.html#cb155-2"></a>gamma &lt;-<span class="st"> </span><span class="fl">0.5</span></span>
+<span id="cb155-3"><a href="traits-inter-dependence.html#cb155-3"></a>my_world &lt;-<span class="st"> </span><span class="kw">matrix</span>( <span class="kw">rep</span>(<span class="dv">1</span>, M <span class="op">*</span><span class="st"> </span>M), <span class="dt">nrow =</span> M)</span>
+<span id="cb155-4"><a href="traits-inter-dependence.html#cb155-4"></a>compatibilities &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">-1</span>), <span class="kw">choose</span>(M, <span class="dv">2</span>), <span class="dt">prob =</span> <span class="kw">c</span>(gamma, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>gamma), <span class="dt">replace =</span> <span class="ot">TRUE</span>) </span>
+<span id="cb155-5"><a href="traits-inter-dependence.html#cb155-5"></a>my_world[<span class="kw">upper.tri</span>(my_world)] &lt;-<span class="st"> </span>compatibilities</span>
+<span id="cb155-6"><a href="traits-inter-dependence.html#cb155-6"></a>my_world &lt;-<span class="st"> </span><span class="kw">t</span>(my_world)</span>
+<span id="cb155-7"><a href="traits-inter-dependence.html#cb155-7"></a>my_world[<span class="kw">upper.tri</span>(my_world)] &lt;-<span class="st"> </span>compatibilities</span></code></pre></div>
+<p>We have now two parameters we use to build the matrix: the maximum number of traits <span class="math inline">\(M\)</span>, and the probability that two traits are compatible with each other, <span class="math inline">\(\gamma\)</span> (or <code>gamma</code> in the code). To build the matrix, we create a <span class="math inline">\(M\)</span> by <span class="math inline">\(M\)</span> matrix filled with <span class="math inline">\(1\)</span>s, then a vector of compatibilities randomly generated with probability <span class="math inline">\(\gamma\)</span> (the length of the vector is the number of entries above the main diagonal of the matrix, given by <code>choose(M, 2)</code>), and finally we copy the values the lower triangle to the upper triangle of the matrix (in practice, to make it symmetric, we copy it twice in the upper triangle, transposing the matrix after the first copy).</p>
+<p>Have a look at the the matrix we just generated.</p>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="traits-inter-dependence.html#cb156-1"></a>my_world</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7]
+## [1,]    1    1   -1   -1    1   -1    1
+## [2,]    1    1   -1   -1   -1   -1    1
+## [3,]   -1   -1    1    1   -1   -1   -1
+## [4,]   -1   -1    1    1   -1    1    1
+## [5,]    1   -1   -1   -1    1    1    1
+## [6,]   -1   -1   -1    1    1    1   -1
+## [7,]    1    1   -1    1    1   -1    1</code></pre>
+<p>The function to run the simulation is very similar to the previous one, once we account for the difference in how the compatibility matrix is created and for the two new parameters (<span class="math inline">\(M\)</span> and <span class="math inline">\(\gamma\)</span>) needed in the function call. Another difference is that the output data structure is a matrix and not a tibble. Since we want to be able to run the simulations with an arbitrary large number of traits, we need to speed up the computation, exactly in the same way as we did for the multiple traits model in <a href="multiple-traits-models.html#multiple-traits-models">chapter 7</a>.</p>
+<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="traits-inter-dependence.html#cb158-1"></a>traits_inter_dependence_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="cf">function</span>(N, M, t_max, k, mu, p_death, gamma){</span>
+<span id="cb158-2"><a href="traits-inter-dependence.html#cb158-2"></a>  output &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">data =</span> <span class="ot">NA</span>, <span class="dt">nrow =</span> t_max, <span class="dt">ncol =</span> M)</span>
+<span id="cb158-3"><a href="traits-inter-dependence.html#cb158-3"></a>  </span>
+<span id="cb158-4"><a href="traits-inter-dependence.html#cb158-4"></a>  <span class="co"># Initialise the traits&#39; world</span></span>
+<span id="cb158-5"><a href="traits-inter-dependence.html#cb158-5"></a>  world &lt;-<span class="st"> </span><span class="kw">matrix</span>( <span class="kw">rep</span>(<span class="dv">1</span>, M <span class="op">*</span><span class="st"> </span>M), <span class="dt">nrow =</span> M)</span>
+<span id="cb158-6"><a href="traits-inter-dependence.html#cb158-6"></a>  compatibilities &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">-1</span>), <span class="kw">choose</span>(M,<span class="dv">2</span>), <span class="dt">prob =</span> <span class="kw">c</span>(gamma, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>gamma), <span class="dt">replace =</span> <span class="ot">TRUE</span>) </span>
+<span id="cb158-7"><a href="traits-inter-dependence.html#cb158-7"></a>  world[<span class="kw">upper.tri</span>(world)] &lt;-<span class="st"> </span>compatibilities</span>
+<span id="cb158-8"><a href="traits-inter-dependence.html#cb158-8"></a>  world &lt;-<span class="st"> </span><span class="kw">t</span>(world)</span>
+<span id="cb158-9"><a href="traits-inter-dependence.html#cb158-9"></a>  world[<span class="kw">upper.tri</span>(world)] &lt;-<span class="st"> </span>compatibilities</span>
+<span id="cb158-10"><a href="traits-inter-dependence.html#cb158-10"></a>  </span>
+<span id="cb158-11"><a href="traits-inter-dependence.html#cb158-11"></a>  <span class="co"># Initialise the population</span></span>
+<span id="cb158-12"><a href="traits-inter-dependence.html#cb158-12"></a>  population &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>, <span class="dt">ncol =</span> M, <span class="dt">nrow =</span> N)</span>
+<span id="cb158-13"><a href="traits-inter-dependence.html#cb158-13"></a>  output[<span class="dv">1</span>, ] &lt;-<span class="st"> </span><span class="kw">colSums</span>(population) <span class="op">/</span><span class="st"> </span>N </span>
+<span id="cb158-14"><a href="traits-inter-dependence.html#cb158-14"></a>  </span>
+<span id="cb158-15"><a href="traits-inter-dependence.html#cb158-15"></a>  <span class="cf">for</span>(t <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span>t_max){</span>
+<span id="cb158-16"><a href="traits-inter-dependence.html#cb158-16"></a>    <span class="co"># Innovations</span></span>
+<span id="cb158-17"><a href="traits-inter-dependence.html#cb158-17"></a>    innovators &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), N, <span class="dt">prob =</span> <span class="kw">c</span>(mu, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>mu), <span class="dt">replace =</span> <span class="ot">TRUE</span>) </span>
+<span id="cb158-18"><a href="traits-inter-dependence.html#cb158-18"></a>    innovations &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span>M, <span class="kw">sum</span>(innovators), <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb158-19"><a href="traits-inter-dependence.html#cb158-19"></a>    population[<span class="kw">cbind</span>(<span class="kw">which</span>(innovators <span class="op">==</span><span class="st"> </span><span class="ot">TRUE</span>), innovations)] &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb158-20"><a href="traits-inter-dependence.html#cb158-20"></a>    </span>
+<span id="cb158-21"><a href="traits-inter-dependence.html#cb158-21"></a>    <span class="co"># Copying</span></span>
+<span id="cb158-22"><a href="traits-inter-dependence.html#cb158-22"></a>    demonstrators &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span>N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb158-23"><a href="traits-inter-dependence.html#cb158-23"></a>    demonstrators_traits &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span>M, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb158-24"><a href="traits-inter-dependence.html#cb158-24"></a></span>
+<span id="cb158-25"><a href="traits-inter-dependence.html#cb158-25"></a>    <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>N){</span>
+<span id="cb158-26"><a href="traits-inter-dependence.html#cb158-26"></a>      <span class="cf">if</span>(population[demonstrators[i], demonstrators_traits[i]]){</span>
+<span id="cb158-27"><a href="traits-inter-dependence.html#cb158-27"></a>        compatibility_score &lt;-<span class="st"> </span><span class="kw">sum</span>(world[demonstrators_traits[i], <span class="kw">which</span>(population[i,]<span class="op">&gt;</span><span class="dv">0</span>)])</span>
+<span id="cb158-28"><a href="traits-inter-dependence.html#cb158-28"></a>        copy &lt;-<span class="st"> </span>(<span class="dv">1</span> <span class="op">/</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">+</span><span class="st"> </span><span class="kw">exp</span>(<span class="op">-</span>k<span class="op">*</span>compatibility_score))) <span class="op">&gt;</span><span class="st"> </span><span class="kw">runif</span>(<span class="dv">1</span>)</span>
+<span id="cb158-29"><a href="traits-inter-dependence.html#cb158-29"></a>        <span class="cf">if</span>(copy){</span>
+<span id="cb158-30"><a href="traits-inter-dependence.html#cb158-30"></a>          population[i,demonstrators_traits[i]] &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb158-31"><a href="traits-inter-dependence.html#cb158-31"></a>        }</span>
+<span id="cb158-32"><a href="traits-inter-dependence.html#cb158-32"></a>      }</span>
+<span id="cb158-33"><a href="traits-inter-dependence.html#cb158-33"></a>    }</span>
+<span id="cb158-34"><a href="traits-inter-dependence.html#cb158-34"></a>    </span>
+<span id="cb158-35"><a href="traits-inter-dependence.html#cb158-35"></a>    <span class="co"># Birth/death</span></span>
+<span id="cb158-36"><a href="traits-inter-dependence.html#cb158-36"></a>    replace &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), N, <span class="dt">prob =</span> <span class="kw">c</span>(p_death, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_death), <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb158-37"><a href="traits-inter-dependence.html#cb158-37"></a>    population[replace, ] &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb158-38"><a href="traits-inter-dependence.html#cb158-38"></a>  </span>
+<span id="cb158-39"><a href="traits-inter-dependence.html#cb158-39"></a>    <span class="co"># Write output</span></span>
+<span id="cb158-40"><a href="traits-inter-dependence.html#cb158-40"></a>    output[t, ] &lt;-<span class="st"> </span><span class="kw">colSums</span>(population) <span class="op">/</span><span class="st"> </span>N</span>
+<span id="cb158-41"><a href="traits-inter-dependence.html#cb158-41"></a>  }</span>
+<span id="cb158-42"><a href="traits-inter-dependence.html#cb158-42"></a>  <span class="co"># Export data from function</span></span>
+<span id="cb158-43"><a href="traits-inter-dependence.html#cb158-43"></a>  output</span>
+<span id="cb158-44"><a href="traits-inter-dependence.html#cb158-44"></a>}  </span></code></pre></div>
+<p>We can now use the <code>plot_multiple_traits_matrix()</code> function (see <a href="multiple-traits-models.html#multiple-traits-models">chapter 7</a>) to visualise the model results. Let’s have a look at what happens when we have 20 traits and an intermediate probability of compatibility.</p>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="traits-inter-dependence.html#cb159-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">traits_inter_dependence_2</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">M =</span> <span class="dv">20</span>, <span class="dt">t_max =</span> <span class="dv">2000</span>, <span class="dt">k =</span> <span class="dv">10</span>,</span>
+<span id="cb159-2"><a href="traits-inter-dependence.html#cb159-2"></a>                                        <span class="dt">mu =</span> <span class="fl">0.001</span>, <span class="dt">p_death =</span> <span class="fl">0.01</span>, <span class="dt">gamma =</span> <span class="fl">.5</span>)</span>
+<span id="cb159-3"><a href="traits-inter-dependence.html#cb159-3"></a><span class="kw">plot_multiple_traits_matrix</span>(data_model)</span></code></pre></div>
+<div class="figure"><span id="fig:12-12"></span>
+<img src="IBM-cultevo_files/figure-html/12-12-1.png" alt="Frequency of traits in a world with 20 traits and compatiblity randomly generated. Each trait has 50% of probability of being compatible with each other trait." width="672" />
+<p class="caption">
+Figure 12.4: Frequency of traits in a world with 20 traits and compatiblity randomly generated. Each trait has 50% of probability of being compatible with each other trait.
+</p>
+</div>
+<p>The simulation generates a complex dynamic in which some of the traits spread in the population, while others do not. The success of a trait depends on its general compatibility with other traits but also on which traits are present at a certain point in time in the population. Some traits succeed to spread only after the traits they are compatible with have sufficiently spread in the population.</p>
+<p>Let’s change <span class="math inline">\(\gamma\)</span> to be <span class="math inline">\(1\)</span>, i.e. when all traits are compatible with each other.</p>
+<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="traits-inter-dependence.html#cb160-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">traits_inter_dependence_2</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">M =</span> <span class="dv">20</span>, <span class="dt">t_max =</span> <span class="dv">2000</span>, <span class="dt">k =</span> <span class="dv">10</span>, </span>
+<span id="cb160-2"><a href="traits-inter-dependence.html#cb160-2"></a>                                        <span class="dt">mu =</span> <span class="fl">0.001</span>, <span class="dt">p_death =</span> <span class="fl">0.01</span>, <span class="dt">gamma =</span> <span class="dv">1</span>)</span>
+<span id="cb160-3"><a href="traits-inter-dependence.html#cb160-3"></a><span class="kw">plot_multiple_traits_matrix</span>(data_model)</span></code></pre></div>
+<div class="figure"><span id="fig:12-13"></span>
+<img src="IBM-cultevo_files/figure-html/12-13-1.png" alt="Frequency of traits in a world with 20 traits and compatiblity randomly generated. Each trait is compatible with all other traits." width="672" />
+<p class="caption">
+Figure 12.5: Frequency of traits in a world with 20 traits and compatiblity randomly generated. Each trait is compatible with all other traits.
+</p>
+</div>
+<p>As expected, all traits spread in the population.</p>
+<p>We leave to the reader to explore further what drives the dynamic, especially in the interesting cases with intermediate values of <span class="math inline">\(\gamma\)</span>. In order to do this, we suggest to add further outputs to the function <code>traits_inter_dependence_2()</code>, such as the compatibility world generated by the simulation, or the actual composition of the population, perhaps only at the end, or every 100, or 500, time steps.</p>
+<p>As an example, we can try to confirm the intuition that the final number of traits depends on the value of <span class="math inline">\(\gamma\)</span>: if it is more likely that traits are compatible with each other, we expect more traits to spread in the population. We can choose values of <span class="math inline">\(\gamma\)</span> between <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> (with steps of <span class="math inline">\(0.1\)</span>), and use a <code>for</code> cycle to run our function for each value. In fact, we are running another <code>for</code> cycle within the main one, as to have more runs for each value of <span class="math inline">\(\gamma\)</span> (an alternative would be to rewrite the function <code>traits_inter_dependence_2()</code> to accept an additional argument that indicates the number of simulation repetitions, as we did in previous chapters).</p>
+<p>Finally, we store the number of “successful” traits at the end of the simulation, that is, the traits that spread in at least half of the population (<code>data_model[2000,]&gt;.5</code>).</p>
+<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="traits-inter-dependence.html#cb161-1"></a>r_max =<span class="st"> </span><span class="dv">10</span></span>
+<span id="cb161-2"><a href="traits-inter-dependence.html#cb161-2"></a>test_inter_dependence &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">gamma =</span> <span class="kw">as.factor</span>(<span class="kw">rep</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dt">by =</span> <span class="fl">.1</span>), r_max)), </span>
+<span id="cb161-3"><a href="traits-inter-dependence.html#cb161-3"></a>                                <span class="dt">run =</span> <span class="kw">as.factor</span>(<span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>r_max, <span class="dt">each =</span> <span class="dv">11</span>)), </span>
+<span id="cb161-4"><a href="traits-inter-dependence.html#cb161-4"></a>                                <span class="dt">C =</span> <span class="kw">as.numeric</span>(<span class="ot">NA</span>))</span>
+<span id="cb161-5"><a href="traits-inter-dependence.html#cb161-5"></a><span class="cf">for</span>(condition <span class="cf">in</span> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dt">by =</span> <span class="fl">.1</span>)){</span>
+<span id="cb161-6"><a href="traits-inter-dependence.html#cb161-6"></a>  <span class="cf">for</span>(r <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>r_max) {</span>
+<span id="cb161-7"><a href="traits-inter-dependence.html#cb161-7"></a>    data_model &lt;-<span class="st"> </span><span class="kw">traits_inter_dependence_2</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">M =</span> <span class="dv">20</span>, <span class="dt">t_max =</span> <span class="dv">2000</span>, <span class="dt">k =</span> <span class="dv">10</span>, </span>
+<span id="cb161-8"><a href="traits-inter-dependence.html#cb161-8"></a>                                            <span class="dt">mu =</span> <span class="fl">0.001</span>, <span class="dt">p_death =</span> <span class="fl">0.01</span>, <span class="dt">gamma =</span> condition)</span>
+<span id="cb161-9"><a href="traits-inter-dependence.html#cb161-9"></a>    test_inter_dependence[test_inter_dependence<span class="op">$</span>gamma <span class="op">==</span><span class="st"> </span>condition <span class="op">&amp;</span><span class="st"> </span></span>
+<span id="cb161-10"><a href="traits-inter-dependence.html#cb161-10"></a><span class="st">                            </span>test_inter_dependence<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>C &lt;-<span class="st"> </span></span>
+<span id="cb161-11"><a href="traits-inter-dependence.html#cb161-11"></a><span class="st">      </span><span class="kw">sum</span>(data_model[<span class="dv">2000</span>,]<span class="op">&gt;</span>.<span class="dv">5</span>)</span>
+<span id="cb161-12"><a href="traits-inter-dependence.html#cb161-12"></a>  }</span>
+<span id="cb161-13"><a href="traits-inter-dependence.html#cb161-13"></a>}</span></code></pre></div>
+<p>To plot the results, we combine boxplots and <code>geom_jitter()</code> so we can see the actual data points. (We introduced <code>geom_jitter()</code> in <a href="biased-transmission-demonstrator-based-indirect-bias.html#biased-transmission-demonstrator-based-indirect-bias">chapter 5</a>.)</p>
+<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="traits-inter-dependence.html#cb162-1"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> test_inter_dependence, <span class="kw">aes</span>(<span class="dt">x =</span> gamma, <span class="dt">y =</span> C)) <span class="op">+</span></span>
+<span id="cb162-2"><a href="traits-inter-dependence.html#cb162-2"></a><span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></span>
+<span id="cb162-3"><a href="traits-inter-dependence.html#cb162-3"></a><span class="st">  </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="fl">0.1</span>, <span class="dt">height =</span> <span class="dv">0</span>, <span class="dt">alpha =</span> <span class="fl">0.5</span>) <span class="op">+</span></span>
+<span id="cb162-4"><a href="traits-inter-dependence.html#cb162-4"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb162-5"><a href="traits-inter-dependence.html#cb162-5"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Average compatibility&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;C (number of common traits)&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:12-15"></span>
+<img src="IBM-cultevo_files/figure-html/12-15-1.png" alt="Increasing the probability of traits being compatible with each others produces bigger populations." width="672" />
+<p class="caption">
+Figure 12.6: Increasing the probability of traits being compatible with each others produces bigger populations.
+</p>
+</div>
+<p>The results broadly confirm our intuitions. Interestingly, we do not need that all traits are compatible with each other to produce the outcome of all traits being successful. Already with <span class="math inline">\(\gamma=0.8\)</span>, all the 20 traits spread in more than half of the population in almost all runs of the simulation. Even with few incompatibilities, the “compatibility score” between observers and demonstrators is, given a sufficient number of compatible traits, a positive number, resulting in high probabilities to copy.</p>
+</div>
+<div id="summary-of-the-model-11" class="section level2">
+<h2><span class="header-section-number">12.3</span> Summary of the model</h2>
+<p>Using simple models, we formalised the intuitive idea that cultural traits (can) have meaningful (for us) relationships with each other. When we decide whether to support a policy or not, to adopt a behaviour or not, or to participate in the latest fad, the decision may depend on how well the policy, the behaviour, or the fad fit with our pre-existing ideas. We used a simple rule for which traits can be compatible or incompatible with the other traits, and we showed that the success of traits depend on their compatibility. We also showed that, quite intuitively, populations where many traits are compatible with each other, will generate bigger cultures.</p>
+<p>We also introduced a few new modelling devices, such as the logistic function, that transform unbounded positive and negative values into probabilities ranging from <span class="math inline">\(0\)</span> to <span class="math inline">\(1\)</span>, and the ggplot geom <code>geom_jitter()</code>, which is useful to visualise overlapping data points.</p>
+</div>
+<div id="further-readings-5" class="section level2">
+<h2><span class="header-section-number">12.4</span> Further readings</h2>
+<p>A broader treatment of models of cultural evolution where the outcomes depend on the relationships between traits, defined by the authors ‘cultural systems’, is in <span class="citation">Buskell, Enquist, and Jansson (<a href="references.html#ref-buskell_systems_2019" role="doc-biblioref">2019</a>)</span>. More complex relationships between traits, including the possibility that some trait will facilitate the appearance of new traits, generating cascade of innovations are explored in <span class="citation">Enquist, Ghirlanda, and Eriksson (<a href="references.html#ref-enquist_modelling_2011" role="doc-biblioref">2011</a>)</span>.</p>
+
+</div>
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="social-learning-of-social-learning-rules.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="demography.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["IBM-cultevo.pdf", "IBM-cultevo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

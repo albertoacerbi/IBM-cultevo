@@ -3,7 +3,7 @@
 
 # Demography
 
-In the previous chapters, we have looked at the transmission of information between individuals. We have seen that relatively simple mechanisms at the individual level can lead to population-level outcomes (e.g. the fixation of a rare cultural trait). We have also seen the importance of the characteristics of individuals (e.g. for success and prestige bias) in cultural processes. What we have not yet looked at is how the characteristics of the population may affect the outcome of cultural dynamics. In the following three chapters we will have a closer look at how population size (demography, this chapter), population structure (social networks, [Chapter 11][Social network structure]), and group structured populations with migration ([Chapter 12][Group structured populations and migration]) can influence cultural evolution.
+In the previous chapters, we have looked at the transmission of information between individuals. We have seen that relatively simple mechanisms at the individual level can lead to population-level outcomes (e.g. the fixation of a rare cultural trait). We have also seen the importance of the characteristics of individuals (e.g. for success and prestige bias) in cultural processes. What we have not yet looked at is how the characteristics of the population may affect the outcome of cultural dynamics. In the following three chapters we will have a closer look at how population size (demography, this chapter), population structure (social networks, [Chapter 14][Social network structure]), and group structured populations with migration ([Chapter 15][Group structured populations and migration]) can influence cultural evolution.
 
 Why would demography matter to cultural evolution? As long as information is transmitted among individuals and between generations, the size of the population should not play a role. In theory, this statement is true but it relies on a crucial assumption: information transfer is not only complete (all information from the previous generation is transmitted to the next generation) but also error-free. However, from many lab experiments, we know that copying information is an error-prone process. In this chapter, we will look at how those errors affect information accumulation and how population size is augmenting this process. 
 
@@ -18,7 +18,7 @@ To simulate imperfect imitation, Henrich's model uses random values from a Gumbe
 <!-- (i) I changed the identification of the code chunk to 10.1 for consistency. We use always consecutive numbers.
 (ii) I think we need to quickly introduce the two new things in the code, i.e. library(extraDistr) and geom_density() -->
 
-```{r 10-1, fig.cap = "Shown are the probability distributions to acquire a specific skill level ($z$, x-axis) for two different skills (a simple one that is easy to learn, and a compelx one that is harder to learn). Given that learning is error-prone more individuals will acquire a skill level that is lower than that of a cultural model (its level is indicated by the vertical dashed line) through imitation (left of the dashed line). A few individauls will achieve higher skill levels (right of the dashed line). For the complex skill the probability to be above the skill level of the cultural model is lower (smaller area under the curve) than for simple skills.", message = FALSE, warning = FALSE, echo = FALSE}
+```{r 13-1, fig.cap = "Shown are the probability distributions to acquire a specific skill level ($z$, x-axis) for two different skills (a simple one that is easy to learn, and a compelx one that is harder to learn). Given that learning is error-prone more individuals will acquire a skill level that is lower than that of a cultural model (its level is indicated by the vertical dashed line) through imitation (left of the dashed line). A few individauls will achieve higher skill levels (right of the dashed line). For the complex skill the probability to be above the skill level of the cultural model is lower (smaller area under the curve) than for simple skills.", message = FALSE, warning = FALSE, echo = FALSE}
 library(extraDistr)
 library(tidyverse)
 data <- tibble(skill = rep(c("simple","complex"), each = 6000),
@@ -46,7 +46,7 @@ We also set the parameters for the Gumbel distribution, here $\sigma=3$ and $\al
 
 Finally, we write down a very basic learning loop. The first step in this `for()` loop is to draw new values of `z` and store them in `z_new`. We then calculate the mean of the new skill levels and the change compared to the previous time step and finally update all values stored in `z`.
 
-```{r 10-2, cache = TRUE}
+```{r 13-2, cache = TRUE}
 library(tidyverse)
 library(extraDistr)
 
@@ -79,7 +79,7 @@ for(r in 1:t_max){
 
 Let us now plot the result of this simulation run. We first transform the output data structures in a tibble, so that can be conveniently be plotted with `ggplot`: 
 
-```{r 10-3, fig.cap = "While $\\bar z$ is sometimes above and sometimes below $0$, it is on average postive (dashed line), which indicated that the average skill level of the population increases."}
+```{r 13-3, fig.cap = "While $\\bar z$ is sometimes above and sometimes below $0$, it is on average postive (dashed line), which indicated that the average skill level of the population increases."}
 z_delta_bar_val <- tibble(x = 1:length(z_delta_bar), y = z_delta_bar)
 ggplot(z_delta_bar_val) + 
   geom_line(aes(x = x, y = y)) +
@@ -91,7 +91,7 @@ ggplot(z_delta_bar_val) +
 
 We find that $\Delta \bar z$ quickly plateaus at about `r round(mean(z_delta_bar),1)` (grey dashed line). As this is $>0$, on average the population will improve its skill over time. We can see that this is the case when we plot the average skill level over time:
 
-```{r 10-4, fig.cap = "For the given parameter ($\\alpha=5$, $\\sigma=3$) the average skill-level increases continously."}
+```{r 13-4, fig.cap = "For the given parameter ($\\alpha=5$, $\\sigma=3$) the average skill-level increases continously."}
 z_bar_val <- tibble(x = 1:length(z_bar), y = z_bar)
 ggplot(z_bar_val) + 
   geom_line(aes(x = x, y = y)) +
@@ -104,7 +104,7 @@ As in the previous chapters, we can now write a wrapper function that allows us 
 
 Have a look at our `demography_model()` wrapper function: 
 
-```{r 10-5}
+```{r 13-5}
 demography_model <- function(T_MAX, N, ALPHA, SIGMA, R_MAX){
   res <- lapply(1:R_MAX, function(repetition){
                   z <- rep(1, N)
@@ -128,7 +128,7 @@ We first define a variable, `sizes`, for the different population sizes. We are 
 
 In the last line of this chunk, we create a tibble that will hold the final results of the simulations for each skill and the different population sizes. 
 
-```{r 10-6, cache = TRUE}
+```{r 13-6, cache = TRUE}
 sizes <- c(2, seq(from = 100, to = 6100, by = 500))
 
 simple_skill <- lapply(X = sizes, FUN = demography_model, 
@@ -145,7 +145,7 @@ data <- tibble(N = rep(sizes, 2),
 
 Let us now plot the results:
 
-```{r 10-7, fig.cap = "For a simple skill, effective populaton size (at which the skill can be just maintained in a population) is much smaller than the population that is required to maintain a complext skill."}
+```{r 13-7, fig.cap = "For a simple skill, effective populaton size (at which the skill can be just maintained in a population) is much smaller than the population that is required to maintain a complext skill."}
 ggplot(data) + 
   geom_line(aes(x = N, y = z_delta_bar, color = skill)) +
   xlab("effective population size") + 
@@ -162,7 +162,7 @@ Henrich calls the minimum population size required to maintain a skill the criti
 
 When we plot the previous results over logarithmic population size the resulting graphs are almost linear.
 
-```{r 10-8, fig.cap = "The same results as in Figure \\@ref(fig:10-7) but using log on population sizes."}
+```{r 13-8, fig.cap = "The same results as in Figure \\@ref(fig:10-7) but using log on population sizes."}
 ggplot(data) + 
   geom_line(aes(x = log(N), y = z_delta_bar, color=skill)) +
   xlab("log(effective population size)") +
@@ -174,7 +174,7 @@ ggplot(data) +
 Thus, we could use a linear fit and then solve for $y = 0$ to calculate $N^\star$. To do this we use the `lm()` function, which fits a linear model to the data that we provide. It takes a `formula` argument that identifies the 'response variable' (here `z_delta_bar`) and the 'predictor variable' (here `log(N)`). The two variables are separated with a `~` sign. To calculate a fit just for the data points of the simple skill simulation, we only hand over that part of the `data` where the `skill` column contains the term `simple`. As usual, we can inspect the results simply writing the variable name where we saved the results of the function, i.e. `fit`.
 
 
-```{r 10-9}
+```{r 13-9}
 # Create linear regression for the change in average skill level in response to population size
 fit <- lm(formula = z_delta_bar ~ log(N), 
           data = data[data$skill == "simple",])
@@ -183,7 +183,7 @@ fit
 
 The result is a list of information from the linear regression. Here, we are interested in the intercept with the y-axis and the inclination of the linear regression, both of which are displayed under `Coefficients`. We can calculate the point at which our regression line crosses the x-axis using the linear function $y = mx+b$, setting $y=0$ and then transforming, such that $x=-\frac{b}{m}$, where $b$ is the y-axis intercept, and $m$ is the inclination. 
 
-```{r 10-10}
+```{r 13-10}
 # Solve for y = 0 by using the coefficients of the linear regression:
 b <- fit$coefficients[1]
 m <- fit$coefficients[2]
@@ -199,7 +199,7 @@ Note that we need to take the exponent (`exp()`) of the resulting value to rever
 
 Let us now calculate the $N^\star$ values for different skill complexities and different population sizes. We first set up the parameter space using `expand.grid()`. This function essentially creates all possible combinations of input variables. In our case, we want all possible combinations of the different population sizes `N` and skill complexities, which we will vary using different values for $\alpha$. Therefore, executing this function will return a two column (for `N` and `alpha`) data structure, stored in `simulations`. We visualise the first lines with the function `head()`:
 
-```{r 10-11}
+```{r 13-11}
 # Run simulation for the following population sizes
 sizes <- seq(from = 100, to = 6100, by = 500)
 
@@ -211,7 +211,7 @@ head(simulations)
 ```
 Now we can run simulations for all combinations of population sizes and skill compexities:
 
-```{r 10-12, cache = TRUE}
+```{r 13-12, cache = TRUE}
 z_delta_bar <- lapply(X = 1:nrow(simulations), FUN = function(s){
                   demography_model(T_MAX = 200, 
                                    N = simulations[s, "N"], 
@@ -225,7 +225,7 @@ data <- cbind(simulations, z_delta_bar=unlist(z_delta_bar))
 
 Finally, let us fit a linear regression to each skill complexity to determine the according critical population size $N^\star$:  
 
-```{r 10-13}
+```{r 13-13}
 n_stars <- lapply(X = unique(data$alpha), FUN = function(alpha){
                       # Only use the results with identical value for alpha
                       subset <- data[data$alpha == alpha,]
@@ -242,7 +242,7 @@ results <- tibble(n_star = unlist(n_stars), alpha = unique(data$alpha))
 Now, we plot the critical population size as a function of the skill complexity $\alpha$ over $\sigma$. Note, that the x-axis label contains Greek letters. There are at least two ways to get `ggplot` to display Greek letters. The most simple way is to type the unicode equivalents of the symbols and letters. In our case this would look like this: `xlab("\u03b1 / \u03C3")`. Alternatively, we can use the `expression()` function and type the names of the Greek letters (see below). This will be parsed and translated into the according letters:
 <!-- expression() needs to be introduced -->
 
-```{r 10-14, fig.cap = "The critical population size, $N^\\star$, increases exponentially as skill complexity increases."}
+```{r 13-14, fig.cap = "The critical population size, $N^\\star$, increases exponentially as skill complexity increases."}
 ggplot(results, aes(x = alpha, y = n_star)) + 
   geom_line() + 
   xlab(expression(alpha/sigma)) +

@@ -1,0 +1,223 @@
+# Social learning of social learning rules
+
+In most of the models we explored so far, individuals decide whether to copy or not according to various rules, often called 'transmission biases' in cultural evolution jargon. They may have a tendency to copy common traits, or to copy a subset of the population, or to prefer certain cultural traits with respect to others by virtue of their intrinsic characteristics, and so on. 
+
+A feature of all these models is that these rules were considered stable, or changing very slowly (perhaps because of genetic evolution) in comparison to the timescale of the model, so that we effectively treated them as fixed. However, cultural evolution can also influence its own rules, that is, we can learn from others when, what, or from whom to learn. This is far from being a rare instance: parents, at least in modern western societies, invest much effort to transmit to children that learning from schoolteachers is important, or teenagers groups may discourage learning from other groups, or from adults in general. Educational systems in countries such as Korea or Japan are thought to encourage pupils to learn and trust teachers almost unconditionally, whereas, in countries like UK and USA, the emphasis is on individual creativity and critical thinking.
+
+## Openness and conservatism 
+
+How can we approach the social learning of social learning rules with simple models? To start with, we can imagine that individuals learn from others whether to copy others or not. We can imagine the simplest possible dynamic, where a single trait, *P*, both regulate the probability to copy from others and is the trait that is actually copied. When an individual has $P=1$ always copies others (we will call it a completely 'open' individual), and when it has $P=0$ never copies others (we will call it a completely 'conservative' individual). All intermediate values of *P* are possible.    
+
+```{r 11-1, message=FALSE}
+library(tidyverse)
+N <- 1000
+population <- tibble(P = runif(N))
+```
+
+After initialising the population with a random uniform sample of values of *P*, we can write the function to run the simulations.
+
+```{r 11-2}
+openness_conservatism <- function(N, t_max, r_max) {
+  output <- tibble(generation = rep(1:t_max, r_max), 
+                   p = as.numeric(rep(NA, t_max * r_max)), 
+                   run = as.factor(rep(1:r_max, each = t_max)))
+  for (r in 1:r_max) {
+    # Create first generation
+    population <- tibble(P = runif(N))
+    
+    # Add first generation's p for run r
+    output[output$generation == 1 & output$run == r, ]$p <- 
+      sum(population$P) / N 
+    
+    for (t in 2:t_max) {
+      # Copy individuals to previous_population tibble
+      previous_population <- population 
+      
+      # Choose demonstrators at random
+      demonstrators <- tibble(P = sample(previous_population$P, N, replace = TRUE)) 
+      
+      # Choose individuals that copy, according to their P
+      copy <- previous_population$P > runif(N) 
+      
+      # Copy
+      population[copy, ]$P <- demonstrators[copy, ]$P 
+      
+      # Get p and put it into output slot for this generation t and run r
+      output[output$generation == t & output$run == r, ]$p <- 
+        sum(population$P) / N 
+    }
+  }
+  # Export data from function
+  output 
+}
+```
+
+Everything should be familiar in this function. The only new instruction is in the line `copy <- previous_population$P > runif(N)`. This simply compares each individual's *P* value with a random number extracted between $0$ and $1$. If the *P* value is higher, the individual will copy, otherwise it will not. 
+
+We can now run the simulation, and plot it with the `plot_multiple_runs_p()` function for continuous traits we wrote in the previous chapter.
+
+```{r 11-3}
+plot_multiple_runs_p <- function(data_model) {
+  ggplot(data = data_model, aes(y = p, x = generation)) +
+    geom_line(aes(colour = run)) +
+    stat_summary(fun = mean, geom = "line", size = 1) +
+    ylim(c(0, 1)) +
+    theme_bw() +
+    labs(y = "p (average value of P)")
+}
+```
+
+```{r 11-4, fig.cap = "After few generations, the popualtion is composed by conservative individuals."}
+data_model <- openness_conservatism(N = 1000, t_max = 50, r_max = 5)
+plot_multiple_runs_p(data_model)
+```
+
+The average value of *P* in the population quickly converges towards 0 (in fact, towards the lower initial value, as there are no mutations) in all runs. At this point of the book, you should be able to introduce mutations, as well as initialising the population with different values of *P*. What would happen, for example, if individuals start with values of *P* clustering around 1, that is, they are all initially very open? Another possible modification is that, instead of comparing the copier's *P* value with a random number, when two individuals are paired, the individual with the higher *P* (that is, the most open of the two) copies the other one. 
+
+At the risk of ruining the surprise, the main result of populations converging towards maximum conservatism is robust to many modifications (but you should try your own, this is what models are about). The result seems at first sight counterintuitive: the outcome of social transmission is to eliminate social transmission! A way to understand this result is that conservative individuals, exactly because they are conservative, change less than open individuals and, in general, transitions from open to conservative happen more frequently than transitions from conservative to open. Imagine a room where people are all copying the t-shirt colours of each other, but one stubborn individual, with a red t-shirt, never changes. If there are not other forces acting, at some point all individuals will wear red t-shirts.    
+
+## Maintaining open populations
+
+The result above highlights a possibly interesting aspect of what could happen when social learning rules are themselves subject to social learning, but it does not represent, of course, what happens in reality. Some models, such as the Rogers' model we explored in [chapter 8][Rogers' model], are useful exactly because they force us to think how reality differs from the modelled situation. Individuals, in real life, remain open because learning from others is, on average, effective, and increases their fitness. 
+
+However, even without considering the possible fitness advantages of copying from others, there may be other reasons why individuals remain open to cultural influences. We can add a bit of complexity to the previous model and see what happens. For example, instead of having a single *P* value, individuals can be "open" or "conservative" depending on the specific cultural trait they observe. One can be open to try exotic recipes, while another may like only its local cuisine; one want to know everything about combat sports, while another prefers watching them in TV. We can say that, instead of a single *P*, we have many preferences associated to cultural traits and, as before, they can be transmitted from one individual to another. Second, we decide to copy other individuals depending on our preferences for the traits they show us. 
+
+Finally, differently from the models we explored in the previous chapters, individuals in the population are replaced through a birth/death process. They are born without cultural traits, and they acquire them during the course of their life, by copying them from others, or by introducing them through innovation. The new function `openness_conservatims_2()` does all the above.   
+
+```{r 11-5}
+openness_conservatism_2 <- function(N, M, mu, p_death, t_max, r_max){
+  output <- tibble(generation = rep(1:t_max, r_max), 
+                   p = as.numeric(rep(NA, t_max * r_max)), 
+                   m = as.numeric(rep(NA, t_max * r_max)), 
+                   run = as.factor(rep(1:r_max, each = t_max)))
+  
+  for (r in 1:r_max) {
+    
+    # Initialise population
+    population_preferences <- matrix( runif(M * N), ncol = M, nrow = N)
+    population_traits <- matrix(0, ncol = M, nrow = N)
+    
+    # Write first output
+    output[output$generation == 1 & output$run == r, ]$p <- mean(population_preferences)
+    output[output$generation == 1 & output$run == r, ]$m <- sum(population_traits) / N  
+    
+    for(t in 2:t_max){
+      # Innovations
+      innovators <- sample(c(TRUE, FALSE), N, prob = c(mu, 1 - mu), replace = TRUE) 
+      innovations <- sample(1:M, sum(innovators), replace = TRUE)
+      population_traits[cbind(which(innovators == TRUE), innovations)] <- 1
+      
+      # Copying
+      previous_population_preferences <- population_preferences
+      previous_population_traits <- population_traits
+      
+      demonstrators <- sample(1:N, replace = TRUE)
+      demonstrators_traits <- sample(1:M, N, replace = TRUE)
+
+      copy <- previous_population_traits[cbind(demonstrators,demonstrators_traits)] == 1 & 
+        previous_population_preferences[cbind(1:N, demonstrators_traits)] > runif(N)
+      
+      population_traits[cbind(which(copy), demonstrators_traits[copy])] <- 1
+      
+      population_preferences[cbind(which(copy), demonstrators_traits[copy])] <- 
+        previous_population_preferences[cbind(demonstrators[copy], demonstrators_traits[copy])] 
+      
+      # Birth/death
+      replace <- sample(c(TRUE, FALSE), N, prob = c(p_death, 1 - p_death), replace = TRUE)
+      population_traits[replace, ] <- 0
+      population_preferences[replace, ] <- runif(M * sum(replace))
+      
+      # Write output
+      output[output$generation == t & output$run == r, ]$p <- mean(population_preferences)
+      output[output$generation == t & output$run == r, ]$m <- sum(population_traits) / N    
+    }
+  }
+  # Export data from function
+  output
+}
+```
+
+The population is now described by two matrices, `population_preferences` and `population_traits`, that are initialised, respectively, with random number between 0 and 1 and with all 0s, respectively, meaning that at the beginning there are no traits in the population. The same happens for newborns. A parameter of the simulation, *M*, gives the maximum possible number of traits. At each time step, a proportion $\mu$ of innovators introduce a trait at random. 
+
+The main novelties of the code are in the copying procedure. After selecting random demonstrators and, for each of them, a random trait-slot, we record in the variable `copy` whether or not the individuals that will copy the demonstrator. For this to happen, the demonstrator needs to actually possess the trait randomly selected (`previous_population_traits[cbind(demonstrators,demonstrators_traits)]==1`) and the preference of the observer for that trait should be sufficiently high (`previous_population_preferences[cbind(1:N, demonstrators_traits)] > runif(N)`). If these two conditions are satisfied, the observer copies both the trait and the preference of the demonstrator. 
+
+We can start with a situation similar to the previous model, with only a single trait ($M=1$). We set a relatively high innovation rate ($\mu=0.1$) so that the initial population is quickly populated by cultural traits, and $p_\text{death}=0.01$, meaning that, with a population of 100 individuals, every time step there will be on average one newborn. (As usual, you are invited to explore the effect of these parameters.) 
+
+```{r 11-6, fig.cap = "Simlarly to the previous model, the popualtion converges to conservatism, even if the descent is less steep as individuals need some time to acquire traits."}
+data_model <- openness_conservatism_2(N = 1000, M = 1, mu = 0.1, 
+                                      p_death = 0.01, t_max = 50, r_max = 5)
+plot_multiple_runs_p(data_model)
+```
+
+The plot is fairly similar to what we saw before. The average openness of the population converges towards lower values in few generations, in all runs. The descent is less steep since at the beginning of the simulations individuals need to acquire cultural traits to kick start social transmission. We can now try with an higher number of possible traits, for example $M=10$.  
+
+```{r 11-7, fig.cap = "With 10 possible traits, convergence to conservatism is slower."}
+data_model <- openness_conservatism_2(N = 1000, M = 10, mu = 0.1, 
+                                      p_death = 0.01, t_max = 50, r_max = 5)
+plot_multiple_runs_p(data_model)
+```
+
+Now the convergence seems slower. We can try with longer simulations, fixing $t_\text{max}=1000$.
+
+```{r 11-8, fig.cap = "Even after 1,000 generations, with 10 possible traits, individuals are not completely conservative."}
+data_model <- openness_conservatism_2(N = 1000, M = 10, mu = 0.1, 
+                                      p_death = 0.01, t_max = 1000, r_max = 5)
+plot_multiple_runs_p(data_model)
+```
+
+Even after $1000$ generations, population openness did not go to $0$, but it stabilises on a value of around $0.12$. To understand what happens it is interesting to plot the other value we are recording in the output of the simulation, that is the average number of traits that individuals possess. The function below is equivalent to the usual `plot_multiple_runs()`, but with a different y-axis label, and it takes $M$ (the maximum number of traits) as a parameter, so that we can set the y-axis to span from $0$ to $M$, to have a better visual estimate of the proportion of traits present with respect to the maximum possible.  
+
+```{r 11-9}
+plot_multiple_runs_m <- function(data_model, M) {
+  ggplot(data = data_model, aes(y = m, x = generation)) +
+    geom_line(aes(colour = run)) +
+    stat_summary(fun = mean, geom = "line", size = 1) +
+    ylim(c(0, M)) +
+    theme_bw() +
+    labs(y = "m (average number of traits)")
+}
+```
+
+```{r 11-10, fig.cap = "Individuals, on average, do not acquire all the possible traits during the lifetime."}
+plot_multiple_runs_m(data_model, M = 10)
+```
+
+On average, individuals do not have all $10$ possible traits. Remember that individuals are replaced with a birth/death process, and they are born with no cultural traits so that they need time to acquire them. Let's try now with a bigger possible cultural repertoire, say $M=50$, and plot the average openness as well as the average number of traits.
+
+```{r 11-11, fig.cap = "Individuals, on average, acquire less then half of the available traits, when there are 50 possible traits."}
+data_model <- openness_conservatism_2(N = 1000, M = 50, mu = 0.1, p_death = 0.01, t_max = 1000, r_max = 5)
+plot_multiple_runs_p(data_model)
+plot_multiple_runs_m(data_model, M = 50)
+```
+
+This time the average openness stabilises to an even higher value (around $0.4$), and the number of cultural traits is below $20$, lower than half of all possible traits. 
+
+We can explicitly visualise the relationship between $M$ and population openness after $1000$ generations for few representative values of $M$. We consider only a single run for each condition as, from the previous results, we know that different runs give very similar results.
+  
+```{r 11-12, fig.cap = "Relationhsip between the number of possible cultural traits and the average openness of the population: when there are more traits possible to acquire, populations remain more open."}
+test_openness <- tibble(M = c(1,5,10,20,50,100), p = as.numeric(rep(NA, 6)))
+for(condition in test_openness$M){
+  data_model <- openness_conservatism_2(N = 1000, M = condition, mu = 0.1, 
+                                        p_death = 0.01, t_max = 1000, r_max = 1)
+  test_openness[test_openness$M == condition, ]$p <- 
+    data_model[data_model$generation == 1000, ]$p
+}
+ggplot(data = test_openness, aes(x = M, y = p)) +
+  geom_line(linetype = "dashed") +
+  geom_point() +
+  theme_bw() +
+  labs(x = "Maximum possible number of traits", y = "p (final average value of p)")
+```
+
+The more cultural traits that are possible to acquire, the more individuals remain open. Why is that the case? As we saw before, a conservative individual will be able to spread its traits because they are more stable (remember the red t-shirt example). On the other hand, to be copied, an individual needs to showcase its traits. As the traits are chosen at random, it is better for an individual - from the point of view of its cultural success - to have many traits. These two requirements are in conflict: to acquire many traits an individual needs to remain relatively open. For this reason, when the cultural repertoire is big, individuals will remain open longer. 
+
+You can easily check by yourself that decreasing $p_\text{death}$ has a similar effect of decreasing $M$. Individual living longer will generate more conservative populations. With a bit of work to the code, the same effect can be produced if individuals can learn faster. You can add a parameter to the model that tells how many traits an observer copies from the demonstrator at each interaction (in the case above is as this parameter would have been fixed to 1). The more effective is cultural transmission, the more conservative the populations. All depends on whether individuals have time to to optimise *both* openness and conservatism: big repertories, short lifespans, and ineffective cultural transmission all maintain relatively open populations. 
+  
+## Summary of the model
+  
+In this chapter we explored the idea that we can learn from others not only beliefs and skills, but also the rules that govern how and when we learn from others. The models we presented just scratch the surface of what the consequences of the 'social learning of social learning rules' could be, and we invite the readers to explore other possibilities. The models still provide some interesting insights: successful cultural models need to integrate openness (to acquire cultural traits liked by others) and, at the same time, conservativeness (to remain stable and repeatedly show the same traits to copy). This also suggests that successful cultural traits should not only be liked by many, but they also should promote conservativeness, as we defined it here, in their bearers. After all, the first commandment in the Abrahamic religions is 'Thou shalt have no other gods before me' rather then 'Check the other gods, and you'll see I am the better one;! Regardless of the particular results, however, these models mostly highlight how unexpected cultural dynamics can emerge from systems in which the rules governing social learning are not fixed, but they are themselves subject of cultural evolution.
+
+  
+## Further readings
+  
+The models above are based on the models described in @ghirlanda_cultural_2006 and @acerbi_cultural_2009. @acerbi_cultural_2009 investigates possible variants of the main model of this chapter, such as continuous traits, innovations possible for preferences too, and various degrees of effectiveness of cultural transmission. It also explores how the basic dynamics affects individual characteristics (young individuals are more open than older individuals, older individuals are more effective cultural models than younger individuals, and so on). @acerbi_regulatory_2014 summarises these models, and provides a more general perspective on the 'social learning of social learning rules' topics, including other simulated scenarios. @mesoudi_evolution_2016 is a review of the individual and cultural variation in social learning, pointing to various references, including empirical evidences of cultural variation in social learning in humans.   

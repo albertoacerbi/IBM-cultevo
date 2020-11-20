@@ -2,9 +2,7 @@
 
 ## Before sharing 
 
-* Chapter 12: check + cross-references + captions numbering + references
-
-* Put back chapter 13-14-15
+* Chapter 12: check + cross-references + captions numbering + references -> becomes 15
 
 * Rename references chapter to 16-References.Rmd
 

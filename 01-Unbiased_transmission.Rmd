@@ -38,7 +38,7 @@ We can see the cultural traits of our population by simply entering its name in 
 population
 ```
 
-As expected, there is a single column called `trait` containing $A$s and $B$s. The type of the column, in this case '<chr>' (i.e. character), is reported below the name. 
+As expected, there is a single column called `trait` containing $A$s and $B$s. The type of the column, in this case `<chr>` (i.e. character), is reported below the name. 
 
 A specific individual's trait can be retrieved using the square bracket notation in R. For example, individual 4's trait can be retrieved by typing: 
 
