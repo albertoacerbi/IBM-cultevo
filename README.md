@@ -40,7 +40,7 @@ Introduction
 
 * Reproduction and transformation
 
-* Social learning of social learnign rules
+* Social learning of social learning rules
 
 * Traits inter-dependence
 
