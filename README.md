@@ -10,6 +10,10 @@ by
 
 Alberto Acerbi, Marco Smolla, and Alex Mesoudi
 
+The published version on the book is currently hosted at [https://acerbialberto.com/IBM-cultevo/](https://acerbialberto.com/IBM-cultevo/)
+
+--
+
 # Table of content
 
 Introduction
@@ -54,8 +58,5 @@ Introduction
 
 References
 
---
-<!--
-The published version on the book is currently hosted at [https://acerbialberto.com/IBM-cultevo/](https://acerbialberto.com/IBM-cultevo/)
--->
-Notice the book is not ready yet, the last chapter is missing.
+
+

@@ -26,7 +26,7 @@
 <meta name="author" content="Alex Mesoudi" />
 
 
-<meta name="date" content="2020-11-20" />
+<meta name="date" content="2020-11-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -255,6 +255,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="14.6" data-path="social-network-structure.html"><a href="social-network-structure.html#summary-of-the-model-13"><i class="fa fa-check"></i><b>14.6</b> Summary of the model</a></li>
 <li class="chapter" data-level="14.7" data-path="social-network-structure.html"><a href="social-network-structure.html#further-reading-7"><i class="fa fa-check"></i><b>14.7</b> Further Reading</a></li>
 </ul></li>
+<li class="chapter" data-level="15" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html"><i class="fa fa-check"></i><b>15</b> Group structured populations and migration</a><ul>
+<li class="chapter" data-level="15.1" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#modelling-migration-and-contact-between-population-subsets"><i class="fa fa-check"></i><b>15.1</b> Modelling migration and contact between population subsets</a></li>
+<li class="chapter" data-level="15.2" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#subdivided-population-with-limited-contact"><i class="fa fa-check"></i><b>15.2</b> Subdivided population with limited contact</a></li>
+<li class="chapter" data-level="15.3" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#subdivided-populations-with-migration"><i class="fa fa-check"></i><b>15.3</b> Subdivided populations with migration</a></li>
+<li class="chapter" data-level="15.4" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#varying-contact-and-migration-probability-for-repeated-simulation-runs"><i class="fa fa-check"></i><b>15.4</b> Varying contact and migration probability for repeated simulation runs</a></li>
+<li class="chapter" data-level="15.5" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#model-extensions"><i class="fa fa-check"></i><b>15.5</b> Model extensions</a><ul>
+<li class="chapter" data-level="" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#innovation-or-mutation"><i class="fa fa-check"></i>Innovation or mutation</a></li>
+<li><a href="group-structured-populations-and-migration.html#copy-m-models">Copy <span class="math inline">\(m\)</span> models</a></li>
+<li class="chapter" data-level="" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#variable-migration-probability-among-subsets"><i class="fa fa-check"></i>Variable migration probability among subsets</a></li>
+</ul></li>
+<li class="chapter" data-level="15.6" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#summary-of-the-model-14"><i class="fa fa-check"></i><b>15.6</b> Summary of the model</a></li>
+<li class="chapter" data-level="15.7" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#further-reading-8"><i class="fa fa-check"></i><b>15.7</b> Further reading</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -299,14 +312,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##    trait status
 ##    &lt;chr&gt; &lt;chr&gt; 
 ##  1 B     low   
-##  2 B     low   
-##  3 A     high  
-##  4 A     high  
-##  5 A     low   
-##  6 A     low   
-##  7 B     low   
-##  8 A     low   
-##  9 B     low   
+##  2 A     low   
+##  3 A     low   
+##  4 A     low   
+##  5 B     low   
+##  6 B     low   
+##  7 A     low   
+##  8 B     low   
+##  9 A     low   
 ## 10 B     low   
 ## # … with 90 more rows</code></pre>
 <p>With <span class="math inline">\(p_s=0.05\)</span> around 5 individuals in a population of 100 will have high status.</p>
@@ -437,16 +450,16 @@ Figure 5.2: Indirectly biased transmission depends on the effective population s
 <pre><code>## # A tibble: 50 x 2
 ##    status_A     p
 ##       &lt;dbl&gt; &lt;dbl&gt;
-##  1    0.6       0
-##  2    0.75      1
-##  3    0.333     1
-##  4    1         1
-##  5    0.2       0
+##  1    0         0
+##  2    0.286     0
+##  3    0.556     1
+##  4    0.5       1
+##  5    1         1
 ##  6    0.5       1
-##  7    0.167     0
-##  8    0.6       1
-##  9    0.4       1
-## 10    0.375     0
+##  7    0.5       1
+##  8    0.5       0
+##  9    0.333     0
+## 10    0.333     0
 ## # … with 40 more rows</code></pre>
 <p>Each line of the output is a run of the simulation. The first column (labelled <code>status_A</code>) gives the frequency of <span class="math inline">\(A\)</span> in the high-status individuals, and the second (labelled <code>p</code>) the frequency of <span class="math inline">\(A\)</span> at the end of the simulation. From a cursory inspection of the output, you should be able to see that our guess was correct, and when <code>status_A</code> is higher than 0.5, <code>p</code> should be generally 1, and when <code>status_A</code> is less than 0.5, <code>p</code> should be generally 0. But let’s visualise all the data to be sure.</p>
 <p>We want to know how the initial proportion of high-status individuals is related to the two possible outcomes (trait <span class="math inline">\(A\)</span> reaches fixation or trait <span class="math inline">\(B\)</span> reaches fixation). A convenient way is to use a boxplot. In the code below, we first eliminate the runs where the traits did not reach fixation (if they exist) using the new function <code>filter()</code>, and, for clarity, we assign the trait name <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> to each run according to which trait reached fixation. We can then plot our output.</p>
@@ -467,8 +480,6 @@ Figure 5.2: Indirectly biased transmission depends on the effective population s
 <span id="cb63-14"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-14"></a>       <span class="dt">x =</span> <span class="st">&quot;winning trait&quot;</span>) <span class="op">+</span></span>
 <span id="cb63-15"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-15"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
 <span id="cb63-16"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb63-16"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>) </span></code></pre></div>
-<pre><code>## Warning: Removed 1 rows containing non-finite values (stat_boxplot).</code></pre>
-<pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
 <div class="figure"><span id="fig:5-11"></span>
 <img src="IBM-cultevo_files/figure-html/5-11-1.png" alt="The trait reaching fixation tends to be the trait that was in majority among high-status individuals." width="672" />
 <p class="caption">
@@ -476,26 +487,26 @@ Figure 5.3: The trait reaching fixation tends to be the trait that was in majori
 </p>
 </div>
 <p>The plot shows that when trait <span class="math inline">\(A\)</span> reaches fixation there are more high-status individuals with trait <span class="math inline">\(A\)</span> at the beginning, and vice versa for <span class="math inline">\(B\)</span>, confirming our intuition. However, this is far from being a safe bet. Runs with only a quarter of high-status individuals with <span class="math inline">\(A\)</span> ended up with all <span class="math inline">\(A\)</span>s in the population and, conversely, runs with 80% of high-status individuals with <span class="math inline">\(A\)</span> ended up with the fixation of <span class="math inline">\(B\)</span>. With bigger populations (e.g. with <span class="math inline">\(N=10000\)</span>), it is even worse.</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">biased_transmission_demonstrator_2</span>(<span class="dt">N =</span> <span class="dv">10000</span>, <span class="dt">p_s =</span> <span class="fl">0.005</span>, <span class="dt">p_low=</span><span class="fl">0.0001</span>, </span>
-<span id="cb66-2"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-2"></a>                                                 <span class="dt">p_0 =</span> <span class="fl">0.5</span>, <span class="dt">t_max =</span> <span class="dv">200</span>, <span class="dt">r_max =</span> <span class="dv">50</span>)</span>
-<span id="cb66-3"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-3"></a></span>
-<span id="cb66-4"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-4"></a><span class="co"># Filter only lines where p is equal to 1 or to 0</span></span>
-<span id="cb66-5"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-5"></a>data_model &lt;-<span class="st"> </span><span class="kw">filter</span>(data_model, p <span class="op">==</span><span class="st"> </span><span class="dv">1</span> <span class="op">|</span><span class="st"> </span>p <span class="op">==</span><span class="st"> </span><span class="dv">0</span>)</span>
-<span id="cb66-6"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-6"></a></span>
-<span id="cb66-7"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-7"></a>data_model<span class="op">$</span>p &lt;-<span class="st"> </span><span class="kw">as.character</span>(data_model<span class="op">$</span>p)</span>
-<span id="cb66-8"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-8"></a><span class="co"># Call &quot;A&quot; the runs where p is equal to 1 </span></span>
-<span id="cb66-9"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-9"></a>data_model[data_model<span class="op">$</span>p<span class="op">==</span><span class="dv">1</span>, ]<span class="op">$</span>p &lt;-<span class="st"> &quot;A&quot;</span></span>
-<span id="cb66-10"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-10"></a><span class="co"># Call &quot;B&quot; the runs where p is equal to 0</span></span>
-<span id="cb66-11"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-11"></a>data_model[data_model<span class="op">$</span>p<span class="op">==</span><span class="dv">0</span>, ]<span class="op">$</span>p &lt;-<span class="st"> &quot;B&quot;</span></span>
-<span id="cb66-12"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-12"></a></span>
-<span id="cb66-13"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-13"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> data_model, <span class="kw">aes</span>(<span class="dt">x =</span> p, <span class="dt">y =</span> status_A, <span class="dt">fill =</span> p)) <span class="op">+</span></span>
-<span id="cb66-14"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-14"></a><span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></span>
-<span id="cb66-15"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-15"></a><span class="st">  </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="fl">0.05</span>) <span class="op">+</span></span>
-<span id="cb66-16"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-16"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;proportion of high-status individuals with trait A&quot;</span>, </span>
-<span id="cb66-17"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-17"></a>       <span class="dt">x =</span> <span class="st">&quot;winning trait&quot;</span>) <span class="op">+</span></span>
-<span id="cb66-18"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-18"></a><span class="st">  </span><span class="kw">ylim</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)) <span class="op">+</span></span>
-<span id="cb66-19"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-19"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
-<span id="cb66-20"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb66-20"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">biased_transmission_demonstrator_2</span>(<span class="dt">N =</span> <span class="dv">10000</span>, <span class="dt">p_s =</span> <span class="fl">0.005</span>, <span class="dt">p_low=</span><span class="fl">0.0001</span>, </span>
+<span id="cb64-2"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-2"></a>                                                 <span class="dt">p_0 =</span> <span class="fl">0.5</span>, <span class="dt">t_max =</span> <span class="dv">200</span>, <span class="dt">r_max =</span> <span class="dv">50</span>)</span>
+<span id="cb64-3"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-3"></a></span>
+<span id="cb64-4"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-4"></a><span class="co"># Filter only lines where p is equal to 1 or to 0</span></span>
+<span id="cb64-5"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-5"></a>data_model &lt;-<span class="st"> </span><span class="kw">filter</span>(data_model, p <span class="op">==</span><span class="st"> </span><span class="dv">1</span> <span class="op">|</span><span class="st"> </span>p <span class="op">==</span><span class="st"> </span><span class="dv">0</span>)</span>
+<span id="cb64-6"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-6"></a></span>
+<span id="cb64-7"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-7"></a>data_model<span class="op">$</span>p &lt;-<span class="st"> </span><span class="kw">as.character</span>(data_model<span class="op">$</span>p)</span>
+<span id="cb64-8"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-8"></a><span class="co"># Call &quot;A&quot; the runs where p is equal to 1 </span></span>
+<span id="cb64-9"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-9"></a>data_model[data_model<span class="op">$</span>p<span class="op">==</span><span class="dv">1</span>, ]<span class="op">$</span>p &lt;-<span class="st"> &quot;A&quot;</span></span>
+<span id="cb64-10"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-10"></a><span class="co"># Call &quot;B&quot; the runs where p is equal to 0</span></span>
+<span id="cb64-11"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-11"></a>data_model[data_model<span class="op">$</span>p<span class="op">==</span><span class="dv">0</span>, ]<span class="op">$</span>p &lt;-<span class="st"> &quot;B&quot;</span></span>
+<span id="cb64-12"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-12"></a></span>
+<span id="cb64-13"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-13"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> data_model, <span class="kw">aes</span>(<span class="dt">x =</span> p, <span class="dt">y =</span> status_A, <span class="dt">fill =</span> p)) <span class="op">+</span></span>
+<span id="cb64-14"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-14"></a><span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></span>
+<span id="cb64-15"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-15"></a><span class="st">  </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="fl">0.05</span>) <span class="op">+</span></span>
+<span id="cb64-16"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-16"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;proportion of high-status individuals with trait A&quot;</span>, </span>
+<span id="cb64-17"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-17"></a>       <span class="dt">x =</span> <span class="st">&quot;winning trait&quot;</span>) <span class="op">+</span></span>
+<span id="cb64-18"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-18"></a><span class="st">  </span><span class="kw">ylim</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)) <span class="op">+</span></span>
+<span id="cb64-19"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-19"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb64-20"><a href="biased-transmission-demonstrator-based-indirect-bias.html#cb64-20"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>) </span></code></pre></div>
 <div class="figure"><span id="fig:5-12"></span>
 <img src="IBM-cultevo_files/figure-html/5-12-1.png" alt="With bigger populations - and bigger pools of high-status demonstrators is more difficult to predict the winning trait." width="672" />
 <p class="caption">
