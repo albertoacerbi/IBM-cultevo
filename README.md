@@ -8,9 +8,15 @@ This repository contains the code to generate, using [bookdown](https://bookdown
 
 by 
 
-Alberto Acerbi, Marco Smolla, and Alex Mesoudi
+Alberto Acerbi, Alex Mesoudi, and Marco Smolla
 
 The published version on the book is currently hosted at [https://acerbialberto.com/IBM-cultevo/](https://acerbialberto.com/IBM-cultevo/)
+
+Please notice this is a “living” book. It will be updated over time.
+
+If you would like to cite this book, you can use this reference:
+
+Acerbi Alberto, Mesoudi Alex, and Smolla Marco (2020) *Individual-based models of cultural evolution. A step-by-step guide using R*. doi:110.31219/osf.io/32v6a
 
 --
 

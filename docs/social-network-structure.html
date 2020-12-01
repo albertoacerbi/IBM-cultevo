@@ -22,11 +22,11 @@
   
 
 <meta name="author" content="Alberto Acerbi" />
-<meta name="author" content="Marco Smolla" />
 <meta name="author" content="Alex Mesoudi" />
+<meta name="author" content="Marco Smolla" />
 
 
-<meta name="date" content="2020-11-30" />
+<meta name="date" content="2020-12-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -138,15 +138,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Individual-based models of cultural evolution</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#aim-of-the-book"><i class="fa fa-check"></i>Aim of the book</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-is-cultural-evolution"><i class="fa fa-check"></i>What is cultural evolution?</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-model"><i class="fa fa-check"></i>Why model?</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-individual-based-models"><i class="fa fa-check"></i>Why individual-based models?</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book---the-programming"><i class="fa fa-check"></i>How to use this book - the programming</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book---the-simulations"><i class="fa fa-check"></i>How to use this book - the simulations</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#conventions-and-formatting"><i class="fa fa-check"></i>Conventions and formatting</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Note to the reader</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#aim-of-the-book"><i class="fa fa-check"></i>Aim of the book</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#what-is-cultural-evolution"><i class="fa fa-check"></i>What is cultural evolution?</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#why-model"><i class="fa fa-check"></i>Why model?</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#why-individual-based-models"><i class="fa fa-check"></i>Why individual-based models?</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#how-to-use-this-book---the-programming"><i class="fa fa-check"></i>How to use this book - the programming</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#how-to-use-this-book---the-simulations"><i class="fa fa-check"></i>How to use this book - the simulations</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#conventions-and-formatting"><i class="fa fa-check"></i>Conventions and formatting</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
 </ul></li>
 <li class="part"><span><b>Basics</b></span></li>
 <li class="chapter" data-level="1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html"><i class="fa fa-check"></i><b>1</b> Unbiased transmission</a><ul>
@@ -408,8 +409,8 @@ Figure 14.2: Different graph types (from left: circle, lattice, random, scale fr
 <div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="social-network-structure.html#cb195-1"></a><span class="kw">library</span>(igraph)</span>
 <span id="cb195-2"><a href="social-network-structure.html#cb195-2"></a>net &lt;-<span class="st"> </span><span class="kw">graph_from_adjacency_matrix</span>(adjm)</span>
 <span id="cb195-3"><a href="social-network-structure.html#cb195-3"></a>net</span></code></pre></div>
-<pre><code>## IGRAPH ec7284e D--- 10 44 -- 
-## + edges from ec7284e:
+<pre><code>## IGRAPH 5b9550e D--- 10 44 -- 
+## + edges from 5b9550e:
 ##  [1]  1-&gt; 2  1-&gt; 8  1-&gt; 9  1-&gt;10  2-&gt; 1  2-&gt; 3  2-&gt; 7  2-&gt; 9  3-&gt; 2  3-&gt; 7
 ## [11]  3-&gt; 9  4-&gt; 5  4-&gt; 6  4-&gt; 9  5-&gt; 4  5-&gt; 8  5-&gt; 9  6-&gt; 4  6-&gt; 7  6-&gt; 8
 ## [21]  6-&gt; 9  6-&gt;10  7-&gt; 2  7-&gt; 3  7-&gt; 6  7-&gt;10  8-&gt; 1  8-&gt; 5  8-&gt; 6  8-&gt; 9
@@ -515,9 +516,9 @@ Figure 14.7: In this plot we indicate a node’s age by colouring the node with 
 ##  [8] &quot;#FF9300&quot; &quot;#FFA900&quot; &quot;#FF4500&quot;</code></pre>
 <div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="social-network-structure.html#cb208-1"></a><span class="co"># Return the network object</span></span>
 <span id="cb208-2"><a href="social-network-structure.html#cb208-2"></a>net</span></code></pre></div>
-<pre><code>## IGRAPH ec7284e D--- 10 44 -- 
+<pre><code>## IGRAPH 5b9550e D--- 10 44 -- 
 ## + attr: age (v/n), col (v/c)
-## + edges from ec7284e:
+## + edges from 5b9550e:
 ##  [1]  1-&gt; 2  1-&gt; 8  1-&gt; 9  1-&gt;10  2-&gt; 1  2-&gt; 3  2-&gt; 7  2-&gt; 9  3-&gt; 2  3-&gt; 7
 ## [11]  3-&gt; 9  4-&gt; 5  4-&gt; 6  4-&gt; 9  5-&gt; 4  5-&gt; 8  5-&gt; 9  6-&gt; 4  6-&gt; 7  6-&gt; 8
 ## [21]  6-&gt; 9  6-&gt;10  7-&gt; 2  7-&gt; 3  7-&gt; 6  7-&gt;10  8-&gt; 1  8-&gt; 5  8-&gt; 6  8-&gt; 9
@@ -545,9 +546,9 @@ Figure 14.8: A cleaner version of the same network.
 <span id="cb211-3"><a href="social-network-structure.html#cb211-3"></a><span class="co"># Assign values to edges</span></span>
 <span id="cb211-4"><a href="social-network-structure.html#cb211-4"></a><span class="kw">E</span>(net)<span class="op">$</span>weight &lt;-<span class="st"> </span>strength</span>
 <span id="cb211-5"><a href="social-network-structure.html#cb211-5"></a>net</span></code></pre></div>
-<pre><code>## IGRAPH d846489 U-W- 10 22 -- 
+<pre><code>## IGRAPH 3724932 U-W- 10 22 -- 
 ## + attr: age (v/n), col (v/c), weight (e/n)
-## + edges from d846489:
+## + edges from 3724932:
 ##  [1] 1-- 2 2-- 3 4-- 5 4-- 6 2-- 7 3-- 7 6-- 7 1-- 8 5-- 8 6-- 8 1-- 9 2-- 9
 ## [13] 3-- 9 4-- 9 5-- 9 6-- 9 8-- 9 1--10 6--10 7--10 8--10 9--10</code></pre>
 <p>We assigned the friendship strength values to an attribute called <code>weight</code>. Take a look at the <code>net</code> object. It now says <code>U-W-</code>, indicating that it is both an <strong>u</strong>ndirected as well as a <strong>w</strong>eighted network. To plot the edge weights, we instruct the plotting function to use the <code>E(net)$weight</code> values for the <code>edge.width</code> parameter (note that we multiply the values by some value to make the strokes bigger in the final plot):</p>
@@ -578,10 +579,10 @@ Figure 14.9: To indicate different strength in the relationship of two nodes, we
 <h3><span class="header-section-number">14.4.1</span> Network properties and characteristics</h3>
 <p>To retrieve the most basic information about our network we can use the <code>V()</code> and <code>E()</code> function for vertices and edges of a given network.</p>
 <div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="social-network-structure.html#cb214-1"></a><span class="kw">V</span>(net)</span></code></pre></div>
-<pre><code>## + 10/10 vertices, from d846489:
+<pre><code>## + 10/10 vertices, from 3724932:
 ##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 <div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="social-network-structure.html#cb216-1"></a><span class="kw">E</span>(net)</span></code></pre></div>
-<pre><code>## + 22/22 edges from d846489:
+<pre><code>## + 22/22 edges from 3724932:
 ##  [1] 1-- 2 2-- 3 4-- 5 4-- 6 2-- 7 3-- 7 6-- 7 1-- 8 5-- 8 6-- 8 1-- 9 2-- 9
 ## [13] 3-- 9 4-- 9 5-- 9 6-- 9 8-- 9 1--10 6--10 7--10 8--10 9--10</code></pre>
 <p>If our network has attributes associates for its vertices or edges, we can retrieve them with the following two functions:</p>
