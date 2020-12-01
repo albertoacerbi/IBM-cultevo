@@ -3,8 +3,8 @@ title: "Individual-based models of cultural evolution"
 subtitle: "A step-by-step guide using R"
 author: 
 - Alberto Acerbi
-- Marco Smolla
 - Alex Mesoudi
+- Marco Smolla
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
