@@ -26,7 +26,7 @@
 <meta name="author" content="Marco Smolla" />
 
 
-<meta name="date" content="2020-12-01" />
+<meta name="date" content="2020-12-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -313,14 +313,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##    trait status
 ##    &lt;chr&gt; &lt;chr&gt; 
 ##  1 A     low   
-##  2 B     low   
-##  3 B     low   
-##  4 B     low   
+##  2 A     low   
+##  3 A     low   
+##  4 A     low   
 ##  5 B     low   
-##  6 A     low   
-##  7 B     low   
-##  8 A     low   
-##  9 B     low   
+##  6 A     high  
+##  7 A     low   
+##  8 B     low   
+##  9 A     low   
 ## 10 B     low   
 ## # … with 90 more rows</code></pre>
 <p>With <span class="math inline">\(p_s=0.05\)</span> around 5 individuals in a population of 100 will have high status.</p>
@@ -451,15 +451,15 @@ Figure 5.2: Indirectly biased transmission depends on the effective population s
 <pre><code>## # A tibble: 50 x 2
 ##    status_A     p
 ##       &lt;dbl&gt; &lt;dbl&gt;
-##  1    0.286     0
-##  2    0.556     0
-##  3    0.429     0
-##  4    0.429     1
-##  5    0.667     1
-##  6    0.5       1
-##  7    0.75      1
-##  8    0.667     1
-##  9    0.75      0
+##  1    0.5       1
+##  2    0.333     1
+##  3    0.571     1
+##  4    0.333     1
+##  5    0.5       1
+##  6    0.571     1
+##  7    0.571     0
+##  8    1         1
+##  9    0.714     1
 ## 10    0.8       1
 ## # … with 40 more rows</code></pre>
 <p>Each line of the output is a run of the simulation. The first column (labelled <code>status_A</code>) gives the frequency of <span class="math inline">\(A\)</span> in the high-status individuals, and the second (labelled <code>p</code>) the frequency of <span class="math inline">\(A\)</span> at the end of the simulation. From a cursory inspection of the output, you should be able to see that our guess was correct, and when <code>status_A</code> is higher than 0.5, <code>p</code> should be generally 1, and when <code>status_A</code> is less than 0.5, <code>p</code> should be generally 0. But let’s visualise all the data to be sure.</p>
