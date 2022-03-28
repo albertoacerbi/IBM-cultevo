@@ -75,7 +75,7 @@ vertical_transmission <- function(N, p_0, b, t_max, r_max) {
 
 First we set up an output tibble to store the frequency of $A$ ($p$) over $t_{\text{max}}$ generations and across $r_{\text{max}}$ runs. As before we create a `population` tibble to store our $N$ traits, one per individual.
 
-This time, however, in each generation we create two new tibbles, `mother` and `father`. These store the traits of two randomly chosen individuals from the `previous_population`, one pair for each new individual. Note that we are assuming random mating here: parents pair up entirely at random. Alternative mating rules are possible, such as assortative cultural mating, where parents preferentially assort based on their cultural trait. We will leave it to readers to create models of this.
+This time, however, in each generation we create two new tibbles, `mother` and `father`. These store the traits of two randomly chosen individuals from the `previous_population`, one pair for each new individual (notice each individual can be interchangeably either mother or father). We are also assuming random mating here: parents pair up entirely at random. Alternative mating rules are possible, such as assortative cultural mating, where parents preferentially assort based on their cultural trait. We will leave it to readers to create models of this.
 
 Once the `mother` and `father` tibbles are created, we can fill in the new individuals' traits in `population`. `both_A` is used to mark with `TRUE` whether both mother and father have trait $A$, and (assuming some such cases exist), sets all individuals in `population` for whom this is true to have trait $A$. `both_B` works equivalently for parents who both possess trait $B$.
 

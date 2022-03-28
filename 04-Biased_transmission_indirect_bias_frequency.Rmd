@@ -6,7 +6,7 @@ In [Chapter 3][Biased transmission: direct bias] we looked at the case where one
 
 A first possibility is that we may be influenced by the frequency of the trait in the population, i.e. how many other individuals already have the trait. Conformity (or 'positive frequency-dependent bias') has been most studied. Here, individuals are disproportionately more likely to adopt the most common trait in the population, irrespective of its intrinsic characteristics. (The opposite case, anti-conformity or negative frequency-dependent bias is also possible, where the least common trait is more likely to be copied. This is probably less common in real life.)
 
-For example, imagine trait $A$ has a frequency of 0.7 in the population, with the rest possessing trait $B$. An unbiased learner would adopt trait $A$ with a probability exactly equal to 0.7. This is unbiased transmission and is what happens the model described in ([Chapter 1][Unbiased transmission]: by picking a member of the previous generation at random, the probability of adoption is equal to the frequency of that trait among the previous generation.
+For example, imagine trait $A$ has a frequency of 0.7 in the population, with the rest possessing trait $B$. An unbiased learner would adopt trait $A$ with a probability exactly equal to 0.7. This is unbiased transmission and is what happens the model described in [Chapter 1][Unbiased transmission] by picking a member of the previous generation at random, the probability of adoption is equal to the frequency of that trait among the previous generation.
 
 A conformist learner, on the other hand, would adopt trait $A$ with a probability greater than 0.7. In other words, common traits get an 'adoption boost' relative to unbiased transmission. Uncommon traits get an equivalent 'adoption penalty'. The magnitude of this boost or penalty can be controlled by a parameter, which we will call $D$.
 
@@ -84,18 +84,18 @@ prob_minority <- sample(c(TRUE, FALSE),
 
 # 3-demonstrator combinations with two As and one B
 if (nrow(population[prob_majority & num_As == 2, ]) > 0) {
-  population[prob_majority & num_As == 2, ] <- "A"
+  population[prob_majority & num_As == 2, ]$trait <- "A"
 }
 if (nrow(population[prob_majority == FALSE & num_As == 2, ]) > 0) {
-  population[prob_majority == FALSE & num_As == 2, ] <- "B"
+  population[prob_majority == FALSE & num_As == 2, ]$trait <- "B"
 }  
 
 # 3-demonstrator combinations with one A and two Bs
 if (nrow(population[prob_minority & num_As == 1, ]) > 0) {
-  population[prob_minority & num_As == 1, ] <- "A"
+  population[prob_minority & num_As == 1, ]$trait <- "A"
 }
 if (nrow(population[prob_minority == FALSE & num_As == 1, ]) > 0) {
-  population[prob_minority == FALSE & num_As == 1, ] <- "B"
+  population[prob_minority == FALSE & num_As == 1, ]$trait <- "B"
 }  
 
 ```
@@ -138,18 +138,18 @@ prob_minority <- sample(c(TRUE, FALSE),
 
 # 3-demonstrator combinations with two As and one B
 if (nrow(population[prob_majority & num_As == 2, ]) > 0) {
-  population[prob_majority & num_As == 2, ] <- "A"
+  population[prob_majority & num_As == 2, ]$trait <- "A"
 }
 if (nrow(population[prob_majority == FALSE & num_As == 2, ]) > 0) {
-  population[prob_majority == FALSE & num_As == 2, ] <- "B"
+  population[prob_majority == FALSE & num_As == 2, ]$trait <- "B"
 }  
 
 # 3-demonstrator combinations with one A and two Bs
 if (nrow(population[prob_minority & num_As == 1, ]) > 0) {
-  population[prob_minority & num_As == 1, ] <- "A"
+  population[prob_minority & num_As == 1, ]$trait <- "A"
 }
 if (nrow(population[prob_minority == FALSE & num_As == 1, ]) > 0) {
-  population[prob_minority == FALSE & num_As == 1, ] <- "B"
+  population[prob_minority == FALSE & num_As == 1, ]$trait <- "B"
 }  
 
 demonstrators <- add_column(demonstrators, new_trait = population$trait)
@@ -162,7 +162,7 @@ Now that conformity is weaker, sometimes the new trait is not the majority among
 
 ## Testing conformist transmission
 
-As in the previous chapters, we can put all this code together into a function to see what happens over multiple generations and in multiple runs. There is nothing new in the code below, which is a combination of the code we already wrote in ([Chapter 1][Unbiased transmission]) and the new bits of code for conformity introduced above.
+As in the previous chapters, we can put all this code together into a function to see what happens over multiple generations and in multiple runs. There is nothing new in the code below, which is a combination of the code we already wrote in [Chapter 1][Unbiased transmission] and the new bits of code for conformity introduced above.
 
 ```{r 4-6}
 
@@ -203,17 +203,17 @@ conformist_transmission <- function (N, p_0, D, t_max, r_max) {
       
       # 3-demonstrator combinations with two As and one B
       if (nrow(population[prob_majority & num_As == 2, ]) > 0) {
-        population[prob_majority & num_As == 2, ] <- "A"
+        population[prob_majority & num_As == 2, ]$trait <- "A"
       }
       if (nrow(population[prob_majority == FALSE & num_As == 2, ]) > 0) {
-        population[prob_majority == FALSE & num_As == 2, ] <- "B"
+        population[prob_majority == FALSE & num_As == 2, ]$trait <- "B"
       }  
       # 3-demonstrator combinations with one A and two Bs
       if (nrow(population[prob_minority & num_As == 1, ]) > 0) {
-        population[prob_minority & num_As == 1, ] <- "A"
+        population[prob_minority & num_As == 1, ]$trait <- "A"
       }
       if (nrow(population[prob_minority == FALSE & num_As == 1, ]) > 0) {
-        population[prob_minority == FALSE & num_As == 1, ] <- "B"
+        population[prob_minority == FALSE & num_As == 1, ]$trait <- "B"
       }  
       
       # Get p and put it into output slot for this generation t and run r

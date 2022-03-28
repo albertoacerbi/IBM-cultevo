@@ -1,12 +1,12 @@
 # Biased transmission: demonstrator-based indirect bias
 
-In the previous two chapters we examined two forms of biased transmission, one where the bias arises due to characteristics of the traits (or [direct bias][Biased transmission: direct bias]) and another where the bias arises due to the characteristics of the population (or indirect bias). In the previous chapter we examined frequency-dependent indirect bias which takes into account the frequency of the trait (or [conformity][Biased transmission: frequency-dependent indirect bias]). Here we examine indirect bias that takes into account specific features of the demonstrators. This demonstrator-based bias is also called 'model bias' or 'context bias' in the cultural evolution literature.
+In the previous two chapters, we examined two forms of biased transmission, one where the bias arises due to characteristics of the traits (or [direct bias][Biased transmission: direct bias]) and another where the bias arises due to the characteristics of the population (or indirect bias). In the previous chapter, we examined frequency-dependent indirect bias which takes into account the frequency of the trait (or [conformity][Biased transmission: frequency-dependent indirect bias]). Here we examine indirect bias that takes into account specific features of the demonstrators. This demonstrator-based bias is also called 'model bias' or 'context bias' in the cultural evolution literature.
 
-Whereas the simulations we created previously are fairly standard, indirect demonstrator-based biases can be implemented in several ways. Demonstrator biases result whenever individuals decide whether or not to copy by taking into account any features of the demonstrators, as long as it is not directly tied to the traits. The most studied demonstrator bias is prestige bias, where individuals are more likely to copy from demonstrators who are considered more 'prestigious' or high in subjective social status, for example because other individuals show deference to them. Alternatively, individuals can copy demonstrators who are more successful according to some objective criterion (e.g. wealth) independently from how others judge them, or they can copy individuals that are more similar to themselves, or older (or younger) than themselves, and so on. The key point is that the decision is not directly linked to the cultural trait itself, and relates to some characteristic of the demonstrator(s) from whom one is copying.
+Whereas the simulations we created previously are fairly standard, indirect demonstrator-based biases can be implemented in several ways. Demonstrator biases occur whenever individuals decide whether or not to copy by taking into account any features of the demonstrators, as long as it is not directly tied to the traits. The most studied demonstrator bias is prestige bias, where individuals are more likely to copy from demonstrators who are considered more 'prestigious' or high in subjective social status, for example, because other individuals show deference to them. Alternatively, individuals can copy demonstrators who are more successful according to some objective criterion (e.g. wealth) independently from how others judge them, or they can copy individuals that are more similar to themselves, or older (or younger) than themselves, and so on. The key point is that the decision is not directly linked to the cultural trait itself, and relates to some characteristic of the demonstrator(s) from whom one is copying.
 
 ## A simple demonstrator bias
 
-To implement a simple version of demonstrator-biased cultural transmission, we first need to assume that there are some intrinsic differences between individuals within the population. Up until now, our individuals have only been described by the traits they possess. We now want individuals to have some additional feature which others can use when deciding whether to copy that individual. We call this feature 'status'. For simplicity, an individual's status is a binary variable that could stand for whether they are prestigious or not, successful or not, and so on. We define a parameter $p_s$ that determines the probability that an individual has high status, as opposed to low status.
+To implement a simple version of demonstrator-biased cultural transmission, we first need to assume that there are some intrinsic differences between individuals within the population. Up until now, our individuals have only been described by the traits they possess. We now want individuals to have an additional feature which others can use when deciding whether to copy that individual. Let's call this feature 'status'. For simplicity, an individual's status is a binary variable that could stand for whether they are prestigious or not, successful or not, and so on. We define a parameter $p_s$ that determines the probability that an individual has high status, as opposed to low status.
 
 ```{r 5-1, message = FALSE}
 library(tidyverse)
@@ -21,7 +21,7 @@ population <- tibble(trait = sample(c("A", "B"), N,
                                      replace = TRUE, prob = c(p_s, 1 - p_s))) 
 ```
 
-We can inspect the tibble by typing its name in the R console
+We can inspect the tibble by typing its name in the R console:
 
 ```{r 5-2}
 population
@@ -29,9 +29,9 @@ population
 
 With $p_s=0.05$ around 5 individuals in a population of 100 will have high status. 
 
-We now need to make it so that these rare high status individuals are more likely to be copied. One way of doing this is to assume that the probabilities of picking high-status and low-status individuals as demonstrators are different. So far, when using the function `sample()` to select demonstrators, we did not include any specific probability. This meant that each individual of the previous generation had the same likelihood of being selected and copied. Instead, now we pass to the function a vector of probabilities to weight the choice. 
+We now need to make it so that these rare high-status individuals are more likely to be copied. One way of doing this is to assume that the probabilities of picking high-status and low-status individuals as demonstrators are different. So far, when using the function `sample()` to select demonstrators, we did not include any specific probability. This meant that each individual of the previous generation had the same likelihood of being selected and copied. Here, we will hand over a vector of probabilities to weigh the choice. 
 
-We assume that the probability if selecting low-status individuals is given by a further parameter, $p_\text{low}$, that gives the proportion between the probabilities of choosing a low-status individual versus an high-status individual. When $p_\text{low}=1$, the simulations correspond to unbiased transmission, as everybody has the same probability of being chosen. When $p_\text{low}=0$, there is a strict status-based demonstrator bias, where only high-status individuals are ever selected as demonstrators.
+We assume that the probability of selecting low-status individuals is given by a further parameter, $p_\text{low}$, that gives the proportion between the probabilities of choosing a low-status individual versus a high-status individual. When $p_\text{low}=1$, the simulations correspond to unbiased transmission, as everybody has the same probability of being chosen. When $p_\text{low}=0$, there is a strict status-based demonstrator bias, where only high-status individuals are ever selected as demonstrators.
 
 To implement this, we first store in `p_demonstrator` the probabilities of being copied for each member of the population: 
 
@@ -39,10 +39,9 @@ To implement this, we first store in `p_demonstrator` the probabilities of being
 p_low <- 0.01
 p_demonstrator <- rep(1, N)
 p_demonstrator[population$status == "low"] <- p_low
-
 ```
 
-Then we sample the traits in the population using these probabilities. Notice the condition `if(sum(p_demonstrator) > 0)`. This is necessary in case there are no high-status individuals (for example when $p_s\approx0$) and the probability of selecting a low status demonstrator to copy is 0 ($p_\text{low}=0$). This would make the overall probability equal to 0, and without including this control the model would generate an error. 
+Then we sample the traits in the population using these probabilities. Notice the condition `if(sum(p_demonstrator) > 0)`. This is necessary in case there are no high-status individuals (for example, when $p_s\approx0$) and the probability of selecting a low-status demonstrator to copy is 0 ($p_\text{low}=0$). This would make the overall probability equal to 0, and without including this control the model would generate an error. 
 
 ```{r 5-4}
 if(sum(p_demonstrator) > 0){
@@ -53,7 +52,7 @@ if(sum(p_demonstrator) > 0){
 }
 ```
 
-As usual, we can wrap everything in a function.
+As before, let's wrap everything in a function:
 
 ```{r 5-5}
 biased_transmission_demonstrator <- function(N, p_0, p_s, p_low, t_max, r_max) {
@@ -97,7 +96,7 @@ biased_transmission_demonstrator <- function(N, p_0, p_s, p_low, t_max, r_max) {
 }
 ```
 
-We can now test our simulation, assuming a very low, but not zero, probability of selecting low-status individuals as demonstrators. We are using the usual `plot_multiple_runs()` function to plot the results of the simulations.
+We can now test our simulation, assuming a very low (but $>0$) probability of selecting low-status individuals as demonstrators. We are using the usual `plot_multiple_runs()` function to plot the results of the simulations.
 
 ```{r 5-6, echo=FALSE}
 plot_multiple_runs <- function(data_model) {
@@ -126,15 +125,15 @@ data_model <- biased_transmission_demonstrator(N = 10000, p_s = 0.005, p_low=0.0
 plot_multiple_runs(data_model)
 ```
 
-Even with $N=10000$, if the number of high-status individuals is sufficiently low, as in this case ($p_s=0.005$ means that, on average, 50 individuals are high-status in each run), traits reach fixation. By reducing the pool of demonstrators, demonstrator-based bias makes drift more important for the overall dynamics. The pool of high-status demonstrators (equal to $Np_s$) is the effective population size, which is much smaller than the actual population size ($N$).
+Even with $N=10000$, if the number of high-status individuals is sufficiently low, as in this case ($p_s=0.005$ means that, on average, 50 individuals are high-status in each run), traits reach fixation. By reducing the pool of demonstrators, the demonstrator-based bias makes drift more important for the overall dynamics. The number of high-status demonstrators (equal to $Np_s$) is the effective population size, which is much smaller than the actual population size ($N$).
 
 You can experiment with different values of $p_s$ and $p_\text{low}$. How big can the pool of high-status demonstrators be before the dynamics become indistinguishable from unbiased transmission?
 
 ## Predicting the 'winning' trait
 
-With conformity, as just mentioned, the trait that reaches fixation is the one starting out in the majority. With unbiased transmission the trait that goes to fixation cannot be predicted at the beginning of the simulation. With a demonstrator-based bias, a reasonable guess would be that the 'winning' trait is the one that is, at the beginning, most common among the high-status individuals. Can we check this intuition with our model?
+With conformity, the trait that reaches fixation is the one starting out in the majority. With unbiased transmission, the trait that goes to fixation cannot be predicted at the beginning of the simulation. With a demonstrator-based bias, a reasonable guess would be that the 'winning' trait is the one that is, in the beginning, most common among the high-status individuals. Can we check this intuition with our model?
 
-Currently the output we obtain from the simulations is not suitable for this purpose. On the one hand, we do not have the crucial piece of information that we need: the proportion of each trait among the high-status individuals when the population is initialised. On the other hand, we have much information that we do not need, such as the frequency of the two traits at each time step. However, we just want to know which traits reach fixation. We can therefore rewrite the `biased_transmission_demonstrator()` function and change the `output` tibble to suit our needs.
+Currently, the output we obtain from the simulations is not suitable for this purpose. On the one hand, we do not have the crucial piece of information that we need: the proportion of each trait among the high-status individuals when the population is initialised. On the other hand, we have much information that we do not need, such as the frequency of the two traits at each time step. We just want to know which traits reach fixation. We can therefore rewrite the `biased_transmission_demonstrator()` function and change the `output` tibble to suit our needs.
 
 ```{r 5-9}
 biased_transmission_demonstrator_2 <- function(N, p_0, p_s, p_low, t_max, r_max) {
@@ -177,7 +176,7 @@ biased_transmission_demonstrator_2 <- function(N, p_0, p_s, p_low, t_max, r_max)
 }
 ```
 
-Here, `status_A` gives the starting frequency of A among the high status individuals. $p$, as before, gives the frequency of $A$ in the entire population, but we only record this value at the very end of the simulation, to see if one trait has gone to fixation. The tibble `output`, as a consequence, has now only $r_\text{max}$ rows.
+Here, `status_A` gives the starting frequency of $A$ among the high status individuals. $p$, as before, gives the frequency of $A$ in the entire population, but we only record this value at the very end of the simulation, to see if one trait has gone to fixation. The tibble `output`, as a consequence, has now only $r_\text{max}$ rows.
 
 Let's run the new function, `biased_transmission_demonstrator_2()`, for 50 runs (setting `r_max = 50`) so that we have more independent data points, and inspect the output.
 
@@ -187,14 +186,14 @@ data_model <- biased_transmission_demonstrator_2(N = 100, p_s = 0.05, p_low=0.00
 data_model
 ```
 
-Each line of the output is a run of the simulation. The first column (labelled `status_A`) gives the frequency of $A$ in the high-status individuals, and the second (labelled `p`) the frequency of $A$ at the end of the simulation. From a cursory inspection of the output, you should be able to see that our guess was correct, and when `status_A` is higher than 0.5, `p` should be generally 1, and when `status_A` is less than 0.5, `p` should be generally 0. But let's visualise all the data to be sure.
+Each line of the output is a run of the simulation. The first column (labelled `status_A`) gives the frequency of $A$ in the high-status individuals, and the second (labelled `p`) the frequency of $A$ at the end of the simulation. From a cursory inspection of the output, you should be able to see that our guess was correct: when `status_A` is $>0.5$, `p` should be generally 1, and when `status_A` is $<0.5$, `p` should be generally 0. We should be able to see this pattern when we plot the results.
 
 We want to know how the initial proportion of high-status individuals is related to the two possible outcomes (trait $A$ reaches fixation or trait $B$ reaches fixation). A convenient way is to use a boxplot. In the code below, we first eliminate the runs where the traits did not reach fixation (if they exist) using the new function `filter()`, and, for clarity, we assign the trait name $A$ or $B$ to each run according to which trait reached fixation. We can then plot our output.
 
 The main novelties in this code are the new ggplot 'geoms' `geom_boxplot()` and `geom_jitter()`. Whereas boxplots are useful to detect aggregate information on our simulations, `geom_jitter()` plots all of the data points, so we can get a better idea of how the proportions of high-status individuals are distributed in the various runs. We could have done this with our usual `geom_point()`, but `geom_jitter()` scatters randomly the points in the plot (at a distance specified by the parameter `width`). This avoids the overlapping of individual data points (known as overplotting). 
 
 ```{r 5-11, fig.cap = "The trait reaching fixation tends to be the trait that was in majority among high-status individuals."}
-# Filter only lines where p is equal to 1 or to 0
+# Filter only lines where p is equal to 1 or equal to 0
 data_model <- filter(data_model, p == 1 | p == 0)
 
 data_model$p <- as.character(data_model$p)
@@ -218,7 +217,7 @@ The plot shows that when trait $A$ reaches fixation there are more high-status i
 data_model <- biased_transmission_demonstrator_2(N = 10000, p_s = 0.005, p_low=0.0001, 
                                                  p_0 = 0.5, t_max = 200, r_max = 50)
 
-# Filter only lines where p is equal to 1 or to 0
+# Filter only lines where p is equal to 1 or equal to 0
 data_model <- filter(data_model, p == 1 | p == 0)
 
 data_model$p <- as.character(data_model$p)
@@ -241,7 +240,7 @@ With $N=10000$ and around 50 high-status individuals, the traits are more equall
 
 ## Summary of the model
 
-In this chapter we modeled an example of indirectly-biased or demonstrator-biased transmission. We assumed that a fraction of individuals in the population were 'high-status' and thus more likely to be selected as demonstrators. The results show that in this situation a trait is likely to become predominant even when populations are large. This is due to the fact that a demonstrator bias effectively reduces the pool of demonstrators and accelerates convergence through a similar process as drift / unbiased transmission.
+In this chapter, we modelled an example of indirectly biased or demonstrator-biased transmission. We assumed that a fraction of individuals in the population were 'high-status' and thus more likely to be selected as demonstrators. The results show that in this situation a trait is likely to become predominant even when populations are large. This is due to the fact that a demonstrator bias effectively reduces the pool of demonstrators and accelerates convergence through a similar process as drift / unbiased transmission.
 
 We also saw that the possibility of predicting which trait will become predominant depends on the number of high-status demonstrators. When there are few high-status demonstrators, then the most common trait amongst these high-status demonstrators will likely go to fixation. When their number increases, it is more difficult to make such a prediction.
 
@@ -252,6 +251,6 @@ We also saw how it is important to modify the output of a model depending on the
 
 Examples of simulation models implementing indirect, demonstrator-based, biased transmission include @mesoudi_cultural_2009, an individual-based model that explores how prestige bias can generate clusters of recurring behaviours, applied to the case of copycat suicides. @henrich_joseph_big_2015 presents a population-level model that links prestige to the emergence of within-group cooperation. @henrich_demography_2004 describes an analytical, population-level, model, where individuals copy the most successful demonstrator in the population.  
 
-An earlier analytical treatment of demonstrator-based bias, with extensions on the evolution of symbolic traits that may be associated to demonstrators is in Chapter 8 of @boyd_culture_1985.
+An earlier analytical treatment of demonstrator-based bias, with extensions on the evolution of symbolic traits that may be associated with demonstrators, is in Chapter 8 of @boyd_culture_1985.
 
 Finally, @henrich_evolution_2001 is the classic treatment of prestige bias, and a recent review of the empirical evidence supporting it is @jimenez_prestige-biased_2019.
