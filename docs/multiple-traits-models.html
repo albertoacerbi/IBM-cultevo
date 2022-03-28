@@ -26,7 +26,7 @@
 <meta name="author" content="Marco Smolla" />
 
 
-<meta name="date" content="2020-12-03" />
+<meta name="date" content="2022-03-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -35,6 +35,7 @@
   
 <link rel="prev" href="vertical-and-horizontal-transmission.html"/>
 <link rel="next" href="rogers-paradox.html"/>
+<script src="libs/header-attrs-2.5.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,24 +53,22 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -89,7 +88,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -139,7 +138,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Note to the reader</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#aim-of-the-book"><i class="fa fa-check"></i>Aim of the book</a></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#what-is-cultural-evolution"><i class="fa fa-check"></i>What is cultural evolution?</a></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#why-model"><i class="fa fa-check"></i>Why model?</a></li>
@@ -150,7 +150,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
 </ul></li>
 <li class="part"><span><b>Basics</b></span></li>
-<li class="chapter" data-level="1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html"><i class="fa fa-check"></i><b>1</b> Unbiased transmission</a><ul>
+<li class="chapter" data-level="1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html"><i class="fa fa-check"></i><b>1</b> Unbiased transmission</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#initialising-the-simulation"><i class="fa fa-check"></i><b>1.1</b> Initialising the simulation</a></li>
 <li class="chapter" data-level="1.2" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#execute-generation-turn-over-many-times"><i class="fa fa-check"></i><b>1.2</b> Execute generation turn-over many times</a></li>
 <li class="chapter" data-level="1.3" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#plotting-the-model-results"><i class="fa fa-check"></i><b>1.3</b> Plotting the model results</a></li>
@@ -160,37 +161,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.7" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#summary-of-the-model"><i class="fa fa-check"></i><b>1.7</b> Summary of the model</a></li>
 <li class="chapter" data-level="1.8" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#further-reading-1"><i class="fa fa-check"></i><b>1.8</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html"><i class="fa fa-check"></i><b>2</b> Unbiased and biased mutation</a><ul>
+<li class="chapter" data-level="2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html"><i class="fa fa-check"></i><b>2</b> Unbiased and biased mutation</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#unbiased-mutation"><i class="fa fa-check"></i><b>2.1</b> Unbiased mutation</a></li>
 <li class="chapter" data-level="2.2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#biased-mutation"><i class="fa fa-check"></i><b>2.2</b> Biased mutation</a></li>
 <li class="chapter" data-level="2.3" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#summary-of-the-model-1"><i class="fa fa-check"></i><b>2.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="2.4" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#further-reading-2"><i class="fa fa-check"></i><b>2.4</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html"><i class="fa fa-check"></i><b>3</b> Biased transmission: direct bias</a><ul>
+<li class="chapter" data-level="3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html"><i class="fa fa-check"></i><b>3</b> Biased transmission: direct bias</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#a-simple-model-of-directly-biased-transmission"><i class="fa fa-check"></i><b>3.1</b> A simple model of directly biased transmission</a></li>
 <li class="chapter" data-level="3.2" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#strength-of-selection"><i class="fa fa-check"></i><b>3.2</b> Strength of selection</a></li>
 <li class="chapter" data-level="3.3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#summary-of-the-model-2"><i class="fa fa-check"></i><b>3.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="3.4" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#further-reading-3"><i class="fa fa-check"></i><b>3.4</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html"><i class="fa fa-check"></i><b>4</b> Biased transmission: frequency-dependent indirect bias</a><ul>
+<li class="chapter" data-level="4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html"><i class="fa fa-check"></i><b>4</b> Biased transmission: frequency-dependent indirect bias</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#the-logic-of-conformity"><i class="fa fa-check"></i><b>4.1</b> The logic of conformity</a></li>
 <li class="chapter" data-level="4.2" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#testing-conformist-transmission"><i class="fa fa-check"></i><b>4.2</b> Testing conformist transmission</a></li>
 <li class="chapter" data-level="4.3" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#summary-of-the-model-3"><i class="fa fa-check"></i><b>4.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="4.4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#further-readings"><i class="fa fa-check"></i><b>4.4</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html"><i class="fa fa-check"></i><b>5</b> Biased transmission: demonstrator-based indirect bias</a><ul>
+<li class="chapter" data-level="5" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html"><i class="fa fa-check"></i><b>5</b> Biased transmission: demonstrator-based indirect bias</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#a-simple-demonstrator-bias"><i class="fa fa-check"></i><b>5.1</b> A simple demonstrator bias</a></li>
 <li class="chapter" data-level="5.2" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#predicting-the-winning-trait"><i class="fa fa-check"></i><b>5.2</b> Predicting the ‘winning’ trait</a></li>
 <li class="chapter" data-level="5.3" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#summary-of-the-model-4"><i class="fa fa-check"></i><b>5.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="5.4" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#further-readings-1"><i class="fa fa-check"></i><b>5.4</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html"><i class="fa fa-check"></i><b>6</b> Vertical and horizontal transmission</a><ul>
+<li class="chapter" data-level="6" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html"><i class="fa fa-check"></i><b>6</b> Vertical and horizontal transmission</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#vertical-cultural-transmission"><i class="fa fa-check"></i><b>6.1</b> Vertical cultural transmission</a></li>
 <li class="chapter" data-level="6.2" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#horizontal-cultural-transmission"><i class="fa fa-check"></i><b>6.2</b> Horizontal cultural transmission</a></li>
 <li class="chapter" data-level="6.3" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#summary-of-the-model-5"><i class="fa fa-check"></i><b>6.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="6.4" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#further-reading-4"><i class="fa fa-check"></i><b>6.4</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html"><i class="fa fa-check"></i><b>7</b> Multiple traits models</a><ul>
+<li class="chapter" data-level="7" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html"><i class="fa fa-check"></i><b>7</b> Multiple traits models</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#unbiased-transmission-with-multiple-traits"><i class="fa fa-check"></i><b>7.1</b> Unbiased transmission with multiple traits</a></li>
 <li class="chapter" data-level="7.2" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#introducing-innovation"><i class="fa fa-check"></i><b>7.2</b> Introducing innovation</a></li>
 <li class="chapter" data-level="7.3" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#optimising-the-code"><i class="fa fa-check"></i><b>7.3</b> Optimising the code</a></li>
@@ -199,18 +206,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.6" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#further-readings-2"><i class="fa fa-check"></i><b>7.6</b> Further readings</a></li>
 </ul></li>
 <li class="part"><span><b>Advanced topics - The evolution of cultural evolution</b></span></li>
-<li class="chapter" data-level="8" data-path="rogers-paradox.html"><a href="rogers-paradox.html"><i class="fa fa-check"></i><b>8</b> Rogers’ Paradox</a><ul>
+<li class="chapter" data-level="8" data-path="rogers-paradox.html"><a href="rogers-paradox.html"><i class="fa fa-check"></i><b>8</b> Rogers’ Paradox</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="rogers-paradox.html"><a href="rogers-paradox.html#modelling-rogers-paradox"><i class="fa fa-check"></i><b>8.1</b> Modelling Rogers’ Paradox</a></li>
 <li class="chapter" data-level="8.2" data-path="rogers-paradox.html"><a href="rogers-paradox.html#summary-of-the-model-7"><i class="fa fa-check"></i><b>8.2</b> Summary of the model</a></li>
 <li class="chapter" data-level="8.3" data-path="rogers-paradox.html"><a href="rogers-paradox.html#further-reading-5"><i class="fa fa-check"></i><b>8.3</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html"><i class="fa fa-check"></i><b>9</b> Rogers’ Paradox: A Solution</a><ul>
+<li class="chapter" data-level="9" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html"><i class="fa fa-check"></i><b>9</b> Rogers’ Paradox: A Solution</a>
+<ul>
 <li class="chapter" data-level="9.1" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#modelling-critical-social-learners"><i class="fa fa-check"></i><b>9.1</b> Modelling critical social learners</a></li>
 <li class="chapter" data-level="9.2" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#summary-of-the-model-8"><i class="fa fa-check"></i><b>9.2</b> Summary of the model</a></li>
 <li class="chapter" data-level="9.3" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#further-reading-6"><i class="fa fa-check"></i><b>9.3</b> Further reading</a></li>
 </ul></li>
 <li class="part"><span><b>Advanced topics - Cultural inheritance</b></span></li>
-<li class="chapter" data-level="10" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html"><i class="fa fa-check"></i><b>10</b> Reproduction and transformation</a><ul>
+<li class="chapter" data-level="10" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html"><i class="fa fa-check"></i><b>10</b> Reproduction and transformation</a>
+<ul>
 <li class="chapter" data-level="10.1" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#copying-and-selection"><i class="fa fa-check"></i><b>10.1</b> Copying and selection</a></li>
 <li class="chapter" data-level="10.2" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#convergent-transformation"><i class="fa fa-check"></i><b>10.2</b> Convergent transformation</a></li>
 <li class="chapter" data-level="10.3" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#emergent-similarity"><i class="fa fa-check"></i><b>10.3</b> Emergent similarity</a></li>
@@ -218,56 +228,59 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.5" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#summary-of-the-model-9"><i class="fa fa-check"></i><b>10.5</b> Summary of the model</a></li>
 <li class="chapter" data-level="10.6" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#further-readings-3"><i class="fa fa-check"></i><b>10.6</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html"><i class="fa fa-check"></i><b>11</b> Social learning of social learning rules</a><ul>
+<li class="chapter" data-level="11" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html"><i class="fa fa-check"></i><b>11</b> Social learning of social learning rules</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#openness-and-conservatism"><i class="fa fa-check"></i><b>11.1</b> Openness and conservatism</a></li>
 <li class="chapter" data-level="11.2" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#maintaining-open-populations"><i class="fa fa-check"></i><b>11.2</b> Maintaining open populations</a></li>
 <li class="chapter" data-level="11.3" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#summary-of-the-model-10"><i class="fa fa-check"></i><b>11.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="11.4" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#further-readings-4"><i class="fa fa-check"></i><b>11.4</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html"><i class="fa fa-check"></i><b>12</b> Traits inter-dependence</a><ul>
+<li class="chapter" data-level="12" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html"><i class="fa fa-check"></i><b>12</b> Traits inter-dependence</a>
+<ul>
 <li class="chapter" data-level="12.1" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#compatible-and-incompatible-traits"><i class="fa fa-check"></i><b>12.1</b> Compatible and incompatible traits</a></li>
 <li class="chapter" data-level="12.2" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#many-traits-model"><i class="fa fa-check"></i><b>12.2</b> Many-traits model</a></li>
 <li class="chapter" data-level="12.3" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#summary-of-the-model-11"><i class="fa fa-check"></i><b>12.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="12.4" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#further-readings-5"><i class="fa fa-check"></i><b>12.4</b> Further readings</a></li>
 </ul></li>
 <li class="part"><span><b>Advanced topics - Culture and populations</b></span></li>
-<li class="chapter" data-level="13" data-path="demography.html"><a href="demography.html"><i class="fa fa-check"></i><b>13</b> Demography</a><ul>
+<li class="chapter" data-level="13" data-path="demography.html"><a href="demography.html"><i class="fa fa-check"></i><b>13</b> Demography</a>
+<ul>
 <li class="chapter" data-level="13.1" data-path="demography.html"><a href="demography.html#the-tasmania-case"><i class="fa fa-check"></i><b>13.1</b> The Tasmania Case</a></li>
 <li class="chapter" data-level="13.2" data-path="demography.html"><a href="demography.html#modelling-the-tasmania-case"><i class="fa fa-check"></i><b>13.2</b> Modelling the Tasmania Case</a></li>
 <li class="chapter" data-level="13.3" data-path="demography.html"><a href="demography.html#calculating-critical-population-sizes-based-on-skill-complexity"><i class="fa fa-check"></i><b>13.3</b> Calculating critical population sizes based on skill complexity</a></li>
 <li class="chapter" data-level="13.4" data-path="demography.html"><a href="demography.html#summary-of-the-model-12"><i class="fa fa-check"></i><b>13.4</b> Summary of the model</a></li>
 <li class="chapter" data-level="13.5" data-path="demography.html"><a href="demography.html#further-readings-6"><i class="fa fa-check"></i><b>13.5</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="social-network-structure.html"><a href="social-network-structure.html"><i class="fa fa-check"></i><b>14</b> Social network structure</a><ul>
+<li class="chapter" data-level="14" data-path="social-network-structure.html"><a href="social-network-structure.html"><i class="fa fa-check"></i><b>14</b> Social network structure</a>
+<ul>
 <li class="chapter" data-level="14.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-basics"><i class="fa fa-check"></i><b>14.1</b> Network basics</a></li>
 <li class="chapter" data-level="14.2" data-path="social-network-structure.html"><a href="social-network-structure.html#generating-networks"><i class="fa fa-check"></i><b>14.2</b> Generating networks</a></li>
-<li class="chapter" data-level="14.3" data-path="social-network-structure.html"><a href="social-network-structure.html#plotting-networks"><i class="fa fa-check"></i><b>14.3</b> Plotting networks</a><ul>
+<li class="chapter" data-level="14.3" data-path="social-network-structure.html"><a href="social-network-structure.html#plotting-networks"><i class="fa fa-check"></i><b>14.3</b> Plotting networks</a>
+<ul>
 <li class="chapter" data-level="14.3.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-layout"><i class="fa fa-check"></i><b>14.3.1</b> Network layout</a></li>
 <li class="chapter" data-level="14.3.2" data-path="social-network-structure.html"><a href="social-network-structure.html#network-styling"><i class="fa fa-check"></i><b>14.3.2</b> Network styling</a></li>
 </ul></li>
-<li class="chapter" data-level="14.4" data-path="social-network-structure.html"><a href="social-network-structure.html#analyse-social-networks"><i class="fa fa-check"></i><b>14.4</b> Analyse social networks</a><ul>
+<li class="chapter" data-level="14.4" data-path="social-network-structure.html"><a href="social-network-structure.html#analyse-social-networks"><i class="fa fa-check"></i><b>14.4</b> Analyse social networks</a>
+<ul>
 <li class="chapter" data-level="14.4.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-properties-and-characteristics"><i class="fa fa-check"></i><b>14.4.1</b> Network properties and characteristics</a></li>
 <li class="chapter" data-level="14.4.2" data-path="social-network-structure.html"><a href="social-network-structure.html#vertex-properties"><i class="fa fa-check"></i><b>14.4.2</b> Vertex properties</a></li>
 </ul></li>
-<li class="chapter" data-level="14.5" data-path="social-network-structure.html"><a href="social-network-structure.html#modelling-information-transmission-in-social-networks"><i class="fa fa-check"></i><b>14.5</b> Modelling information transmission in social networks</a><ul>
+<li class="chapter" data-level="14.5" data-path="social-network-structure.html"><a href="social-network-structure.html#modelling-information-transmission-in-social-networks"><i class="fa fa-check"></i><b>14.5</b> Modelling information transmission in social networks</a>
+<ul>
 <li class="chapter" data-level="14.5.1" data-path="social-network-structure.html"><a href="social-network-structure.html#gossip-diffusion-in-networked-populations"><i class="fa fa-check"></i><b>14.5.1</b> Gossip diffusion in networked populations</a></li>
 <li class="chapter" data-level="14.5.2" data-path="social-network-structure.html"><a href="social-network-structure.html#complex-versus-simple-contagion-information-transmission"><i class="fa fa-check"></i><b>14.5.2</b> Complex versus simple contagion information transmission</a></li>
 </ul></li>
 <li class="chapter" data-level="14.6" data-path="social-network-structure.html"><a href="social-network-structure.html#summary-of-the-model-13"><i class="fa fa-check"></i><b>14.6</b> Summary of the model</a></li>
 <li class="chapter" data-level="14.7" data-path="social-network-structure.html"><a href="social-network-structure.html#further-reading-7"><i class="fa fa-check"></i><b>14.7</b> Further Reading</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html"><i class="fa fa-check"></i><b>15</b> Group structured populations and migration</a><ul>
+<li class="chapter" data-level="15" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html"><i class="fa fa-check"></i><b>15</b> Group structured populations and migration</a>
+<ul>
 <li class="chapter" data-level="15.1" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#modelling-migration-and-contact-between-population-subsets"><i class="fa fa-check"></i><b>15.1</b> Modelling migration and contact between population subsets</a></li>
 <li class="chapter" data-level="15.2" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#subdivided-population-with-limited-contact"><i class="fa fa-check"></i><b>15.2</b> Subdivided population with limited contact</a></li>
 <li class="chapter" data-level="15.3" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#subdivided-populations-with-migration"><i class="fa fa-check"></i><b>15.3</b> Subdivided populations with migration</a></li>
 <li class="chapter" data-level="15.4" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#varying-contact-and-migration-probability-for-repeated-simulation-runs"><i class="fa fa-check"></i><b>15.4</b> Varying contact and migration probability for repeated simulation runs</a></li>
-<li class="chapter" data-level="15.5" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#model-extensions"><i class="fa fa-check"></i><b>15.5</b> Model extensions</a><ul>
-<li class="chapter" data-level="" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#innovation-or-mutation"><i class="fa fa-check"></i>Innovation or mutation</a></li>
-<li><a href="group-structured-populations-and-migration.html#copy-m-models">Copy <span class="math inline">\(m\)</span> models</a></li>
-<li class="chapter" data-level="" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#variable-migration-probability-among-subsets"><i class="fa fa-check"></i>Variable migration probability among subsets</a></li>
-</ul></li>
-<li class="chapter" data-level="15.6" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#summary-of-the-model-14"><i class="fa fa-check"></i><b>15.6</b> Summary of the model</a></li>
-<li class="chapter" data-level="15.7" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#further-reading-8"><i class="fa fa-check"></i><b>15.7</b> Further reading</a></li>
+<li class="chapter" data-level="15.5" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#summary-of-the-model-14"><i class="fa fa-check"></i><b>15.5</b> Summary of the model</a></li>
+<li class="chapter" data-level="15.6" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#further-reading-8"><i class="fa fa-check"></i><b>15.6</b> Further reading</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -290,17 +303,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="multiple-traits-models" class="section level1">
+<div id="multiple-traits-models" class="section level1" number="7">
 <h1><span class="header-section-number">Chapter 7</span> Multiple traits models</h1>
-<p>In all previous models, individuals could possess one of only two cultural traits, <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span>. This is a useful simplification, and it represents cases in which cultural traits can be modeled as binary choices, such as voting Republican or Democrat, driving on the left or the right, or being vegetarian or meat-eating. In other cases, however, there are many options: in many countries there are multiple political parties to vote for, there may be many dietary choices (vegan, pescatarian, vegetarian, etc), and so on. What happens when we copy others’ choices given more than two alternatives? To simplify this question, we again assume unbiased copying as in <a href="unbiased-transmission.html#unbiased-transmission">Chapter 1</a>: all traits are functionally equivalent and other individuals are copied at random.</p>
-<div id="unbiased-transmission-with-multiple-traits" class="section level2">
+<p>In all previous models, individuals could only carry one out of only two cultural traits, <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span>. This is a useful simplification, and it represents cases in which cultural traits can be modelled as binary choices, such as voting Republican or Democrat, driving on the left or the right, or being vegetarian or meat-eating. In other cases, however, there are many options: in many countries, there are multiple political parties to vote for, there may be many dietary choices (e.g. vegan, pescatarian, vegetarian), and so on. What happens when we copy others’ choices given more than two alternatives? To simplify this question, we again assume unbiased copying as in <a href="unbiased-transmission.html#unbiased-transmission">Chapter 1</a>: all traits are functionally equivalent and other individuals are copied at random.</p>
+<div id="unbiased-transmission-with-multiple-traits" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> Unbiased transmission with multiple traits</h2>
-<p>The first modification we need to make in the code concerns how traits are represented. Since we have an undetermined number of possible traits we cannot use the two letters <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>. Instead we will use numbers, referring to trait “1”, trait “2”, trait “3”, etc. How can we distribute the traits in the initial population? We can assume that there are <span class="math inline">\(m\)</span> possible traits at the beginning, with <span class="math inline">\(m \leq N\)</span> (as usual, <span class="math inline">\(N\)</span> is the population size). In all the following simulations, we will fix <span class="math inline">\(m=N\)</span>, and effectively initialise each individual with a trait randomly chosen between “1” and “100”.</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="multiple-traits-models.html#cb74-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb74-2"><a href="multiple-traits-models.html#cb74-2"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
-<span id="cb74-3"><a href="multiple-traits-models.html#cb74-3"></a>population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span>N, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>))</span></code></pre></div>
+<p>The first modification we need to make in the code concerns how traits are represented. Since there is an indefinite number of possible traits, we cannot use the two letters <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> any more. Instead, we will use numbers, referring to trait “1,” trait “2,” trait “3,” etc. How can we distribute the traits in the initial population? We can assume that there are <span class="math inline">\(m\)</span> possible traits at the beginning, with <span class="math inline">\(m \leq N\)</span> (as usual, <span class="math inline">\(N\)</span> is the population size). In all the following simulations, we will fix <span class="math inline">\(m=N\)</span>, and effectively initialise each individual with a trait randomly chosen between <span class="math inline">\(1\)</span> and <span class="math inline">\(N\)</span> (here <span class="math inline">\(N=100\)</span>).</p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="multiple-traits-models.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb74-2"><a href="multiple-traits-models.html#cb74-2" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb74-3"><a href="multiple-traits-models.html#cb74-3" aria-hidden="true" tabindex="-1"></a>population <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">trait =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>N, N, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span></code></pre></div>
 <p>You can inspect the <code>population</code> tibble by writing its name.</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="multiple-traits-models.html#cb75-1"></a>population</span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="multiple-traits-models.html#cb75-1" aria-hidden="true" tabindex="-1"></a>population</span></code></pre></div>
 <pre><code>## # A tibble: 100 x 1
 ##    trait
 ##    &lt;int&gt;
@@ -315,44 +328,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##  9    81
 ## 10    28
 ## # … with 90 more rows</code></pre>
-<p>The basic code of the simulation is similar to the code in the <a href="unbiased-transmission.html#unbiased-transmission">first chapter</a>, but what should the <code>output</code> be? Until now, we generally just needed to save the frequency of one of the two traits, because the frequency of the other was always one minus the first’s frequency. Now we need the frequencies of all <span class="math inline">\(N\)</span> traits. (Technically, we only need to track <span class="math inline">\(N-1\)</span> frequencies, with the last inferred by substracting the other frequencies from 1. But for simplicity we’ll track all of the frequencies.)</p>
-<p>Second, how do we measure the frequency of the traits in each generation? The base R function <code>tabulate()</code> does this for us. <code>tabulate()</code> counts the number of times each element of a vector (<code>population$trait</code> in our case) occurs in the bins that we also pass to the function. In our case the bins are <span class="math inline">\(1\)</span> to <span class="math inline">\(N\)</span>. Since we want the frequencies, and not the absolute number, we divide the result by <span class="math inline">\(N\)</span>.</p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="multiple-traits-models.html#cb77-1"></a>multiple_traits &lt;-<span class="st"> </span><span class="cf">function</span>(N, t_max) {</span>
-<span id="cb77-2"><a href="multiple-traits-models.html#cb77-2"></a>  </span>
-<span id="cb77-3"><a href="multiple-traits-models.html#cb77-3"></a>  output &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">as.factor</span>(<span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>N, <span class="dt">each =</span> t_max)), </span>
-<span id="cb77-4"><a href="multiple-traits-models.html#cb77-4"></a>                   <span class="dt">generation =</span> <span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>t_max, N), </span>
-<span id="cb77-5"><a href="multiple-traits-models.html#cb77-5"></a>                   <span class="dt">p =</span> <span class="kw">as.numeric</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, t_max <span class="op">*</span><span class="st"> </span>N)))</span>
-<span id="cb77-6"><a href="multiple-traits-models.html#cb77-6"></a>  </span>
-<span id="cb77-7"><a href="multiple-traits-models.html#cb77-7"></a>  <span class="co"># Create first generation</span></span>
-<span id="cb77-8"><a href="multiple-traits-models.html#cb77-8"></a>  population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span>N, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>))  </span>
-<span id="cb77-9"><a href="multiple-traits-models.html#cb77-9"></a>  </span>
-<span id="cb77-10"><a href="multiple-traits-models.html#cb77-10"></a>  <span class="co"># Add first generation&#39;s p for all traits</span></span>
-<span id="cb77-11"><a href="multiple-traits-models.html#cb77-11"></a>  output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, ]<span class="op">$</span>p &lt;-<span class="st"> </span><span class="kw">tabulate</span>(population<span class="op">$</span>trait, <span class="dt">nbins =</span> N) <span class="op">/</span><span class="st"> </span>N  </span>
-<span id="cb77-12"><a href="multiple-traits-models.html#cb77-12"></a></span>
-<span id="cb77-13"><a href="multiple-traits-models.html#cb77-13"></a>  <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span>t_max) {</span>
-<span id="cb77-14"><a href="multiple-traits-models.html#cb77-14"></a>    <span class="co"># Copy individuals to previous_population tibble</span></span>
-<span id="cb77-15"><a href="multiple-traits-models.html#cb77-15"></a>    previous_population &lt;-<span class="st"> </span>population </span>
-<span id="cb77-16"><a href="multiple-traits-models.html#cb77-16"></a>    </span>
-<span id="cb77-17"><a href="multiple-traits-models.html#cb77-17"></a>    <span class="co"># Randomly copy from previous generation</span></span>
-<span id="cb77-18"><a href="multiple-traits-models.html#cb77-18"></a>    population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(previous_population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>))</span>
-<span id="cb77-19"><a href="multiple-traits-models.html#cb77-19"></a>    </span>
-<span id="cb77-20"><a href="multiple-traits-models.html#cb77-20"></a>    <span class="co"># Get p for all traits and put it into output slot for this generation t</span></span>
-<span id="cb77-21"><a href="multiple-traits-models.html#cb77-21"></a>    output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span>t, ]<span class="op">$</span>p &lt;-<span class="st"> </span><span class="kw">tabulate</span>(population<span class="op">$</span>trait, <span class="dt">nbins =</span> N) <span class="op">/</span><span class="st"> </span>N  </span>
-<span id="cb77-22"><a href="multiple-traits-models.html#cb77-22"></a>  }</span>
-<span id="cb77-23"><a href="multiple-traits-models.html#cb77-23"></a>  <span class="co"># Export data from function</span></span>
-<span id="cb77-24"><a href="multiple-traits-models.html#cb77-24"></a>  output </span>
-<span id="cb77-25"><a href="multiple-traits-models.html#cb77-25"></a>}</span></code></pre></div>
-<p>Finally, the function to plot the output is similar to what we have already done when plotting multiple runs. The one difference is that now the colored lines do not represent different runs, but different traits, as indicated below by <code>aes(colour = trait)</code>. The new line <code>theme(legend.position = "none")</code> simply tells ggplot to not include the legend in the graph, as it is not informative. It would just show 100 or more colors, one for each trait.</p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="multiple-traits-models.html#cb78-1"></a>plot_multiple_traits &lt;-<span class="st"> </span><span class="cf">function</span>(data_model) {</span>
-<span id="cb78-2"><a href="multiple-traits-models.html#cb78-2"></a>  <span class="kw">ggplot</span>(<span class="dt">data =</span> data_model, <span class="kw">aes</span>(<span class="dt">y =</span> p, <span class="dt">x =</span> generation)) <span class="op">+</span></span>
-<span id="cb78-3"><a href="multiple-traits-models.html#cb78-3"></a><span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">colour =</span> trait)) <span class="op">+</span></span>
-<span id="cb78-4"><a href="multiple-traits-models.html#cb78-4"></a><span class="st">    </span><span class="kw">ylim</span>(<span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>)) <span class="op">+</span></span>
-<span id="cb78-5"><a href="multiple-traits-models.html#cb78-5"></a><span class="st">    </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
-<span id="cb78-6"><a href="multiple-traits-models.html#cb78-6"></a><span class="st">    </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>)</span>
-<span id="cb78-7"><a href="multiple-traits-models.html#cb78-7"></a>}</span></code></pre></div>
+<p>The code below is similar to the code in the <a href="unbiased-transmission.html#unbiased-transmission">first chapter</a>. However, we have to think again about what we need our function to return to us. Until now, we generally only needed to keep track of the frequency of one of the two traits, <span class="math inline">\(p\)</span>, because the frequency of the other was always <span class="math inline">\(1-p\)</span>. Now we need the frequencies of all <span class="math inline">\(N\)</span> traits.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<p>Second, how do we measure the frequency of the traits in each generation? The base R function <code>tabulate()</code> does this for us. <code>tabulate()</code> counts the number of times each element of a vector (<code>population$trait</code> in our case) occurs in the bins that we also pass to the function. In our case, the bins are <span class="math inline">\(1\)</span> to <span class="math inline">\(N\)</span>. Since we want the frequencies and not the absolute number, we divide the result by <span class="math inline">\(N\)</span>.</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="multiple-traits-models.html#cb77-1" aria-hidden="true" tabindex="-1"></a>multiple_traits <span class="ot">&lt;-</span> <span class="cf">function</span>(N, t_max) {</span>
+<span id="cb77-2"><a href="multiple-traits-models.html#cb77-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb77-3"><a href="multiple-traits-models.html#cb77-3" aria-hidden="true" tabindex="-1"></a>  output <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">trait =</span> <span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>N, <span class="at">each =</span> t_max)), </span>
+<span id="cb77-4"><a href="multiple-traits-models.html#cb77-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">generation =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>t_max, N), </span>
+<span id="cb77-5"><a href="multiple-traits-models.html#cb77-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">p =</span> <span class="fu">as.numeric</span>(<span class="fu">rep</span>(<span class="cn">NA</span>, t_max <span class="sc">*</span> N)))</span>
+<span id="cb77-6"><a href="multiple-traits-models.html#cb77-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb77-7"><a href="multiple-traits-models.html#cb77-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create first generation</span></span>
+<span id="cb77-8"><a href="multiple-traits-models.html#cb77-8" aria-hidden="true" tabindex="-1"></a>  population <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">trait =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>N, N, <span class="at">replace =</span> <span class="cn">TRUE</span>))  </span>
+<span id="cb77-9"><a href="multiple-traits-models.html#cb77-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb77-10"><a href="multiple-traits-models.html#cb77-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add first generation&#39;s p for all traits</span></span>
+<span id="cb77-11"><a href="multiple-traits-models.html#cb77-11" aria-hidden="true" tabindex="-1"></a>  output[output<span class="sc">$</span>generation <span class="sc">==</span> <span class="dv">1</span>, ]<span class="sc">$</span>p <span class="ot">&lt;-</span> <span class="fu">tabulate</span>(population<span class="sc">$</span>trait, <span class="at">nbins =</span> N) <span class="sc">/</span> N  </span>
+<span id="cb77-12"><a href="multiple-traits-models.html#cb77-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-13"><a href="multiple-traits-models.html#cb77-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>t_max) {</span>
+<span id="cb77-14"><a href="multiple-traits-models.html#cb77-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Copy individuals to previous_population tibble</span></span>
+<span id="cb77-15"><a href="multiple-traits-models.html#cb77-15" aria-hidden="true" tabindex="-1"></a>    previous_population <span class="ot">&lt;-</span> population </span>
+<span id="cb77-16"><a href="multiple-traits-models.html#cb77-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb77-17"><a href="multiple-traits-models.html#cb77-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Randomly copy from previous generation</span></span>
+<span id="cb77-18"><a href="multiple-traits-models.html#cb77-18" aria-hidden="true" tabindex="-1"></a>    population <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">trait =</span> <span class="fu">sample</span>(previous_population<span class="sc">$</span>trait, N, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb77-19"><a href="multiple-traits-models.html#cb77-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb77-20"><a href="multiple-traits-models.html#cb77-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get p for all traits and put it into output slot for this generation t</span></span>
+<span id="cb77-21"><a href="multiple-traits-models.html#cb77-21" aria-hidden="true" tabindex="-1"></a>    output[output<span class="sc">$</span>generation <span class="sc">==</span> t, ]<span class="sc">$</span>p <span class="ot">&lt;-</span> <span class="fu">tabulate</span>(population<span class="sc">$</span>trait, <span class="at">nbins =</span> N) <span class="sc">/</span> N  </span>
+<span id="cb77-22"><a href="multiple-traits-models.html#cb77-22" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb77-23"><a href="multiple-traits-models.html#cb77-23" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Export data from function</span></span>
+<span id="cb77-24"><a href="multiple-traits-models.html#cb77-24" aria-hidden="true" tabindex="-1"></a>  output </span>
+<span id="cb77-25"><a href="multiple-traits-models.html#cb77-25" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Finally, we’ll define a function to plot the simulation results. It is similar to what we have already done when plotting repeated simulation runs. The one difference is that now the coloured lines do not represent different runs, but different traits, as indicated below by <code>aes(colour = trait)</code>. The new line <code>theme(legend.position = "none")</code> simply tells ggplot to exclude the legend in the graph, as it is not informative here. It would just show 100 or more colours, one for each trait.</p>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="multiple-traits-models.html#cb78-1" aria-hidden="true" tabindex="-1"></a>plot_multiple_traits <span class="ot">&lt;-</span> <span class="cf">function</span>(data_model) {</span>
+<span id="cb78-2"><a href="multiple-traits-models.html#cb78-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> data_model, <span class="fu">aes</span>(<span class="at">y =</span> p, <span class="at">x =</span> generation)) <span class="sc">+</span></span>
+<span id="cb78-3"><a href="multiple-traits-models.html#cb78-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">colour =</span> trait)) <span class="sc">+</span></span>
+<span id="cb78-4"><a href="multiple-traits-models.html#cb78-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb78-5"><a href="multiple-traits-models.html#cb78-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb78-6"><a href="multiple-traits-models.html#cb78-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>)</span>
+<span id="cb78-7"><a href="multiple-traits-models.html#cb78-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>As usual, we can call the function and see what happens:</p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="multiple-traits-models.html#cb79-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">multiple_traits</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">t_max =</span> <span class="dv">200</span>)</span>
-<span id="cb79-2"><a href="multiple-traits-models.html#cb79-2"></a><span class="kw">plot_multiple_traits</span>(data_model)</span></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="multiple-traits-models.html#cb79-1" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">multiple_traits</span>(<span class="at">N =</span> <span class="dv">100</span>, <span class="at">t_max =</span> <span class="dv">200</span>)</span>
+<span id="cb79-2"><a href="multiple-traits-models.html#cb79-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_traits</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:7-5"></span>
 <img src="IBM-cultevo_files/figure-html/7-5-1.png" alt="With small populations, the majority of traits disappear after few generations in a model with multiple traits and unbiased transmission." width="672" />
 <p class="caption">
@@ -360,8 +373,8 @@ Figure 7.1: With small populations, the majority of traits disappear after few g
 </p>
 </div>
 <p>Usually, only one or two traits are still present in the population after 200 generations, and, if we increase <span class="math inline">\(t_\text{max}\)</span> for example to 1000, virtually all runs end up with only a single trait reaching fixation:</p>
-<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="multiple-traits-models.html#cb80-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">multiple_traits</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">t_max =</span> <span class="dv">1000</span>)</span>
-<span id="cb80-2"><a href="multiple-traits-models.html#cb80-2"></a><span class="kw">plot_multiple_traits</span>(data_model)</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="multiple-traits-models.html#cb80-1" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">multiple_traits</span>(<span class="at">N =</span> <span class="dv">100</span>, <span class="at">t_max =</span> <span class="dv">1000</span>)</span>
+<span id="cb80-2"><a href="multiple-traits-models.html#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_traits</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:7-6"></span>
 <img src="IBM-cultevo_files/figure-html/7-6-1.png" alt="With small populations, a single traits reach fixation if there are enough generations in a model with multiple traits and unbiased transmission." width="672" />
 <p class="caption">
@@ -369,209 +382,209 @@ Figure 7.2: With small populations, a single traits reach fixation if there are 
 </p>
 </div>
 <p>This is similar to what we saw with only two traits, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>: with unbiased copying and relatively small populations, drift is a powerful force and quickly erodes cultural diversity.</p>
-<p>As we already discussed, increasing <span class="math inline">\(N\)</span> reduces the effect of drift. You can experiment with various values for <span class="math inline">\(N\)</span> and <span class="math inline">\(t_\text{max}\)</span>. However, the general point is that variation is gradually lost in all cases. How can we counterbalance the homogenizing effect that drift has in small and isolated population, such as the one we are simulating?</p>
+<p>As we already discussed, increasing <span class="math inline">\(N\)</span> reduces the effect of drift. You can experiment with various values for <span class="math inline">\(N\)</span> and <span class="math inline">\(t_\text{max}\)</span>. However, the general point is that variation is gradually lost in all cases. How can we counterbalance the homogenizing effect that drift has in a small and isolated population, such as the one we are simulating?</p>
 </div>
-<div id="introducing-innovation" class="section level2">
+<div id="introducing-innovation" class="section level2" number="7.2">
 <h2><span class="header-section-number">7.2</span> Introducing innovation</h2>
-<p>One option is to introduce new traits via innovation. We can imagine that, at each time step, a proportion of individuals, <span class="math inline">\(\mu\)</span>, introduces a new trait in the population. We use the same notation that we used for mutation in <a href="unbiased-and-biased-mutation.html#unbiased-and-biased-mutation">Chapter 2</a>: you can think that ‘mutation’ is when an individual change its trait for one that is already present, whereas an ‘innovation’ happens when an individual introduces a new trait never seen before. The remaining proportion of individuals, <span class="math inline">\(1-\mu\)</span>, copy at random from others, as before. We can start with a small value, such as <span class="math inline">\(\mu=0.01\)</span>. Since <span class="math inline">\(N=100\)</span>, this means that in each generation, on average, one new trait will be introduced into the population.</p>
+<p>One option is to introduce new traits via innovation. We can imagine that, at each time step, a proportion of individuals, <span class="math inline">\(\mu\)</span>, introduces (i.e. innovates) a new trait. We use the same notation that we used for mutation in <a href="unbiased-and-biased-mutation.html#unbiased-and-biased-mutation">Chapter 2</a>: you can think that ‘mutation’ is when an individual replaces its trait for one that is already present, whereas an ‘innovation’ happens when an individual introduces a new trait never seen before. The remaining proportion of individuals, <span class="math inline">\(1-\mu\)</span>, copy at random from others, as before. We can start with a small value, such as <span class="math inline">\(\mu=0.01\)</span>. Since <span class="math inline">\(N=100\)</span>, this means that in each generation, on average, one new trait will be introduced into the population.</p>
 <p>The following code adds innovation to the multiple-trait code from above:</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="multiple-traits-models.html#cb81-1"></a>mu &lt;-<span class="st"> </span><span class="fl">0.01</span></span>
-<span id="cb81-2"><a href="multiple-traits-models.html#cb81-2"></a><span class="co"># Record the last trait introduced in the population</span></span>
-<span id="cb81-3"><a href="multiple-traits-models.html#cb81-3"></a>last_trait &lt;-<span class="st"> </span><span class="kw">max</span>(population) </span>
-<span id="cb81-4"><a href="multiple-traits-models.html#cb81-4"></a><span class="co"># Copy the population tibble to previous_population tibble</span></span>
-<span id="cb81-5"><a href="multiple-traits-models.html#cb81-5"></a>previous_population &lt;-<span class="st"> </span>population </span>
-<span id="cb81-6"><a href="multiple-traits-models.html#cb81-6"></a><span class="co"># Randomly copy from previous generation</span></span>
-<span id="cb81-7"><a href="multiple-traits-models.html#cb81-7"></a>population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(previous_population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>))  </span>
-<span id="cb81-8"><a href="multiple-traits-models.html#cb81-8"></a><span class="co"># Identify the innovators</span></span>
-<span id="cb81-9"><a href="multiple-traits-models.html#cb81-9"></a>innovators &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), N, <span class="dt">prob =</span> <span class="kw">c</span>(mu, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>mu), <span class="dt">replace =</span> <span class="ot">TRUE</span>) </span>
-<span id="cb81-10"><a href="multiple-traits-models.html#cb81-10"></a><span class="co"># If there are innovators</span></span>
-<span id="cb81-11"><a href="multiple-traits-models.html#cb81-11"></a><span class="cf">if</span>( <span class="kw">sum</span>(innovators) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>){ </span>
-<span id="cb81-12"><a href="multiple-traits-models.html#cb81-12"></a>  <span class="co"># Replace innovators&#39; traits with new traits</span></span>
-<span id="cb81-13"><a href="multiple-traits-models.html#cb81-13"></a>  population[innovators,]<span class="op">$</span>trait &lt;-<span class="st"> </span>(last_trait <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)<span class="op">:</span>(last_trait <span class="op">+</span><span class="st"> </span><span class="kw">sum</span>(innovators)) </span>
-<span id="cb81-14"><a href="multiple-traits-models.html#cb81-14"></a>}</span></code></pre></div>
-<p>There are two modifications here. First, we need to select who are the innovators. For that, we use again the function <code>sample()</code>, biased by <span class="math inline">\(\mu\)</span>, picking <code>TRUE</code> (corresponding to being an innovator) or <code>FALSE</code> (keeping the copied cultural trait) <span class="math inline">\(N\)</span> times.</p>
-<p>Second, we need to actually introduce the new traits, with the correct number labels. First we record at the beginning of each generation the label of the last trait introduced (at the beginning, with <span class="math inline">\(N=100\)</span>, it will likely be 100 because we initialise each individual’s traits by choosing randomly between 1 and 100). When new traits are introduced, we give them consecutive number labels: the first new trait will be called 101, the second 102, and so on. The code above adds all of the new traits into the innovator slots all in one go, which is more efficient than doing it one innovator at a time.</p>
-<p>We can now, as usual, wrap everything in a function:</p>
-<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="multiple-traits-models.html#cb82-1"></a>multiple_traits_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="cf">function</span>(N, t_max, mu) {</span>
-<span id="cb82-2"><a href="multiple-traits-models.html#cb82-2"></a>  max_traits &lt;-<span class="st"> </span>N <span class="op">+</span><span class="st"> </span>N <span class="op">*</span><span class="st"> </span>mu <span class="op">*</span><span class="st"> </span>t_max</span>
-<span id="cb82-3"><a href="multiple-traits-models.html#cb82-3"></a></span>
-<span id="cb82-4"><a href="multiple-traits-models.html#cb82-4"></a>  output &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">as.factor</span>(<span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>max_traits, <span class="dt">each =</span> t_max)), </span>
-<span id="cb82-5"><a href="multiple-traits-models.html#cb82-5"></a>                   <span class="dt">generation =</span> <span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>t_max, max_traits), </span>
-<span id="cb82-6"><a href="multiple-traits-models.html#cb82-6"></a>                   <span class="dt">p =</span> <span class="kw">as.numeric</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, t_max <span class="op">*</span><span class="st"> </span>max_traits)))</span>
-<span id="cb82-7"><a href="multiple-traits-models.html#cb82-7"></a>  </span>
-<span id="cb82-8"><a href="multiple-traits-models.html#cb82-8"></a>  <span class="co"># Create first generation</span></span>
-<span id="cb82-9"><a href="multiple-traits-models.html#cb82-9"></a>  population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span>N, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>))  </span>
-<span id="cb82-10"><a href="multiple-traits-models.html#cb82-10"></a>  <span class="co"># Add first generation&#39;s p for all traits</span></span>
-<span id="cb82-11"><a href="multiple-traits-models.html#cb82-11"></a>  output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, ]<span class="op">$</span>p &lt;-<span class="st"> </span></span>
-<span id="cb82-12"><a href="multiple-traits-models.html#cb82-12"></a><span class="st">    </span><span class="kw">tabulate</span>(population<span class="op">$</span>trait, <span class="dt">nbins =</span> max_traits) <span class="op">/</span><span class="st"> </span>N  </span>
-<span id="cb82-13"><a href="multiple-traits-models.html#cb82-13"></a></span>
-<span id="cb82-14"><a href="multiple-traits-models.html#cb82-14"></a>  <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span>t_max) {</span>
-<span id="cb82-15"><a href="multiple-traits-models.html#cb82-15"></a>    <span class="co"># Record what is the last trait introduced in the population</span></span>
-<span id="cb82-16"><a href="multiple-traits-models.html#cb82-16"></a>    last_trait &lt;-<span class="st"> </span><span class="kw">max</span>(population) </span>
-<span id="cb82-17"><a href="multiple-traits-models.html#cb82-17"></a>    </span>
-<span id="cb82-18"><a href="multiple-traits-models.html#cb82-18"></a>    <span class="co"># Copy individuals to previous_population tibble</span></span>
-<span id="cb82-19"><a href="multiple-traits-models.html#cb82-19"></a>    previous_population &lt;-<span class="st"> </span>population </span>
-<span id="cb82-20"><a href="multiple-traits-models.html#cb82-20"></a>    </span>
-<span id="cb82-21"><a href="multiple-traits-models.html#cb82-21"></a>    <span class="co"># Randomly copy from previous generation</span></span>
-<span id="cb82-22"><a href="multiple-traits-models.html#cb82-22"></a>    population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(previous_population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>))  </span>
-<span id="cb82-23"><a href="multiple-traits-models.html#cb82-23"></a>    </span>
-<span id="cb82-24"><a href="multiple-traits-models.html#cb82-24"></a>    <span class="co"># Select the innovators</span></span>
-<span id="cb82-25"><a href="multiple-traits-models.html#cb82-25"></a>    innovators &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), N, <span class="dt">prob =</span> <span class="kw">c</span>(mu, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>mu), <span class="dt">replace =</span> <span class="ot">TRUE</span>) </span>
-<span id="cb82-26"><a href="multiple-traits-models.html#cb82-26"></a>    <span class="cf">if</span> ((last_trait <span class="op">+</span><span class="st"> </span><span class="kw">sum</span>(innovators)) <span class="op">&lt;</span><span class="st"> </span>max_traits) {  </span>
-<span id="cb82-27"><a href="multiple-traits-models.html#cb82-27"></a>      <span class="cf">if</span>(<span class="kw">sum</span>(innovators) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb82-28"><a href="multiple-traits-models.html#cb82-28"></a>        <span class="co"># Replace innovators&#39; traits with new traits</span></span>
-<span id="cb82-29"><a href="multiple-traits-models.html#cb82-29"></a>        population[innovators,]<span class="op">$</span>trait &lt;-<span class="st"> </span></span>
-<span id="cb82-30"><a href="multiple-traits-models.html#cb82-30"></a><span class="st">          </span>(last_trait <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)<span class="op">:</span>(last_trait <span class="op">+</span><span class="st"> </span><span class="kw">sum</span>(innovators)) </span>
-<span id="cb82-31"><a href="multiple-traits-models.html#cb82-31"></a>      }</span>
-<span id="cb82-32"><a href="multiple-traits-models.html#cb82-32"></a>    }</span>
-<span id="cb82-33"><a href="multiple-traits-models.html#cb82-33"></a>    <span class="co"># Get p for all traits and put it into output slot for this generation t</span></span>
-<span id="cb82-34"><a href="multiple-traits-models.html#cb82-34"></a>    output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span>t, ]<span class="op">$</span>p &lt;-<span class="st"> </span></span>
-<span id="cb82-35"><a href="multiple-traits-models.html#cb82-35"></a><span class="st">      </span><span class="kw">tabulate</span>(population<span class="op">$</span>trait, <span class="dt">nbins =</span> max_traits) <span class="op">/</span><span class="st"> </span>N </span>
-<span id="cb82-36"><a href="multiple-traits-models.html#cb82-36"></a>  }</span>
-<span id="cb82-37"><a href="multiple-traits-models.html#cb82-37"></a>  <span class="co"># Export data</span></span>
-<span id="cb82-38"><a href="multiple-traits-models.html#cb82-38"></a>  output </span>
-<span id="cb82-39"><a href="multiple-traits-models.html#cb82-39"></a>}</span></code></pre></div>
-<p>You should now be familiar with more or less everything within this function, with one exception: the new quantity <em>max_traits</em>. This is a trick we are using to avoid making the code too slow to run. Our <code>output</code> tibble, as you remember, records all the frequencies of all traits. When programming, a good rule-of-thumb is to avoid dynamically modifying the size of your data structures, such as adding new rows to a pre-existing tibble during the simulation. Where possible, set the size of a data structure at the start, and then modify its values during the simulation. So rather than creating a tibble that is expanded dynamically as new traits are introduced via innovation, we create a bigger tibble from the start. How big should it be? We do not know for sure, but a good estimate is that we will need space for the initial traits (<span class="math inline">\(N\)</span>), plus around <span class="math inline">\(N\mu\)</span> traits that are added each generation.</p>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="multiple-traits-models.html#cb81-1" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="fl">0.01</span></span>
+<span id="cb81-2"><a href="multiple-traits-models.html#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Record the last trait introduced in the population</span></span>
+<span id="cb81-3"><a href="multiple-traits-models.html#cb81-3" aria-hidden="true" tabindex="-1"></a>last_trait <span class="ot">&lt;-</span> <span class="fu">max</span>(population) </span>
+<span id="cb81-4"><a href="multiple-traits-models.html#cb81-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the population tibble to previous_population tibble</span></span>
+<span id="cb81-5"><a href="multiple-traits-models.html#cb81-5" aria-hidden="true" tabindex="-1"></a>previous_population <span class="ot">&lt;-</span> population </span>
+<span id="cb81-6"><a href="multiple-traits-models.html#cb81-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Randomly copy from previous generation</span></span>
+<span id="cb81-7"><a href="multiple-traits-models.html#cb81-7" aria-hidden="true" tabindex="-1"></a>population <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">trait =</span> <span class="fu">sample</span>(previous_population<span class="sc">$</span>trait, <span class="at">size =</span> N, <span class="at">replace =</span> <span class="cn">TRUE</span>))  </span>
+<span id="cb81-8"><a href="multiple-traits-models.html#cb81-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify the innovators</span></span>
+<span id="cb81-9"><a href="multiple-traits-models.html#cb81-9" aria-hidden="true" tabindex="-1"></a>innovators <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), <span class="at">size =</span> N, <span class="at">prob =</span> <span class="fu">c</span>(mu, <span class="dv">1</span> <span class="sc">-</span> mu), <span class="at">replace =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb81-10"><a href="multiple-traits-models.html#cb81-10" aria-hidden="true" tabindex="-1"></a><span class="co"># If there are innovators</span></span>
+<span id="cb81-11"><a href="multiple-traits-models.html#cb81-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">sum</span>(innovators) <span class="sc">&gt;</span> <span class="dv">0</span>){ </span>
+<span id="cb81-12"><a href="multiple-traits-models.html#cb81-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Replace innovators&#39; traits with new traits</span></span>
+<span id="cb81-13"><a href="multiple-traits-models.html#cb81-13" aria-hidden="true" tabindex="-1"></a>  population[innovators,]<span class="sc">$</span>trait <span class="ot">&lt;-</span> (last_trait <span class="sc">+</span> <span class="dv">1</span>)<span class="sc">:</span>(last_trait <span class="sc">+</span> <span class="fu">sum</span>(innovators)) </span>
+<span id="cb81-14"><a href="multiple-traits-models.html#cb81-14" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>There are two modifications here. First, we need to select innovators. For that, we use the <code>sample()</code> function, biased by <span class="math inline">\(\mu\)</span>, picking <code>TRUE</code> (corresponding to being an innovator) or <code>FALSE</code> (keeping the copied cultural trait) <span class="math inline">\(N\)</span> times.</p>
+<p>Second, we need to introduce the new traits, with the correct number labels. First, we record at the beginning of each generation the label of the last trait introduced (at the beginning, with <span class="math inline">\(N=100\)</span>, it will likely be 100 because we initialise each individual’s traits by choosing randomly between 1 and 100). When new traits are introduced, we give them consecutive number labels: the first new trait will be called 101, the second 102, and so on. The code above adds all of the new traits into the innovator slots all in one go, which is more efficient than doing it one innovator at a time.</p>
+<p>As before we will wrap everything in a function:</p>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="multiple-traits-models.html#cb82-1" aria-hidden="true" tabindex="-1"></a>multiple_traits_2 <span class="ot">&lt;-</span> <span class="cf">function</span>(N, t_max, mu) {</span>
+<span id="cb82-2"><a href="multiple-traits-models.html#cb82-2" aria-hidden="true" tabindex="-1"></a>  max_traits <span class="ot">&lt;-</span> N <span class="sc">+</span> N <span class="sc">*</span> mu <span class="sc">*</span> t_max</span>
+<span id="cb82-3"><a href="multiple-traits-models.html#cb82-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-4"><a href="multiple-traits-models.html#cb82-4" aria-hidden="true" tabindex="-1"></a>  output <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">trait =</span> <span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>max_traits, <span class="at">each =</span> t_max)), </span>
+<span id="cb82-5"><a href="multiple-traits-models.html#cb82-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">generation =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>t_max, max_traits), </span>
+<span id="cb82-6"><a href="multiple-traits-models.html#cb82-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">p =</span> <span class="fu">as.numeric</span>(<span class="fu">rep</span>(<span class="cn">NA</span>, t_max <span class="sc">*</span> max_traits)))</span>
+<span id="cb82-7"><a href="multiple-traits-models.html#cb82-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb82-8"><a href="multiple-traits-models.html#cb82-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create first generation</span></span>
+<span id="cb82-9"><a href="multiple-traits-models.html#cb82-9" aria-hidden="true" tabindex="-1"></a>  population <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">trait =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>N, N, <span class="at">replace =</span> <span class="cn">TRUE</span>))  </span>
+<span id="cb82-10"><a href="multiple-traits-models.html#cb82-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add first generation&#39;s p for all traits</span></span>
+<span id="cb82-11"><a href="multiple-traits-models.html#cb82-11" aria-hidden="true" tabindex="-1"></a>  output[output<span class="sc">$</span>generation <span class="sc">==</span> <span class="dv">1</span>, ]<span class="sc">$</span>p <span class="ot">&lt;-</span> </span>
+<span id="cb82-12"><a href="multiple-traits-models.html#cb82-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tabulate</span>(population<span class="sc">$</span>trait, <span class="at">nbins =</span> max_traits) <span class="sc">/</span> N  </span>
+<span id="cb82-13"><a href="multiple-traits-models.html#cb82-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-14"><a href="multiple-traits-models.html#cb82-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>t_max) {</span>
+<span id="cb82-15"><a href="multiple-traits-models.html#cb82-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Record what is the last trait introduced in the population</span></span>
+<span id="cb82-16"><a href="multiple-traits-models.html#cb82-16" aria-hidden="true" tabindex="-1"></a>    last_trait <span class="ot">&lt;-</span> <span class="fu">max</span>(population) </span>
+<span id="cb82-17"><a href="multiple-traits-models.html#cb82-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb82-18"><a href="multiple-traits-models.html#cb82-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Copy individuals to previous_population tibble</span></span>
+<span id="cb82-19"><a href="multiple-traits-models.html#cb82-19" aria-hidden="true" tabindex="-1"></a>    previous_population <span class="ot">&lt;-</span> population </span>
+<span id="cb82-20"><a href="multiple-traits-models.html#cb82-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb82-21"><a href="multiple-traits-models.html#cb82-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Randomly copy from previous generation</span></span>
+<span id="cb82-22"><a href="multiple-traits-models.html#cb82-22" aria-hidden="true" tabindex="-1"></a>    population <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">trait =</span> <span class="fu">sample</span>(previous_population<span class="sc">$</span>trait, N, <span class="at">replace =</span> <span class="cn">TRUE</span>))  </span>
+<span id="cb82-23"><a href="multiple-traits-models.html#cb82-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb82-24"><a href="multiple-traits-models.html#cb82-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Select the innovators</span></span>
+<span id="cb82-25"><a href="multiple-traits-models.html#cb82-25" aria-hidden="true" tabindex="-1"></a>    innovators <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), N, <span class="at">prob =</span> <span class="fu">c</span>(mu, <span class="dv">1</span> <span class="sc">-</span> mu), <span class="at">replace =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb82-26"><a href="multiple-traits-models.html#cb82-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ((last_trait <span class="sc">+</span> <span class="fu">sum</span>(innovators)) <span class="sc">&lt;</span> max_traits) {  </span>
+<span id="cb82-27"><a href="multiple-traits-models.html#cb82-27" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span>(<span class="fu">sum</span>(innovators) <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
+<span id="cb82-28"><a href="multiple-traits-models.html#cb82-28" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Replace innovators&#39; traits with new traits</span></span>
+<span id="cb82-29"><a href="multiple-traits-models.html#cb82-29" aria-hidden="true" tabindex="-1"></a>        population[innovators,]<span class="sc">$</span>trait <span class="ot">&lt;-</span> </span>
+<span id="cb82-30"><a href="multiple-traits-models.html#cb82-30" aria-hidden="true" tabindex="-1"></a>          (last_trait <span class="sc">+</span> <span class="dv">1</span>)<span class="sc">:</span>(last_trait <span class="sc">+</span> <span class="fu">sum</span>(innovators)) </span>
+<span id="cb82-31"><a href="multiple-traits-models.html#cb82-31" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb82-32"><a href="multiple-traits-models.html#cb82-32" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb82-33"><a href="multiple-traits-models.html#cb82-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get p for all traits and put it into output slot for this generation t</span></span>
+<span id="cb82-34"><a href="multiple-traits-models.html#cb82-34" aria-hidden="true" tabindex="-1"></a>    output[output<span class="sc">$</span>generation <span class="sc">==</span> t, ]<span class="sc">$</span>p <span class="ot">&lt;-</span> </span>
+<span id="cb82-35"><a href="multiple-traits-models.html#cb82-35" aria-hidden="true" tabindex="-1"></a>      <span class="fu">tabulate</span>(population<span class="sc">$</span>trait, <span class="at">nbins =</span> max_traits) <span class="sc">/</span> N </span>
+<span id="cb82-36"><a href="multiple-traits-models.html#cb82-36" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb82-37"><a href="multiple-traits-models.html#cb82-37" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Export data</span></span>
+<span id="cb82-38"><a href="multiple-traits-models.html#cb82-38" aria-hidden="true" tabindex="-1"></a>  output </span>
+<span id="cb82-39"><a href="multiple-traits-models.html#cb82-39" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>You should now be familiar with more or less everything within this function, with one exception: the new quantity <code>max_traits</code>. This is a trick we are using to avoid making the code too slow to run. Our <code>output</code> tibble, as you remember, records all the frequencies of all traits. When programming, a good rule-of-thumb is to avoid dynamically modifying the size of your data structures, such as adding new rows to an existing tibble during the simulation. To make a data structure larger, your computer has to create a copy somewhere else in its memory that is just a bit bigger than what you had before. Therefore, whenever possible (and you would be surprised how rarely it is not), set the size of a data structure at the start, and then only modify its content during the simulation. So rather than creating a tibble that is expanded dynamically as new traits are introduced via innovation, we create a big tibble right from the start. How big should it be? We do not know for sure, but a good estimate is that we will need space for the initial traits (<span class="math inline">\(N\)</span>), plus around <span class="math inline">\(N\mu\)</span> traits that are added each generation.</p>
 <p>To be absolutely sure we do not exceed this estimate, we wrap the innovation instruction within the <code>if ((last_trait + sum(innovators)) &lt; max_traits)</code> condition. This prevents innovation when the tibble has filled up. This might prevent innovation in the last few generations, but this should have negligible consequences for our purposes.</p>
 <p>Let’s now run the function with an innovation rate <span class="math inline">\(\mu=0.01\)</span>, a population of 100 individuals, and for 200 generations.</p>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="multiple-traits-models.html#cb83-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">multiple_traits_2</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">t_max =</span> <span class="dv">200</span>, <span class="dt">mu =</span> <span class="fl">0.01</span>)</span>
-<span id="cb83-2"><a href="multiple-traits-models.html#cb83-2"></a><span class="kw">plot_multiple_traits</span>(data_model)</span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="multiple-traits-models.html#cb83-1" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">multiple_traits_2</span>(<span class="at">N =</span> <span class="dv">100</span>, <span class="at">t_max =</span> <span class="dv">200</span>, <span class="at">mu =</span> <span class="fl">0.01</span>)</span>
+<span id="cb83-2"><a href="multiple-traits-models.html#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_traits</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:7-9"></span>
 <img src="IBM-cultevo_files/figure-html/7-9-1.png" alt="By adding innovations, more traits can be preserved in the population." width="672" />
 <p class="caption">
 Figure 7.3: By adding innovations, more traits can be preserved in the population.
 </p>
 </div>
-<p>With innovation, there should now be more traits at non-zero frequency at the end of the simulation than when innovation was not possible. We can check the exact number, by inspecting how many frequencies are higher than 0 in the last row of our matrix:</p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="multiple-traits-models.html#cb84-1"></a><span class="kw">sum</span>(<span class="kw">filter</span>(data_model, generation<span class="op">==</span><span class="dv">200</span>)<span class="op">$</span>p <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>)</span></code></pre></div>
+<p>With innovation, there should now be more traits at a non-zero frequency at the end of the simulation than when innovation was not possible. We can check the exact number, by inspecting how many frequencies are <span class="math inline">\(&gt;0\)</span> in the last row of our matrix:</p>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="multiple-traits-models.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">filter</span>(data_model, generation<span class="sc">==</span><span class="dv">200</span>)<span class="sc">$</span>p <span class="sc">&gt;</span> <span class="dv">0</span>)</span></code></pre></div>
 <pre><code>## [1] 8</code></pre>
 <p>What happens if we increase the number of generations, or time steps, to 1000, as we did before?</p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="multiple-traits-models.html#cb86-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">multiple_traits_2</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">t_max =</span> <span class="dv">1000</span>, <span class="dt">mu =</span> <span class="fl">0.01</span>)</span>
-<span id="cb86-2"><a href="multiple-traits-models.html#cb86-2"></a><span class="kw">plot_multiple_traits</span>(data_model)</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="multiple-traits-models.html#cb86-1" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">multiple_traits_2</span>(<span class="at">N =</span> <span class="dv">100</span>, <span class="at">t_max =</span> <span class="dv">1000</span>, <span class="at">mu =</span> <span class="fl">0.01</span>)</span>
+<span id="cb86-2"><a href="multiple-traits-models.html#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_traits</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:7-11"></span>
 <img src="IBM-cultevo_files/figure-html/7-11-1.png" alt="By adding innovations, traits are preserved even when the model runs for several generations." width="672" />
 <p class="caption">
 Figure 7.4: By adding innovations, traits are preserved even when the model runs for several generations.
 </p>
 </div>
-<p>As you can see in the plot, there should still be several traits that have frequencies higher than 0, even after 1000 generations. Again, we can find the exact number in the final generation:</p>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="multiple-traits-models.html#cb87-1"></a><span class="kw">sum</span>(<span class="kw">filter</span>(data_model, generation<span class="op">==</span><span class="dv">1000</span>)<span class="op">$</span>p <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>)</span></code></pre></div>
+<p>As you can see in the plot, there should still be several traits that have frequencies above 0, even after 1000 generations. Again, we can find the exact number in the final generation:</p>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="multiple-traits-models.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">filter</span>(data_model, generation<span class="sc">==</span><span class="dv">1000</span>)<span class="sc">$</span>p <span class="sc">&gt;</span> <span class="dv">0</span>)</span></code></pre></div>
 <pre><code>## [1] 5</code></pre>
-<p>Innovation, in sum, allows the maintenance of variation even in small populations.</p>
+<p>In sum, innovation allows the maintenance of variation even in small populations.</p>
 </div>
-<div id="optimising-the-code" class="section level2">
+<div id="optimising-the-code" class="section level2" number="7.3">
 <h2><span class="header-section-number">7.3</span> Optimising the code</h2>
 <p>Now for a short technical digression. You may have noticed that running the function <code>multiple_traits_2()</code> is quite time consuming with a population of 1000 individuals. There is a quick way to check the exact time needed, using the function <code>Sys.time()</code>. This returns the current time at the point of its execution. Let’s run the function again and calculate how long it takes.</p>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="multiple-traits-models.html#cb89-1"></a>start_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()</span>
-<span id="cb89-2"><a href="multiple-traits-models.html#cb89-2"></a>data_model &lt;-<span class="st"> </span><span class="kw">multiple_traits_2</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">t_max =</span> <span class="dv">1000</span>, <span class="dt">mu =</span> <span class="fl">0.01</span>)</span>
-<span id="cb89-3"><a href="multiple-traits-models.html#cb89-3"></a>end_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()</span>
-<span id="cb89-4"><a href="multiple-traits-models.html#cb89-4"></a>end_time <span class="op">-</span><span class="st"> </span>start_time</span></code></pre></div>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="multiple-traits-models.html#cb89-1" aria-hidden="true" tabindex="-1"></a>start_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
+<span id="cb89-2"><a href="multiple-traits-models.html#cb89-2" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">multiple_traits_2</span>(<span class="at">N =</span> <span class="dv">100</span>, <span class="at">t_max =</span> <span class="dv">1000</span>, <span class="at">mu =</span> <span class="fl">0.01</span>)</span>
+<span id="cb89-3"><a href="multiple-traits-models.html#cb89-3" aria-hidden="true" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
+<span id="cb89-4"><a href="multiple-traits-models.html#cb89-4" aria-hidden="true" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span></code></pre></div>
 <pre><code>## Time difference of 22.71843 secs</code></pre>
-<p>While this varies from computer to computer, it may take several seconds to finsh. To store the output, we are using a tibble with <span class="math inline">\(1100000\)</span> data points, as <em>max_traits</em> is equal to <span class="math inline">\(1100\)</span>, which needs to be updated in each of the <span class="math inline">\(1000\)</span> generations. One way of speeding up the simulation is to record our output in a different data structure.</p>
-<p>So far, we have been using tibbles to store our simulation output. R, as with all programming languages, can store data in different structures. Depending on what the data are and what one wants to do with them, different structures are more or less suitable. The advantage of tibbles is that they can contain heterogeneous data, depending on what we need to store: for example, in our <code>output</code> tibble, the <code>trait</code> column was specified as a factor, whereas the others two columns, <code>generation</code> and <code>p</code>, were numeric.</p>
-<p>An alternative is to use vectors and matrices. A vector is a list of data points that are all of the same type, e.g. logical (TRUE/FALSE), integer (whole numbers), numeric (any numbers), or character (text). Matrices are just two-dimensional vectors: they must also contain all the same type of data, but they have rows and columns similar to a tibble, dataframe or Excel spreadsheet. The advantage of vectors and matrices is efficiency: they make simulations much faster than identical code running with tibbles.</p>
-<p>Let’s rewrite our multiple trait function that runs exactly the same simulation, but using matrices instead of tibbles. The output is now a matrix with <code>t_max</code> rows and <code>max_traits</code> columns. This is initialised with NAs at the beginning. The population is a vector of integers, representing the trait held by each individual.</p>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="multiple-traits-models.html#cb91-1"></a>multiple_traits_matrix &lt;-<span class="st"> </span><span class="cf">function</span>(N, t_max, mu) {</span>
-<span id="cb91-2"><a href="multiple-traits-models.html#cb91-2"></a>  </span>
-<span id="cb91-3"><a href="multiple-traits-models.html#cb91-3"></a>  max_traits &lt;-<span class="st"> </span>N <span class="op">+</span><span class="st"> </span>N <span class="op">*</span><span class="st"> </span>mu <span class="op">*</span><span class="st"> </span>t_max</span>
-<span id="cb91-4"><a href="multiple-traits-models.html#cb91-4"></a>  </span>
-<span id="cb91-5"><a href="multiple-traits-models.html#cb91-5"></a>  output &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">data =</span> <span class="ot">NA</span>, <span class="dt">nrow =</span> t_max, <span class="dt">ncol =</span> max_traits)</span>
-<span id="cb91-6"><a href="multiple-traits-models.html#cb91-6"></a>  </span>
-<span id="cb91-7"><a href="multiple-traits-models.html#cb91-7"></a>  <span class="co"># Create first generation</span></span>
-<span id="cb91-8"><a href="multiple-traits-models.html#cb91-8"></a>  population &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span>N, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb91-9"><a href="multiple-traits-models.html#cb91-9"></a>  output[<span class="dv">1</span>, ] &lt;-<span class="st"> </span><span class="kw">tabulate</span>(population, <span class="dt">nbins =</span> N) <span class="op">/</span><span class="st"> </span>N</span>
-<span id="cb91-10"><a href="multiple-traits-models.html#cb91-10"></a>  </span>
-<span id="cb91-11"><a href="multiple-traits-models.html#cb91-11"></a>  <span class="co"># Add first generation&#39;s p for all traits</span></span>
-<span id="cb91-12"><a href="multiple-traits-models.html#cb91-12"></a>  <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span>t_max) {</span>
-<span id="cb91-13"><a href="multiple-traits-models.html#cb91-13"></a>    <span class="co"># Record what is the last trait introduced in the population</span></span>
-<span id="cb91-14"><a href="multiple-traits-models.html#cb91-14"></a>    last_trait &lt;-<span class="st"> </span><span class="kw">max</span>(population) </span>
-<span id="cb91-15"><a href="multiple-traits-models.html#cb91-15"></a>    </span>
-<span id="cb91-16"><a href="multiple-traits-models.html#cb91-16"></a>    <span class="co"># Copy individuals to previous_population tibble</span></span>
-<span id="cb91-17"><a href="multiple-traits-models.html#cb91-17"></a>    previous_population &lt;-<span class="st"> </span>population </span>
-<span id="cb91-18"><a href="multiple-traits-models.html#cb91-18"></a>    </span>
-<span id="cb91-19"><a href="multiple-traits-models.html#cb91-19"></a>    <span class="co"># Randomly copy from previous generation</span></span>
-<span id="cb91-20"><a href="multiple-traits-models.html#cb91-20"></a>    population &lt;-<span class="st"> </span><span class="kw">sample</span>(previous_population, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb91-21"><a href="multiple-traits-models.html#cb91-21"></a>    </span>
-<span id="cb91-22"><a href="multiple-traits-models.html#cb91-22"></a>    <span class="co"># Select the innovators</span></span>
-<span id="cb91-23"><a href="multiple-traits-models.html#cb91-23"></a>    innovators &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), N, <span class="dt">prob =</span> <span class="kw">c</span>(mu, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>mu), <span class="dt">replace =</span> <span class="ot">TRUE</span>) </span>
-<span id="cb91-24"><a href="multiple-traits-models.html#cb91-24"></a>    <span class="cf">if</span> ((last_trait <span class="op">+</span><span class="st"> </span><span class="kw">sum</span>(innovators)) <span class="op">&lt;</span><span class="st"> </span>max_traits) {</span>
-<span id="cb91-25"><a href="multiple-traits-models.html#cb91-25"></a>      <span class="co"># Replace innovators&#39; traits with new traits</span></span>
-<span id="cb91-26"><a href="multiple-traits-models.html#cb91-26"></a>      population[innovators] &lt;-<span class="st"> </span>(last_trait <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)<span class="op">:</span>(last_trait <span class="op">+</span><span class="st"> </span><span class="kw">sum</span>(innovators)) </span>
-<span id="cb91-27"><a href="multiple-traits-models.html#cb91-27"></a>    }</span>
-<span id="cb91-28"><a href="multiple-traits-models.html#cb91-28"></a>    <span class="co"># Get p for all traits and put it into output slot for this generation t</span></span>
-<span id="cb91-29"><a href="multiple-traits-models.html#cb91-29"></a>    output[t, ] &lt;-<span class="st"> </span><span class="kw">tabulate</span>(population, <span class="dt">nbins =</span> max_traits) <span class="op">/</span><span class="st"> </span>N </span>
-<span id="cb91-30"><a href="multiple-traits-models.html#cb91-30"></a>  }</span>
-<span id="cb91-31"><a href="multiple-traits-models.html#cb91-31"></a>  <span class="co"># Export data</span></span>
-<span id="cb91-32"><a href="multiple-traits-models.html#cb91-32"></a>  output </span>
-<span id="cb91-33"><a href="multiple-traits-models.html#cb91-33"></a>}</span></code></pre></div>
+<p>While this varies from computer to computer, it may take several seconds to finish. To store the output, we are using a tibble with <span class="math inline">\(1,100,000\)</span> data points, as <code>max_traits</code> is equal to <span class="math inline">\(1100\)</span>, which needs to be updated in each of the <span class="math inline">\(1000\)</span> generations. One way of speeding up the simulation is to record our output in a different data structure.</p>
+<p>So far, we have been using tibbles to store our simulation output. R, as with all programming languages, can store data in different structures. Depending on what the data are and what one wants to do with them, different structures are more or less suitable. The advantage of tibbles is that they can contain heterogeneous data, depending on what we need to store: for example, in our <code>output</code> tibble, the <code>trait</code> column was specified as a factor, whereas the other two columns, <code>generation</code> and <code>p</code>, were numeric.</p>
+<p>An alternative is to use vectors and matrices. A vector is a list of elements that are all of the same type, e.g. logical or boolean (TRUE/FALSE), integer (whole numbers), numeric (any numbers), or character (text). Matrices are similar to vectors in that they only contain one type of data. However, they are different from vectors in that they are two-dimensional, i.e. they have rows and columns similar to a tibble, data frame or Excel spreadsheet. The advantage of vectors and matrices is efficiency. Because they can only contain one type of data they make simulations much faster than identical code running with tibbles. We will be using matrices more heavily in the advanced chapters later in the book.</p>
+<p>Let’s rewrite our multiple trait function that runs exactly the same simulation, but uses matrices instead of tibbles. The output is now a matrix with <code>t_max</code> rows and <code>max_traits</code> columns. This is initialised with NAs at the beginning. The population is a vector of integers, representing the trait held by each individual.</p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="multiple-traits-models.html#cb91-1" aria-hidden="true" tabindex="-1"></a>multiple_traits_matrix <span class="ot">&lt;-</span> <span class="cf">function</span>(N, t_max, mu) {</span>
+<span id="cb91-2"><a href="multiple-traits-models.html#cb91-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb91-3"><a href="multiple-traits-models.html#cb91-3" aria-hidden="true" tabindex="-1"></a>  max_traits <span class="ot">&lt;-</span> N <span class="sc">+</span> N <span class="sc">*</span> mu <span class="sc">*</span> t_max</span>
+<span id="cb91-4"><a href="multiple-traits-models.html#cb91-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb91-5"><a href="multiple-traits-models.html#cb91-5" aria-hidden="true" tabindex="-1"></a>  output <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">data =</span> <span class="cn">NA</span>, <span class="at">nrow =</span> t_max, <span class="at">ncol =</span> max_traits)</span>
+<span id="cb91-6"><a href="multiple-traits-models.html#cb91-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb91-7"><a href="multiple-traits-models.html#cb91-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create first generation</span></span>
+<span id="cb91-8"><a href="multiple-traits-models.html#cb91-8" aria-hidden="true" tabindex="-1"></a>  population <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>N, N, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb91-9"><a href="multiple-traits-models.html#cb91-9" aria-hidden="true" tabindex="-1"></a>  output[<span class="dv">1</span>, ] <span class="ot">&lt;-</span> <span class="fu">tabulate</span>(population, <span class="at">nbins =</span> N) <span class="sc">/</span> N</span>
+<span id="cb91-10"><a href="multiple-traits-models.html#cb91-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb91-11"><a href="multiple-traits-models.html#cb91-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add first generation&#39;s p for all traits</span></span>
+<span id="cb91-12"><a href="multiple-traits-models.html#cb91-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>t_max) {</span>
+<span id="cb91-13"><a href="multiple-traits-models.html#cb91-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Record what is the last trait introduced in the population</span></span>
+<span id="cb91-14"><a href="multiple-traits-models.html#cb91-14" aria-hidden="true" tabindex="-1"></a>    last_trait <span class="ot">&lt;-</span> <span class="fu">max</span>(population) </span>
+<span id="cb91-15"><a href="multiple-traits-models.html#cb91-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb91-16"><a href="multiple-traits-models.html#cb91-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Copy individuals to previous_population tibble</span></span>
+<span id="cb91-17"><a href="multiple-traits-models.html#cb91-17" aria-hidden="true" tabindex="-1"></a>    previous_population <span class="ot">&lt;-</span> population </span>
+<span id="cb91-18"><a href="multiple-traits-models.html#cb91-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb91-19"><a href="multiple-traits-models.html#cb91-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Randomly copy from previous generation</span></span>
+<span id="cb91-20"><a href="multiple-traits-models.html#cb91-20" aria-hidden="true" tabindex="-1"></a>    population <span class="ot">&lt;-</span> <span class="fu">sample</span>(previous_population, N, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb91-21"><a href="multiple-traits-models.html#cb91-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb91-22"><a href="multiple-traits-models.html#cb91-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Select the innovators</span></span>
+<span id="cb91-23"><a href="multiple-traits-models.html#cb91-23" aria-hidden="true" tabindex="-1"></a>    innovators <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), N, <span class="at">prob =</span> <span class="fu">c</span>(mu, <span class="dv">1</span> <span class="sc">-</span> mu), <span class="at">replace =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb91-24"><a href="multiple-traits-models.html#cb91-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ((last_trait <span class="sc">+</span> <span class="fu">sum</span>(innovators)) <span class="sc">&lt;</span> max_traits) {</span>
+<span id="cb91-25"><a href="multiple-traits-models.html#cb91-25" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Replace innovators&#39; traits with new traits</span></span>
+<span id="cb91-26"><a href="multiple-traits-models.html#cb91-26" aria-hidden="true" tabindex="-1"></a>      population[innovators] <span class="ot">&lt;-</span> (last_trait <span class="sc">+</span> <span class="dv">1</span>)<span class="sc">:</span>(last_trait <span class="sc">+</span> <span class="fu">sum</span>(innovators)) </span>
+<span id="cb91-27"><a href="multiple-traits-models.html#cb91-27" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb91-28"><a href="multiple-traits-models.html#cb91-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get p for all traits and put it into output slot for this generation t</span></span>
+<span id="cb91-29"><a href="multiple-traits-models.html#cb91-29" aria-hidden="true" tabindex="-1"></a>    output[t, ] <span class="ot">&lt;-</span> <span class="fu">tabulate</span>(population, <span class="at">nbins =</span> max_traits) <span class="sc">/</span> N </span>
+<span id="cb91-30"><a href="multiple-traits-models.html#cb91-30" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb91-31"><a href="multiple-traits-models.html#cb91-31" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Export data</span></span>
+<span id="cb91-32"><a href="multiple-traits-models.html#cb91-32" aria-hidden="true" tabindex="-1"></a>  output </span>
+<span id="cb91-33"><a href="multiple-traits-models.html#cb91-33" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>To plot the output, we re-convert it into a tibble so that it can be handled by <code>ggplot()</code>. We first create a column that explicitly indicates the number of generations, and then we use the function <code>pivot_longer()</code> from the tidyverse to reassemble the columns of the matrix in trait-frequency pairs, the ‘tidy’ format consistent with the functioning of ggplot.</p>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="multiple-traits-models.html#cb92-1"></a>plot_multiple_traits_matrix &lt;-<span class="st"> </span><span class="cf">function</span>(data_model) {</span>
-<span id="cb92-2"><a href="multiple-traits-models.html#cb92-2"></a>  generation &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">dim</span>(data_model)[<span class="dv">1</span>], <span class="dt">each =</span> <span class="kw">dim</span>(data_model)[<span class="dv">2</span>])</span>
-<span id="cb92-3"><a href="multiple-traits-models.html#cb92-3"></a>  </span>
-<span id="cb92-4"><a href="multiple-traits-models.html#cb92-4"></a>  data_to_plot &lt;-<span class="st"> </span><span class="kw">as_tibble</span>(data_model) <span class="op">%&gt;%</span></span>
-<span id="cb92-5"><a href="multiple-traits-models.html#cb92-5"></a><span class="st">    </span><span class="kw">pivot_longer</span>(<span class="kw">everything</span>(), <span class="dt">names_to =</span> <span class="st">&quot;trait&quot;</span>, <span class="dt">values_to =</span> <span class="st">&quot;p&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb92-6"><a href="multiple-traits-models.html#cb92-6"></a><span class="st">    </span><span class="kw">add_column</span>(generation)</span>
-<span id="cb92-7"><a href="multiple-traits-models.html#cb92-7"></a>  </span>
-<span id="cb92-8"><a href="multiple-traits-models.html#cb92-8"></a>  <span class="kw">ggplot</span>(<span class="dt">data =</span> data_to_plot, <span class="kw">aes</span>(<span class="dt">y =</span> p, <span class="dt">x =</span> generation)) <span class="op">+</span></span>
-<span id="cb92-9"><a href="multiple-traits-models.html#cb92-9"></a><span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">colour =</span> trait)) <span class="op">+</span></span>
-<span id="cb92-10"><a href="multiple-traits-models.html#cb92-10"></a><span class="st">    </span><span class="kw">ylim</span>(<span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>)) <span class="op">+</span></span>
-<span id="cb92-11"><a href="multiple-traits-models.html#cb92-11"></a><span class="st">    </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
-<span id="cb92-12"><a href="multiple-traits-models.html#cb92-12"></a><span class="st">    </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>)</span>
-<span id="cb92-13"><a href="multiple-traits-models.html#cb92-13"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="multiple-traits-models.html#cb92-1" aria-hidden="true" tabindex="-1"></a>plot_multiple_traits_matrix <span class="ot">&lt;-</span> <span class="cf">function</span>(data_model) {</span>
+<span id="cb92-2"><a href="multiple-traits-models.html#cb92-2" aria-hidden="true" tabindex="-1"></a>  generation <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">dim</span>(data_model)[<span class="dv">1</span>], <span class="at">each =</span> <span class="fu">dim</span>(data_model)[<span class="dv">2</span>])</span>
+<span id="cb92-3"><a href="multiple-traits-models.html#cb92-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb92-4"><a href="multiple-traits-models.html#cb92-4" aria-hidden="true" tabindex="-1"></a>  data_to_plot <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(data_model) <span class="sc">%&gt;%</span></span>
+<span id="cb92-5"><a href="multiple-traits-models.html#cb92-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pivot_longer</span>(<span class="fu">everything</span>(), <span class="at">names_to =</span> <span class="st">&quot;trait&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;p&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb92-6"><a href="multiple-traits-models.html#cb92-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_column</span>(generation)</span>
+<span id="cb92-7"><a href="multiple-traits-models.html#cb92-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb92-8"><a href="multiple-traits-models.html#cb92-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> data_to_plot, <span class="fu">aes</span>(<span class="at">y =</span> p, <span class="at">x =</span> generation)) <span class="sc">+</span></span>
+<span id="cb92-9"><a href="multiple-traits-models.html#cb92-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">colour =</span> trait)) <span class="sc">+</span></span>
+<span id="cb92-10"><a href="multiple-traits-models.html#cb92-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb92-11"><a href="multiple-traits-models.html#cb92-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb92-12"><a href="multiple-traits-models.html#cb92-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>)</span>
+<span id="cb92-13"><a href="multiple-traits-models.html#cb92-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>We can now run the new function, checking that it gives the same output as the tibble version, and again calculating the time needed.</p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="multiple-traits-models.html#cb93-1"></a>start_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()</span>
-<span id="cb93-2"><a href="multiple-traits-models.html#cb93-2"></a>data_model &lt;-<span class="st"> </span><span class="kw">multiple_traits_matrix</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">t_max =</span> <span class="dv">1000</span>, <span class="dt">mu =</span> <span class="fl">0.01</span>)</span>
-<span id="cb93-3"><a href="multiple-traits-models.html#cb93-3"></a>end_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()</span>
-<span id="cb93-4"><a href="multiple-traits-models.html#cb93-4"></a><span class="kw">plot_multiple_traits_matrix</span>(data_model)</span></code></pre></div>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="multiple-traits-models.html#cb93-1" aria-hidden="true" tabindex="-1"></a>start_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
+<span id="cb93-2"><a href="multiple-traits-models.html#cb93-2" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">multiple_traits_matrix</span>(<span class="at">N =</span> <span class="dv">100</span>, <span class="at">t_max =</span> <span class="dv">1000</span>, <span class="at">mu =</span> <span class="fl">0.01</span>)</span>
+<span id="cb93-3"><a href="multiple-traits-models.html#cb93-3" aria-hidden="true" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
+<span id="cb93-4"><a href="multiple-traits-models.html#cb93-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_traits_matrix</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:7-16"></span>
 <img src="IBM-cultevo_files/figure-html/7-16-1.png" alt="We obtain qualitatively the same results of the previous code, in a model with unbiased transmission, multiple traits, and innovation." width="672" />
 <p class="caption">
 Figure 7.5: We obtain qualitatively the same results of the previous code, in a model with unbiased transmission, multiple traits, and innovation.
 </p>
 </div>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="multiple-traits-models.html#cb94-1"></a>end_time <span class="op">-</span><span class="st"> </span>start_time</span></code></pre></div>
-<pre><code>## Time difference of 0.143692 secs</code></pre>
-<p>The results are equivalent, but the simulation should be hundreds of times faster! This shows that implementation details are very important when building individual based models. When one needs to run the same simulation many times, or test many different parameter values, implementation choices can make drastic differences.</p>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="multiple-traits-models.html#cb94-1" aria-hidden="true" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span></code></pre></div>
+<pre><code>## Time difference of 0.06097603 secs</code></pre>
+<p>The results are equivalent, but the simulation should be hundreds of times faster! This shows that implementation details are very important when building individual-based models. When one needs to run the same simulation many times, or test many different parameter values, implementation choices can make drastic differences.</p>
 </div>
-<div id="the-distribution-of-popularity" class="section level2">
+<div id="the-distribution-of-popularity" class="section level2" number="7.4">
 <h2><span class="header-section-number">7.4</span> The distribution of popularity</h2>
-<p>An interesting aspect of these simulations is that, even if all traits are functionally equivalent and transmission is unbiased, a few traits, for random reasons, are more successful than the others. A way to visualise this is to plot their cumulative popularity, i.e. the sum of their quantities over all generations. Given our matrix, it is easy to calculate this by summing each column and multiplying by <em>N</em> (remember they are frequencies, whereas now we want to visualise their actual quantities). We also need to keep only the values that are higher than zero: values equal to zero are in fact the empty slots created in the initial matrix that were never filled with actual traits.</p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="multiple-traits-models.html#cb96-1"></a>cumulative &lt;-<span class="st"> </span><span class="kw">colSums</span>(data_model) <span class="op">*</span><span class="st"> </span>N </span>
-<span id="cb96-2"><a href="multiple-traits-models.html#cb96-2"></a>cumulative &lt;-<span class="st"> </span>cumulative[cumulative <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>]</span></code></pre></div>
-<p>Let’s sort them from the most to the least popular and plot the results.</p>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="multiple-traits-models.html#cb97-1"></a>data_to_plot &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">cumulative =</span> <span class="kw">sort</span>(cumulative, <span class="dt">decreasing =</span> <span class="ot">TRUE</span>))</span>
-<span id="cb97-2"><a href="multiple-traits-models.html#cb97-2"></a></span>
-<span id="cb97-3"><a href="multiple-traits-models.html#cb97-3"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> data_to_plot, <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">seq_along</span>(cumulative), <span class="dt">y =</span> cumulative)) <span class="op">+</span></span>
-<span id="cb97-4"><a href="multiple-traits-models.html#cb97-4"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb97-5"><a href="multiple-traits-models.html#cb97-5"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
-<span id="cb97-6"><a href="multiple-traits-models.html#cb97-6"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;trait label&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;cumulative popularity&quot;</span>)</span></code></pre></div>
+<p>An interesting aspect of these simulations is that, even if all traits are functionally equivalent and transmission is unbiased, a few traits, for random reasons, are more successful than the others. A way to visualise this is to plot their cumulative popularity, i.e. the sum of their quantities over all generations. Given our matrix, it is easy to calculate this by summing each column and multiplying by <span class="math inline">\(N\)</span> (remember they are frequencies, whereas now we want to visualise their actual quantities). We also need to keep only the values that are greater than zero: values equal to zero are the empty slots created in the initial matrix that were never filled with actual traits.</p>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="multiple-traits-models.html#cb96-1" aria-hidden="true" tabindex="-1"></a>cumulative <span class="ot">&lt;-</span> <span class="fu">colSums</span>(data_model) <span class="sc">*</span> N </span>
+<span id="cb96-2"><a href="multiple-traits-models.html#cb96-2" aria-hidden="true" tabindex="-1"></a>cumulative <span class="ot">&lt;-</span> cumulative[cumulative <span class="sc">&gt;</span> <span class="dv">0</span>]</span></code></pre></div>
+<p>Let’s sort them from the most to the least popular and plot the results:</p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="multiple-traits-models.html#cb97-1" aria-hidden="true" tabindex="-1"></a>data_to_plot <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">cumulative =</span> <span class="fu">sort</span>(cumulative, <span class="at">decreasing =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb97-2"><a href="multiple-traits-models.html#cb97-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb97-3"><a href="multiple-traits-models.html#cb97-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_to_plot, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">seq_along</span>(cumulative), <span class="at">y =</span> cumulative)) <span class="sc">+</span></span>
+<span id="cb97-4"><a href="multiple-traits-models.html#cb97-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb97-5"><a href="multiple-traits-models.html#cb97-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb97-6"><a href="multiple-traits-models.html#cb97-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;trait label&quot;</span>, <span class="at">y =</span> <span class="st">&quot;cumulative popularity&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:7-18"></span>
 <img src="IBM-cultevo_files/figure-html/7-18-1.png" alt="The popularity distribution of traits with unbiased copying is long-tailed, with few very successful traits and many relatively unsuccessful ones." width="672" />
 <p class="caption">
 Figure 7.6: The popularity distribution of traits with unbiased copying is long-tailed, with few very successful traits and many relatively unsuccessful ones.
 </p>
 </div>
-<p>This is an example of a long-tailed distribution. The great majority of traits did not spread in the population, and their cumulative popularity is very close to one. Very few of them—the ones on the left side of the plot—were instead very successful. Long-tailed distributions like the one we just produced are very common for cultural traits: a small number of movies, books, or first names are very popular, while the great majority is not. In addition, in these domains, the popular traits are <em>much</em> more popular than the unpopular ones. The average cumulative popularity of the data we plotted is 106.2, but the most successful trait has a popularity of 23891.</p>
-<p>It is common to plot these distributions by binning the data in intervals of exponentially increasing size. In other words, we want to know how many traits have a cumulative popularity between 1 and 2, then between 2 and 4, then between 4 and 8, and so on, until we reach the maximum value of cumulative popularity. The code below does that, using a <code>for</code> cycle to find how many traits fall in each bin and further normalising according to bin size. The size is increased 50 times, until an arbitrary maximum bin size of <span class="math inline">\(2^{50}\)</span>, to be sure to include all cumulative popularities.</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="multiple-traits-models.html#cb98-1"></a>bin &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, <span class="dv">50</span>)</span>
-<span id="cb98-2"><a href="multiple-traits-models.html#cb98-2"></a>x &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, <span class="dv">50</span>)</span>
-<span id="cb98-3"><a href="multiple-traits-models.html#cb98-3"></a></span>
-<span id="cb98-4"><a href="multiple-traits-models.html#cb98-4"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">50</span>){</span>
-<span id="cb98-5"><a href="multiple-traits-models.html#cb98-5"></a>  bin[i] &lt;-<span class="st"> </span><span class="kw">sum</span>(cumulative <span class="op">&gt;=</span><span class="st"> </span><span class="dv">2</span><span class="op">^</span>(i <span class="op">-</span><span class="st"> </span><span class="dv">1</span>) <span class="op">&amp;</span><span class="st"> </span>cumulative <span class="op">&lt;</span><span class="st"> </span><span class="dv">2</span><span class="op">^</span>i)</span>
-<span id="cb98-6"><a href="multiple-traits-models.html#cb98-6"></a>  bin[i] &lt;-<span class="st"> </span>(bin[i] <span class="op">/</span><span class="st"> </span><span class="kw">length</span>( cumulative)) <span class="op">/</span><span class="st"> </span><span class="dv">2</span><span class="op">^</span>(i <span class="op">-</span><span class="st"> </span><span class="dv">1</span>);</span>
-<span id="cb98-7"><a href="multiple-traits-models.html#cb98-7"></a>  x[i] &lt;-<span class="st"> </span><span class="dv">2</span><span class="op">^</span>i</span>
-<span id="cb98-8"><a href="multiple-traits-models.html#cb98-8"></a>}</span></code></pre></div>
+<p>This is an example of a long-tailed distribution. The vast majority of traits did not spread in the population, and their cumulative popularity is very close to one (i.e. only present in one individual). Very few of them—the ones on the left side of the plot—were instead very successful. Long-tailed distributions like the one we just produced are very common for cultural traits: a small number of movies, books, or first names are very popular, while the great majority is not. In addition, in these domains, the popular traits are <em>much</em> more popular than the unpopular ones. The average cumulative popularity of the data we plotted is 106.2, but the most successful trait has a popularity of 23891.</p>
+<p>It is common to plot these distributions by binning the data in intervals of exponentially increasing size. In other words, we want to know how many traits have a cumulative popularity between 1 and 2, then between 2 and 4, then between 4 and 8, and so on, until we reach the maximum value of cumulative popularity. The code below does that, using a <code>for</code> loop to find how many traits fall in each bin and further normalising according to bin size. The size is increased 50 times, until an arbitrary maximum bin size of <span class="math inline">\(2^{50}\)</span>, to be sure to include all cumulative popularities.</p>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="multiple-traits-models.html#cb98-1" aria-hidden="true" tabindex="-1"></a>bin <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">50</span>)</span>
+<span id="cb98-2"><a href="multiple-traits-models.html#cb98-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">50</span>)</span>
+<span id="cb98-3"><a href="multiple-traits-models.html#cb98-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb98-4"><a href="multiple-traits-models.html#cb98-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>){</span>
+<span id="cb98-5"><a href="multiple-traits-models.html#cb98-5" aria-hidden="true" tabindex="-1"></a>  bin[i] <span class="ot">&lt;-</span> <span class="fu">sum</span>(cumulative <span class="sc">&gt;=</span> <span class="dv">2</span><span class="sc">^</span>(i <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">&amp;</span> cumulative <span class="sc">&lt;</span> <span class="dv">2</span><span class="sc">^</span>i)</span>
+<span id="cb98-6"><a href="multiple-traits-models.html#cb98-6" aria-hidden="true" tabindex="-1"></a>  bin[i] <span class="ot">&lt;-</span> (bin[i] <span class="sc">/</span> <span class="fu">length</span>( cumulative)) <span class="sc">/</span> <span class="dv">2</span><span class="sc">^</span>(i <span class="sc">-</span> <span class="dv">1</span>);</span>
+<span id="cb98-7"><a href="multiple-traits-models.html#cb98-7" aria-hidden="true" tabindex="-1"></a>  x[i] <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">^</span>i</span>
+<span id="cb98-8"><a href="multiple-traits-models.html#cb98-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>We can now visualise the data on a log-log plot, after filtering out the empty bins. A log-log plot is a graph that uses logarithmic scales on both axes. Using logarithmic axes is useful when, as in this case, the data are skewed towards large values. In the previous plot, we were not able to appreciate visually any difference in the great majority of data points, for example points that had cumulative popularity between 1 and 10, as they were all bunched up close to the x-axis.</p>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="multiple-traits-models.html#cb99-1"></a>data_to_plot &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">bin =</span> bin, <span class="dt">x =</span> x) </span>
-<span id="cb99-2"><a href="multiple-traits-models.html#cb99-2"></a>data_to_plot &lt;-<span class="st"> </span><span class="kw">filter</span>(data_to_plot, bin <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>)</span>
-<span id="cb99-3"><a href="multiple-traits-models.html#cb99-3"></a></span>
-<span id="cb99-4"><a href="multiple-traits-models.html#cb99-4"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> data_to_plot, <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> bin)) <span class="op">+</span></span>
-<span id="cb99-5"><a href="multiple-traits-models.html#cb99-5"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb99-6"><a href="multiple-traits-models.html#cb99-6"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;cumulative popularity&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;proportion of traits&quot;</span>) <span class="op">+</span></span>
-<span id="cb99-7"><a href="multiple-traits-models.html#cb99-7"></a><span class="st">  </span><span class="kw">scale_x_log10</span>() <span class="op">+</span></span>
-<span id="cb99-8"><a href="multiple-traits-models.html#cb99-8"></a><span class="st">  </span><span class="kw">scale_y_log10</span>() <span class="op">+</span></span>
-<span id="cb99-9"><a href="multiple-traits-models.html#cb99-9"></a><span class="st">  </span><span class="kw">stat_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>) <span class="op">+</span></span>
-<span id="cb99-10"><a href="multiple-traits-models.html#cb99-10"></a><span class="st">  </span><span class="kw">theme_bw</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="multiple-traits-models.html#cb99-1" aria-hidden="true" tabindex="-1"></a>data_to_plot <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">bin =</span> bin, <span class="at">x =</span> x) </span>
+<span id="cb99-2"><a href="multiple-traits-models.html#cb99-2" aria-hidden="true" tabindex="-1"></a>data_to_plot <span class="ot">&lt;-</span> <span class="fu">filter</span>(data_to_plot, bin <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb99-3"><a href="multiple-traits-models.html#cb99-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-4"><a href="multiple-traits-models.html#cb99-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_to_plot, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> bin)) <span class="sc">+</span></span>
+<span id="cb99-5"><a href="multiple-traits-models.html#cb99-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>) <span class="sc">+</span></span>
+<span id="cb99-6"><a href="multiple-traits-models.html#cb99-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb99-7"><a href="multiple-traits-models.html#cb99-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;cumulative popularity&quot;</span>, <span class="at">y =</span> <span class="st">&quot;proportion of traits&quot;</span>) <span class="sc">+</span></span>
+<span id="cb99-8"><a href="multiple-traits-models.html#cb99-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb99-9"><a href="multiple-traits-models.html#cb99-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb99-10"><a href="multiple-traits-models.html#cb99-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
 <div class="figure"><span id="fig:7-20"></span>
 <img src="IBM-cultevo_files/figure-html/7-20-1.png" alt="Popularity distribution of traits on a log-log scale." width="672" />
 <p class="caption">
@@ -580,21 +593,27 @@ Figure 7.7: Popularity distribution of traits on a log-log scale.
 </div>
 <p>On a log-log scale, the distribution of cumulative popularity produced by unbiased copying lies approximately on a straight line (this linear best-fit line is produced using the command <code>stat_smooth(method = "lm")</code>). This straight line on a log-log plot is known as a “power law” frequency distribution. The goodness of fit and the slope of the line can be used to compare different types of cultural transmission. For example, what would happen to the above power law if we added some degree of conformity? What about demonstrator-based bias? We can also generate equivalent plots for real-world cultural datasets to test hypotheses about the processes that generated these distributions in the real world.</p>
 </div>
-<div id="summary-of-the-model-6" class="section level2">
+<div id="summary-of-the-model-6" class="section level2" number="7.5">
 <h2><span class="header-section-number">7.5</span> Summary of the model</h2>
-<p>In this chapter we simulated the case where individuals can possess one of more than two traits. We explored the simplest case of unbiased transmission. We also implemented the possibility of innovation, where individuals introduce, with some probability, new traits into the cultural pool of the population. Individual innovations counterbalance the homogenizing effect of drift, and replace the traits that are gradually lost.</p>
+<p>In this chapter, we simulated the case where individuals can possess one of more than two traits. We explored the simplest case of unbiased transmission. We also implemented innovation, where individuals introduce, with some probability, new traits into the cultural pool of the population. Individual innovations counterbalance the homogenizing and converging effect of drift.</p>
 <p>To simulate multiple traits and innovation we also needed to deal with a few technical details such as how to keep track of an initially unknown number of new traits. We learned that it is best to create data structures of the desired size at the outset, rather than changing their size dynamically during the simulation. We also saw the importance of using appropriate data structures when simulations start to become more complex. Replacing tibbles with matrices, we were able to make our simulation 100 times faster.</p>
 <p>Our results showed that unbiased copying produces long-tailed distributions where very few traits are very popular and the great majority are not. An interesting insight from this model is that these extreme distributions do not necessarily result from extreme tendencies at the individual level. Some traits become hugely more popular than others without individuals being biased, for example, towards popular traits. Cultural transmission generates these distributions without biases, but simply because popular traits have the intrinsic advantage of being more likely to be randomly copied. We also introduced a new technique, the log-log plot of binned popularity distributions, to visualise this outcome.</p>
 </div>
-<div id="further-readings-2" class="section level2">
+<div id="further-readings-2" class="section level2" number="7.6">
 <h2><span class="header-section-number">7.6</span> Further readings</h2>
-<p><span class="citation">Neiman (<a href="references.html#ref-neiman_stylistic_1995" role="doc-biblioref">1995</a>)</span> first introduced a model of unbiased copying with multiple traits to explain popularity distributions in assemblages of Neolithic pottery. <span class="citation">Bentley, Hahn, and Shennan (<a href="references.html#ref-bentley_random_2004" role="doc-biblioref">2004</a>)</span> elaborated on this idea, presenting a ‘random copying’ model (equivalent to the one developed in this chapter) and comparing the popularity distributions produced with real datasets, including the frequency distributions of first names in the US and the citations of patents. <span class="citation">Mesoudi and Lycett (<a href="references.html#ref-mesoudi_random_2009" role="doc-biblioref">2009</a>)</span> explored how adding transmission biases (e.g. conformity) to the basic model changes the resulting power-law frequency distribution.</p>
+<p><span class="citation"><a href="references.html#ref-neiman_stylistic_1995" role="doc-biblioref">Neiman</a> (<a href="references.html#ref-neiman_stylistic_1995" role="doc-biblioref">1995</a>)</span> first introduced a model of unbiased copying with multiple traits to explain popularity distributions in assemblages of Neolithic pottery. <span class="citation"><a href="references.html#ref-bentley_random_2004" role="doc-biblioref">Bentley, Hahn, and Shennan</a> (<a href="references.html#ref-bentley_random_2004" role="doc-biblioref">2004</a>)</span> elaborated on this idea, presenting a ‘random copying’ model (equivalent to the one developed in this chapter) and comparing the popularity distributions produced with real datasets, including the frequency distributions of first names in the US and the citations of patents. <span class="citation"><a href="references.html#ref-mesoudi_random_2009" role="doc-biblioref">Mesoudi and Lycett</a> (<a href="references.html#ref-mesoudi_random_2009" role="doc-biblioref">2009</a>)</span> explored how adding transmission biases (e.g. conformity) to the basic model changes the resulting power-law frequency distribution.</p>
 
 </div>
 </div>
 
 
 
+<div class="footnotes">
+<hr />
+<ol start="2">
+<li id="fn2"><p>Technically, we only need to track <span class="math inline">\(N-1\)</span> frequencies, with the last inferred by subtracting the other frequencies from 1. But for simplicity we will track all of the frequencies.<a href="multiple-traits-models.html#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
             </section>
 
           </div>

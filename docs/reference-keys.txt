@@ -186,6 +186,5 @@ modelling-migration-and-contact-between-population-subsets
 subdivided-population-with-limited-contact
 subdivided-populations-with-migration
 varying-contact-and-migration-probability-for-repeated-simulation-runs
-model-extensions
 summary-of-the-model-14
 further-reading-8

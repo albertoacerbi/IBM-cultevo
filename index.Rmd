@@ -14,9 +14,9 @@ link-citations: true
 
 # Note to the reader {-}
 
-![cover](docs/images/cover.jpeg)
+![](docs/images/cover.jpeg)
 
-We have used the [bookdown](https://bookdown.org) package to create an html version of the book, which you are reading now. This is created from RMarkdown (.Rmd) files, which are a mix of regular text and code. You can find the original .Rmd files in a [Github repository](https://github.com/albertoacerbi/IBM-cultevo), from where you can recreate the entire project. This online version of this book is free (and it will remain free). 
+We have used the [bookdown](https://bookdown.org) package to create an html version of the book, which you are reading now. This is created from RMarkdown (.Rmd) files, which are a mix of regular text and code. You can find the original .Rmd files in a [Github repository](https://github.com/albertoacerbi/IBM-cultevo), from where you can use the code directly in RStudio, and recreate the entire project. This online version of the book is free (and it will remain free). 
 
 A physical copy of the book is published by Routledge. You can purchase it [here](https://www.routledge.com/Individual-Based-Models-of-Cultural-Evolution-A-Step-by-Step-Guide-Using/Acerbi-Mesoudi-Smolla/p/book/9781032252063), and in all the usual places.
 

@@ -26,7 +26,7 @@
 <meta name="author" content="Marco Smolla" />
 
 
-<meta name="date" content="2020-12-03" />
+<meta name="date" content="2022-03-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -35,6 +35,7 @@
   
 <link rel="prev" href="group-structured-populations-and-migration.html"/>
 
+<script src="libs/header-attrs-2.5.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,24 +53,22 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -89,7 +88,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -139,7 +138,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Note to the reader</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#aim-of-the-book"><i class="fa fa-check"></i>Aim of the book</a></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#what-is-cultural-evolution"><i class="fa fa-check"></i>What is cultural evolution?</a></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#why-model"><i class="fa fa-check"></i>Why model?</a></li>
@@ -150,7 +150,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
 </ul></li>
 <li class="part"><span><b>Basics</b></span></li>
-<li class="chapter" data-level="1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html"><i class="fa fa-check"></i><b>1</b> Unbiased transmission</a><ul>
+<li class="chapter" data-level="1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html"><i class="fa fa-check"></i><b>1</b> Unbiased transmission</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#initialising-the-simulation"><i class="fa fa-check"></i><b>1.1</b> Initialising the simulation</a></li>
 <li class="chapter" data-level="1.2" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#execute-generation-turn-over-many-times"><i class="fa fa-check"></i><b>1.2</b> Execute generation turn-over many times</a></li>
 <li class="chapter" data-level="1.3" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#plotting-the-model-results"><i class="fa fa-check"></i><b>1.3</b> Plotting the model results</a></li>
@@ -160,37 +161,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.7" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#summary-of-the-model"><i class="fa fa-check"></i><b>1.7</b> Summary of the model</a></li>
 <li class="chapter" data-level="1.8" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#further-reading-1"><i class="fa fa-check"></i><b>1.8</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html"><i class="fa fa-check"></i><b>2</b> Unbiased and biased mutation</a><ul>
+<li class="chapter" data-level="2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html"><i class="fa fa-check"></i><b>2</b> Unbiased and biased mutation</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#unbiased-mutation"><i class="fa fa-check"></i><b>2.1</b> Unbiased mutation</a></li>
 <li class="chapter" data-level="2.2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#biased-mutation"><i class="fa fa-check"></i><b>2.2</b> Biased mutation</a></li>
 <li class="chapter" data-level="2.3" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#summary-of-the-model-1"><i class="fa fa-check"></i><b>2.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="2.4" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#further-reading-2"><i class="fa fa-check"></i><b>2.4</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html"><i class="fa fa-check"></i><b>3</b> Biased transmission: direct bias</a><ul>
+<li class="chapter" data-level="3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html"><i class="fa fa-check"></i><b>3</b> Biased transmission: direct bias</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#a-simple-model-of-directly-biased-transmission"><i class="fa fa-check"></i><b>3.1</b> A simple model of directly biased transmission</a></li>
 <li class="chapter" data-level="3.2" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#strength-of-selection"><i class="fa fa-check"></i><b>3.2</b> Strength of selection</a></li>
 <li class="chapter" data-level="3.3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#summary-of-the-model-2"><i class="fa fa-check"></i><b>3.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="3.4" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#further-reading-3"><i class="fa fa-check"></i><b>3.4</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html"><i class="fa fa-check"></i><b>4</b> Biased transmission: frequency-dependent indirect bias</a><ul>
+<li class="chapter" data-level="4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html"><i class="fa fa-check"></i><b>4</b> Biased transmission: frequency-dependent indirect bias</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#the-logic-of-conformity"><i class="fa fa-check"></i><b>4.1</b> The logic of conformity</a></li>
 <li class="chapter" data-level="4.2" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#testing-conformist-transmission"><i class="fa fa-check"></i><b>4.2</b> Testing conformist transmission</a></li>
 <li class="chapter" data-level="4.3" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#summary-of-the-model-3"><i class="fa fa-check"></i><b>4.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="4.4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#further-readings"><i class="fa fa-check"></i><b>4.4</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html"><i class="fa fa-check"></i><b>5</b> Biased transmission: demonstrator-based indirect bias</a><ul>
+<li class="chapter" data-level="5" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html"><i class="fa fa-check"></i><b>5</b> Biased transmission: demonstrator-based indirect bias</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#a-simple-demonstrator-bias"><i class="fa fa-check"></i><b>5.1</b> A simple demonstrator bias</a></li>
 <li class="chapter" data-level="5.2" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#predicting-the-winning-trait"><i class="fa fa-check"></i><b>5.2</b> Predicting the ‘winning’ trait</a></li>
 <li class="chapter" data-level="5.3" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#summary-of-the-model-4"><i class="fa fa-check"></i><b>5.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="5.4" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#further-readings-1"><i class="fa fa-check"></i><b>5.4</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html"><i class="fa fa-check"></i><b>6</b> Vertical and horizontal transmission</a><ul>
+<li class="chapter" data-level="6" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html"><i class="fa fa-check"></i><b>6</b> Vertical and horizontal transmission</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#vertical-cultural-transmission"><i class="fa fa-check"></i><b>6.1</b> Vertical cultural transmission</a></li>
 <li class="chapter" data-level="6.2" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#horizontal-cultural-transmission"><i class="fa fa-check"></i><b>6.2</b> Horizontal cultural transmission</a></li>
 <li class="chapter" data-level="6.3" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#summary-of-the-model-5"><i class="fa fa-check"></i><b>6.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="6.4" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#further-reading-4"><i class="fa fa-check"></i><b>6.4</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html"><i class="fa fa-check"></i><b>7</b> Multiple traits models</a><ul>
+<li class="chapter" data-level="7" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html"><i class="fa fa-check"></i><b>7</b> Multiple traits models</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#unbiased-transmission-with-multiple-traits"><i class="fa fa-check"></i><b>7.1</b> Unbiased transmission with multiple traits</a></li>
 <li class="chapter" data-level="7.2" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#introducing-innovation"><i class="fa fa-check"></i><b>7.2</b> Introducing innovation</a></li>
 <li class="chapter" data-level="7.3" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#optimising-the-code"><i class="fa fa-check"></i><b>7.3</b> Optimising the code</a></li>
@@ -199,18 +206,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.6" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#further-readings-2"><i class="fa fa-check"></i><b>7.6</b> Further readings</a></li>
 </ul></li>
 <li class="part"><span><b>Advanced topics - The evolution of cultural evolution</b></span></li>
-<li class="chapter" data-level="8" data-path="rogers-paradox.html"><a href="rogers-paradox.html"><i class="fa fa-check"></i><b>8</b> Rogers’ Paradox</a><ul>
+<li class="chapter" data-level="8" data-path="rogers-paradox.html"><a href="rogers-paradox.html"><i class="fa fa-check"></i><b>8</b> Rogers’ Paradox</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="rogers-paradox.html"><a href="rogers-paradox.html#modelling-rogers-paradox"><i class="fa fa-check"></i><b>8.1</b> Modelling Rogers’ Paradox</a></li>
 <li class="chapter" data-level="8.2" data-path="rogers-paradox.html"><a href="rogers-paradox.html#summary-of-the-model-7"><i class="fa fa-check"></i><b>8.2</b> Summary of the model</a></li>
 <li class="chapter" data-level="8.3" data-path="rogers-paradox.html"><a href="rogers-paradox.html#further-reading-5"><i class="fa fa-check"></i><b>8.3</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html"><i class="fa fa-check"></i><b>9</b> Rogers’ Paradox: A Solution</a><ul>
+<li class="chapter" data-level="9" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html"><i class="fa fa-check"></i><b>9</b> Rogers’ Paradox: A Solution</a>
+<ul>
 <li class="chapter" data-level="9.1" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#modelling-critical-social-learners"><i class="fa fa-check"></i><b>9.1</b> Modelling critical social learners</a></li>
 <li class="chapter" data-level="9.2" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#summary-of-the-model-8"><i class="fa fa-check"></i><b>9.2</b> Summary of the model</a></li>
 <li class="chapter" data-level="9.3" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#further-reading-6"><i class="fa fa-check"></i><b>9.3</b> Further reading</a></li>
 </ul></li>
 <li class="part"><span><b>Advanced topics - Cultural inheritance</b></span></li>
-<li class="chapter" data-level="10" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html"><i class="fa fa-check"></i><b>10</b> Reproduction and transformation</a><ul>
+<li class="chapter" data-level="10" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html"><i class="fa fa-check"></i><b>10</b> Reproduction and transformation</a>
+<ul>
 <li class="chapter" data-level="10.1" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#copying-and-selection"><i class="fa fa-check"></i><b>10.1</b> Copying and selection</a></li>
 <li class="chapter" data-level="10.2" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#convergent-transformation"><i class="fa fa-check"></i><b>10.2</b> Convergent transformation</a></li>
 <li class="chapter" data-level="10.3" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#emergent-similarity"><i class="fa fa-check"></i><b>10.3</b> Emergent similarity</a></li>
@@ -218,56 +228,59 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.5" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#summary-of-the-model-9"><i class="fa fa-check"></i><b>10.5</b> Summary of the model</a></li>
 <li class="chapter" data-level="10.6" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#further-readings-3"><i class="fa fa-check"></i><b>10.6</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html"><i class="fa fa-check"></i><b>11</b> Social learning of social learning rules</a><ul>
+<li class="chapter" data-level="11" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html"><i class="fa fa-check"></i><b>11</b> Social learning of social learning rules</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#openness-and-conservatism"><i class="fa fa-check"></i><b>11.1</b> Openness and conservatism</a></li>
 <li class="chapter" data-level="11.2" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#maintaining-open-populations"><i class="fa fa-check"></i><b>11.2</b> Maintaining open populations</a></li>
 <li class="chapter" data-level="11.3" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#summary-of-the-model-10"><i class="fa fa-check"></i><b>11.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="11.4" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#further-readings-4"><i class="fa fa-check"></i><b>11.4</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html"><i class="fa fa-check"></i><b>12</b> Traits inter-dependence</a><ul>
+<li class="chapter" data-level="12" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html"><i class="fa fa-check"></i><b>12</b> Traits inter-dependence</a>
+<ul>
 <li class="chapter" data-level="12.1" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#compatible-and-incompatible-traits"><i class="fa fa-check"></i><b>12.1</b> Compatible and incompatible traits</a></li>
 <li class="chapter" data-level="12.2" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#many-traits-model"><i class="fa fa-check"></i><b>12.2</b> Many-traits model</a></li>
 <li class="chapter" data-level="12.3" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#summary-of-the-model-11"><i class="fa fa-check"></i><b>12.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="12.4" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#further-readings-5"><i class="fa fa-check"></i><b>12.4</b> Further readings</a></li>
 </ul></li>
 <li class="part"><span><b>Advanced topics - Culture and populations</b></span></li>
-<li class="chapter" data-level="13" data-path="demography.html"><a href="demography.html"><i class="fa fa-check"></i><b>13</b> Demography</a><ul>
+<li class="chapter" data-level="13" data-path="demography.html"><a href="demography.html"><i class="fa fa-check"></i><b>13</b> Demography</a>
+<ul>
 <li class="chapter" data-level="13.1" data-path="demography.html"><a href="demography.html#the-tasmania-case"><i class="fa fa-check"></i><b>13.1</b> The Tasmania Case</a></li>
 <li class="chapter" data-level="13.2" data-path="demography.html"><a href="demography.html#modelling-the-tasmania-case"><i class="fa fa-check"></i><b>13.2</b> Modelling the Tasmania Case</a></li>
 <li class="chapter" data-level="13.3" data-path="demography.html"><a href="demography.html#calculating-critical-population-sizes-based-on-skill-complexity"><i class="fa fa-check"></i><b>13.3</b> Calculating critical population sizes based on skill complexity</a></li>
 <li class="chapter" data-level="13.4" data-path="demography.html"><a href="demography.html#summary-of-the-model-12"><i class="fa fa-check"></i><b>13.4</b> Summary of the model</a></li>
 <li class="chapter" data-level="13.5" data-path="demography.html"><a href="demography.html#further-readings-6"><i class="fa fa-check"></i><b>13.5</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="social-network-structure.html"><a href="social-network-structure.html"><i class="fa fa-check"></i><b>14</b> Social network structure</a><ul>
+<li class="chapter" data-level="14" data-path="social-network-structure.html"><a href="social-network-structure.html"><i class="fa fa-check"></i><b>14</b> Social network structure</a>
+<ul>
 <li class="chapter" data-level="14.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-basics"><i class="fa fa-check"></i><b>14.1</b> Network basics</a></li>
 <li class="chapter" data-level="14.2" data-path="social-network-structure.html"><a href="social-network-structure.html#generating-networks"><i class="fa fa-check"></i><b>14.2</b> Generating networks</a></li>
-<li class="chapter" data-level="14.3" data-path="social-network-structure.html"><a href="social-network-structure.html#plotting-networks"><i class="fa fa-check"></i><b>14.3</b> Plotting networks</a><ul>
+<li class="chapter" data-level="14.3" data-path="social-network-structure.html"><a href="social-network-structure.html#plotting-networks"><i class="fa fa-check"></i><b>14.3</b> Plotting networks</a>
+<ul>
 <li class="chapter" data-level="14.3.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-layout"><i class="fa fa-check"></i><b>14.3.1</b> Network layout</a></li>
 <li class="chapter" data-level="14.3.2" data-path="social-network-structure.html"><a href="social-network-structure.html#network-styling"><i class="fa fa-check"></i><b>14.3.2</b> Network styling</a></li>
 </ul></li>
-<li class="chapter" data-level="14.4" data-path="social-network-structure.html"><a href="social-network-structure.html#analyse-social-networks"><i class="fa fa-check"></i><b>14.4</b> Analyse social networks</a><ul>
+<li class="chapter" data-level="14.4" data-path="social-network-structure.html"><a href="social-network-structure.html#analyse-social-networks"><i class="fa fa-check"></i><b>14.4</b> Analyse social networks</a>
+<ul>
 <li class="chapter" data-level="14.4.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-properties-and-characteristics"><i class="fa fa-check"></i><b>14.4.1</b> Network properties and characteristics</a></li>
 <li class="chapter" data-level="14.4.2" data-path="social-network-structure.html"><a href="social-network-structure.html#vertex-properties"><i class="fa fa-check"></i><b>14.4.2</b> Vertex properties</a></li>
 </ul></li>
-<li class="chapter" data-level="14.5" data-path="social-network-structure.html"><a href="social-network-structure.html#modelling-information-transmission-in-social-networks"><i class="fa fa-check"></i><b>14.5</b> Modelling information transmission in social networks</a><ul>
+<li class="chapter" data-level="14.5" data-path="social-network-structure.html"><a href="social-network-structure.html#modelling-information-transmission-in-social-networks"><i class="fa fa-check"></i><b>14.5</b> Modelling information transmission in social networks</a>
+<ul>
 <li class="chapter" data-level="14.5.1" data-path="social-network-structure.html"><a href="social-network-structure.html#gossip-diffusion-in-networked-populations"><i class="fa fa-check"></i><b>14.5.1</b> Gossip diffusion in networked populations</a></li>
 <li class="chapter" data-level="14.5.2" data-path="social-network-structure.html"><a href="social-network-structure.html#complex-versus-simple-contagion-information-transmission"><i class="fa fa-check"></i><b>14.5.2</b> Complex versus simple contagion information transmission</a></li>
 </ul></li>
 <li class="chapter" data-level="14.6" data-path="social-network-structure.html"><a href="social-network-structure.html#summary-of-the-model-13"><i class="fa fa-check"></i><b>14.6</b> Summary of the model</a></li>
 <li class="chapter" data-level="14.7" data-path="social-network-structure.html"><a href="social-network-structure.html#further-reading-7"><i class="fa fa-check"></i><b>14.7</b> Further Reading</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html"><i class="fa fa-check"></i><b>15</b> Group structured populations and migration</a><ul>
+<li class="chapter" data-level="15" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html"><i class="fa fa-check"></i><b>15</b> Group structured populations and migration</a>
+<ul>
 <li class="chapter" data-level="15.1" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#modelling-migration-and-contact-between-population-subsets"><i class="fa fa-check"></i><b>15.1</b> Modelling migration and contact between population subsets</a></li>
 <li class="chapter" data-level="15.2" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#subdivided-population-with-limited-contact"><i class="fa fa-check"></i><b>15.2</b> Subdivided population with limited contact</a></li>
 <li class="chapter" data-level="15.3" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#subdivided-populations-with-migration"><i class="fa fa-check"></i><b>15.3</b> Subdivided populations with migration</a></li>
 <li class="chapter" data-level="15.4" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#varying-contact-and-migration-probability-for-repeated-simulation-runs"><i class="fa fa-check"></i><b>15.4</b> Varying contact and migration probability for repeated simulation runs</a></li>
-<li class="chapter" data-level="15.5" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#model-extensions"><i class="fa fa-check"></i><b>15.5</b> Model extensions</a><ul>
-<li class="chapter" data-level="" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#innovation-or-mutation"><i class="fa fa-check"></i>Innovation or mutation</a></li>
-<li><a href="group-structured-populations-and-migration.html#copy-m-models">Copy <span class="math inline">\(m\)</span> models</a></li>
-<li class="chapter" data-level="" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#variable-migration-probability-among-subsets"><i class="fa fa-check"></i>Variable migration probability among subsets</a></li>
-</ul></li>
-<li class="chapter" data-level="15.6" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#summary-of-the-model-14"><i class="fa fa-check"></i><b>15.6</b> Summary of the model</a></li>
-<li class="chapter" data-level="15.7" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#further-reading-8"><i class="fa fa-check"></i><b>15.7</b> Further reading</a></li>
+<li class="chapter" data-level="15.5" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#summary-of-the-model-14"><i class="fa fa-check"></i><b>15.5</b> Summary of the model</a></li>
+<li class="chapter" data-level="15.6" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#further-reading-8"><i class="fa fa-check"></i><b>15.6</b> Further reading</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -293,165 +306,169 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="references" class="section level1 unnumbered">
 <h1>References</h1>
 
-<div id="refs" class="references">
-<div id="ref-acerbi_cultural_2019-1">
-<p>Acerbi, Alberto. 2019. <em>Cultural Evolution in the Digital Age</em>. Oxford, New York: Oxford University Press.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-acerbi_cultural_2019-1" class="csl-entry">
+Acerbi, Alberto. 2019. <em>Cultural <span>Evolution</span> in the <span>Digital</span> <span>Age</span></em>. Oxford, New York: Oxford University Press.
 </div>
-<div id="ref-acerbi_cultural_2019">
-<p>Acerbi, Alberto, Mathieu Charbonneau, Helena Miton, and Thom Scott-Phillips. 2019. “Cultural Stability Without Copying.” Preprint. Open Science Framework. <a href="https://doi.org/10.31219/osf.io/vjcq3">https://doi.org/10.31219/osf.io/vjcq3</a>.</p>
+<div id="ref-acerbi_cultural_2019" class="csl-entry">
+Acerbi, Alberto, Mathieu Charbonneau, Helena Miton, and Thom Scott-Phillips. 2019. <span>“Cultural Stability Without Copying.”</span> Preprint. Open Science Framework. <a href="https://doi.org/10.31219/osf.io/vjcq3">https://doi.org/10.31219/osf.io/vjcq3</a>.
 </div>
-<div id="ref-acerbi_cultural_2009">
-<p>Acerbi, Alberto, Magnus Enquist, and Stefano Ghirlanda. 2009. “Cultural Evolution and Individual Development of Openness and Conservatism.” <em>Proceedings of the National Academy of Sciences</em> 106 (45): 18931–5. <a href="https://doi.org/10.1073/pnas.0908889106">https://doi.org/10.1073/pnas.0908889106</a>.</p>
+<div id="ref-acerbi_cultural_2009" class="csl-entry">
+Acerbi, Alberto, Magnus Enquist, and Stefano Ghirlanda. 2009. <span>“Cultural Evolution and Individual Development of Openness and Conservatism.”</span> <em>Proceedings of the National Academy of Sciences</em> 106 (45): 18931–35. <a href="https://doi.org/10.1073/pnas.0908889106">https://doi.org/10.1073/pnas.0908889106</a>.
 </div>
-<div id="ref-acerbi_regulatory_2014">
-<p>Acerbi, Alberto, Stefano Ghirlanda, and Magnus Enquist. 2014. “Regulatory Traits: Cultural Influences on Cultural Evolution.” In <em>Evolution, Complexity and Artificial Life</em>, edited by Stefano Cagnoni, Marco Mirolli, and Marco Villani, 135–47. Berlin, Heidelberg: Springer. <a href="https://doi.org/10.1007/978-3-642-37577-4_9">https://doi.org/10.1007/978-3-642-37577-4_9</a>.</p>
+<div id="ref-acerbi_regulatory_2014" class="csl-entry">
+Acerbi, Alberto, Stefano Ghirlanda, and Magnus Enquist. 2014. <span>“Regulatory <span>Traits</span>: <span>Cultural</span> <span>Influences</span> on <span>Cultural</span> <span>Evolution</span>.”</span> In <em>Evolution, <span>Complexity</span> and <span>Artificial</span> <span>Life</span></em>, edited by Stefano Cagnoni, Marco Mirolli, and Marco Villani, 135–47. Berlin, Heidelberg: Springer. <a href="https://doi.org/10.1007/978-3-642-37577-4_9">https://doi.org/10.1007/978-3-642-37577-4_9</a>.
 </div>
-<div id="ref-acerbi_if_2015">
-<p>Acerbi, Alberto, and Alex Mesoudi. 2015. “If We Are All Cultural Darwinians What’s the Fuss About? Clarifying Recent Disagreements in the Field of Cultural Evolution.” <em>Biology &amp; Philosophy</em> 30 (4): 481–503. <a href="https://doi.org/10.1007/s10539-015-9490-2">https://doi.org/10.1007/s10539-015-9490-2</a>.</p>
+<div id="ref-acerbi_if_2015" class="csl-entry">
+Acerbi, Alberto, and Alex Mesoudi. 2015. <span>“If We Are All Cultural <span>Darwinians</span> What’s the Fuss about? <span>Clarifying</span> Recent Disagreements in the Field of Cultural Evolution.”</span> <em>Biology &amp; Philosophy</em> 30 (4): 481–503. <a href="https://doi.org/10.1007/s10539-015-9490-2">https://doi.org/10.1007/s10539-015-9490-2</a>.
 </div>
-<div id="ref-aplin_social_2012">
-<p>Aplin, L. M., D. R. Farine, J. Morand-Ferron, and B. C. Sheldon. 2012. “Social Networks Predict Patch Discovery in a Wild Population of Songbirds.” <em>Proceedings of the Royal Society B: Biological Sciences</em> 279 (1745): 4199–4205. <a href="https://doi.org/10.1098/rspb.2012.1591">https://doi.org/10.1098/rspb.2012.1591</a>.</p>
+<div id="ref-aplin_social_2012" class="csl-entry">
+Aplin, L. M., D. R. Farine, J. Morand-Ferron, and B. C. Sheldon. 2012. <span>“Social Networks Predict Patch Discovery in a Wild Population of Songbirds.”</span> <em>Proceedings of the Royal Society B: Biological Sciences</em> 279 (1745): 4199–4205. <a href="https://doi.org/10.1098/rspb.2012.1591">https://doi.org/10.1098/rspb.2012.1591</a>.
 </div>
-<div id="ref-bentley_random_2004">
-<p>Bentley, R. Alexander, Matthew W. Hahn, and Stephen J. Shennan. 2004. “Random Drift and Culture Change.” <em>Proceedings of the Royal Society of London. Series B: Biological Sciences</em> 271 (1547): 1443–50. <a href="https://doi.org/10.1098/rspb.2004.2746">https://doi.org/10.1098/rspb.2004.2746</a>.</p>
+<div id="ref-bentley_random_2004" class="csl-entry">
+Bentley, R. Alexander, Matthew W. Hahn, and Stephen J. Shennan. 2004. <span>“Random Drift and Culture Change.”</span> <em>Proceedings of the Royal Society of London. Series B: Biological Sciences</em> 271 (1547): 1443–50. <a href="https://doi.org/10.1098/rspb.2004.2746">https://doi.org/10.1098/rspb.2004.2746</a>.
 </div>
-<div id="ref-boyd_culture_1985">
-<p>Boyd, Robert, and Peter J. Richerson. 1985. <em>Culture and the Evolutionary Process</em>. Culture and the Evolutionary Process. Chicago, IL, US: University of Chicago Press.</p>
+<div id="ref-boyd_culture_1985" class="csl-entry">
+Boyd, Robert, and Peter J. Richerson. 1985. <em>Culture and the Evolutionary Process</em>. Culture and the Evolutionary Process. Chicago, IL, US: University of Chicago Press.
 </div>
-<div id="ref-boyd_why_1995">
-<p>———. 1995. “Why Does Culture Increase Human Adaptability?” <em>Ethology and Sociobiology</em> 16 (2): 125–43. <a href="https://doi.org/10.1016/0162-3095(94)00073-G">https://doi.org/10.1016/0162-3095(94)00073-G</a>.</p>
+<div id="ref-boyd_why_1995" class="csl-entry">
+———. 1995. <span>“Why Does Culture Increase Human Adaptability?”</span> <em>Ethology and Sociobiology</em> 16 (2): 125–43. <a href="https://doi.org/10.1016/0162-3095(94)00073-G">https://doi.org/10.1016/0162-3095(94)00073-G</a>.
 </div>
-<div id="ref-boyd_voting_2009">
-<p>———. 2009. “Voting with Your Feet: Payoff Biased Migration and the Evolution of Group Beneficial Behavior.” <em>Journal of Theoretical Biology</em> 257 (2): 331–39. <a href="https://doi.org/10.1016/j.jtbi.2008.12.007">https://doi.org/10.1016/j.jtbi.2008.12.007</a>.</p>
+<div id="ref-boyd_voting_2009" class="csl-entry">
+———. 2009. <span>“Voting with Your Feet: <span>Payoff</span> Biased Migration and the Evolution of Group Beneficial Behavior.”</span> <em>Journal of Theoretical Biology</em> 257 (2): 331–39. <a href="https://doi.org/10.1016/j.jtbi.2008.12.007">https://doi.org/10.1016/j.jtbi.2008.12.007</a>.
 </div>
-<div id="ref-buskell_systems_2019">
-<p>Buskell, Andrew, Magnus Enquist, and Fredrik Jansson. 2019. “A Systems Approach to Cultural Evolution.” <em>Palgrave Communications</em> 5: 131. <a href="https://www.nature.com/articles/s41599-019-0343-5">https://www.nature.com/articles/s41599-019-0343-5</a>.</p>
+<div id="ref-buskell_systems_2019" class="csl-entry">
+Buskell, Andrew, Magnus Enquist, and Fredrik Jansson. 2019. <span>“A Systems Approach to Cultural Evolution.”</span> <em>Palgrave Communications</em> 5: 131. <a href="https://www.nature.com/articles/s41599-019-0343-5">https://www.nature.com/articles/s41599-019-0343-5</a>.
 </div>
-<div id="ref-cavalli-sforza_cultural_1981">
-<p>Cavalli-Sforza, Luigi Luca, and Marcus W. Feldman. 1981. <em>Cultural Transmission and Evolution</em>. Princeton: Princeton Univ. Press.</p>
+<div id="ref-cavalli-sforza_cultural_1981" class="csl-entry">
+Cavalli-Sforza, Luigi Luca, and Marcus W. Feldman. 1981. <em>Cultural Transmission and Evolution</em>. Princeton: Princeton Univ. Press.
 </div>
-<div id="ref-centola_spread_2010">
-<p>Centola, Damon. 2010. “The Spread of Behavior in an Online Social Network Experiment.” <em>Science</em> 329 (5996): 1194–7. <a href="https://doi.org/10.1126/science.1185231">https://doi.org/10.1126/science.1185231</a>.</p>
+<div id="ref-centola_spread_2010" class="csl-entry">
+Centola, Damon. 2010. <span>“The <span>Spread</span> of <span>Behavior</span> in an <span>Online</span> <span>Social</span> <span>Network</span> <span>Experiment</span>.”</span> <em>Science</em> 329 (5996): 1194–97. <a href="https://doi.org/10.1126/science.1185231">https://doi.org/10.1126/science.1185231</a>.
 </div>
-<div id="ref-derex_cumulative_2020">
-<p>Derex, Maxime, and Alex Mesoudi. 2020. “Cumulative Cultural Evolution Within Evolving Population Structures.” <em>Trends in Cognitive Sciences</em> 24 (8): 654–67. <a href="https://doi.org/10.1016/j.tics.2020.04.005">https://doi.org/10.1016/j.tics.2020.04.005</a>.</p>
+<div id="ref-derex_cumulative_2020" class="csl-entry">
+Derex, Maxime, and Alex Mesoudi. 2020. <span>“Cumulative <span>Cultural</span> <span>Evolution</span> Within <span>Evolving</span> <span>Population</span> <span>Structures</span>.”</span> <em>Trends in Cognitive Sciences</em> 24 (8): 654–67. <a href="https://doi.org/10.1016/j.tics.2020.04.005">https://doi.org/10.1016/j.tics.2020.04.005</a>.
 </div>
-<div id="ref-efferson_conformists_2008">
-<p>Efferson, C., Rafael Lalive, Peter J. Richerson, R. McElreath, and Mark Lubell. 2008. “Conformists and Mavericks: The Empirics of Frequency-Dependent Cultural Transmission.” <em>Evolution and Human Behavior</em> 29 (1): 56–64. <a href="https://doi.org/10.1016/j.evolhumbehav.2007.08.003">https://doi.org/10.1016/j.evolhumbehav.2007.08.003</a>.</p>
+<div id="ref-efferson_conformists_2008" class="csl-entry">
+Efferson, C., Rafael Lalive, Peter J. Richerson, R. McElreath, and Mark Lubell. 2008. <span>“Conformists and Mavericks: The Empirics of Frequency-Dependent Cultural Transmission.”</span> <em>Evolution and Human Behavior</em> 29 (1): 56–64. <a href="https://doi.org/10.1016/j.evolhumbehav.2007.08.003">https://doi.org/10.1016/j.evolhumbehav.2007.08.003</a>.
 </div>
-<div id="ref-enquist_critical_2007">
-<p>Enquist, Magnus, Kimmo Eriksson, and Stefano Ghirlanda. 2007. “Critical Social Learning: A Solution to Rogers’s Paradox of Nonadaptive Culture.” <em>American Anthropologist</em> 109 (4): 727–34.</p>
+<div id="ref-enquist_critical_2007" class="csl-entry">
+Enquist, Magnus, Kimmo Eriksson, and Stefano Ghirlanda. 2007. <span>“Critical <span>Social</span> <span>Learning</span>: <span>A</span> <span>Solution</span> to <span>Rogers</span>’s <span>Paradox</span> of <span>Nonadaptive</span> <span>Culture</span>.”</span> <em>American Anthropologist</em> 109 (4): 727–34.
 </div>
-<div id="ref-enquist_modelling_2011">
-<p>Enquist, Magnus, Stefano Ghirlanda, and Kimmo Eriksson. 2011. “Modelling the Evolution and Diversity of Cumulative Culture.” <em>Philosophical Transactions of the Royal Society B: Biological Sciences</em> 366 (1563): 412–23. <a href="https://doi.org/10.1098/rstb.2010.0132">https://doi.org/10.1098/rstb.2010.0132</a>.</p>
+<div id="ref-enquist_modelling_2011" class="csl-entry">
+Enquist, Magnus, Stefano Ghirlanda, and Kimmo Eriksson. 2011. <span>“Modelling the Evolution and Diversity of Cumulative Culture.”</span> <em>Philosophical Transactions of the Royal Society B: Biological Sciences</em> 366 (1563): 412–23. <a href="https://doi.org/10.1098/rstb.2010.0132">https://doi.org/10.1098/rstb.2010.0132</a>.
 </div>
-<div id="ref-ghirlanda_cultural_2006">
-<p>Ghirlanda, Stefano, Magnus Enquist, and Mayuko Nakamaru. 2006. “Cultural Evolution Develops Its Own Rules: The Rise of Conservatism and Persuasion.” <em>Current Anthropology</em> 47 (6): 1027–34. <a href="https://doi.org/10.1086/508696">https://doi.org/10.1086/508696</a>.</p>
+<div id="ref-ghirlanda_cultural_2006" class="csl-entry">
+Ghirlanda, Stefano, Magnus Enquist, and Mayuko Nakamaru. 2006. <span>“Cultural <span>Evolution</span> <span>Develops</span> <span>Its</span> <span>Own</span> <span>Rules</span>: <span>The</span> <span>Rise</span> of <span>Conservatism</span> and <span>Persuasion</span>.”</span> <em>Current Anthropology</em> 47 (6): 1027–34. <a href="https://doi.org/10.1086/508696">https://doi.org/10.1086/508696</a>.
 </div>
-<div id="ref-ghirlanda_sustainability_2010">
-<p>Ghirlanda, Stefano, Magnus Enquist, and Matjaž Perc. 2010. “Sustainability of Culture-Driven Population Dynamics.” <em>Theoretical Population Biology</em> 77 (3): 181–88. <a href="https://doi.org/10.1016/j.tpb.2010.01.004">https://doi.org/10.1016/j.tpb.2010.01.004</a>.</p>
+<div id="ref-ghirlanda_sustainability_2010" class="csl-entry">
+Ghirlanda, Stefano, Magnus Enquist, and Matjaž Perc. 2010. <span>“Sustainability of Culture-Driven Population Dynamics.”</span> <em>Theoretical Population Biology</em> 77 (3): 181–88. <a href="https://doi.org/10.1016/j.tpb.2010.01.004">https://doi.org/10.1016/j.tpb.2010.01.004</a>.
 </div>
-<div id="ref-grolemund_hands-programming_2014">
-<p>Grolemund, Garrett. 2014. <em>Hands-on Programming with R</em>. Sebastopol, CA. <a href="https://rstudio-education.github.io/hopr/">https://rstudio-education.github.io/hopr/</a>.</p>
+<div id="ref-grolemund_hands-programming_2014" class="csl-entry">
+Grolemund, Garrett. 2014. <em>Hands-<span>On</span> <span>Programming</span> with <span>R</span></em>. Sebastopol, CA. <a href="https://rstudio-education.github.io/hopr/">https://rstudio-education.github.io/hopr/</a>.
 </div>
-<div id="ref-henrich_cultural_2001">
-<p>Henrich, Joseph. 2001. “Cultural Transmission and the Diffusion of Innovations.” <em>American Anthropologist</em> 103 (4): 992–1013.</p>
+<div id="ref-henrich_cultural_2001" class="csl-entry">
+Henrich, Joseph. 2001. <span>“Cultural Transmission and the Diffusion of Innovations.”</span> <em>American Anthropologist</em> 103 (4): 992–1013.
 </div>
-<div id="ref-henrich_demography_2004">
-<p>———. 2004. “Demography and Cultural Evolution: How Adaptive Cultural Processes Can Produce Maladaptive Losses: The Tasmanian Case.” <em>American Antiquity</em> 69 (2): 197–214. <a href="https://doi.org/10.2307/4128416">https://doi.org/10.2307/4128416</a>.</p>
+<div id="ref-henrich_demography_2004" class="csl-entry">
+———. 2004. <span>“Demography and <span>Cultural</span> <span>Evolution</span>: <span>How</span> <span>Adaptive</span> <span>Cultural</span> <span>Processes</span> Can <span>Produce</span> <span>Maladaptive</span> <span>Losses</span>: <span>The</span> <span>Tasmanian</span> <span>Case</span>.”</span> <em>American Antiquity</em> 69 (2): 197–214. <a href="https://doi.org/10.2307/4128416">https://doi.org/10.2307/4128416</a>.
 </div>
-<div id="ref-henrich_secret_2016">
-<p>———. 2016. <em>The Secret of Our Success</em>. Princeton, NJ: Princeton University Press.</p>
+<div id="ref-henrich_secret_2016" class="csl-entry">
+———. 2016. <em>The <span>Secret</span> of <span>Our</span> <span>Success</span></em>. Princeton, NJ: Princeton University Press.
 </div>
-<div id="ref-henrich_evolution_1998">
-<p>Henrich, Joseph, and Robert Boyd. 1998. “The Evolution of Conformist Transmission and the Emergence of Between-Group Differences.” <em>Evolution and Human Behavior</em> 19 (4): 215–41. <a href="https://doi.org/10.1016/S1090-5138(98)00018-X">https://doi.org/10.1016/S1090-5138(98)00018-X</a>.</p>
+<div id="ref-henrich_evolution_1998" class="csl-entry">
+Henrich, Joseph, and Robert Boyd. 1998. <span>“The Evolution of Conformist Transmission and the Emergence of Between-Group Differences.”</span> <em>Evolution and Human Behavior</em> 19 (4): 215–41. <a href="https://doi.org/10.1016/S1090-5138(98)00018-X">https://doi.org/10.1016/S1090-5138(98)00018-X</a>.
 </div>
-<div id="ref-henrich_evolution_2001">
-<p>Henrich, Joseph, and Francisco J Gil-White. 2001. “The Evolution of Prestige: Freely Conferred Deference as a Mechanism for Enhancing the Benefits of Cultural Transmission.” <em>Evolution and Human Behavior</em> 22 (3): 165–96. <a href="https://doi.org/10.1016/S1090-5138(00)00071-4">https://doi.org/10.1016/S1090-5138(00)00071-4</a>.</p>
+<div id="ref-henrich_joseph_big_2015" class="csl-entry">
+Henrich Joseph, Chudek Maciej, and Boyd Robert. 2015. <span>“The <span>Big</span> <span>Man</span> <span>Mechanism</span>: How Prestige Fosters Cooperation and Creates Prosocial Leaders.”</span> <em>Philosophical Transactions of the Royal Society B: Biological Sciences</em> 370 (1683): 20150013. <a href="https://doi.org/10.1098/rstb.2015.0013">https://doi.org/10.1098/rstb.2015.0013</a>.
 </div>
-<div id="ref-henrich_joseph_big_2015">
-<p>Henrich Joseph, Chudek Maciej, and Boyd Robert. 2015. “The Big Man Mechanism: How Prestige Fosters Cooperation and Creates Prosocial Leaders.” <em>Philosophical Transactions of the Royal Society B: Biological Sciences</em> 370 (1683): 20150013. <a href="https://doi.org/10.1098/rstb.2015.0013">https://doi.org/10.1098/rstb.2015.0013</a>.</p>
+<div id="ref-henrich_evolution_2001" class="csl-entry">
+Henrich, Joseph, and Francisco J Gil-White. 2001. <span>“The Evolution of Prestige: Freely Conferred Deference as a Mechanism for Enhancing the Benefits of Cultural Transmission.”</span> <em>Evolution and Human Behavior</em> 22 (3): 165–96. <a href="https://doi.org/10.1016/S1090-5138(00)00071-4">https://doi.org/10.1016/S1090-5138(00)00071-4</a>.
 </div>
-<div id="ref-heyes_whats_2012">
-<p>Heyes, Cecilia. 2012. “What’s Social About Social Learning?” <em>Journal of Comparative Psychology</em> 126 (2): 193–202. <a href="https://doi.org/10.1037/a0025180">https://doi.org/10.1037/a0025180</a>.</p>
+<div id="ref-heyes_whats_2012" class="csl-entry">
+Heyes, Cecilia. 2012. <span>“What’s Social about Social Learning?”</span> <em>Journal of Comparative Psychology</em> 126 (2): 193–202. <a href="https://doi.org/10.1037/a0025180">https://doi.org/10.1037/a0025180</a>.
 </div>
-<div id="ref-hill_hunter-gatherer_2014">
-<p>Hill, Kim R., Brian M. Wood, Jacopo Baggio, A. Magdalena Hurtado, and Robert T. Boyd. 2014. “Hunter-Gatherer Inter-Band Interaction Rates: Implications for Cumulative Culture.” <em>PLOS ONE</em> 9 (7): e102806. <a href="https://doi.org/10.1371/journal.pone.0102806">https://doi.org/10.1371/journal.pone.0102806</a>.</p>
+<div id="ref-hill_hunter-gatherer_2014" class="csl-entry">
+Hill, Kim R., Brian M. Wood, Jacopo Baggio, A. Magdalena Hurtado, and Robert T. Boyd. 2014. <span>“Hunter-<span>Gatherer</span> <span>Inter</span>-<span>Band</span> <span>Interaction</span> <span>Rates</span>: <span>Implications</span> for <span>Cumulative</span> <span>Culture</span>.”</span> <em>PLOS ONE</em> 9 (7): e102806. <a href="https://doi.org/10.1371/journal.pone.0102806">https://doi.org/10.1371/journal.pone.0102806</a>.
 </div>
-<div id="ref-jimenez_prestige-biased_2019">
-<p>Jiménez, Ángel V., and Alex Mesoudi. 2019. “Prestige-Biased Social Learning: Current Evidence and Outstanding Questions.” <em>Palgrave Communications</em> 5 (1): 1–12. <a href="https://doi.org/10.1057/s41599-019-0228-7">https://doi.org/10.1057/s41599-019-0228-7</a>.</p>
+<div id="ref-jimenez_prestige-biased_2019" class="csl-entry">
+Jiménez, Ángel V., and Alex Mesoudi. 2019. <span>“Prestige-Biased Social Learning: Current Evidence and Outstanding Questions.”</span> <em>Palgrave Communications</em> 5 (1): 1–12. <a href="https://doi.org/10.1057/s41599-019-0228-7">https://doi.org/10.1057/s41599-019-0228-7</a>.
 </div>
-<div id="ref-laland_darwins_2017">
-<p>Laland, Kevin N. 2017. <em>Darwin’s Unfinished Symphony: How Culture Made the Human Mind</em>. Princeton, NJ: Princeton University Press.</p>
+<div id="ref-laland_darwins_2017" class="csl-entry">
+Laland, Kevin N. 2017. <em>Darwin’s <span>Unfinished</span> <span>Symphony</span>: <span>How</span> <span>Culture</span> <span>Made</span> the <span>Human</span> <span>Mind</span></em>. Princeton, NJ: Princeton University Press.
 </div>
-<div id="ref-lansing_domain_2011">
-<p>Lansing, J. Stephen, and Murray P. Cox. 2011. “The Domain of the Replicators.” <em>Current Anthropology</em> 52 (1): 105–25. <a href="https://doi.org/10.1086/657643">https://doi.org/10.1086/657643</a>.</p>
+<div id="ref-lansing_domain_2011" class="csl-entry">
+Lansing, J. Stephen, and Murray P. Cox. 2011. <span>“The Domain of the Replicators.”</span> <em>Current Anthropology</em> 52 (1): 105–25. <a href="https://doi.org/10.1086/657643">https://doi.org/10.1086/657643</a>.
 </div>
-<div id="ref-luncz_tradition_2014">
-<p>Luncz, Lydia V., and Christophe Boesch. 2014. “Tradition over Trend: Neighboring Chimpanzee Communities Maintain Differences in Cultural Behavior Despite Frequent Immigration of Adult Females.” <em>American Journal of Primatology</em> 76 (7): 649–57. <a href="https://doi.org/10.1002/ajp.22259">https://doi.org/10.1002/ajp.22259</a>.</p>
+<div id="ref-luncz_tradition_2014" class="csl-entry">
+Luncz, Lydia V., and Christophe Boesch. 2014. <span>“Tradition over Trend: <span>Neighboring</span> Chimpanzee Communities Maintain Differences in Cultural Behavior Despite Frequent Immigration of Adult Females.”</span> <em>American Journal of Primatology</em> 76 (7): 649–57. <a href="https://doi.org/10.1002/ajp.22259">https://doi.org/10.1002/ajp.22259</a>.
 </div>
-<div id="ref-mesoudi_cultural_2011">
-<p>Mesoudi, Alex. 2011. <em>Cultural Evolution: How Darwinian Theory Can Explain Human Culture and Synthesize the Social Sciences</em>. Chicago: University of Chicago Press.</p>
+<div id="ref-mesoudi_cultural_2009" class="csl-entry">
+Mesoudi, Alex. 2009. <span>“The <span>Cultural</span> <span>Dynamics</span> of <span>Copycat</span> <span>Suicide</span>.”</span> <em>PLOS ONE</em> 4 (9): e7252. <a href="https://doi.org/10.1371/journal.pone.0007252">https://doi.org/10.1371/journal.pone.0007252</a>.
 </div>
-<div id="ref-mesoudi_cultural_2009">
-<p>———. 2009. “The Cultural Dynamics of Copycat Suicide.” <em>PLOS ONE</em> 4 (9): e7252. <a href="https://doi.org/10.1371/journal.pone.0007252">https://doi.org/10.1371/journal.pone.0007252</a>.</p>
+<div id="ref-mesoudi_cultural_2011" class="csl-entry">
+———. 2011. <em>Cultural <span>Evolution</span>: <span>How</span> <span>Darwinian</span> <span>Theory</span> <span>Can</span> <span>Explain</span> <span>Human</span> <span>Culture</span> and <span>Synthesize</span> the <span>Social</span> <span>Sciences</span></em>. Chicago: University of Chicago Press.
 </div>
-<div id="ref-mesoudi_migration_2018">
-<p>———. 2018. “Migration, Acculturation, and the Maintenance of Between-Group Cultural Variation.” <em>PLOS ONE</em> 13 (10): e0205573. <a href="https://doi.org/10.1371/journal.pone.0205573">https://doi.org/10.1371/journal.pone.0205573</a>.</p>
+<div id="ref-mesoudi_migration_2018" class="csl-entry">
+———. 2018. <span>“Migration, Acculturation, and the Maintenance of Between-Group Cultural Variation.”</span> <em>PLOS ONE</em> 13 (10): e0205573. <a href="https://doi.org/10.1371/journal.pone.0205573">https://doi.org/10.1371/journal.pone.0205573</a>.
 </div>
-<div id="ref-mesoudi_evolution_2016">
-<p>Mesoudi, Alex, Lei Chang, Sasha R. X. Dall, and Alex Thornton. 2016. “The Evolution of Individual and Cultural Variation in Social Learning.” <em>Trends in Ecology &amp; Evolution</em> 31 (3): 215–25. <a href="https://doi.org/10.1016/j.tree.2015.12.012">https://doi.org/10.1016/j.tree.2015.12.012</a>.</p>
+<div id="ref-mesoudi_evolution_2016" class="csl-entry">
+Mesoudi, Alex, Lei Chang, Sasha R. X. Dall, and Alex Thornton. 2016. <span>“The <span>Evolution</span> of <span>Individual</span> and <span>Cultural</span> <span>Variation</span> in <span>Social</span> <span>Learning</span>.”</span> <em>Trends in Ecology &amp; Evolution</em> 31 (3): 215–25. <a href="https://doi.org/10.1016/j.tree.2015.12.012">https://doi.org/10.1016/j.tree.2015.12.012</a>.
 </div>
-<div id="ref-mesoudi_random_2009">
-<p>Mesoudi, Alex, and Stephen J. Lycett. 2009. “Random Copying, Frequency-Dependent Copying and Culture Change.” <em>Evolution and Human Behavior</em> 30 (1): 41–48. <a href="https://doi.org/10.1016/j.evolhumbehav.2008.07.005">https://doi.org/10.1016/j.evolhumbehav.2008.07.005</a>.</p>
+<div id="ref-mesoudi_random_2009" class="csl-entry">
+Mesoudi, Alex, and Stephen J. Lycett. 2009. <span>“Random Copying, Frequency-Dependent Copying and Culture Change.”</span> <em>Evolution and Human Behavior</em> 30 (1): 41–48. <a href="https://doi.org/10.1016/j.evolhumbehav.2008.07.005">https://doi.org/10.1016/j.evolhumbehav.2008.07.005</a>.
 </div>
-<div id="ref-morin_how_2015">
-<p>Morin, Olivier. 2015. <em>How Traditions Live and Die</em>. London &amp; New York: Oxford University Press.</p>
+<div id="ref-morin_how_2015" class="csl-entry">
+Morin, Olivier. 2015. <em>How <span>Traditions</span> <span>Live</span> and <span>Die</span></em>. London &amp; New York: Oxford University Press.
 </div>
-<div id="ref-neiman_stylistic_1995">
-<p>Neiman, Fraser D. 1995. “Stylistic Variation in Evolutionary Perspective: Inferences from Decorative Diversity and Interassemblage Distance in Illinois Woodland Ceramic Assemblages.” <em>American Antiquity</em> 60 (1): 7–36. <a href="https://doi.org/10.2307/282074">https://doi.org/10.2307/282074</a>.</p>
+<div id="ref-neiman_stylistic_1995" class="csl-entry">
+Neiman, Fraser D. 1995. <span>“Stylistic <span>Variation</span> in <span>Evolutionary</span> <span>Perspective</span>: <span>Inferences</span> from <span>Decorative</span> <span>Diversity</span> and <span>Interassemblage</span> <span>Distance</span> in <span>Illinois</span> <span>Woodland</span> <span>Ceramic</span> <span>Assemblages</span>.”</span> <em>American Antiquity</em> 60 (1): 7–36. <a href="https://doi.org/10.2307/282074">https://doi.org/10.2307/282074</a>.
 </div>
-<div id="ref-nettle_selection_2020">
-<p>Nettle, Daniel. 2020. “Selection, Adaptation, Inheritance and Design in Human Culture: The View from the Price Equation.” <em>Philosophical Transactions of the Royal Society B</em> 375: 20190358.</p>
+<div id="ref-nettle_selection_2020" class="csl-entry">
+Nettle, Daniel. 2020. <span>“Selection, Adaptation, Inheritance and Design in Human Culture: <span>The</span> View from the <span>Price</span> Equation.”</span> <em>Philosophical Transactions of the Royal Society B</em> 375: 20190358.
 </div>
-<div id="ref-osullivan_mathematical_2015">
-<p>O’Sullivan, David J. P., Gary James O’Keeffe, Peter G. Fennell, and James P. Gleeson. 2015. “Mathematical Modeling of Complex Contagion on Clustered Networks.” <em>Frontiers in Physics</em> 3. <a href="https://doi.org/10.3389/fphy.2015.00071">https://doi.org/10.3389/fphy.2015.00071</a>.</p>
+<div id="ref-osullivan_mathematical_2015" class="csl-entry">
+O’Sullivan, David J. P., Gary James O’Keeffe, Peter G. Fennell, and James P. Gleeson. 2015. <span>“Mathematical Modeling of Complex Contagion on Clustered Networks.”</span> <em>Frontiers in Physics</em> 3. <a href="https://doi.org/10.3389/fphy.2015.00071">https://doi.org/10.3389/fphy.2015.00071</a>.
 </div>
-<div id="ref-powell_late_2009">
-<p>Powell, Adam, Stephen Shennan, and Mark Thomas. 2009. “Late Pleistocene Demography and the Appearance of Modern Human Behavior.” <em>Science</em> 324: 1298–1301.</p>
+<div id="ref-powell_late_2009" class="csl-entry">
+Powell, Adam, Stephen Shennan, and Mark Thomas. 2009. <span>“Late <span>Pleistocene</span> <span>Demography</span> and the <span>Appearance</span> of <span>Modern</span> <span>Human</span> <span>Behavior</span>.”</span> <em>Science</em> 324: 1298–1301.
 </div>
-<div id="ref-reader_distinguishing_2004">
-<p>Reader, S. M. 2004. “Distinguishing Social and Asocial Learning Using Diffusion Dynamics.” <em>Learning and Behavior</em> 32: 90–104.</p>
+<div id="ref-reader_distinguishing_2004" class="csl-entry">
+Reader, S. M. 2004. <span>“Distinguishing Social and Asocial Learning Using Diffusion Dynamics.”</span> <em>Learning and Behavior</em> 32: 90–104.
 </div>
-<div id="ref-rogers_does_1988">
-<p>Rogers, Alan R. 1988. “Does Biology Constrain Culture?” <em>American Anthropologist</em> 90 (4): 819–31. <a href="https://doi.org/10.1525/aa.1988.90.4.02a00030">https://doi.org/10.1525/aa.1988.90.4.02a00030</a>.</p>
+<div id="ref-rogers_does_1988" class="csl-entry">
+Rogers, Alan R. 1988. <span>“Does <span>Biology</span> <span>Constrain</span> <span>Culture</span>?”</span> <em>American Anthropologist</em> 90 (4): 819–31. <a href="https://doi.org/10.1525/aa.1988.90.4.02a00030">https://doi.org/10.1525/aa.1988.90.4.02a00030</a>.
 </div>
-<div id="ref-shennan_demography_2001">
-<p>Shennan, Stephen. 2001. “Demography and Cultural Innovation: A Model and Its Implications for the Emergence of Modern Human Culture.” <em>Cambridge Archaeological Journal</em> 11 (1): 5–16.</p>
+<div id="ref-shennan_demography_2001" class="csl-entry">
+Shennan, Stephen. 2001. <span>“Demography and <span>Cultural</span> <span>Innovation</span>: A <span>Model</span> and Its <span>Implications</span> for the <span>Emergence</span> of <span>Modern</span> <span>Human</span> <span>Culture</span>.”</span> <em>Cambridge Archaeological Journal</em> 11 (1): 5–16.
 </div>
-<div id="ref-shennan_demography_2015">
-<p>———. 2015. “Demography and Cultural Evolution.” In <em>Emerging Trends in the Social and Behavioral Sciences</em>, 1–14. American Cancer Society. <a href="https://doi.org/10.1002/9781118900772.etrds0073">https://doi.org/10.1002/9781118900772.etrds0073</a>.</p>
+<div id="ref-shennan_demography_2015" class="csl-entry">
+———. 2015. <span>“Demography and <span>Cultural</span> <span>Evolution</span>.”</span> In <em>Emerging <span>Trends</span> in the <span>Social</span> and <span>Behavioral</span> <span>Sciences</span></em>, 1–14. American Cancer Society. <a href="https://doi.org/10.1002/9781118900772.etrds0073">https://doi.org/10.1002/9781118900772.etrds0073</a>.
 </div>
-<div id="ref-smaldino_how_2020">
-<p>Smaldino, Paul E. 2020. “How to Translate a Verbal Theory into a Formal Model.” <em>Social Psychology</em> 51 (4): 207–18. <a href="https://doi.org/10.1027/1864-9335/a000425">https://doi.org/10.1027/1864-9335/a000425</a>.</p>
+<div id="ref-smaldino_models_2017" class="csl-entry">
+Smaldino, Paul E. 2017. <span>“Models <span>Are</span> <span>Stupid</span>, and <span>We</span> <span>Need</span> <span>More</span> of <span>Them</span>.”</span> <em>Computational Social Psychology</em>. <a href="https://doi.org/10.4324/9781315173726-14">https://doi.org/10.4324/9781315173726-14</a>.
 </div>
-<div id="ref-smaldino_models_2017">
-<p>———. 2017. “Models Are Stupid, and We Need More of Them.” <em>Computational Social Psychology</em>. <a href="https://doi.org/10.4324/9781315173726-14">https://doi.org/10.4324/9781315173726-14</a>.</p>
+<div id="ref-smaldino_how_2020" class="csl-entry">
+———. 2020. <span>“How to Translate a Verbal Theory into a Formal Model.”</span> <em>Social Psychology</em> 51 (4): 207–18. <a href="https://doi.org/10.1027/1864-9335/a000425">https://doi.org/10.1027/1864-9335/a000425</a>.
 </div>
-<div id="ref-smolla_cultural_2019">
-<p>Smolla, Marco, and Erol Akçay. 2019. “Cultural Selection Shapes Network Structure.” <em>Science Advances</em> 5 (8): eaaw0609. <a href="https://doi.org/10.1126/sciadv.aaw0609">https://doi.org/10.1126/sciadv.aaw0609</a>.</p>
+<div id="ref-smolla_cultural_2019" class="csl-entry">
+Smolla, Marco, and Erol Akçay. 2019. <span>“Cultural Selection Shapes Network Structure.”</span> <em>Science Advances</em> 5 (8): eaaw0609. <a href="https://doi.org/10.1126/sciadv.aaw0609">https://doi.org/10.1126/sciadv.aaw0609</a>.
 </div>
-<div id="ref-sperber_selection_1997">
-<p>Sperber, Dan. 1997. “Selection and Attraction in Cultural Evolution.” In <em>Explaining Culture. A Naturalistic Approach</em>, 409–26. Oxford: Blackwell.</p>
+<div id="ref-sperber_selection_1997" class="csl-entry">
+Sperber, Dan. 1997. <span>“Selection and <span>Attraction</span> in <span>Cultural</span> <span>Evolution</span>.”</span> In <em>Explaining <span>Culture</span>. <span>A</span> Naturalistic Approach</em>, 409–26. Oxford: Blackwell.
 </div>
-<div id="ref-vaesen_population_2016">
-<p>Vaesen, Krist, Mark Collard, Richard Cosgrove, and Wil Roebroeks. 2016. “Population Size Does Not Explain Past Changes in Cultural Complexity.” <em>Proceedings of the National Academy of Sciences of the United States of America</em> 113 (16): E2241–2247. <a href="https://doi.org/10.1073/pnas.1520288113">https://doi.org/10.1073/pnas.1520288113</a>.</p>
-</div>
-<div id="ref-wickham_r_2017">
-<p>Wickham, Hadley, and Garrett Grolemund. 2017. <em>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data</em>. 1st edition. Sebastopol, CA: O’Reilly Media.</p>
+<div id="ref-wickham_r_2017" class="csl-entry">
+Wickham, Hadley, and Garrett Grolemund. 2017. <em>R for <span>Data</span> <span>Science</span>: <span>Import</span>, <span>Tidy</span>, <span>Transform</span>, <span>Visualize</span>, and <span>Model</span> <span>Data</span></em>. 1st edition. Sebastopol, CA: O’Reilly Media.
 </div>
 </div>
 </div>
+
+
+
+
+
+
+
             </section>
 
           </div>

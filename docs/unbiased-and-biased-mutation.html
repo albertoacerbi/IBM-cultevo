@@ -26,7 +26,7 @@
 <meta name="author" content="Marco Smolla" />
 
 
-<meta name="date" content="2020-12-03" />
+<meta name="date" content="2022-03-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -35,6 +35,7 @@
   
 <link rel="prev" href="unbiased-transmission.html"/>
 <link rel="next" href="biased-transmission-direct-bias.html"/>
+<script src="libs/header-attrs-2.5.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,24 +53,22 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -89,7 +88,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -139,7 +138,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Note to the reader</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#aim-of-the-book"><i class="fa fa-check"></i>Aim of the book</a></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#what-is-cultural-evolution"><i class="fa fa-check"></i>What is cultural evolution?</a></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#why-model"><i class="fa fa-check"></i>Why model?</a></li>
@@ -150,7 +150,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
 </ul></li>
 <li class="part"><span><b>Basics</b></span></li>
-<li class="chapter" data-level="1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html"><i class="fa fa-check"></i><b>1</b> Unbiased transmission</a><ul>
+<li class="chapter" data-level="1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html"><i class="fa fa-check"></i><b>1</b> Unbiased transmission</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#initialising-the-simulation"><i class="fa fa-check"></i><b>1.1</b> Initialising the simulation</a></li>
 <li class="chapter" data-level="1.2" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#execute-generation-turn-over-many-times"><i class="fa fa-check"></i><b>1.2</b> Execute generation turn-over many times</a></li>
 <li class="chapter" data-level="1.3" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#plotting-the-model-results"><i class="fa fa-check"></i><b>1.3</b> Plotting the model results</a></li>
@@ -160,37 +161,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.7" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#summary-of-the-model"><i class="fa fa-check"></i><b>1.7</b> Summary of the model</a></li>
 <li class="chapter" data-level="1.8" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#further-reading-1"><i class="fa fa-check"></i><b>1.8</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html"><i class="fa fa-check"></i><b>2</b> Unbiased and biased mutation</a><ul>
+<li class="chapter" data-level="2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html"><i class="fa fa-check"></i><b>2</b> Unbiased and biased mutation</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#unbiased-mutation"><i class="fa fa-check"></i><b>2.1</b> Unbiased mutation</a></li>
 <li class="chapter" data-level="2.2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#biased-mutation"><i class="fa fa-check"></i><b>2.2</b> Biased mutation</a></li>
 <li class="chapter" data-level="2.3" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#summary-of-the-model-1"><i class="fa fa-check"></i><b>2.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="2.4" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#further-reading-2"><i class="fa fa-check"></i><b>2.4</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html"><i class="fa fa-check"></i><b>3</b> Biased transmission: direct bias</a><ul>
+<li class="chapter" data-level="3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html"><i class="fa fa-check"></i><b>3</b> Biased transmission: direct bias</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#a-simple-model-of-directly-biased-transmission"><i class="fa fa-check"></i><b>3.1</b> A simple model of directly biased transmission</a></li>
 <li class="chapter" data-level="3.2" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#strength-of-selection"><i class="fa fa-check"></i><b>3.2</b> Strength of selection</a></li>
 <li class="chapter" data-level="3.3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#summary-of-the-model-2"><i class="fa fa-check"></i><b>3.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="3.4" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#further-reading-3"><i class="fa fa-check"></i><b>3.4</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html"><i class="fa fa-check"></i><b>4</b> Biased transmission: frequency-dependent indirect bias</a><ul>
+<li class="chapter" data-level="4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html"><i class="fa fa-check"></i><b>4</b> Biased transmission: frequency-dependent indirect bias</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#the-logic-of-conformity"><i class="fa fa-check"></i><b>4.1</b> The logic of conformity</a></li>
 <li class="chapter" data-level="4.2" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#testing-conformist-transmission"><i class="fa fa-check"></i><b>4.2</b> Testing conformist transmission</a></li>
 <li class="chapter" data-level="4.3" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#summary-of-the-model-3"><i class="fa fa-check"></i><b>4.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="4.4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#further-readings"><i class="fa fa-check"></i><b>4.4</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html"><i class="fa fa-check"></i><b>5</b> Biased transmission: demonstrator-based indirect bias</a><ul>
+<li class="chapter" data-level="5" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html"><i class="fa fa-check"></i><b>5</b> Biased transmission: demonstrator-based indirect bias</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#a-simple-demonstrator-bias"><i class="fa fa-check"></i><b>5.1</b> A simple demonstrator bias</a></li>
 <li class="chapter" data-level="5.2" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#predicting-the-winning-trait"><i class="fa fa-check"></i><b>5.2</b> Predicting the ‘winning’ trait</a></li>
 <li class="chapter" data-level="5.3" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#summary-of-the-model-4"><i class="fa fa-check"></i><b>5.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="5.4" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#further-readings-1"><i class="fa fa-check"></i><b>5.4</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html"><i class="fa fa-check"></i><b>6</b> Vertical and horizontal transmission</a><ul>
+<li class="chapter" data-level="6" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html"><i class="fa fa-check"></i><b>6</b> Vertical and horizontal transmission</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#vertical-cultural-transmission"><i class="fa fa-check"></i><b>6.1</b> Vertical cultural transmission</a></li>
 <li class="chapter" data-level="6.2" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#horizontal-cultural-transmission"><i class="fa fa-check"></i><b>6.2</b> Horizontal cultural transmission</a></li>
 <li class="chapter" data-level="6.3" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#summary-of-the-model-5"><i class="fa fa-check"></i><b>6.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="6.4" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#further-reading-4"><i class="fa fa-check"></i><b>6.4</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html"><i class="fa fa-check"></i><b>7</b> Multiple traits models</a><ul>
+<li class="chapter" data-level="7" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html"><i class="fa fa-check"></i><b>7</b> Multiple traits models</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#unbiased-transmission-with-multiple-traits"><i class="fa fa-check"></i><b>7.1</b> Unbiased transmission with multiple traits</a></li>
 <li class="chapter" data-level="7.2" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#introducing-innovation"><i class="fa fa-check"></i><b>7.2</b> Introducing innovation</a></li>
 <li class="chapter" data-level="7.3" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#optimising-the-code"><i class="fa fa-check"></i><b>7.3</b> Optimising the code</a></li>
@@ -199,18 +206,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.6" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#further-readings-2"><i class="fa fa-check"></i><b>7.6</b> Further readings</a></li>
 </ul></li>
 <li class="part"><span><b>Advanced topics - The evolution of cultural evolution</b></span></li>
-<li class="chapter" data-level="8" data-path="rogers-paradox.html"><a href="rogers-paradox.html"><i class="fa fa-check"></i><b>8</b> Rogers’ Paradox</a><ul>
+<li class="chapter" data-level="8" data-path="rogers-paradox.html"><a href="rogers-paradox.html"><i class="fa fa-check"></i><b>8</b> Rogers’ Paradox</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="rogers-paradox.html"><a href="rogers-paradox.html#modelling-rogers-paradox"><i class="fa fa-check"></i><b>8.1</b> Modelling Rogers’ Paradox</a></li>
 <li class="chapter" data-level="8.2" data-path="rogers-paradox.html"><a href="rogers-paradox.html#summary-of-the-model-7"><i class="fa fa-check"></i><b>8.2</b> Summary of the model</a></li>
 <li class="chapter" data-level="8.3" data-path="rogers-paradox.html"><a href="rogers-paradox.html#further-reading-5"><i class="fa fa-check"></i><b>8.3</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html"><i class="fa fa-check"></i><b>9</b> Rogers’ Paradox: A Solution</a><ul>
+<li class="chapter" data-level="9" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html"><i class="fa fa-check"></i><b>9</b> Rogers’ Paradox: A Solution</a>
+<ul>
 <li class="chapter" data-level="9.1" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#modelling-critical-social-learners"><i class="fa fa-check"></i><b>9.1</b> Modelling critical social learners</a></li>
 <li class="chapter" data-level="9.2" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#summary-of-the-model-8"><i class="fa fa-check"></i><b>9.2</b> Summary of the model</a></li>
 <li class="chapter" data-level="9.3" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#further-reading-6"><i class="fa fa-check"></i><b>9.3</b> Further reading</a></li>
 </ul></li>
 <li class="part"><span><b>Advanced topics - Cultural inheritance</b></span></li>
-<li class="chapter" data-level="10" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html"><i class="fa fa-check"></i><b>10</b> Reproduction and transformation</a><ul>
+<li class="chapter" data-level="10" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html"><i class="fa fa-check"></i><b>10</b> Reproduction and transformation</a>
+<ul>
 <li class="chapter" data-level="10.1" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#copying-and-selection"><i class="fa fa-check"></i><b>10.1</b> Copying and selection</a></li>
 <li class="chapter" data-level="10.2" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#convergent-transformation"><i class="fa fa-check"></i><b>10.2</b> Convergent transformation</a></li>
 <li class="chapter" data-level="10.3" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#emergent-similarity"><i class="fa fa-check"></i><b>10.3</b> Emergent similarity</a></li>
@@ -218,56 +228,59 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.5" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#summary-of-the-model-9"><i class="fa fa-check"></i><b>10.5</b> Summary of the model</a></li>
 <li class="chapter" data-level="10.6" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#further-readings-3"><i class="fa fa-check"></i><b>10.6</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html"><i class="fa fa-check"></i><b>11</b> Social learning of social learning rules</a><ul>
+<li class="chapter" data-level="11" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html"><i class="fa fa-check"></i><b>11</b> Social learning of social learning rules</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#openness-and-conservatism"><i class="fa fa-check"></i><b>11.1</b> Openness and conservatism</a></li>
 <li class="chapter" data-level="11.2" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#maintaining-open-populations"><i class="fa fa-check"></i><b>11.2</b> Maintaining open populations</a></li>
 <li class="chapter" data-level="11.3" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#summary-of-the-model-10"><i class="fa fa-check"></i><b>11.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="11.4" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#further-readings-4"><i class="fa fa-check"></i><b>11.4</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html"><i class="fa fa-check"></i><b>12</b> Traits inter-dependence</a><ul>
+<li class="chapter" data-level="12" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html"><i class="fa fa-check"></i><b>12</b> Traits inter-dependence</a>
+<ul>
 <li class="chapter" data-level="12.1" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#compatible-and-incompatible-traits"><i class="fa fa-check"></i><b>12.1</b> Compatible and incompatible traits</a></li>
 <li class="chapter" data-level="12.2" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#many-traits-model"><i class="fa fa-check"></i><b>12.2</b> Many-traits model</a></li>
 <li class="chapter" data-level="12.3" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#summary-of-the-model-11"><i class="fa fa-check"></i><b>12.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="12.4" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#further-readings-5"><i class="fa fa-check"></i><b>12.4</b> Further readings</a></li>
 </ul></li>
 <li class="part"><span><b>Advanced topics - Culture and populations</b></span></li>
-<li class="chapter" data-level="13" data-path="demography.html"><a href="demography.html"><i class="fa fa-check"></i><b>13</b> Demography</a><ul>
+<li class="chapter" data-level="13" data-path="demography.html"><a href="demography.html"><i class="fa fa-check"></i><b>13</b> Demography</a>
+<ul>
 <li class="chapter" data-level="13.1" data-path="demography.html"><a href="demography.html#the-tasmania-case"><i class="fa fa-check"></i><b>13.1</b> The Tasmania Case</a></li>
 <li class="chapter" data-level="13.2" data-path="demography.html"><a href="demography.html#modelling-the-tasmania-case"><i class="fa fa-check"></i><b>13.2</b> Modelling the Tasmania Case</a></li>
 <li class="chapter" data-level="13.3" data-path="demography.html"><a href="demography.html#calculating-critical-population-sizes-based-on-skill-complexity"><i class="fa fa-check"></i><b>13.3</b> Calculating critical population sizes based on skill complexity</a></li>
 <li class="chapter" data-level="13.4" data-path="demography.html"><a href="demography.html#summary-of-the-model-12"><i class="fa fa-check"></i><b>13.4</b> Summary of the model</a></li>
 <li class="chapter" data-level="13.5" data-path="demography.html"><a href="demography.html#further-readings-6"><i class="fa fa-check"></i><b>13.5</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="social-network-structure.html"><a href="social-network-structure.html"><i class="fa fa-check"></i><b>14</b> Social network structure</a><ul>
+<li class="chapter" data-level="14" data-path="social-network-structure.html"><a href="social-network-structure.html"><i class="fa fa-check"></i><b>14</b> Social network structure</a>
+<ul>
 <li class="chapter" data-level="14.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-basics"><i class="fa fa-check"></i><b>14.1</b> Network basics</a></li>
 <li class="chapter" data-level="14.2" data-path="social-network-structure.html"><a href="social-network-structure.html#generating-networks"><i class="fa fa-check"></i><b>14.2</b> Generating networks</a></li>
-<li class="chapter" data-level="14.3" data-path="social-network-structure.html"><a href="social-network-structure.html#plotting-networks"><i class="fa fa-check"></i><b>14.3</b> Plotting networks</a><ul>
+<li class="chapter" data-level="14.3" data-path="social-network-structure.html"><a href="social-network-structure.html#plotting-networks"><i class="fa fa-check"></i><b>14.3</b> Plotting networks</a>
+<ul>
 <li class="chapter" data-level="14.3.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-layout"><i class="fa fa-check"></i><b>14.3.1</b> Network layout</a></li>
 <li class="chapter" data-level="14.3.2" data-path="social-network-structure.html"><a href="social-network-structure.html#network-styling"><i class="fa fa-check"></i><b>14.3.2</b> Network styling</a></li>
 </ul></li>
-<li class="chapter" data-level="14.4" data-path="social-network-structure.html"><a href="social-network-structure.html#analyse-social-networks"><i class="fa fa-check"></i><b>14.4</b> Analyse social networks</a><ul>
+<li class="chapter" data-level="14.4" data-path="social-network-structure.html"><a href="social-network-structure.html#analyse-social-networks"><i class="fa fa-check"></i><b>14.4</b> Analyse social networks</a>
+<ul>
 <li class="chapter" data-level="14.4.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-properties-and-characteristics"><i class="fa fa-check"></i><b>14.4.1</b> Network properties and characteristics</a></li>
 <li class="chapter" data-level="14.4.2" data-path="social-network-structure.html"><a href="social-network-structure.html#vertex-properties"><i class="fa fa-check"></i><b>14.4.2</b> Vertex properties</a></li>
 </ul></li>
-<li class="chapter" data-level="14.5" data-path="social-network-structure.html"><a href="social-network-structure.html#modelling-information-transmission-in-social-networks"><i class="fa fa-check"></i><b>14.5</b> Modelling information transmission in social networks</a><ul>
+<li class="chapter" data-level="14.5" data-path="social-network-structure.html"><a href="social-network-structure.html#modelling-information-transmission-in-social-networks"><i class="fa fa-check"></i><b>14.5</b> Modelling information transmission in social networks</a>
+<ul>
 <li class="chapter" data-level="14.5.1" data-path="social-network-structure.html"><a href="social-network-structure.html#gossip-diffusion-in-networked-populations"><i class="fa fa-check"></i><b>14.5.1</b> Gossip diffusion in networked populations</a></li>
 <li class="chapter" data-level="14.5.2" data-path="social-network-structure.html"><a href="social-network-structure.html#complex-versus-simple-contagion-information-transmission"><i class="fa fa-check"></i><b>14.5.2</b> Complex versus simple contagion information transmission</a></li>
 </ul></li>
 <li class="chapter" data-level="14.6" data-path="social-network-structure.html"><a href="social-network-structure.html#summary-of-the-model-13"><i class="fa fa-check"></i><b>14.6</b> Summary of the model</a></li>
 <li class="chapter" data-level="14.7" data-path="social-network-structure.html"><a href="social-network-structure.html#further-reading-7"><i class="fa fa-check"></i><b>14.7</b> Further Reading</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html"><i class="fa fa-check"></i><b>15</b> Group structured populations and migration</a><ul>
+<li class="chapter" data-level="15" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html"><i class="fa fa-check"></i><b>15</b> Group structured populations and migration</a>
+<ul>
 <li class="chapter" data-level="15.1" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#modelling-migration-and-contact-between-population-subsets"><i class="fa fa-check"></i><b>15.1</b> Modelling migration and contact between population subsets</a></li>
 <li class="chapter" data-level="15.2" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#subdivided-population-with-limited-contact"><i class="fa fa-check"></i><b>15.2</b> Subdivided population with limited contact</a></li>
 <li class="chapter" data-level="15.3" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#subdivided-populations-with-migration"><i class="fa fa-check"></i><b>15.3</b> Subdivided populations with migration</a></li>
 <li class="chapter" data-level="15.4" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#varying-contact-and-migration-probability-for-repeated-simulation-runs"><i class="fa fa-check"></i><b>15.4</b> Varying contact and migration probability for repeated simulation runs</a></li>
-<li class="chapter" data-level="15.5" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#model-extensions"><i class="fa fa-check"></i><b>15.5</b> Model extensions</a><ul>
-<li class="chapter" data-level="" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#innovation-or-mutation"><i class="fa fa-check"></i>Innovation or mutation</a></li>
-<li><a href="group-structured-populations-and-migration.html#copy-m-models">Copy <span class="math inline">\(m\)</span> models</a></li>
-<li class="chapter" data-level="" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#variable-migration-probability-among-subsets"><i class="fa fa-check"></i>Variable migration probability among subsets</a></li>
-</ul></li>
-<li class="chapter" data-level="15.6" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#summary-of-the-model-14"><i class="fa fa-check"></i><b>15.6</b> Summary of the model</a></li>
-<li class="chapter" data-level="15.7" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#further-reading-8"><i class="fa fa-check"></i><b>15.7</b> Further reading</a></li>
+<li class="chapter" data-level="15.5" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#summary-of-the-model-14"><i class="fa fa-check"></i><b>15.5</b> Summary of the model</a></li>
+<li class="chapter" data-level="15.6" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#further-reading-8"><i class="fa fa-check"></i><b>15.6</b> Further reading</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -290,64 +303,64 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="unbiased-and-biased-mutation" class="section level1">
+<div id="unbiased-and-biased-mutation" class="section level1" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Unbiased and biased mutation</h1>
 <p>Evolution doesn’t work without a source of variation that introduces new variation upon which selection, drift and other processes can act. In genetic evolution, mutation is almost always blind with respect to function. Beneficial genetic mutations are no more likely to arise when they are needed than when they are not needed - in fact, most genetic mutations are neutral or detrimental to an organism. Cultural evolution is more interesting, in that novel variation may sometimes be directed to solve specific problems, or systematically biased due to features of our cognition. In the models below, we’ll simulate both unbiased and biased mutation.</p>
-<div id="unbiased-mutation" class="section level2">
+<div id="unbiased-mutation" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Unbiased mutation</h2>
 <p>First, we will simulate unbiased mutation in the same basic model as used in the previous chapter. We’ll remove unbiased transmission to see the effect of unbiased mutation alone.</p>
 <p>As in the previous model, we assume <span class="math inline">\(N\)</span> individuals each of whom possesses one of two discrete cultural traits, denoted <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>. In each generation, from <span class="math inline">\(t=1\)</span> to <span class="math inline">\(t=t_{\text{max}}\)</span>, the <span class="math inline">\(N\)</span> individuals are replaced with <span class="math inline">\(N\)</span> new individuals. Instead of random copying, each individual now gives rise to a new individual with the same cultural trait as them. (Another way of looking at this is in terms of timesteps, such as years: the same <span class="math inline">\(N\)</span> individual live for <span class="math inline">\(t_{\text{max}}\)</span> years and keep their cultural trait from one year to the next.)</p>
 <p>At each generation, however, there is a probability <span class="math inline">\(\mu\)</span> that each individual mutates from their current trait to the other trait (the Greek letter Mu is the standard notation for the mutation rate in genetic evolution, and it has an analogous function here). For example, vegetarian individuals can decide to eat animal products, and vice versa. Remember, this is not copied from other individuals, as in the previous model, but can be thought of as an individual decision. Another way to see this is that the probability of changing trait applies to each individual independently; whether an individual mutates has no bearing on whether or how many other individuals have mutated. On average, this means that <span class="math inline">\(\mu N\)</span> individuals mutate each generation. Like in the previous model, we are interested in tracking the proportion <span class="math inline">\(p\)</span> of agents with trait <span class="math inline">\(A\)</span> over time.</p>
 <p>We’ll wrap this in a function called <code>unbiased_mutation()</code>, using much of the same code as <code>unbiased_transmission_3()</code>. As before, we need to call the tidyverse library in order to use the tibble command, and later commands like ggplot2.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="unbiased-and-biased-mutation.html#cb28-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb28-2"><a href="unbiased-and-biased-mutation.html#cb28-2"></a></span>
-<span id="cb28-3"><a href="unbiased-and-biased-mutation.html#cb28-3"></a>unbiased_mutation &lt;-<span class="st"> </span><span class="cf">function</span>(N, mu, p_<span class="dv">0</span>, t_max, r_max) {</span>
-<span id="cb28-4"><a href="unbiased-and-biased-mutation.html#cb28-4"></a>  <span class="co"># Create the output tibble</span></span>
-<span id="cb28-5"><a href="unbiased-and-biased-mutation.html#cb28-5"></a>  output &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">generation =</span> <span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>t_max, r_max), </span>
-<span id="cb28-6"><a href="unbiased-and-biased-mutation.html#cb28-6"></a>                   <span class="dt">p =</span> <span class="kw">as.numeric</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, t_max <span class="op">*</span><span class="st"> </span>r_max)), </span>
-<span id="cb28-7"><a href="unbiased-and-biased-mutation.html#cb28-7"></a>                   <span class="dt">run =</span> <span class="kw">as.factor</span>(<span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>r_max, <span class="dt">each =</span> t_max))) </span>
-<span id="cb28-8"><a href="unbiased-and-biased-mutation.html#cb28-8"></a></span>
-<span id="cb28-9"><a href="unbiased-and-biased-mutation.html#cb28-9"></a>  <span class="cf">for</span> (r <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>r_max) {</span>
-<span id="cb28-10"><a href="unbiased-and-biased-mutation.html#cb28-10"></a>    population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, <span class="dt">replace =</span> <span class="ot">TRUE</span>, </span>
-<span id="cb28-11"><a href="unbiased-and-biased-mutation.html#cb28-11"></a>                                        <span class="dt">prob =</span> <span class="kw">c</span>(p_<span class="dv">0</span>, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_<span class="dv">0</span>)))</span>
-<span id="cb28-12"><a href="unbiased-and-biased-mutation.html#cb28-12"></a>    <span class="co"># Add first generation&#39;s p for run r</span></span>
-<span id="cb28-13"><a href="unbiased-and-biased-mutation.html#cb28-13"></a>    output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span><span class="dv">1</span> <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p &lt;-<span class="st"> </span></span>
-<span id="cb28-14"><a href="unbiased-and-biased-mutation.html#cb28-14"></a><span class="st">      </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N </span>
-<span id="cb28-15"><a href="unbiased-and-biased-mutation.html#cb28-15"></a>    <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span>t_max) {</span>
-<span id="cb28-16"><a href="unbiased-and-biased-mutation.html#cb28-16"></a>      <span class="co"># Copy individuals to previous_population tibble</span></span>
-<span id="cb28-17"><a href="unbiased-and-biased-mutation.html#cb28-17"></a>      previous_population &lt;-<span class="st"> </span>population </span>
-<span id="cb28-18"><a href="unbiased-and-biased-mutation.html#cb28-18"></a>      </span>
-<span id="cb28-19"><a href="unbiased-and-biased-mutation.html#cb28-19"></a>      <span class="co"># Determine &#39;mutant&#39; individuals</span></span>
-<span id="cb28-20"><a href="unbiased-and-biased-mutation.html#cb28-20"></a>      mutate &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), N, <span class="dt">prob =</span> <span class="kw">c</span>(mu, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>mu), <span class="dt">replace =</span> <span class="ot">TRUE</span>) </span>
-<span id="cb28-21"><a href="unbiased-and-biased-mutation.html#cb28-21"></a>      </span>
-<span id="cb28-22"><a href="unbiased-and-biased-mutation.html#cb28-22"></a>      <span class="co"># If there are &#39;mutants&#39; from A to B</span></span>
-<span id="cb28-23"><a href="unbiased-and-biased-mutation.html#cb28-23"></a>      <span class="cf">if</span> (<span class="kw">nrow</span>(population[mutate <span class="op">&amp;</span><span class="st"> </span>previous_population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) { </span>
-<span id="cb28-24"><a href="unbiased-and-biased-mutation.html#cb28-24"></a>        <span class="co"># Then flip them to B</span></span>
-<span id="cb28-25"><a href="unbiased-and-biased-mutation.html#cb28-25"></a>        population[mutate <span class="op">&amp;</span><span class="st"> </span>previous_population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>, ]<span class="op">$</span>trait &lt;-<span class="st"> &quot;B&quot;</span> </span>
-<span id="cb28-26"><a href="unbiased-and-biased-mutation.html#cb28-26"></a>      }</span>
-<span id="cb28-27"><a href="unbiased-and-biased-mutation.html#cb28-27"></a>      </span>
-<span id="cb28-28"><a href="unbiased-and-biased-mutation.html#cb28-28"></a>      <span class="co"># If there are &#39;mutants&#39; from B to A</span></span>
-<span id="cb28-29"><a href="unbiased-and-biased-mutation.html#cb28-29"></a>      <span class="cf">if</span> (<span class="kw">nrow</span>(population[mutate <span class="op">&amp;</span><span class="st"> </span>previous_population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;B&quot;</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) { </span>
-<span id="cb28-30"><a href="unbiased-and-biased-mutation.html#cb28-30"></a>        <span class="co"># Then flip them to A</span></span>
-<span id="cb28-31"><a href="unbiased-and-biased-mutation.html#cb28-31"></a>        population[mutate <span class="op">&amp;</span><span class="st"> </span>previous_population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;B&quot;</span>, ]<span class="op">$</span>trait &lt;-<span class="st"> &quot;A&quot;</span> </span>
-<span id="cb28-32"><a href="unbiased-and-biased-mutation.html#cb28-32"></a>      }</span>
-<span id="cb28-33"><a href="unbiased-and-biased-mutation.html#cb28-33"></a>      </span>
-<span id="cb28-34"><a href="unbiased-and-biased-mutation.html#cb28-34"></a>      <span class="co"># Get p and put it into output slot for this generation t and run r</span></span>
-<span id="cb28-35"><a href="unbiased-and-biased-mutation.html#cb28-35"></a>      output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span>t <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p &lt;-<span class="st"> </span></span>
-<span id="cb28-36"><a href="unbiased-and-biased-mutation.html#cb28-36"></a><span class="st">        </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N </span>
-<span id="cb28-37"><a href="unbiased-and-biased-mutation.html#cb28-37"></a>    }</span>
-<span id="cb28-38"><a href="unbiased-and-biased-mutation.html#cb28-38"></a>  }</span>
-<span id="cb28-39"><a href="unbiased-and-biased-mutation.html#cb28-39"></a>  <span class="co"># Export data from function</span></span>
-<span id="cb28-40"><a href="unbiased-and-biased-mutation.html#cb28-40"></a>  output </span>
-<span id="cb28-41"><a href="unbiased-and-biased-mutation.html#cb28-41"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="unbiased-and-biased-mutation.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb28-2"><a href="unbiased-and-biased-mutation.html#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="unbiased-and-biased-mutation.html#cb28-3" aria-hidden="true" tabindex="-1"></a>unbiased_mutation <span class="ot">&lt;-</span> <span class="cf">function</span>(N, mu, p_0, t_max, r_max) {</span>
+<span id="cb28-4"><a href="unbiased-and-biased-mutation.html#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create the output tibble</span></span>
+<span id="cb28-5"><a href="unbiased-and-biased-mutation.html#cb28-5" aria-hidden="true" tabindex="-1"></a>  output <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">generation =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>t_max, r_max), </span>
+<span id="cb28-6"><a href="unbiased-and-biased-mutation.html#cb28-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">p =</span> <span class="fu">as.numeric</span>(<span class="fu">rep</span>(<span class="cn">NA</span>, t_max <span class="sc">*</span> r_max)), </span>
+<span id="cb28-7"><a href="unbiased-and-biased-mutation.html#cb28-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">run =</span> <span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>r_max, <span class="at">each =</span> t_max))) </span>
+<span id="cb28-8"><a href="unbiased-and-biased-mutation.html#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-9"><a href="unbiased-and-biased-mutation.html#cb28-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (r <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>r_max) {</span>
+<span id="cb28-10"><a href="unbiased-and-biased-mutation.html#cb28-10" aria-hidden="true" tabindex="-1"></a>    population <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">trait =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, <span class="at">replace =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb28-11"><a href="unbiased-and-biased-mutation.html#cb28-11" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">prob =</span> <span class="fu">c</span>(p_0, <span class="dv">1</span> <span class="sc">-</span> p_0)))</span>
+<span id="cb28-12"><a href="unbiased-and-biased-mutation.html#cb28-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add first generation&#39;s p for run r</span></span>
+<span id="cb28-13"><a href="unbiased-and-biased-mutation.html#cb28-13" aria-hidden="true" tabindex="-1"></a>    output[output<span class="sc">$</span>generation <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> output<span class="sc">$</span>run <span class="sc">==</span> r, ]<span class="sc">$</span>p <span class="ot">&lt;-</span> </span>
+<span id="cb28-14"><a href="unbiased-and-biased-mutation.html#cb28-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">sum</span>(population<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;A&quot;</span>) <span class="sc">/</span> N </span>
+<span id="cb28-15"><a href="unbiased-and-biased-mutation.html#cb28-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>t_max) {</span>
+<span id="cb28-16"><a href="unbiased-and-biased-mutation.html#cb28-16" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Copy individuals to previous_population tibble</span></span>
+<span id="cb28-17"><a href="unbiased-and-biased-mutation.html#cb28-17" aria-hidden="true" tabindex="-1"></a>      previous_population <span class="ot">&lt;-</span> population </span>
+<span id="cb28-18"><a href="unbiased-and-biased-mutation.html#cb28-18" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb28-19"><a href="unbiased-and-biased-mutation.html#cb28-19" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Determine &#39;mutant&#39; individuals</span></span>
+<span id="cb28-20"><a href="unbiased-and-biased-mutation.html#cb28-20" aria-hidden="true" tabindex="-1"></a>      mutate <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), N, <span class="at">prob =</span> <span class="fu">c</span>(mu, <span class="dv">1</span> <span class="sc">-</span> mu), <span class="at">replace =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb28-21"><a href="unbiased-and-biased-mutation.html#cb28-21" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb28-22"><a href="unbiased-and-biased-mutation.html#cb28-22" aria-hidden="true" tabindex="-1"></a>      <span class="co"># If there are &#39;mutants&#39; from A to B</span></span>
+<span id="cb28-23"><a href="unbiased-and-biased-mutation.html#cb28-23" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">nrow</span>(population[mutate <span class="sc">&amp;</span> previous_population<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;A&quot;</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) { </span>
+<span id="cb28-24"><a href="unbiased-and-biased-mutation.html#cb28-24" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Then flip them to B</span></span>
+<span id="cb28-25"><a href="unbiased-and-biased-mutation.html#cb28-25" aria-hidden="true" tabindex="-1"></a>        population[mutate <span class="sc">&amp;</span> previous_population<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;A&quot;</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;B&quot;</span> </span>
+<span id="cb28-26"><a href="unbiased-and-biased-mutation.html#cb28-26" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb28-27"><a href="unbiased-and-biased-mutation.html#cb28-27" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb28-28"><a href="unbiased-and-biased-mutation.html#cb28-28" aria-hidden="true" tabindex="-1"></a>      <span class="co"># If there are &#39;mutants&#39; from B to A</span></span>
+<span id="cb28-29"><a href="unbiased-and-biased-mutation.html#cb28-29" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">nrow</span>(population[mutate <span class="sc">&amp;</span> previous_population<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;B&quot;</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) { </span>
+<span id="cb28-30"><a href="unbiased-and-biased-mutation.html#cb28-30" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Then flip them to A</span></span>
+<span id="cb28-31"><a href="unbiased-and-biased-mutation.html#cb28-31" aria-hidden="true" tabindex="-1"></a>        population[mutate <span class="sc">&amp;</span> previous_population<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;B&quot;</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;A&quot;</span> </span>
+<span id="cb28-32"><a href="unbiased-and-biased-mutation.html#cb28-32" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb28-33"><a href="unbiased-and-biased-mutation.html#cb28-33" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb28-34"><a href="unbiased-and-biased-mutation.html#cb28-34" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Get p and put it into output slot for this generation t and run r</span></span>
+<span id="cb28-35"><a href="unbiased-and-biased-mutation.html#cb28-35" aria-hidden="true" tabindex="-1"></a>      output[output<span class="sc">$</span>generation <span class="sc">==</span> t <span class="sc">&amp;</span> output<span class="sc">$</span>run <span class="sc">==</span> r, ]<span class="sc">$</span>p <span class="ot">&lt;-</span> </span>
+<span id="cb28-36"><a href="unbiased-and-biased-mutation.html#cb28-36" aria-hidden="true" tabindex="-1"></a>        <span class="fu">sum</span>(population<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;A&quot;</span>) <span class="sc">/</span> N </span>
+<span id="cb28-37"><a href="unbiased-and-biased-mutation.html#cb28-37" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb28-38"><a href="unbiased-and-biased-mutation.html#cb28-38" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-39"><a href="unbiased-and-biased-mutation.html#cb28-39" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Export data from function</span></span>
+<span id="cb28-40"><a href="unbiased-and-biased-mutation.html#cb28-40" aria-hidden="true" tabindex="-1"></a>  output </span>
+<span id="cb28-41"><a href="unbiased-and-biased-mutation.html#cb28-41" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>The only changes from the previous model are the addition of <code>mu</code>, the parameter that specifies the probability of mutation, in the function definition and new lines of code within the <code>for</code> loop on <code>t</code> which replace the random copying command with unbiased mutation. Let’s examine these lines to see how they work.</p>
 <p>The most obvious way of implementing unbiased mutation - which is <em>not</em> done above - would have been to set up another <code>for</code> loop. We would cycle through every individual one by one, each time calculating whether it should mutate or not based on <code>mu</code>. This would certainly work, but R is notoriously slow at loops. It’s always preferable in R, where possible, to use ‘vectorised’ code. That’s what is done above in our three added lines, starting from <code>mutate &lt;- sample()</code>.</p>
 <p>First, we pre-specify the probability of mutating for each individual. For this, we again use the function <code>sample()</code>, picking <code>TRUE</code> (corresponding to being a mutant) or <code>FALSE</code> (not mutating, i.e. keeping the same cultural trait) for <span class="math inline">\(N\)</span> times. The draw, however, is not random: the probability of drawing <code>TRUE</code> is equal to <span class="math inline">\(\mu\)</span>, and the probability of drawing <code>FALSE</code> is <span class="math inline">\(1-\mu\)</span>. You can think about the procedure in this way: each individual in the population flips a biased coin that has <span class="math inline">\(\mu\)</span> probability to land on, say, heads, and <span class="math inline">\(1-\mu\)</span> to land on tails. If it lands on heads they change their cultural trait.</p>
 <p>In the subsequent lines we change the traits for the ‘mutant’ individuals. We need to check whether there are individuals that change their trait, both from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> and vice versa, using the two <code>if</code> conditionals. If there are no such individuals, then assigning a new value to an empty tibble returns an error. To avoid this, we make sure that the number of rows is greater than 0 (using <code>nrow()&gt;0</code> within the <code>if</code>).</p>
 <p>To plot the results, we can use the same function <code>plot_multiple_runs()</code> we wrote in the <a href="unbiased-transmission.html#unbiased-transmission">previous chapter</a>.</p>
 <p>Let’s now run and plot the model:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="unbiased-and-biased-mutation.html#cb29-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">unbiased_mutation</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">mu =</span> <span class="fl">0.05</span>, <span class="dt">p_0 =</span> <span class="fl">0.5</span>, <span class="dt">t_max =</span> <span class="dv">200</span>, <span class="dt">r_max =</span> <span class="dv">5</span>)</span>
-<span id="cb29-2"><a href="unbiased-and-biased-mutation.html#cb29-2"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="unbiased-and-biased-mutation.html#cb29-1" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">unbiased_mutation</span>(<span class="at">N =</span> <span class="dv">100</span>, <span class="at">mu =</span> <span class="fl">0.05</span>, <span class="at">p_0 =</span> <span class="fl">0.5</span>, <span class="at">t_max =</span> <span class="dv">200</span>, <span class="at">r_max =</span> <span class="dv">5</span>)</span>
+<span id="cb29-2"><a href="unbiased-and-biased-mutation.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_runs</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:2-3"></span>
 <img src="IBM-cultevo_files/figure-html/2-3-1.png" alt="Trait frequencies fluctuate around 0.5 under unbiased mutation" width="672" />
 <p class="caption">
@@ -358,8 +371,8 @@ Figure 2.1: Trait frequencies fluctuate around 0.5 under unbiased mutation
 <p>If you remember from the previous chapter, with unbiased transmission, when populations were small (e.g. <span class="math inline">\(N=100\)</span>) generally one of the traits disappeared after a few generations. Here, though, with <span class="math inline">\(N=100\)</span>, both traits remain until the end of the simulation. Why this difference? You can think of it in this way: when one trait becomes popular, say the frequency of <span class="math inline">\(A\)</span> is equal to <span class="math inline">\(0.8\)</span>, with unbiased transmission it is more likely that individuals of the new generation will pick up <span class="math inline">\(A\)</span> randomly when copying. The few individuals with trait <span class="math inline">\(B\)</span> will have 80% probability of copying <span class="math inline">\(A\)</span>. With unbiased mutation, on the other hand, since <span class="math inline">\(\mu\)</span> is applied independently to each individual, when <span class="math inline">\(A\)</span> is common then there will be more individuals that will flip to <span class="math inline">\(B\)</span> (specifically, <span class="math inline">\(\mu p N\)</span> individuals, which in our case is 4) than individuals that will flip to <span class="math inline">\(A\)</span> (equal to <span class="math inline">\(\mu (1-p) N\)</span> individuals, in our case 1) keeping the traits at similar frequencies.</p>
 <p>But what if we were to start at different initial frequencies of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>? Say, <span class="math inline">\(p=0.1\)</span> and <span class="math inline">\(p=0.9\)</span>? Would <span class="math inline">\(A\)</span> disappear? Would unbiased mutation keep <span class="math inline">\(p\)</span> at these initial values, like we saw unbiased transmission does in Model 1?</p>
 <p>To find out, let’s change <span class="math inline">\(p_0\)</span>, which specifies the initial probability of drawing an <span class="math inline">\(A\)</span> rather than a <span class="math inline">\(B\)</span> in the first generation.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="unbiased-and-biased-mutation.html#cb30-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">unbiased_mutation</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">mu =</span> <span class="fl">0.05</span>, <span class="dt">p_0 =</span> <span class="fl">0.1</span>, <span class="dt">t_max =</span> <span class="dv">200</span>, <span class="dt">r_max =</span> <span class="dv">5</span>)</span>
-<span id="cb30-2"><a href="unbiased-and-biased-mutation.html#cb30-2"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="unbiased-and-biased-mutation.html#cb30-1" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">unbiased_mutation</span>(<span class="at">N =</span> <span class="dv">100</span>, <span class="at">mu =</span> <span class="fl">0.05</span>, <span class="at">p_0 =</span> <span class="fl">0.1</span>, <span class="at">t_max =</span> <span class="dv">200</span>, <span class="at">r_max =</span> <span class="dv">5</span>)</span>
+<span id="cb30-2"><a href="unbiased-and-biased-mutation.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_runs</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:2-4"></span>
 <img src="IBM-cultevo_files/figure-html/2-4-1.png" alt="Unbiased mutation causes trait frequencies to converge on 0.5, irrespective of starting frequencies" width="672" />
 <p class="caption">
@@ -368,46 +381,46 @@ Figure 2.2: Unbiased mutation causes trait frequencies to converge on 0.5, irres
 </div>
 <p>You should see <span class="math inline">\(p\)</span> go from <span class="math inline">\(0.1\)</span> up to <span class="math inline">\(0.5\)</span>. In fact, whatever the initial starting frequencies of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, unbiased mutation always leads to <span class="math inline">\(p=0.5\)</span>, for the reason explained above: unbiased mutation always tends to balance the proportion of <span class="math inline">\(A\)</span>s and <span class="math inline">\(B\)</span>s.</p>
 </div>
-<div id="biased-mutation" class="section level2">
+<div id="biased-mutation" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Biased mutation</h2>
 <p>A more interesting case is biased mutation. Let’s assume now that there is a probability <span class="math inline">\(\mu_b\)</span> that an individual with trait <span class="math inline">\(B\)</span> mutates into <span class="math inline">\(A\)</span>, but there is no possibility of trait <span class="math inline">\(A\)</span> mutating into trait <span class="math inline">\(B\)</span>. Perhaps trait <span class="math inline">\(A\)</span> is a particularly catchy or memorable version of a story or an intuitive explanation of a phenomenon, and <span class="math inline">\(B\)</span> is difficult to remember or unintuitive to understand.</p>
 <p>The function <code>biased_mutation()</code> captures this unidirectional mutation.</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="unbiased-and-biased-mutation.html#cb31-1"></a>biased_mutation &lt;-<span class="st"> </span><span class="cf">function</span>(N, mu_b, p_<span class="dv">0</span>, t_max, r_max) {</span>
-<span id="cb31-2"><a href="unbiased-and-biased-mutation.html#cb31-2"></a>   <span class="co"># Create the output tibble</span></span>
-<span id="cb31-3"><a href="unbiased-and-biased-mutation.html#cb31-3"></a>  output &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">generation =</span> <span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>t_max, r_max), </span>
-<span id="cb31-4"><a href="unbiased-and-biased-mutation.html#cb31-4"></a>                   <span class="dt">p =</span> <span class="kw">as.numeric</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, t_max <span class="op">*</span><span class="st"> </span>r_max)), </span>
-<span id="cb31-5"><a href="unbiased-and-biased-mutation.html#cb31-5"></a>                   <span class="dt">run =</span> <span class="kw">as.factor</span>(<span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>r_max, <span class="dt">each =</span> t_max)))</span>
-<span id="cb31-6"><a href="unbiased-and-biased-mutation.html#cb31-6"></a></span>
-<span id="cb31-7"><a href="unbiased-and-biased-mutation.html#cb31-7"></a>  <span class="cf">for</span> (r <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>r_max) {</span>
-<span id="cb31-8"><a href="unbiased-and-biased-mutation.html#cb31-8"></a>    population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, <span class="dt">replace =</span> <span class="ot">TRUE</span>, </span>
-<span id="cb31-9"><a href="unbiased-and-biased-mutation.html#cb31-9"></a>                                        <span class="dt">prob =</span> <span class="kw">c</span>(p_<span class="dv">0</span>, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_<span class="dv">0</span>)))</span>
-<span id="cb31-10"><a href="unbiased-and-biased-mutation.html#cb31-10"></a>    <span class="co"># Add first generation&#39;s p for run r</span></span>
-<span id="cb31-11"><a href="unbiased-and-biased-mutation.html#cb31-11"></a>    output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span><span class="dv">1</span> <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p &lt;-<span class="st"> </span></span>
-<span id="cb31-12"><a href="unbiased-and-biased-mutation.html#cb31-12"></a><span class="st">      </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N </span>
-<span id="cb31-13"><a href="unbiased-and-biased-mutation.html#cb31-13"></a>    <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span>t_max) {</span>
-<span id="cb31-14"><a href="unbiased-and-biased-mutation.html#cb31-14"></a>      <span class="co"># Copy individuals to previous_population tibble</span></span>
-<span id="cb31-15"><a href="unbiased-and-biased-mutation.html#cb31-15"></a>      previous_population &lt;-<span class="st"> </span>population </span>
-<span id="cb31-16"><a href="unbiased-and-biased-mutation.html#cb31-16"></a>      </span>
-<span id="cb31-17"><a href="unbiased-and-biased-mutation.html#cb31-17"></a>      <span class="co"># Determine &#39;mutant&#39; individuals</span></span>
-<span id="cb31-18"><a href="unbiased-and-biased-mutation.html#cb31-18"></a>      mutate &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), N, <span class="dt">prob =</span> <span class="kw">c</span>(mu_b, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>mu_b), <span class="dt">replace =</span> <span class="ot">TRUE</span>) </span>
-<span id="cb31-19"><a href="unbiased-and-biased-mutation.html#cb31-19"></a>      </span>
-<span id="cb31-20"><a href="unbiased-and-biased-mutation.html#cb31-20"></a>      <span class="co"># If there are &#39;mutants&#39; from B to A</span></span>
-<span id="cb31-21"><a href="unbiased-and-biased-mutation.html#cb31-21"></a>      <span class="cf">if</span> (<span class="kw">nrow</span>(population[mutate <span class="op">&amp;</span><span class="st"> </span>previous_population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;B&quot;</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
-<span id="cb31-22"><a href="unbiased-and-biased-mutation.html#cb31-22"></a>        <span class="co"># Then flip them to A</span></span>
-<span id="cb31-23"><a href="unbiased-and-biased-mutation.html#cb31-23"></a>        population[mutate <span class="op">&amp;</span><span class="st"> </span>previous_population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;B&quot;</span>, ]<span class="op">$</span>trait &lt;-<span class="st"> &quot;A&quot;</span></span>
-<span id="cb31-24"><a href="unbiased-and-biased-mutation.html#cb31-24"></a>      }</span>
-<span id="cb31-25"><a href="unbiased-and-biased-mutation.html#cb31-25"></a>      <span class="co"># Get p and put it into output slot for this generation t and run r</span></span>
-<span id="cb31-26"><a href="unbiased-and-biased-mutation.html#cb31-26"></a>      output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span>t <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p &lt;-<span class="st"> </span></span>
-<span id="cb31-27"><a href="unbiased-and-biased-mutation.html#cb31-27"></a><span class="st">        </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N </span>
-<span id="cb31-28"><a href="unbiased-and-biased-mutation.html#cb31-28"></a>    }</span>
-<span id="cb31-29"><a href="unbiased-and-biased-mutation.html#cb31-29"></a>  }</span>
-<span id="cb31-30"><a href="unbiased-and-biased-mutation.html#cb31-30"></a>  <span class="co"># Export data from function</span></span>
-<span id="cb31-31"><a href="unbiased-and-biased-mutation.html#cb31-31"></a>  output </span>
-<span id="cb31-32"><a href="unbiased-and-biased-mutation.html#cb31-32"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="unbiased-and-biased-mutation.html#cb31-1" aria-hidden="true" tabindex="-1"></a>biased_mutation <span class="ot">&lt;-</span> <span class="cf">function</span>(N, mu_b, p_0, t_max, r_max) {</span>
+<span id="cb31-2"><a href="unbiased-and-biased-mutation.html#cb31-2" aria-hidden="true" tabindex="-1"></a>   <span class="co"># Create the output tibble</span></span>
+<span id="cb31-3"><a href="unbiased-and-biased-mutation.html#cb31-3" aria-hidden="true" tabindex="-1"></a>  output <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">generation =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>t_max, r_max), </span>
+<span id="cb31-4"><a href="unbiased-and-biased-mutation.html#cb31-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">p =</span> <span class="fu">as.numeric</span>(<span class="fu">rep</span>(<span class="cn">NA</span>, t_max <span class="sc">*</span> r_max)), </span>
+<span id="cb31-5"><a href="unbiased-and-biased-mutation.html#cb31-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">run =</span> <span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>r_max, <span class="at">each =</span> t_max)))</span>
+<span id="cb31-6"><a href="unbiased-and-biased-mutation.html#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="unbiased-and-biased-mutation.html#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (r <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>r_max) {</span>
+<span id="cb31-8"><a href="unbiased-and-biased-mutation.html#cb31-8" aria-hidden="true" tabindex="-1"></a>    population <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">trait =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, <span class="at">replace =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb31-9"><a href="unbiased-and-biased-mutation.html#cb31-9" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">prob =</span> <span class="fu">c</span>(p_0, <span class="dv">1</span> <span class="sc">-</span> p_0)))</span>
+<span id="cb31-10"><a href="unbiased-and-biased-mutation.html#cb31-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add first generation&#39;s p for run r</span></span>
+<span id="cb31-11"><a href="unbiased-and-biased-mutation.html#cb31-11" aria-hidden="true" tabindex="-1"></a>    output[output<span class="sc">$</span>generation <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> output<span class="sc">$</span>run <span class="sc">==</span> r, ]<span class="sc">$</span>p <span class="ot">&lt;-</span> </span>
+<span id="cb31-12"><a href="unbiased-and-biased-mutation.html#cb31-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">sum</span>(population<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;A&quot;</span>) <span class="sc">/</span> N </span>
+<span id="cb31-13"><a href="unbiased-and-biased-mutation.html#cb31-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>t_max) {</span>
+<span id="cb31-14"><a href="unbiased-and-biased-mutation.html#cb31-14" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Copy individuals to previous_population tibble</span></span>
+<span id="cb31-15"><a href="unbiased-and-biased-mutation.html#cb31-15" aria-hidden="true" tabindex="-1"></a>      previous_population <span class="ot">&lt;-</span> population </span>
+<span id="cb31-16"><a href="unbiased-and-biased-mutation.html#cb31-16" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb31-17"><a href="unbiased-and-biased-mutation.html#cb31-17" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Determine &#39;mutant&#39; individuals</span></span>
+<span id="cb31-18"><a href="unbiased-and-biased-mutation.html#cb31-18" aria-hidden="true" tabindex="-1"></a>      mutate <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), N, <span class="at">prob =</span> <span class="fu">c</span>(mu_b, <span class="dv">1</span> <span class="sc">-</span> mu_b), <span class="at">replace =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb31-19"><a href="unbiased-and-biased-mutation.html#cb31-19" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb31-20"><a href="unbiased-and-biased-mutation.html#cb31-20" aria-hidden="true" tabindex="-1"></a>      <span class="co"># If there are &#39;mutants&#39; from B to A</span></span>
+<span id="cb31-21"><a href="unbiased-and-biased-mutation.html#cb31-21" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">nrow</span>(population[mutate <span class="sc">&amp;</span> previous_population<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;B&quot;</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb31-22"><a href="unbiased-and-biased-mutation.html#cb31-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Then flip them to A</span></span>
+<span id="cb31-23"><a href="unbiased-and-biased-mutation.html#cb31-23" aria-hidden="true" tabindex="-1"></a>        population[mutate <span class="sc">&amp;</span> previous_population<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;B&quot;</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;A&quot;</span></span>
+<span id="cb31-24"><a href="unbiased-and-biased-mutation.html#cb31-24" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb31-25"><a href="unbiased-and-biased-mutation.html#cb31-25" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Get p and put it into output slot for this generation t and run r</span></span>
+<span id="cb31-26"><a href="unbiased-and-biased-mutation.html#cb31-26" aria-hidden="true" tabindex="-1"></a>      output[output<span class="sc">$</span>generation <span class="sc">==</span> t <span class="sc">&amp;</span> output<span class="sc">$</span>run <span class="sc">==</span> r, ]<span class="sc">$</span>p <span class="ot">&lt;-</span> </span>
+<span id="cb31-27"><a href="unbiased-and-biased-mutation.html#cb31-27" aria-hidden="true" tabindex="-1"></a>        <span class="fu">sum</span>(population<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;A&quot;</span>) <span class="sc">/</span> N </span>
+<span id="cb31-28"><a href="unbiased-and-biased-mutation.html#cb31-28" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb31-29"><a href="unbiased-and-biased-mutation.html#cb31-29" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb31-30"><a href="unbiased-and-biased-mutation.html#cb31-30" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Export data from function</span></span>
+<span id="cb31-31"><a href="unbiased-and-biased-mutation.html#cb31-31" aria-hidden="true" tabindex="-1"></a>  output </span>
+<span id="cb31-32"><a href="unbiased-and-biased-mutation.html#cb31-32" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>There are just two changes in this code compared to <code>unbiased_mutation()</code>. First, we’ve replaced <code>mu</code> with <code>mu_b</code> to keep the two parameters distinct and avoid confusion. Second, the line in <code>unbiased_mutation()</code> which caused individuals with <span class="math inline">\(A\)</span> to mutate to <span class="math inline">\(B\)</span> has been deleted.</p>
 <p>Let’s see what effect this has by running <code>biased_mutation()</code>. We’ll start with the population entirely composed of individuals with <span class="math inline">\(B\)</span>, i.e. <span class="math inline">\(p_0=0\)</span>, to see how quickly and in what manner <span class="math inline">\(A\)</span> spreads via biased mutation.</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="unbiased-and-biased-mutation.html#cb32-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">biased_mutation</span>(<span class="dt">N =</span> <span class="dv">100</span>, <span class="dt">mu_b =</span> <span class="fl">0.05</span>, <span class="dt">p_0 =</span> <span class="dv">0</span>, <span class="dt">t_max =</span> <span class="dv">200</span>, <span class="dt">r_max =</span> <span class="dv">5</span>)</span>
-<span id="cb32-2"><a href="unbiased-and-biased-mutation.html#cb32-2"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="unbiased-and-biased-mutation.html#cb32-1" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">biased_mutation</span>(<span class="at">N =</span> <span class="dv">100</span>, <span class="at">mu_b =</span> <span class="fl">0.05</span>, <span class="at">p_0 =</span> <span class="dv">0</span>, <span class="at">t_max =</span> <span class="dv">200</span>, <span class="at">r_max =</span> <span class="dv">5</span>)</span>
+<span id="cb32-2"><a href="unbiased-and-biased-mutation.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_runs</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:2-6"></span>
 <img src="IBM-cultevo_files/figure-html/2-6-1.png" alt="Biased mutation causes the favoured trait to replace the unfavoured trait" width="672" />
 <p class="caption">
@@ -415,8 +428,8 @@ Figure 2.3: Biased mutation causes the favoured trait to replace the unfavoured 
 </p>
 </div>
 <p>The plot shows a steep increase that slows and plateaus at <span class="math inline">\(p=1\)</span> by around generation <span class="math inline">\(t=100\)</span>. There should be a bit of fluctuation in the different runs, but not much. Now let’s try a larger sample size.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="unbiased-and-biased-mutation.html#cb33-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">biased_mutation</span>(<span class="dt">N =</span> <span class="dv">10000</span>, <span class="dt">mu_b =</span> <span class="fl">0.05</span>, <span class="dt">p_0 =</span> <span class="dv">0</span>, <span class="dt">t_max =</span> <span class="dv">200</span>, <span class="dt">r_max =</span> <span class="dv">5</span>)</span>
-<span id="cb33-2"><a href="unbiased-and-biased-mutation.html#cb33-2"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="unbiased-and-biased-mutation.html#cb33-1" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">biased_mutation</span>(<span class="at">N =</span> <span class="dv">10000</span>, <span class="at">mu_b =</span> <span class="fl">0.05</span>, <span class="at">p_0 =</span> <span class="dv">0</span>, <span class="at">t_max =</span> <span class="dv">200</span>, <span class="at">r_max =</span> <span class="dv">5</span>)</span>
+<span id="cb33-2"><a href="unbiased-and-biased-mutation.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_runs</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:2-7"></span>
 <img src="IBM-cultevo_files/figure-html/2-7-1.png" alt="Increasing the population size does not change the rate at which biased mutation causes the favoured trait to increase in frequency" width="672" />
 <p class="caption">
@@ -424,8 +437,8 @@ Figure 2.4: Increasing the population size does not change the rate at which bia
 </p>
 </div>
 <p>With <span class="math inline">\(N = 10000\)</span> the line should be smooth with little (if any) fluctuation across the runs. But notice that it plateaus at about the same generation, around <span class="math inline">\(t=100\)</span>. Population size has little effect on the rate at which a novel trait spreads via biased mutation. <span class="math inline">\(\mu_b\)</span>, on the other hand, does affect this speed. Let’s double the biased mutation rate to 0.1.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="unbiased-and-biased-mutation.html#cb34-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">biased_mutation</span>(<span class="dt">N =</span> <span class="dv">10000</span>, <span class="dt">mu_b =</span> <span class="fl">0.1</span>, <span class="dt">p_0 =</span> <span class="dv">0</span>, <span class="dt">t_max =</span> <span class="dv">200</span>, <span class="dt">r_max =</span> <span class="dv">5</span>)</span>
-<span id="cb34-2"><a href="unbiased-and-biased-mutation.html#cb34-2"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="unbiased-and-biased-mutation.html#cb34-1" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">biased_mutation</span>(<span class="at">N =</span> <span class="dv">10000</span>, <span class="at">mu_b =</span> <span class="fl">0.1</span>, <span class="at">p_0 =</span> <span class="dv">0</span>, <span class="at">t_max =</span> <span class="dv">200</span>, <span class="at">r_max =</span> <span class="dv">5</span>)</span>
+<span id="cb34-2"><a href="unbiased-and-biased-mutation.html#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_runs</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:2-8"></span>
 <img src="IBM-cultevo_files/figure-html/2-8-1.png" alt="Increasing the mutation rate increases the rate at which biased mutation causes the favoured trait to increase in frequency" width="672" />
 <p class="caption">
@@ -434,15 +447,15 @@ Figure 2.5: Increasing the mutation rate increases the rate at which biased muta
 </div>
 <p>Now trait <span class="math inline">\(A\)</span> reaches fixation around generation <span class="math inline">\(t=50\)</span>. Play around with <span class="math inline">\(N\)</span> and <span class="math inline">\(\mu_b\)</span> to confirm that the latter determines the rate of diffusion of trait <span class="math inline">\(A\)</span>, and that it takes the same form each time - roughly an ‘r’ shape with an initial steep increase followed by a plateauing at <span class="math inline">\(p=1\)</span>.</p>
 </div>
-<div id="summary-of-the-model-1" class="section level2">
+<div id="summary-of-the-model-1" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Summary of the model</h2>
 <p>With this simple model, we can draw the following insights. Unbiased mutation, which resembles genetic mutation in being non-directional, always leads to an equal mix of the two traits. It introduces and maintains cultural variation in the population. It is interesting to compare unbiased mutation to unbiased transmission from the previous chapter. While unbiased transmission did not change <span class="math inline">\(p\)</span> over time, unbiased mutation always converges on <span class="math inline">\(p=0.5\)</span>, irrespective of the starting frequency. (NB <span class="math inline">\(p = 0.5\)</span> assuming there are two traits; more generally, <span class="math inline">\(p=1/v\)</span>, where <span class="math inline">\(v\)</span> is the number of traits.)</p>
 <p>Biased mutation, which is far more common - perhaps even typical - in cultural evolution, shows different dynamics. Novel traits favoured by biased mutation spread in a characteristic fashion - an r-shaped diffusion curve - with a speed characterised by the mutation rate <span class="math inline">\(\mu_b\)</span>. Population size has little effect, whether <span class="math inline">\(N = 100\)</span> or <span class="math inline">\(N = 10000\)</span>. Whenever biased mutation is present (<span class="math inline">\(\mu_b&gt;0\)</span>), the favoured trait goes to fixation, even if it is not initially present.</p>
 <p>In terms of programming techniques, the major novelty in this model is the use of <code>sample()</code> to determine which individuals should undergo whatever the fixed probability specifies (in our case, mutation). This could be done with a loop, but vectorising code in the way we did here is much faster in R than loops.</p>
 </div>
-<div id="further-reading-2" class="section level2">
+<div id="further-reading-2" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> Further reading</h2>
-<p><span class="citation">Boyd and Richerson (<a href="references.html#ref-boyd_culture_1985" role="doc-biblioref">1985</a>)</span> model what they call ‘guided variation’, which is equivalent to biased mutation as modelled in this chapter. <span class="citation">Henrich (<a href="references.html#ref-henrich_cultural_2001" role="doc-biblioref">2001</a>)</span> shows how biased mutation / guided variation generates r-shaped curves similar to those generated here.</p>
+<p><span class="citation"><a href="references.html#ref-boyd_culture_1985" role="doc-biblioref">Boyd and Richerson</a> (<a href="references.html#ref-boyd_culture_1985" role="doc-biblioref">1985</a>)</span> model what they call ‘guided variation,’ which is equivalent to biased mutation as modelled in this chapter. <span class="citation"><a href="references.html#ref-henrich_cultural_2001" role="doc-biblioref">Henrich</a> (<a href="references.html#ref-henrich_cultural_2001" role="doc-biblioref">2001</a>)</span> shows how biased mutation / guided variation generates r-shaped curves similar to those generated here.</p>
 
 </div>
 </div>

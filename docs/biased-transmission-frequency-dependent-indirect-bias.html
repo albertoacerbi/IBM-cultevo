@@ -26,7 +26,7 @@
 <meta name="author" content="Marco Smolla" />
 
 
-<meta name="date" content="2020-12-03" />
+<meta name="date" content="2022-03-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -35,6 +35,7 @@
   
 <link rel="prev" href="biased-transmission-direct-bias.html"/>
 <link rel="next" href="biased-transmission-demonstrator-based-indirect-bias.html"/>
+<script src="libs/header-attrs-2.5.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,24 +53,22 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -89,7 +88,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -139,7 +138,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Note to the reader</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#aim-of-the-book"><i class="fa fa-check"></i>Aim of the book</a></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#what-is-cultural-evolution"><i class="fa fa-check"></i>What is cultural evolution?</a></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#why-model"><i class="fa fa-check"></i>Why model?</a></li>
@@ -150,7 +150,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
 </ul></li>
 <li class="part"><span><b>Basics</b></span></li>
-<li class="chapter" data-level="1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html"><i class="fa fa-check"></i><b>1</b> Unbiased transmission</a><ul>
+<li class="chapter" data-level="1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html"><i class="fa fa-check"></i><b>1</b> Unbiased transmission</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#initialising-the-simulation"><i class="fa fa-check"></i><b>1.1</b> Initialising the simulation</a></li>
 <li class="chapter" data-level="1.2" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#execute-generation-turn-over-many-times"><i class="fa fa-check"></i><b>1.2</b> Execute generation turn-over many times</a></li>
 <li class="chapter" data-level="1.3" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#plotting-the-model-results"><i class="fa fa-check"></i><b>1.3</b> Plotting the model results</a></li>
@@ -160,37 +161,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.7" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#summary-of-the-model"><i class="fa fa-check"></i><b>1.7</b> Summary of the model</a></li>
 <li class="chapter" data-level="1.8" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#further-reading-1"><i class="fa fa-check"></i><b>1.8</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html"><i class="fa fa-check"></i><b>2</b> Unbiased and biased mutation</a><ul>
+<li class="chapter" data-level="2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html"><i class="fa fa-check"></i><b>2</b> Unbiased and biased mutation</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#unbiased-mutation"><i class="fa fa-check"></i><b>2.1</b> Unbiased mutation</a></li>
 <li class="chapter" data-level="2.2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#biased-mutation"><i class="fa fa-check"></i><b>2.2</b> Biased mutation</a></li>
 <li class="chapter" data-level="2.3" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#summary-of-the-model-1"><i class="fa fa-check"></i><b>2.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="2.4" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#further-reading-2"><i class="fa fa-check"></i><b>2.4</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html"><i class="fa fa-check"></i><b>3</b> Biased transmission: direct bias</a><ul>
+<li class="chapter" data-level="3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html"><i class="fa fa-check"></i><b>3</b> Biased transmission: direct bias</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#a-simple-model-of-directly-biased-transmission"><i class="fa fa-check"></i><b>3.1</b> A simple model of directly biased transmission</a></li>
 <li class="chapter" data-level="3.2" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#strength-of-selection"><i class="fa fa-check"></i><b>3.2</b> Strength of selection</a></li>
 <li class="chapter" data-level="3.3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#summary-of-the-model-2"><i class="fa fa-check"></i><b>3.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="3.4" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#further-reading-3"><i class="fa fa-check"></i><b>3.4</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html"><i class="fa fa-check"></i><b>4</b> Biased transmission: frequency-dependent indirect bias</a><ul>
+<li class="chapter" data-level="4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html"><i class="fa fa-check"></i><b>4</b> Biased transmission: frequency-dependent indirect bias</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#the-logic-of-conformity"><i class="fa fa-check"></i><b>4.1</b> The logic of conformity</a></li>
 <li class="chapter" data-level="4.2" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#testing-conformist-transmission"><i class="fa fa-check"></i><b>4.2</b> Testing conformist transmission</a></li>
 <li class="chapter" data-level="4.3" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#summary-of-the-model-3"><i class="fa fa-check"></i><b>4.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="4.4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#further-readings"><i class="fa fa-check"></i><b>4.4</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html"><i class="fa fa-check"></i><b>5</b> Biased transmission: demonstrator-based indirect bias</a><ul>
+<li class="chapter" data-level="5" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html"><i class="fa fa-check"></i><b>5</b> Biased transmission: demonstrator-based indirect bias</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#a-simple-demonstrator-bias"><i class="fa fa-check"></i><b>5.1</b> A simple demonstrator bias</a></li>
 <li class="chapter" data-level="5.2" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#predicting-the-winning-trait"><i class="fa fa-check"></i><b>5.2</b> Predicting the ‘winning’ trait</a></li>
 <li class="chapter" data-level="5.3" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#summary-of-the-model-4"><i class="fa fa-check"></i><b>5.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="5.4" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#further-readings-1"><i class="fa fa-check"></i><b>5.4</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html"><i class="fa fa-check"></i><b>6</b> Vertical and horizontal transmission</a><ul>
+<li class="chapter" data-level="6" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html"><i class="fa fa-check"></i><b>6</b> Vertical and horizontal transmission</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#vertical-cultural-transmission"><i class="fa fa-check"></i><b>6.1</b> Vertical cultural transmission</a></li>
 <li class="chapter" data-level="6.2" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#horizontal-cultural-transmission"><i class="fa fa-check"></i><b>6.2</b> Horizontal cultural transmission</a></li>
 <li class="chapter" data-level="6.3" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#summary-of-the-model-5"><i class="fa fa-check"></i><b>6.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="6.4" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#further-reading-4"><i class="fa fa-check"></i><b>6.4</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html"><i class="fa fa-check"></i><b>7</b> Multiple traits models</a><ul>
+<li class="chapter" data-level="7" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html"><i class="fa fa-check"></i><b>7</b> Multiple traits models</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#unbiased-transmission-with-multiple-traits"><i class="fa fa-check"></i><b>7.1</b> Unbiased transmission with multiple traits</a></li>
 <li class="chapter" data-level="7.2" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#introducing-innovation"><i class="fa fa-check"></i><b>7.2</b> Introducing innovation</a></li>
 <li class="chapter" data-level="7.3" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#optimising-the-code"><i class="fa fa-check"></i><b>7.3</b> Optimising the code</a></li>
@@ -199,18 +206,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.6" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#further-readings-2"><i class="fa fa-check"></i><b>7.6</b> Further readings</a></li>
 </ul></li>
 <li class="part"><span><b>Advanced topics - The evolution of cultural evolution</b></span></li>
-<li class="chapter" data-level="8" data-path="rogers-paradox.html"><a href="rogers-paradox.html"><i class="fa fa-check"></i><b>8</b> Rogers’ Paradox</a><ul>
+<li class="chapter" data-level="8" data-path="rogers-paradox.html"><a href="rogers-paradox.html"><i class="fa fa-check"></i><b>8</b> Rogers’ Paradox</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="rogers-paradox.html"><a href="rogers-paradox.html#modelling-rogers-paradox"><i class="fa fa-check"></i><b>8.1</b> Modelling Rogers’ Paradox</a></li>
 <li class="chapter" data-level="8.2" data-path="rogers-paradox.html"><a href="rogers-paradox.html#summary-of-the-model-7"><i class="fa fa-check"></i><b>8.2</b> Summary of the model</a></li>
 <li class="chapter" data-level="8.3" data-path="rogers-paradox.html"><a href="rogers-paradox.html#further-reading-5"><i class="fa fa-check"></i><b>8.3</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html"><i class="fa fa-check"></i><b>9</b> Rogers’ Paradox: A Solution</a><ul>
+<li class="chapter" data-level="9" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html"><i class="fa fa-check"></i><b>9</b> Rogers’ Paradox: A Solution</a>
+<ul>
 <li class="chapter" data-level="9.1" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#modelling-critical-social-learners"><i class="fa fa-check"></i><b>9.1</b> Modelling critical social learners</a></li>
 <li class="chapter" data-level="9.2" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#summary-of-the-model-8"><i class="fa fa-check"></i><b>9.2</b> Summary of the model</a></li>
 <li class="chapter" data-level="9.3" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#further-reading-6"><i class="fa fa-check"></i><b>9.3</b> Further reading</a></li>
 </ul></li>
 <li class="part"><span><b>Advanced topics - Cultural inheritance</b></span></li>
-<li class="chapter" data-level="10" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html"><i class="fa fa-check"></i><b>10</b> Reproduction and transformation</a><ul>
+<li class="chapter" data-level="10" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html"><i class="fa fa-check"></i><b>10</b> Reproduction and transformation</a>
+<ul>
 <li class="chapter" data-level="10.1" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#copying-and-selection"><i class="fa fa-check"></i><b>10.1</b> Copying and selection</a></li>
 <li class="chapter" data-level="10.2" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#convergent-transformation"><i class="fa fa-check"></i><b>10.2</b> Convergent transformation</a></li>
 <li class="chapter" data-level="10.3" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#emergent-similarity"><i class="fa fa-check"></i><b>10.3</b> Emergent similarity</a></li>
@@ -218,56 +228,59 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.5" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#summary-of-the-model-9"><i class="fa fa-check"></i><b>10.5</b> Summary of the model</a></li>
 <li class="chapter" data-level="10.6" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#further-readings-3"><i class="fa fa-check"></i><b>10.6</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html"><i class="fa fa-check"></i><b>11</b> Social learning of social learning rules</a><ul>
+<li class="chapter" data-level="11" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html"><i class="fa fa-check"></i><b>11</b> Social learning of social learning rules</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#openness-and-conservatism"><i class="fa fa-check"></i><b>11.1</b> Openness and conservatism</a></li>
 <li class="chapter" data-level="11.2" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#maintaining-open-populations"><i class="fa fa-check"></i><b>11.2</b> Maintaining open populations</a></li>
 <li class="chapter" data-level="11.3" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#summary-of-the-model-10"><i class="fa fa-check"></i><b>11.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="11.4" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#further-readings-4"><i class="fa fa-check"></i><b>11.4</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html"><i class="fa fa-check"></i><b>12</b> Traits inter-dependence</a><ul>
+<li class="chapter" data-level="12" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html"><i class="fa fa-check"></i><b>12</b> Traits inter-dependence</a>
+<ul>
 <li class="chapter" data-level="12.1" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#compatible-and-incompatible-traits"><i class="fa fa-check"></i><b>12.1</b> Compatible and incompatible traits</a></li>
 <li class="chapter" data-level="12.2" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#many-traits-model"><i class="fa fa-check"></i><b>12.2</b> Many-traits model</a></li>
 <li class="chapter" data-level="12.3" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#summary-of-the-model-11"><i class="fa fa-check"></i><b>12.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="12.4" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#further-readings-5"><i class="fa fa-check"></i><b>12.4</b> Further readings</a></li>
 </ul></li>
 <li class="part"><span><b>Advanced topics - Culture and populations</b></span></li>
-<li class="chapter" data-level="13" data-path="demography.html"><a href="demography.html"><i class="fa fa-check"></i><b>13</b> Demography</a><ul>
+<li class="chapter" data-level="13" data-path="demography.html"><a href="demography.html"><i class="fa fa-check"></i><b>13</b> Demography</a>
+<ul>
 <li class="chapter" data-level="13.1" data-path="demography.html"><a href="demography.html#the-tasmania-case"><i class="fa fa-check"></i><b>13.1</b> The Tasmania Case</a></li>
 <li class="chapter" data-level="13.2" data-path="demography.html"><a href="demography.html#modelling-the-tasmania-case"><i class="fa fa-check"></i><b>13.2</b> Modelling the Tasmania Case</a></li>
 <li class="chapter" data-level="13.3" data-path="demography.html"><a href="demography.html#calculating-critical-population-sizes-based-on-skill-complexity"><i class="fa fa-check"></i><b>13.3</b> Calculating critical population sizes based on skill complexity</a></li>
 <li class="chapter" data-level="13.4" data-path="demography.html"><a href="demography.html#summary-of-the-model-12"><i class="fa fa-check"></i><b>13.4</b> Summary of the model</a></li>
 <li class="chapter" data-level="13.5" data-path="demography.html"><a href="demography.html#further-readings-6"><i class="fa fa-check"></i><b>13.5</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="social-network-structure.html"><a href="social-network-structure.html"><i class="fa fa-check"></i><b>14</b> Social network structure</a><ul>
+<li class="chapter" data-level="14" data-path="social-network-structure.html"><a href="social-network-structure.html"><i class="fa fa-check"></i><b>14</b> Social network structure</a>
+<ul>
 <li class="chapter" data-level="14.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-basics"><i class="fa fa-check"></i><b>14.1</b> Network basics</a></li>
 <li class="chapter" data-level="14.2" data-path="social-network-structure.html"><a href="social-network-structure.html#generating-networks"><i class="fa fa-check"></i><b>14.2</b> Generating networks</a></li>
-<li class="chapter" data-level="14.3" data-path="social-network-structure.html"><a href="social-network-structure.html#plotting-networks"><i class="fa fa-check"></i><b>14.3</b> Plotting networks</a><ul>
+<li class="chapter" data-level="14.3" data-path="social-network-structure.html"><a href="social-network-structure.html#plotting-networks"><i class="fa fa-check"></i><b>14.3</b> Plotting networks</a>
+<ul>
 <li class="chapter" data-level="14.3.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-layout"><i class="fa fa-check"></i><b>14.3.1</b> Network layout</a></li>
 <li class="chapter" data-level="14.3.2" data-path="social-network-structure.html"><a href="social-network-structure.html#network-styling"><i class="fa fa-check"></i><b>14.3.2</b> Network styling</a></li>
 </ul></li>
-<li class="chapter" data-level="14.4" data-path="social-network-structure.html"><a href="social-network-structure.html#analyse-social-networks"><i class="fa fa-check"></i><b>14.4</b> Analyse social networks</a><ul>
+<li class="chapter" data-level="14.4" data-path="social-network-structure.html"><a href="social-network-structure.html#analyse-social-networks"><i class="fa fa-check"></i><b>14.4</b> Analyse social networks</a>
+<ul>
 <li class="chapter" data-level="14.4.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-properties-and-characteristics"><i class="fa fa-check"></i><b>14.4.1</b> Network properties and characteristics</a></li>
 <li class="chapter" data-level="14.4.2" data-path="social-network-structure.html"><a href="social-network-structure.html#vertex-properties"><i class="fa fa-check"></i><b>14.4.2</b> Vertex properties</a></li>
 </ul></li>
-<li class="chapter" data-level="14.5" data-path="social-network-structure.html"><a href="social-network-structure.html#modelling-information-transmission-in-social-networks"><i class="fa fa-check"></i><b>14.5</b> Modelling information transmission in social networks</a><ul>
+<li class="chapter" data-level="14.5" data-path="social-network-structure.html"><a href="social-network-structure.html#modelling-information-transmission-in-social-networks"><i class="fa fa-check"></i><b>14.5</b> Modelling information transmission in social networks</a>
+<ul>
 <li class="chapter" data-level="14.5.1" data-path="social-network-structure.html"><a href="social-network-structure.html#gossip-diffusion-in-networked-populations"><i class="fa fa-check"></i><b>14.5.1</b> Gossip diffusion in networked populations</a></li>
 <li class="chapter" data-level="14.5.2" data-path="social-network-structure.html"><a href="social-network-structure.html#complex-versus-simple-contagion-information-transmission"><i class="fa fa-check"></i><b>14.5.2</b> Complex versus simple contagion information transmission</a></li>
 </ul></li>
 <li class="chapter" data-level="14.6" data-path="social-network-structure.html"><a href="social-network-structure.html#summary-of-the-model-13"><i class="fa fa-check"></i><b>14.6</b> Summary of the model</a></li>
 <li class="chapter" data-level="14.7" data-path="social-network-structure.html"><a href="social-network-structure.html#further-reading-7"><i class="fa fa-check"></i><b>14.7</b> Further Reading</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html"><i class="fa fa-check"></i><b>15</b> Group structured populations and migration</a><ul>
+<li class="chapter" data-level="15" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html"><i class="fa fa-check"></i><b>15</b> Group structured populations and migration</a>
+<ul>
 <li class="chapter" data-level="15.1" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#modelling-migration-and-contact-between-population-subsets"><i class="fa fa-check"></i><b>15.1</b> Modelling migration and contact between population subsets</a></li>
 <li class="chapter" data-level="15.2" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#subdivided-population-with-limited-contact"><i class="fa fa-check"></i><b>15.2</b> Subdivided population with limited contact</a></li>
 <li class="chapter" data-level="15.3" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#subdivided-populations-with-migration"><i class="fa fa-check"></i><b>15.3</b> Subdivided populations with migration</a></li>
 <li class="chapter" data-level="15.4" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#varying-contact-and-migration-probability-for-repeated-simulation-runs"><i class="fa fa-check"></i><b>15.4</b> Varying contact and migration probability for repeated simulation runs</a></li>
-<li class="chapter" data-level="15.5" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#model-extensions"><i class="fa fa-check"></i><b>15.5</b> Model extensions</a><ul>
-<li class="chapter" data-level="" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#innovation-or-mutation"><i class="fa fa-check"></i>Innovation or mutation</a></li>
-<li><a href="group-structured-populations-and-migration.html#copy-m-models">Copy <span class="math inline">\(m\)</span> models</a></li>
-<li class="chapter" data-level="" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#variable-migration-probability-among-subsets"><i class="fa fa-check"></i>Variable migration probability among subsets</a></li>
-</ul></li>
-<li class="chapter" data-level="15.6" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#summary-of-the-model-14"><i class="fa fa-check"></i><b>15.6</b> Summary of the model</a></li>
-<li class="chapter" data-level="15.7" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#further-reading-8"><i class="fa fa-check"></i><b>15.7</b> Further reading</a></li>
+<li class="chapter" data-level="15.5" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#summary-of-the-model-14"><i class="fa fa-check"></i><b>15.5</b> Summary of the model</a></li>
+<li class="chapter" data-level="15.6" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#further-reading-8"><i class="fa fa-check"></i><b>15.6</b> Further reading</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -290,14 +303,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="biased-transmission-frequency-dependent-indirect-bias" class="section level1">
+<div id="biased-transmission-frequency-dependent-indirect-bias" class="section level1" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Biased transmission: frequency-dependent indirect bias</h1>
 <p>In <a href="biased-transmission-direct-bias.html#biased-transmission-direct-bias">Chapter 3</a> we looked at the case where one cultural trait is intrinsically more likely to be copied than another trait. Here we will start looking at the other kind of biased transmission when traits are equivalent, but individuals are more likely to adopt a trait according to the characteristics of the population, and in particular which other individuals already have it. (As we mentioned previously, these are often called ‘indirect’ or ‘context’ biases).</p>
-<div id="the-logic-of-conformity" class="section level2">
+<div id="the-logic-of-conformity" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> The logic of conformity</h2>
 <p>A first possibility is that we may be influenced by the frequency of the trait in the population, i.e. how many other individuals already have the trait. Conformity (or ‘positive frequency-dependent bias’) has been most studied. Here, individuals are disproportionately more likely to adopt the most common trait in the population, irrespective of its intrinsic characteristics. (The opposite case, anti-conformity or negative frequency-dependent bias is also possible, where the least common trait is more likely to be copied. This is probably less common in real life.)</p>
-<p>For example, imagine trait <span class="math inline">\(A\)</span> has a frequency of 0.7 in the population, with the rest possessing trait <span class="math inline">\(B\)</span>. An unbiased learner would adopt trait <span class="math inline">\(A\)</span> with a probability exactly equal to 0.7. This is unbiased transmission and is what happens the model described in (<a href="unbiased-transmission.html#unbiased-transmission">Chapter 1</a>: by picking a member of the previous generation at random, the probability of adoption is equal to the frequency of that trait among the previous generation.</p>
-<p>A conformist learner, on the other hand, would adopt trait <span class="math inline">\(A\)</span> with a probability greater than 0.7. In other words, common traits get an ‘adoption boost’ relative to unbiased transmission. Uncommon traits get an equivalent ‘adoption penalty’. The magnitude of this boost or penalty can be controlled by a parameter, which we will call <span class="math inline">\(D\)</span>.</p>
+<p>For example, imagine trait <span class="math inline">\(A\)</span> has a frequency of 0.7 in the population, with the rest possessing trait <span class="math inline">\(B\)</span>. An unbiased learner would adopt trait <span class="math inline">\(A\)</span> with a probability exactly equal to 0.7. This is unbiased transmission and is what happens the model described in <a href="unbiased-transmission.html#unbiased-transmission">Chapter 1</a> by picking a member of the previous generation at random, the probability of adoption is equal to the frequency of that trait among the previous generation.</p>
+<p>A conformist learner, on the other hand, would adopt trait <span class="math inline">\(A\)</span> with a probability greater than 0.7. In other words, common traits get an ‘adoption boost’ relative to unbiased transmission. Uncommon traits get an equivalent ‘adoption penalty.’ The magnitude of this boost or penalty can be controlled by a parameter, which we will call <span class="math inline">\(D\)</span>.</p>
 <p>Let’s keep things simple in our model. Rather than assuming that individuals sample across the entire population, which in any case might be implausible in large populations, let’s assume they pick only three demonstrators at random. Why three? This is the minimum number of demonstrators that can yield a majority (i.e. 2 vs 1), which we need to implement conformity. When two demonstrators have one trait and the other demonstrator has a different trait, we want to boost the probability of adoption for the majority trait, and reduce it for the minority trait.</p>
 <p>We can specify the probability of adoption as follows:</p>
 <p><strong>Table 1: Probability of adopting trait <span class="math inline">\(A\)</span> for each possible combination of traits amongst three demonstrators</strong></p>
@@ -390,211 +403,211 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Similarly, for the three combinations where there are two <span class="math inline">\(B\)</span>s and one <span class="math inline">\(A\)</span>, the probability of adopting <span class="math inline">\(A\)</span> is <span class="math inline">\(1/3\)</span> minus the conformist adoption penalty specified by <span class="math inline">\(D\)</span>.</p>
 <p>Let’s implement these assumptions in the kind of individual-based model we’ve been building so far. As before, assume <span class="math inline">\(N\)</span> individuals each of whom possesses one of two traits <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span>. The frequency of <span class="math inline">\(A\)</span> is denoted by <span class="math inline">\(p\)</span>. The initial frequency of <span class="math inline">\(A\)</span> in generation <span class="math inline">\(t=1\)</span> is <span class="math inline">\(p_0\)</span>. Rather than going straight to a function, let’s go step by step.</p>
 <p>First, we’ll specify our parameters, <span class="math inline">\(N\)</span> and <span class="math inline">\(p_0\)</span> as before, plus the new conformity parameter <span class="math inline">\(D\)</span>. We also create the usual <code>population</code> tibble and fill it with <span class="math inline">\(A\)</span>s and <span class="math inline">\(B\)</span>s in the proportion specified by <span class="math inline">\(p_0\)</span>, again exactly as before.</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb39-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-2"></a></span>
-<span id="cb39-3"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-3"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
-<span id="cb39-4"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-4"></a>p_<span class="dv">0</span> &lt;-<span class="st"> </span><span class="fl">0.5</span></span>
-<span id="cb39-5"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-5"></a>D &lt;-<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb39-6"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-6"></a></span>
-<span id="cb39-7"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-7"></a><span class="co"># Create first generation</span></span>
-<span id="cb39-8"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-8"></a>population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, </span>
-<span id="cb39-9"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-9"></a>                                    <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_<span class="dv">0</span>, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_<span class="dv">0</span>))) </span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb39-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-3" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb39-4"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-4" aria-hidden="true" tabindex="-1"></a>p_0 <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
+<span id="cb39-5"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-5" aria-hidden="true" tabindex="-1"></a>D <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb39-6"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-7"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create first generation</span></span>
+<span id="cb39-8"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-8" aria-hidden="true" tabindex="-1"></a>population <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">trait =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, </span>
+<span id="cb39-9"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb39-9" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> <span class="fu">c</span>(p_0, <span class="dv">1</span> <span class="sc">-</span> p_0))) </span></code></pre></div>
 <p>Now we create another tibble called <code>demonstrators</code> that picks, for each new individual in the next generation, three demonstrators at random from the current population of individuals. It therefore needs three columns/variables, one for each of the demonstrators, and <span class="math inline">\(N\)</span> rows, one for each individual. We fill each column with randomly chosen traits from the<code>population</code> tibble. We can have a look at <code>demonstrators</code> by entering its name in the R console.</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb40-1"></a><span class="co"># Create a tibble with a set of 3 randomly-picked demonstrators for each agent</span></span>
-<span id="cb40-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb40-2"></a>demonstrators &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">dem1 =</span> <span class="kw">sample</span>(population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>), </span>
-<span id="cb40-3"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb40-3"></a>                        <span class="dt">dem2 =</span> <span class="kw">sample</span>(population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>), </span>
-<span id="cb40-4"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb40-4"></a>                        <span class="dt">dem3 =</span> <span class="kw">sample</span>(population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>))</span>
-<span id="cb40-5"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb40-5"></a></span>
-<span id="cb40-6"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb40-6"></a><span class="co"># Visualise the tibble</span></span>
-<span id="cb40-7"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb40-7"></a>demonstrators</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a tibble with a set of 3 randomly-picked demonstrators for each agent</span></span>
+<span id="cb40-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb40-2" aria-hidden="true" tabindex="-1"></a>demonstrators <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">dem1 =</span> <span class="fu">sample</span>(population<span class="sc">$</span>trait, N, <span class="at">replace =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb40-3"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb40-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">dem2 =</span> <span class="fu">sample</span>(population<span class="sc">$</span>trait, N, <span class="at">replace =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb40-4"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb40-4" aria-hidden="true" tabindex="-1"></a>                        <span class="at">dem3 =</span> <span class="fu">sample</span>(population<span class="sc">$</span>trait, N, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb40-5"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb40-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-6"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualise the tibble</span></span>
+<span id="cb40-7"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb40-7" aria-hidden="true" tabindex="-1"></a>demonstrators</span></code></pre></div>
 <pre><code>## # A tibble: 100 x 3
 ##    dem1  dem2  dem3 
 ##    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
-##  1 A     A     B    
-##  2 B     A     A    
-##  3 B     A     A    
-##  4 A     A     B    
-##  5 B     B     A    
-##  6 A     B     B    
-##  7 A     A     B    
-##  8 A     A     A    
-##  9 B     A     B    
+##  1 B     B     B    
+##  2 B     A     B    
+##  3 B     B     A    
+##  4 B     A     A    
+##  5 A     B     B    
+##  6 A     A     B    
+##  7 B     B     B    
+##  8 B     B     A    
+##  9 B     B     B    
 ## 10 A     B     B    
 ## # … with 90 more rows</code></pre>
 <p>Think of each row here as containing the traits of three randomly-chosen demonstrators chosen by each new next-generation individual. Now we want to calculate the probability of adoption of <span class="math inline">\(A\)</span> for each of these three-trait demonstrator combinations.</p>
 <p>First we need to get the number of <span class="math inline">\(A\)</span>s in each combination. Then we can replace the traits in <code>population</code> based on the probabilities in Table 1. When all demonstrators have <span class="math inline">\(A\)</span>, we set to <span class="math inline">\(A\)</span>. When no demonstrators have <span class="math inline">\(A\)</span>, we set to <span class="math inline">\(B\)</span>. When two out of three demonstrators have <span class="math inline">\(A\)</span>, we set to <span class="math inline">\(A\)</span> with probability <span class="math inline">\(2/3 + D/3\)</span> and <span class="math inline">\(B\)</span> otherwise. When one out of three demonstrators have <span class="math inline">\(A\)</span>, we set to <span class="math inline">\(A\)</span> with probability <span class="math inline">\(1/3 - D/3\)</span> and <span class="math inline">\(B\)</span> otherwise.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-1"></a><span class="co"># Get the number of As in each 3-demonstrator combinations</span></span>
-<span id="cb42-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-2"></a>num_As &lt;-<span class="st"> </span><span class="kw">rowSums</span>(demonstrators <span class="op">==</span><span class="st"> &quot;A&quot;</span>)</span>
-<span id="cb42-3"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-3"></a></span>
-<span id="cb42-4"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-4"></a><span class="co"># For 3-demonstrator combinations with all As, set to A</span></span>
-<span id="cb42-5"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-5"></a>population<span class="op">$</span>trait[num_As <span class="op">==</span><span class="st"> </span><span class="dv">3</span>] &lt;-<span class="st"> &quot;A&quot;</span>  </span>
-<span id="cb42-6"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-6"></a><span class="co"># For 3-demonstrator combinations with all Bs, set to B</span></span>
-<span id="cb42-7"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-7"></a>population<span class="op">$</span>trait[num_As <span class="op">==</span><span class="st"> </span><span class="dv">0</span>] &lt;-<span class="st"> &quot;B&quot;</span>  </span>
-<span id="cb42-8"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-8"></a></span>
-<span id="cb42-9"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-9"></a>prob_majority &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), </span>
-<span id="cb42-10"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-10"></a>                        <span class="dt">prob =</span> <span class="kw">c</span>((<span class="dv">2</span><span class="op">/</span><span class="dv">3</span> <span class="op">+</span><span class="st"> </span>D<span class="op">/</span><span class="dv">3</span>), <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>(<span class="dv">2</span><span class="op">/</span><span class="dv">3</span> <span class="op">+</span><span class="st"> </span>D<span class="op">/</span><span class="dv">3</span>)), N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb42-11"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-11"></a>prob_minority &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), </span>
-<span id="cb42-12"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-12"></a>                        <span class="dt">prob =</span> <span class="kw">c</span>((<span class="dv">1</span><span class="op">/</span><span class="dv">3</span> <span class="op">-</span><span class="st"> </span>D<span class="op">/</span><span class="dv">3</span>), <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>(<span class="dv">1</span><span class="op">/</span><span class="dv">3</span> <span class="op">-</span><span class="st"> </span>D<span class="op">/</span><span class="dv">3</span>)), N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb42-13"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-13"></a></span>
-<span id="cb42-14"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-14"></a><span class="co"># 3-demonstrator combinations with two As and one B</span></span>
-<span id="cb42-15"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-15"></a><span class="cf">if</span> (<span class="kw">nrow</span>(population[prob_majority <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
-<span id="cb42-16"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-16"></a>  population[prob_majority <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, ] &lt;-<span class="st"> &quot;A&quot;</span></span>
-<span id="cb42-17"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-17"></a>}</span>
-<span id="cb42-18"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-18"></a><span class="cf">if</span> (<span class="kw">nrow</span>(population[prob_majority <span class="op">==</span><span class="st"> </span><span class="ot">FALSE</span> <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
-<span id="cb42-19"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-19"></a>  population[prob_majority <span class="op">==</span><span class="st"> </span><span class="ot">FALSE</span> <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, ] &lt;-<span class="st"> &quot;B&quot;</span></span>
-<span id="cb42-20"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-20"></a>}  </span>
-<span id="cb42-21"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-21"></a></span>
-<span id="cb42-22"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-22"></a><span class="co"># 3-demonstrator combinations with one A and two Bs</span></span>
-<span id="cb42-23"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-23"></a><span class="cf">if</span> (<span class="kw">nrow</span>(population[prob_minority <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
-<span id="cb42-24"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-24"></a>  population[prob_minority <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, ] &lt;-<span class="st"> &quot;A&quot;</span></span>
-<span id="cb42-25"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-25"></a>}</span>
-<span id="cb42-26"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-26"></a><span class="cf">if</span> (<span class="kw">nrow</span>(population[prob_minority <span class="op">==</span><span class="st"> </span><span class="ot">FALSE</span> <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
-<span id="cb42-27"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-27"></a>  population[prob_minority <span class="op">==</span><span class="st"> </span><span class="ot">FALSE</span> <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, ] &lt;-<span class="st"> &quot;B&quot;</span></span>
-<span id="cb42-28"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-28"></a>}  </span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the number of As in each 3-demonstrator combinations</span></span>
+<span id="cb42-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-2" aria-hidden="true" tabindex="-1"></a>num_As <span class="ot">&lt;-</span> <span class="fu">rowSums</span>(demonstrators <span class="sc">==</span> <span class="st">&quot;A&quot;</span>)</span>
+<span id="cb42-3"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-4"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="co"># For 3-demonstrator combinations with all As, set to A</span></span>
+<span id="cb42-5"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-5" aria-hidden="true" tabindex="-1"></a>population<span class="sc">$</span>trait[num_As <span class="sc">==</span> <span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="st">&quot;A&quot;</span>  </span>
+<span id="cb42-6"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="co"># For 3-demonstrator combinations with all Bs, set to B</span></span>
+<span id="cb42-7"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-7" aria-hidden="true" tabindex="-1"></a>population<span class="sc">$</span>trait[num_As <span class="sc">==</span> <span class="dv">0</span>] <span class="ot">&lt;-</span> <span class="st">&quot;B&quot;</span>  </span>
+<span id="cb42-8"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-9"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-9" aria-hidden="true" tabindex="-1"></a>prob_majority <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), </span>
+<span id="cb42-10"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-10" aria-hidden="true" tabindex="-1"></a>                        <span class="at">prob =</span> <span class="fu">c</span>((<span class="dv">2</span><span class="sc">/</span><span class="dv">3</span> <span class="sc">+</span> D<span class="sc">/</span><span class="dv">3</span>), <span class="dv">1</span> <span class="sc">-</span> (<span class="dv">2</span><span class="sc">/</span><span class="dv">3</span> <span class="sc">+</span> D<span class="sc">/</span><span class="dv">3</span>)), N, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb42-11"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-11" aria-hidden="true" tabindex="-1"></a>prob_minority <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), </span>
+<span id="cb42-12"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-12" aria-hidden="true" tabindex="-1"></a>                        <span class="at">prob =</span> <span class="fu">c</span>((<span class="dv">1</span><span class="sc">/</span><span class="dv">3</span> <span class="sc">-</span> D<span class="sc">/</span><span class="dv">3</span>), <span class="dv">1</span> <span class="sc">-</span> (<span class="dv">1</span><span class="sc">/</span><span class="dv">3</span> <span class="sc">-</span> D<span class="sc">/</span><span class="dv">3</span>)), N, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb42-13"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-14"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 3-demonstrator combinations with two As and one B</span></span>
+<span id="cb42-15"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-15" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(population[prob_majority <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">2</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb42-16"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-16" aria-hidden="true" tabindex="-1"></a>  population[prob_majority <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">2</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;A&quot;</span></span>
+<span id="cb42-17"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb42-18"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-18" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(population[prob_majority <span class="sc">==</span> <span class="cn">FALSE</span> <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">2</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb42-19"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-19" aria-hidden="true" tabindex="-1"></a>  population[prob_majority <span class="sc">==</span> <span class="cn">FALSE</span> <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">2</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;B&quot;</span></span>
+<span id="cb42-20"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-20" aria-hidden="true" tabindex="-1"></a>}  </span>
+<span id="cb42-21"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-22"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-22" aria-hidden="true" tabindex="-1"></a><span class="co"># 3-demonstrator combinations with one A and two Bs</span></span>
+<span id="cb42-23"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-23" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(population[prob_minority <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">1</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb42-24"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-24" aria-hidden="true" tabindex="-1"></a>  population[prob_minority <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">1</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;A&quot;</span></span>
+<span id="cb42-25"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-25" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb42-26"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-26" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(population[prob_minority <span class="sc">==</span> <span class="cn">FALSE</span> <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">1</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb42-27"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-27" aria-hidden="true" tabindex="-1"></a>  population[prob_minority <span class="sc">==</span> <span class="cn">FALSE</span> <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">1</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;B&quot;</span></span>
+<span id="cb42-28"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb42-28" aria-hidden="true" tabindex="-1"></a>}  </span></code></pre></div>
 <p>To check it works, we can add the new <code>population</code> tibble as a column to <code>demonstrators</code> and have a look at it. This will let us see the three demonstrators and the resulting new trait side by side.</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb43-1"></a>demonstrators &lt;-<span class="st"> </span><span class="kw">add_column</span>(demonstrators, <span class="dt">new_trait =</span> population<span class="op">$</span>trait)</span>
-<span id="cb43-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb43-2"></a></span>
-<span id="cb43-3"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb43-3"></a><span class="co"># Visualise the tibble</span></span>
-<span id="cb43-4"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb43-4"></a>demonstrators</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb43-1" aria-hidden="true" tabindex="-1"></a>demonstrators <span class="ot">&lt;-</span> <span class="fu">add_column</span>(demonstrators, <span class="at">new_trait =</span> population<span class="sc">$</span>trait)</span>
+<span id="cb43-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb43-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-3"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualise the tibble</span></span>
+<span id="cb43-4"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb43-4" aria-hidden="true" tabindex="-1"></a>demonstrators</span></code></pre></div>
 <pre><code>## # A tibble: 100 x 4
 ##    dem1  dem2  dem3  new_trait
 ##    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    
-##  1 A     A     B     A        
-##  2 B     A     A     A        
-##  3 B     A     A     A        
-##  4 A     A     B     A        
-##  5 B     B     A     B        
-##  6 A     B     B     B        
-##  7 A     A     B     A        
-##  8 A     A     A     A        
-##  9 B     A     B     B        
+##  1 B     B     B     B        
+##  2 B     A     B     B        
+##  3 B     B     A     B        
+##  4 B     A     A     A        
+##  5 A     B     B     B        
+##  6 A     A     B     A        
+##  7 B     B     B     B        
+##  8 B     B     A     B        
+##  9 B     B     B     B        
 ## 10 A     B     B     B        
 ## # … with 90 more rows</code></pre>
 <p>Because we set <span class="math inline">\(D=1\)</span> above, the new trait is always the majority trait among the three demonstrators. This is perfect conformity. We can weaken conformity by reducing <span class="math inline">\(D\)</span>. Here is an example with <span class="math inline">\(D=0.5\)</span>. All the code is the same as what we already discussed above.</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-1"></a>D &lt;-<span class="st"> </span><span class="fl">0.5</span></span>
-<span id="cb45-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-2"></a></span>
-<span id="cb45-3"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-3"></a><span class="co"># create first generation</span></span>
-<span id="cb45-4"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-4"></a>population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, </span>
-<span id="cb45-5"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-5"></a>                                    <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_<span class="dv">0</span>, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_<span class="dv">0</span>))) </span>
-<span id="cb45-6"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-6"></a></span>
-<span id="cb45-7"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-7"></a><span class="co"># Create a tibble with a set of 3 randomly-picked demonstrators for each agent</span></span>
-<span id="cb45-8"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-8"></a>demonstrators &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">dem1 =</span> <span class="kw">sample</span>(population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>), </span>
-<span id="cb45-9"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-9"></a>                        <span class="dt">dem2 =</span> <span class="kw">sample</span>(population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>), </span>
-<span id="cb45-10"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-10"></a>                        <span class="dt">dem3 =</span> <span class="kw">sample</span>(population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>))</span>
-<span id="cb45-11"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-11"></a></span>
-<span id="cb45-12"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-12"></a><span class="co"># Get the number of As in each 3-demonstrator combinations</span></span>
-<span id="cb45-13"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-13"></a>num_As &lt;-<span class="st"> </span><span class="kw">rowSums</span>(demonstrators <span class="op">==</span><span class="st"> &quot;A&quot;</span>)</span>
-<span id="cb45-14"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-14"></a></span>
-<span id="cb45-15"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-15"></a><span class="co"># For 3-demonstrator combinations with all As, set to A</span></span>
-<span id="cb45-16"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-16"></a>population<span class="op">$</span>trait[num_As <span class="op">==</span><span class="st"> </span><span class="dv">3</span>] &lt;-<span class="st"> &quot;A&quot;</span>  </span>
-<span id="cb45-17"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-17"></a><span class="co"># For 3-demonstrator combinations with all Bs, set to B</span></span>
-<span id="cb45-18"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-18"></a>population<span class="op">$</span>trait[num_As <span class="op">==</span><span class="st"> </span><span class="dv">0</span>] &lt;-<span class="st"> &quot;B&quot;</span>  </span>
-<span id="cb45-19"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-19"></a></span>
-<span id="cb45-20"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-20"></a>prob_majority &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), </span>
-<span id="cb45-21"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-21"></a>                        <span class="dt">prob =</span> <span class="kw">c</span>((<span class="dv">2</span><span class="op">/</span><span class="dv">3</span> <span class="op">+</span><span class="st"> </span>D<span class="op">/</span><span class="dv">3</span>), <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>(<span class="dv">2</span><span class="op">/</span><span class="dv">3</span> <span class="op">+</span><span class="st"> </span>D<span class="op">/</span><span class="dv">3</span>)), N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb45-22"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-22"></a>prob_minority &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), </span>
-<span id="cb45-23"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-23"></a>                        <span class="dt">prob =</span> <span class="kw">c</span>((<span class="dv">1</span><span class="op">/</span><span class="dv">3</span> <span class="op">-</span><span class="st"> </span>D<span class="op">/</span><span class="dv">3</span>), <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>(<span class="dv">1</span><span class="op">/</span><span class="dv">3</span> <span class="op">-</span><span class="st"> </span>D<span class="op">/</span><span class="dv">3</span>)), N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb45-24"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-24"></a></span>
-<span id="cb45-25"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-25"></a><span class="co"># 3-demonstrator combinations with two As and one B</span></span>
-<span id="cb45-26"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-26"></a><span class="cf">if</span> (<span class="kw">nrow</span>(population[prob_majority <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
-<span id="cb45-27"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-27"></a>  population[prob_majority <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, ] &lt;-<span class="st"> &quot;A&quot;</span></span>
-<span id="cb45-28"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-28"></a>}</span>
-<span id="cb45-29"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-29"></a><span class="cf">if</span> (<span class="kw">nrow</span>(population[prob_majority <span class="op">==</span><span class="st"> </span><span class="ot">FALSE</span> <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
-<span id="cb45-30"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-30"></a>  population[prob_majority <span class="op">==</span><span class="st"> </span><span class="ot">FALSE</span> <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, ] &lt;-<span class="st"> &quot;B&quot;</span></span>
-<span id="cb45-31"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-31"></a>}  </span>
-<span id="cb45-32"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-32"></a></span>
-<span id="cb45-33"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-33"></a><span class="co"># 3-demonstrator combinations with one A and two Bs</span></span>
-<span id="cb45-34"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-34"></a><span class="cf">if</span> (<span class="kw">nrow</span>(population[prob_minority <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
-<span id="cb45-35"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-35"></a>  population[prob_minority <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, ] &lt;-<span class="st"> &quot;A&quot;</span></span>
-<span id="cb45-36"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-36"></a>}</span>
-<span id="cb45-37"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-37"></a><span class="cf">if</span> (<span class="kw">nrow</span>(population[prob_minority <span class="op">==</span><span class="st"> </span><span class="ot">FALSE</span> <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
-<span id="cb45-38"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-38"></a>  population[prob_minority <span class="op">==</span><span class="st"> </span><span class="ot">FALSE</span> <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, ] &lt;-<span class="st"> &quot;B&quot;</span></span>
-<span id="cb45-39"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-39"></a>}  </span>
-<span id="cb45-40"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-40"></a></span>
-<span id="cb45-41"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-41"></a>demonstrators &lt;-<span class="st"> </span><span class="kw">add_column</span>(demonstrators, <span class="dt">new_trait =</span> population<span class="op">$</span>trait)</span>
-<span id="cb45-42"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-42"></a></span>
-<span id="cb45-43"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-43"></a><span class="co"># Visualise the tibble</span></span>
-<span id="cb45-44"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-44"></a>demonstrators</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-1" aria-hidden="true" tabindex="-1"></a>D <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
+<span id="cb45-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-3"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="co"># create first generation</span></span>
+<span id="cb45-4"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-4" aria-hidden="true" tabindex="-1"></a>population <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">trait =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, </span>
+<span id="cb45-5"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-5" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> <span class="fu">c</span>(p_0, <span class="dv">1</span> <span class="sc">-</span> p_0))) </span>
+<span id="cb45-6"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-7"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a tibble with a set of 3 randomly-picked demonstrators for each agent</span></span>
+<span id="cb45-8"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-8" aria-hidden="true" tabindex="-1"></a>demonstrators <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">dem1 =</span> <span class="fu">sample</span>(population<span class="sc">$</span>trait, N, <span class="at">replace =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb45-9"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-9" aria-hidden="true" tabindex="-1"></a>                        <span class="at">dem2 =</span> <span class="fu">sample</span>(population<span class="sc">$</span>trait, N, <span class="at">replace =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb45-10"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-10" aria-hidden="true" tabindex="-1"></a>                        <span class="at">dem3 =</span> <span class="fu">sample</span>(population<span class="sc">$</span>trait, N, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb45-11"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-12"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the number of As in each 3-demonstrator combinations</span></span>
+<span id="cb45-13"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-13" aria-hidden="true" tabindex="-1"></a>num_As <span class="ot">&lt;-</span> <span class="fu">rowSums</span>(demonstrators <span class="sc">==</span> <span class="st">&quot;A&quot;</span>)</span>
+<span id="cb45-14"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-15"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-15" aria-hidden="true" tabindex="-1"></a><span class="co"># For 3-demonstrator combinations with all As, set to A</span></span>
+<span id="cb45-16"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-16" aria-hidden="true" tabindex="-1"></a>population<span class="sc">$</span>trait[num_As <span class="sc">==</span> <span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="st">&quot;A&quot;</span>  </span>
+<span id="cb45-17"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-17" aria-hidden="true" tabindex="-1"></a><span class="co"># For 3-demonstrator combinations with all Bs, set to B</span></span>
+<span id="cb45-18"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-18" aria-hidden="true" tabindex="-1"></a>population<span class="sc">$</span>trait[num_As <span class="sc">==</span> <span class="dv">0</span>] <span class="ot">&lt;-</span> <span class="st">&quot;B&quot;</span>  </span>
+<span id="cb45-19"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-20"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-20" aria-hidden="true" tabindex="-1"></a>prob_majority <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), </span>
+<span id="cb45-21"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-21" aria-hidden="true" tabindex="-1"></a>                        <span class="at">prob =</span> <span class="fu">c</span>((<span class="dv">2</span><span class="sc">/</span><span class="dv">3</span> <span class="sc">+</span> D<span class="sc">/</span><span class="dv">3</span>), <span class="dv">1</span> <span class="sc">-</span> (<span class="dv">2</span><span class="sc">/</span><span class="dv">3</span> <span class="sc">+</span> D<span class="sc">/</span><span class="dv">3</span>)), N, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb45-22"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-22" aria-hidden="true" tabindex="-1"></a>prob_minority <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), </span>
+<span id="cb45-23"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-23" aria-hidden="true" tabindex="-1"></a>                        <span class="at">prob =</span> <span class="fu">c</span>((<span class="dv">1</span><span class="sc">/</span><span class="dv">3</span> <span class="sc">-</span> D<span class="sc">/</span><span class="dv">3</span>), <span class="dv">1</span> <span class="sc">-</span> (<span class="dv">1</span><span class="sc">/</span><span class="dv">3</span> <span class="sc">-</span> D<span class="sc">/</span><span class="dv">3</span>)), N, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb45-24"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-25"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-25" aria-hidden="true" tabindex="-1"></a><span class="co"># 3-demonstrator combinations with two As and one B</span></span>
+<span id="cb45-26"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-26" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(population[prob_majority <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">2</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb45-27"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-27" aria-hidden="true" tabindex="-1"></a>  population[prob_majority <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">2</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;A&quot;</span></span>
+<span id="cb45-28"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-28" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb45-29"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-29" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(population[prob_majority <span class="sc">==</span> <span class="cn">FALSE</span> <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">2</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb45-30"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-30" aria-hidden="true" tabindex="-1"></a>  population[prob_majority <span class="sc">==</span> <span class="cn">FALSE</span> <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">2</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;B&quot;</span></span>
+<span id="cb45-31"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-31" aria-hidden="true" tabindex="-1"></a>}  </span>
+<span id="cb45-32"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-33"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-33" aria-hidden="true" tabindex="-1"></a><span class="co"># 3-demonstrator combinations with one A and two Bs</span></span>
+<span id="cb45-34"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-34" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(population[prob_minority <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">1</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb45-35"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-35" aria-hidden="true" tabindex="-1"></a>  population[prob_minority <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">1</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;A&quot;</span></span>
+<span id="cb45-36"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-36" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb45-37"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-37" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(population[prob_minority <span class="sc">==</span> <span class="cn">FALSE</span> <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">1</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb45-38"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-38" aria-hidden="true" tabindex="-1"></a>  population[prob_minority <span class="sc">==</span> <span class="cn">FALSE</span> <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">1</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;B&quot;</span></span>
+<span id="cb45-39"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-39" aria-hidden="true" tabindex="-1"></a>}  </span>
+<span id="cb45-40"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-41"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-41" aria-hidden="true" tabindex="-1"></a>demonstrators <span class="ot">&lt;-</span> <span class="fu">add_column</span>(demonstrators, <span class="at">new_trait =</span> population<span class="sc">$</span>trait)</span>
+<span id="cb45-42"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-43"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualise the tibble</span></span>
+<span id="cb45-44"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb45-44" aria-hidden="true" tabindex="-1"></a>demonstrators</span></code></pre></div>
 <pre><code>## # A tibble: 100 x 4
 ##    dem1  dem2  dem3  new_trait
 ##    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    
-##  1 A     B     B     B        
+##  1 A     B     A     A        
 ##  2 A     A     B     A        
-##  3 B     B     B     B        
-##  4 B     A     B     B        
-##  5 A     B     B     A        
-##  6 B     A     B     B        
-##  7 B     A     A     A        
-##  8 A     A     B     A        
-##  9 A     A     B     A        
-## 10 B     B     A     B        
+##  3 B     A     A     B        
+##  4 B     B     B     B        
+##  5 A     B     B     B        
+##  6 A     B     A     B        
+##  7 B     A     B     B        
+##  8 B     A     B     B        
+##  9 B     A     B     B        
+## 10 B     A     A     A        
 ## # … with 90 more rows</code></pre>
 <p>Now that conformity is weaker, sometimes the new trait is not the majority amongst the three demonstrators.</p>
 </div>
-<div id="testing-conformist-transmission" class="section level2">
+<div id="testing-conformist-transmission" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Testing conformist transmission</h2>
-<p>As in the previous chapters, we can put all this code together into a function to see what happens over multiple generations and in multiple runs. There is nothing new in the code below, which is a combination of the code we already wrote in (<a href="unbiased-transmission.html#unbiased-transmission">Chapter 1</a>) and the new bits of code for conformity introduced above.</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-1"></a>conformist_transmission &lt;-<span class="st"> </span><span class="cf">function</span> (N, p_<span class="dv">0</span>, D, t_max, r_max) {</span>
-<span id="cb47-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-2"></a>  </span>
-<span id="cb47-3"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-3"></a>  output &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">generation =</span> <span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>t_max, r_max), </span>
-<span id="cb47-4"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-4"></a>                   <span class="dt">p =</span> <span class="kw">as.numeric</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, t_max <span class="op">*</span><span class="st"> </span>r_max)), </span>
-<span id="cb47-5"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-5"></a>                   <span class="dt">run =</span> <span class="kw">as.factor</span>(<span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>r_max, <span class="dt">each =</span> t_max)))</span>
-<span id="cb47-6"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-6"></a>  </span>
-<span id="cb47-7"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-7"></a>  <span class="cf">for</span> (r <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>r_max) {</span>
-<span id="cb47-8"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-8"></a>    <span class="co"># Create first generation</span></span>
-<span id="cb47-9"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-9"></a>    population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, </span>
-<span id="cb47-10"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-10"></a>                                        <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_<span class="dv">0</span>, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_<span class="dv">0</span>)))</span>
-<span id="cb47-11"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-11"></a>    </span>
-<span id="cb47-12"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-12"></a>    <span class="co"># Add first generation&#39;s p for run r</span></span>
-<span id="cb47-13"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-13"></a>    output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span><span class="dv">1</span> <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p &lt;-<span class="st"> </span></span>
-<span id="cb47-14"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-14"></a><span class="st">      </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N </span>
-<span id="cb47-15"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-15"></a>    </span>
-<span id="cb47-16"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-16"></a>    <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span>t_max) {</span>
-<span id="cb47-17"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-17"></a>      </span>
-<span id="cb47-18"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-18"></a>      <span class="co"># Create a tibble with a set of 3 randomly-picked demonstrators for each agent</span></span>
-<span id="cb47-19"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-19"></a>      demonstrators &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">dem1 =</span> <span class="kw">sample</span>(population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>), </span>
-<span id="cb47-20"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-20"></a>                              <span class="dt">dem2 =</span> <span class="kw">sample</span>(population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>), </span>
-<span id="cb47-21"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-21"></a>                              <span class="dt">dem3 =</span> <span class="kw">sample</span>(population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>))</span>
-<span id="cb47-22"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-22"></a>      </span>
-<span id="cb47-23"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-23"></a>      <span class="co"># Get the number of As in each 3-demonstrator combinations</span></span>
-<span id="cb47-24"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-24"></a>      num_As &lt;-<span class="st"> </span><span class="kw">rowSums</span>(demonstrators <span class="op">==</span><span class="st"> &quot;A&quot;</span>)</span>
-<span id="cb47-25"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-25"></a>      </span>
-<span id="cb47-26"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-26"></a>      <span class="co"># For 3-demonstrator combinations with all As, set to A</span></span>
-<span id="cb47-27"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-27"></a>      population<span class="op">$</span>trait[num_As <span class="op">==</span><span class="st"> </span><span class="dv">3</span>] &lt;-<span class="st"> &quot;A&quot;</span>  </span>
-<span id="cb47-28"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-28"></a>      <span class="co"># For 3-demonstrator combinations with all Bs, set to B</span></span>
-<span id="cb47-29"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-29"></a>      population<span class="op">$</span>trait[num_As <span class="op">==</span><span class="st"> </span><span class="dv">0</span>] &lt;-<span class="st"> &quot;B&quot;</span>  </span>
-<span id="cb47-30"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-30"></a>      </span>
-<span id="cb47-31"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-31"></a>      prob_majority &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), </span>
-<span id="cb47-32"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-32"></a>                              <span class="dt">prob =</span> <span class="kw">c</span>((<span class="dv">2</span><span class="op">/</span><span class="dv">3</span> <span class="op">+</span><span class="st"> </span>D<span class="op">/</span><span class="dv">3</span>), <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>(<span class="dv">2</span><span class="op">/</span><span class="dv">3</span> <span class="op">+</span><span class="st"> </span>D<span class="op">/</span><span class="dv">3</span>)), N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb47-33"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-33"></a>      prob_minority &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), </span>
-<span id="cb47-34"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-34"></a>                              <span class="dt">prob =</span> <span class="kw">c</span>((<span class="dv">1</span><span class="op">/</span><span class="dv">3</span> <span class="op">-</span><span class="st"> </span>D<span class="op">/</span><span class="dv">3</span>), <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>(<span class="dv">1</span><span class="op">/</span><span class="dv">3</span> <span class="op">-</span><span class="st"> </span>D<span class="op">/</span><span class="dv">3</span>)), N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb47-35"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-35"></a>      </span>
-<span id="cb47-36"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-36"></a>      <span class="co"># 3-demonstrator combinations with two As and one B</span></span>
-<span id="cb47-37"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-37"></a>      <span class="cf">if</span> (<span class="kw">nrow</span>(population[prob_majority <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
-<span id="cb47-38"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-38"></a>        population[prob_majority <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, ] &lt;-<span class="st"> &quot;A&quot;</span></span>
-<span id="cb47-39"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-39"></a>      }</span>
-<span id="cb47-40"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-40"></a>      <span class="cf">if</span> (<span class="kw">nrow</span>(population[prob_majority <span class="op">==</span><span class="st"> </span><span class="ot">FALSE</span> <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
-<span id="cb47-41"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-41"></a>        population[prob_majority <span class="op">==</span><span class="st"> </span><span class="ot">FALSE</span> <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, ] &lt;-<span class="st"> &quot;B&quot;</span></span>
-<span id="cb47-42"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-42"></a>      }  </span>
-<span id="cb47-43"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-43"></a>      <span class="co"># 3-demonstrator combinations with one A and two Bs</span></span>
-<span id="cb47-44"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-44"></a>      <span class="cf">if</span> (<span class="kw">nrow</span>(population[prob_minority <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
-<span id="cb47-45"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-45"></a>        population[prob_minority <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, ] &lt;-<span class="st"> &quot;A&quot;</span></span>
-<span id="cb47-46"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-46"></a>      }</span>
-<span id="cb47-47"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-47"></a>      <span class="cf">if</span> (<span class="kw">nrow</span>(population[prob_minority <span class="op">==</span><span class="st"> </span><span class="ot">FALSE</span> <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
-<span id="cb47-48"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-48"></a>        population[prob_minority <span class="op">==</span><span class="st"> </span><span class="ot">FALSE</span> <span class="op">&amp;</span><span class="st"> </span>num_As <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, ] &lt;-<span class="st"> &quot;B&quot;</span></span>
-<span id="cb47-49"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-49"></a>      }  </span>
-<span id="cb47-50"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-50"></a>      </span>
-<span id="cb47-51"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-51"></a>      <span class="co"># Get p and put it into output slot for this generation t and run r</span></span>
-<span id="cb47-52"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-52"></a>      output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span>t <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p &lt;-<span class="st"> </span></span>
-<span id="cb47-53"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-53"></a><span class="st">        </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N </span>
-<span id="cb47-54"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-54"></a>    }</span>
-<span id="cb47-55"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-55"></a>  }</span>
-<span id="cb47-56"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-56"></a>  <span class="co"># Export data from function</span></span>
-<span id="cb47-57"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-57"></a>  output  </span>
-<span id="cb47-58"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-58"></a>}</span></code></pre></div>
+<p>As in the previous chapters, we can put all this code together into a function to see what happens over multiple generations and in multiple runs. There is nothing new in the code below, which is a combination of the code we already wrote in <a href="unbiased-transmission.html#unbiased-transmission">Chapter 1</a> and the new bits of code for conformity introduced above.</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-1" aria-hidden="true" tabindex="-1"></a>conformist_transmission <span class="ot">&lt;-</span> <span class="cf">function</span> (N, p_0, D, t_max, r_max) {</span>
+<span id="cb47-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb47-3"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-3" aria-hidden="true" tabindex="-1"></a>  output <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">generation =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>t_max, r_max), </span>
+<span id="cb47-4"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">p =</span> <span class="fu">as.numeric</span>(<span class="fu">rep</span>(<span class="cn">NA</span>, t_max <span class="sc">*</span> r_max)), </span>
+<span id="cb47-5"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">run =</span> <span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>r_max, <span class="at">each =</span> t_max)))</span>
+<span id="cb47-6"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb47-7"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (r <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>r_max) {</span>
+<span id="cb47-8"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create first generation</span></span>
+<span id="cb47-9"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-9" aria-hidden="true" tabindex="-1"></a>    population <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">trait =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, </span>
+<span id="cb47-10"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-10" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> <span class="fu">c</span>(p_0, <span class="dv">1</span> <span class="sc">-</span> p_0)))</span>
+<span id="cb47-11"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb47-12"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add first generation&#39;s p for run r</span></span>
+<span id="cb47-13"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-13" aria-hidden="true" tabindex="-1"></a>    output[output<span class="sc">$</span>generation <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> output<span class="sc">$</span>run <span class="sc">==</span> r, ]<span class="sc">$</span>p <span class="ot">&lt;-</span> </span>
+<span id="cb47-14"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">sum</span>(population<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;A&quot;</span>) <span class="sc">/</span> N </span>
+<span id="cb47-15"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb47-16"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>t_max) {</span>
+<span id="cb47-17"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-17" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb47-18"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-18" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Create a tibble with a set of 3 randomly-picked demonstrators for each agent</span></span>
+<span id="cb47-19"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-19" aria-hidden="true" tabindex="-1"></a>      demonstrators <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">dem1 =</span> <span class="fu">sample</span>(population<span class="sc">$</span>trait, N, <span class="at">replace =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb47-20"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-20" aria-hidden="true" tabindex="-1"></a>                              <span class="at">dem2 =</span> <span class="fu">sample</span>(population<span class="sc">$</span>trait, N, <span class="at">replace =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb47-21"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-21" aria-hidden="true" tabindex="-1"></a>                              <span class="at">dem3 =</span> <span class="fu">sample</span>(population<span class="sc">$</span>trait, N, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb47-22"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-22" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb47-23"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-23" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Get the number of As in each 3-demonstrator combinations</span></span>
+<span id="cb47-24"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-24" aria-hidden="true" tabindex="-1"></a>      num_As <span class="ot">&lt;-</span> <span class="fu">rowSums</span>(demonstrators <span class="sc">==</span> <span class="st">&quot;A&quot;</span>)</span>
+<span id="cb47-25"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-25" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb47-26"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-26" aria-hidden="true" tabindex="-1"></a>      <span class="co"># For 3-demonstrator combinations with all As, set to A</span></span>
+<span id="cb47-27"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-27" aria-hidden="true" tabindex="-1"></a>      population<span class="sc">$</span>trait[num_As <span class="sc">==</span> <span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="st">&quot;A&quot;</span>  </span>
+<span id="cb47-28"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-28" aria-hidden="true" tabindex="-1"></a>      <span class="co"># For 3-demonstrator combinations with all Bs, set to B</span></span>
+<span id="cb47-29"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-29" aria-hidden="true" tabindex="-1"></a>      population<span class="sc">$</span>trait[num_As <span class="sc">==</span> <span class="dv">0</span>] <span class="ot">&lt;-</span> <span class="st">&quot;B&quot;</span>  </span>
+<span id="cb47-30"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-30" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb47-31"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-31" aria-hidden="true" tabindex="-1"></a>      prob_majority <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), </span>
+<span id="cb47-32"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-32" aria-hidden="true" tabindex="-1"></a>                              <span class="at">prob =</span> <span class="fu">c</span>((<span class="dv">2</span><span class="sc">/</span><span class="dv">3</span> <span class="sc">+</span> D<span class="sc">/</span><span class="dv">3</span>), <span class="dv">1</span> <span class="sc">-</span> (<span class="dv">2</span><span class="sc">/</span><span class="dv">3</span> <span class="sc">+</span> D<span class="sc">/</span><span class="dv">3</span>)), N, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb47-33"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-33" aria-hidden="true" tabindex="-1"></a>      prob_minority <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), </span>
+<span id="cb47-34"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-34" aria-hidden="true" tabindex="-1"></a>                              <span class="at">prob =</span> <span class="fu">c</span>((<span class="dv">1</span><span class="sc">/</span><span class="dv">3</span> <span class="sc">-</span> D<span class="sc">/</span><span class="dv">3</span>), <span class="dv">1</span> <span class="sc">-</span> (<span class="dv">1</span><span class="sc">/</span><span class="dv">3</span> <span class="sc">-</span> D<span class="sc">/</span><span class="dv">3</span>)), N, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb47-35"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-35" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb47-36"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-36" aria-hidden="true" tabindex="-1"></a>      <span class="co"># 3-demonstrator combinations with two As and one B</span></span>
+<span id="cb47-37"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-37" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">nrow</span>(population[prob_majority <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">2</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb47-38"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-38" aria-hidden="true" tabindex="-1"></a>        population[prob_majority <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">2</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;A&quot;</span></span>
+<span id="cb47-39"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-39" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb47-40"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-40" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">nrow</span>(population[prob_majority <span class="sc">==</span> <span class="cn">FALSE</span> <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">2</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb47-41"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-41" aria-hidden="true" tabindex="-1"></a>        population[prob_majority <span class="sc">==</span> <span class="cn">FALSE</span> <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">2</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;B&quot;</span></span>
+<span id="cb47-42"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-42" aria-hidden="true" tabindex="-1"></a>      }  </span>
+<span id="cb47-43"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-43" aria-hidden="true" tabindex="-1"></a>      <span class="co"># 3-demonstrator combinations with one A and two Bs</span></span>
+<span id="cb47-44"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-44" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">nrow</span>(population[prob_minority <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">1</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb47-45"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-45" aria-hidden="true" tabindex="-1"></a>        population[prob_minority <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">1</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;A&quot;</span></span>
+<span id="cb47-46"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-46" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb47-47"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-47" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">nrow</span>(population[prob_minority <span class="sc">==</span> <span class="cn">FALSE</span> <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">1</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb47-48"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-48" aria-hidden="true" tabindex="-1"></a>        population[prob_minority <span class="sc">==</span> <span class="cn">FALSE</span> <span class="sc">&amp;</span> num_As <span class="sc">==</span> <span class="dv">1</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;B&quot;</span></span>
+<span id="cb47-49"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-49" aria-hidden="true" tabindex="-1"></a>      }  </span>
+<span id="cb47-50"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-50" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb47-51"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-51" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Get p and put it into output slot for this generation t and run r</span></span>
+<span id="cb47-52"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-52" aria-hidden="true" tabindex="-1"></a>      output[output<span class="sc">$</span>generation <span class="sc">==</span> t <span class="sc">&amp;</span> output<span class="sc">$</span>run <span class="sc">==</span> r, ]<span class="sc">$</span>p <span class="ot">&lt;-</span> </span>
+<span id="cb47-53"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-53" aria-hidden="true" tabindex="-1"></a>        <span class="fu">sum</span>(population<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;A&quot;</span>) <span class="sc">/</span> N </span>
+<span id="cb47-54"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-54" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb47-55"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-55" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb47-56"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-56" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Export data from function</span></span>
+<span id="cb47-57"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-57" aria-hidden="true" tabindex="-1"></a>  output  </span>
+<span id="cb47-58"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb47-58" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>We can test the function with perfect conformity (<span class="math inline">\(D=1\)</span>) and plot it (again we use the function <code>plot_multiple_runs()</code> we wrote in <a href="unbiased-transmission.html#unbiased-transmission">Chapter 1</a>).</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb48-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">conformist_transmission</span>(<span class="dt">N =</span> <span class="dv">1000</span>, <span class="dt">p_0 =</span> <span class="fl">0.5</span>, <span class="dt">D =</span> <span class="dv">1</span>, <span class="dt">t_max =</span> <span class="dv">50</span>, <span class="dt">r_max =</span> <span class="dv">10</span>)</span>
-<span id="cb48-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb48-2"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb48-1" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">conformist_transmission</span>(<span class="at">N =</span> <span class="dv">1000</span>, <span class="at">p_0 =</span> <span class="fl">0.5</span>, <span class="at">D =</span> <span class="dv">1</span>, <span class="at">t_max =</span> <span class="dv">50</span>, <span class="at">r_max =</span> <span class="dv">10</span>)</span>
+<span id="cb48-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_runs</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:4-8"></span>
 <img src="IBM-cultevo_files/figure-html/4-8-1.png" alt="Conformity causes one trait to spread and replace the other by favouring whichever trait is initially most common" width="672" />
 <p class="caption">
@@ -603,8 +616,8 @@ Figure 4.1: Conformity causes one trait to spread and replace the other by favou
 </div>
 <p>Here we should see some lines going to <span class="math inline">\(p=1\)</span>, and some lines going to <span class="math inline">\(p=0\)</span>. Conformity acts to favour the majority trait. This will depend on the initial frequency of <span class="math inline">\(A\)</span> in the population. In different runs with <span class="math inline">\(p_0=0.5\)</span>, sometimes there will be slightly more <span class="math inline">\(A\)</span>s, sometimes slightly more <span class="math inline">\(B\)</span>s (remember, in our model, this is probabilistic, like flipping coins, so initial frequencies will rarely be precisely 0.5).</p>
 <p>What happens if we set <span class="math inline">\(D=0\)</span>?</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb49-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">conformist_transmission</span>(<span class="dt">N =</span> <span class="dv">1000</span>, <span class="dt">p_0 =</span> <span class="fl">0.5</span>, <span class="dt">D =</span> <span class="dv">0</span>, <span class="dt">t_max =</span> <span class="dv">50</span>, <span class="dt">r_max =</span> <span class="dv">10</span>)</span>
-<span id="cb49-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb49-2"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb49-1" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">conformist_transmission</span>(<span class="at">N =</span> <span class="dv">1000</span>, <span class="at">p_0 =</span> <span class="fl">0.5</span>, <span class="at">D =</span> <span class="dv">0</span>, <span class="at">t_max =</span> <span class="dv">50</span>, <span class="at">r_max =</span> <span class="dv">10</span>)</span>
+<span id="cb49-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_runs</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:4-9"></span>
 <img src="IBM-cultevo_files/figure-html/4-9-1.png" alt="Removing conformist bias recreates unbiased transmission, and does not systematically change trait frequencies" width="672" />
 <p class="caption">
@@ -614,8 +627,8 @@ Figure 4.2: Removing conformist bias recreates unbiased transmission, and does n
 <p>This model is equivalent to unbiased transmission. As for the simulations described in <a href="unbiased-transmission.html#unbiased-transmission">Chapter 1</a>, with a sufficiently large <span class="math inline">\(N\)</span>, the frequencies fluctuate around <span class="math inline">\(p=0.5\)</span>. This underlines the effect of conformity. With unbiased transmission, majority traits are favoured because they are copied in proportion to their frequency (incidentally, it is for this reason that ‘copying the majority’ is not a good description of conformity in the technical sense used in the field of cultural evolution: even with unbiased copying the majority trait is copied more than the minority one). However, they reach fixation only in small populations. With conformity, instead, the majority trait is copied with a probability higher than its frequency, so that conformity drives traits to fixation as they become more and more common.</p>
 <p>As an aside, note that the last two graphs have roughly the same thick black mean frequency line, which hovers around <span class="math inline">\(p=0.5\)</span>. This highlights the dangers of looking at means alone. If we hadn’t plotted the individual runs and relied solely on mean frequencies, we might think that <span class="math inline">\(D=0\)</span> and <span class="math inline">\(D=1\)</span> gave identical results. But in fact, they are very different. Always look at the underlying distribution that generates means.</p>
 <p>Now let’s explore the effect of changing the initial frequencies by changing <span class="math inline">\(p_0\)</span>, and adding conformity back in.</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb50-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">conformist_transmission</span>(<span class="dt">N =</span> <span class="dv">1000</span>, <span class="dt">p_0 =</span> <span class="fl">0.55</span>, <span class="dt">D =</span> <span class="dv">1</span>, <span class="dt">t_max =</span> <span class="dv">50</span>, <span class="dt">r_max =</span> <span class="dv">10</span>)</span>
-<span id="cb50-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb50-2"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb50-1" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">conformist_transmission</span>(<span class="at">N =</span> <span class="dv">1000</span>, <span class="at">p_0 =</span> <span class="fl">0.55</span>, <span class="at">D =</span> <span class="dv">1</span>, <span class="at">t_max =</span> <span class="dv">50</span>, <span class="at">r_max =</span> <span class="dv">10</span>)</span>
+<span id="cb50-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_runs</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:4-10"></span>
 <img src="IBM-cultevo_files/figure-html/4-10-1.png" alt="When trait A is always initially in the majority, it is always favoured by conformity" width="672" />
 <p class="caption">
@@ -623,8 +636,8 @@ Figure 4.3: When trait A is always initially in the majority, it is always favou
 </p>
 </div>
 <p>When <span class="math inline">\(A\)</span> starts with a slight majority (<span class="math inline">\(p_0=0.55\)</span>), all (or almost all) of the runs result in <span class="math inline">\(A\)</span> going to fixation. Now let’s try the reverse.</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb51-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">conformist_transmission</span>(<span class="dt">N =</span> <span class="dv">1000</span>, <span class="dt">p_0 =</span> <span class="fl">0.45</span>, <span class="dt">D =</span> <span class="dv">1</span>, <span class="dt">t_max =</span> <span class="dv">50</span>, <span class="dt">r_max =</span> <span class="dv">10</span>)</span>
-<span id="cb51-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb51-2"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb51-1" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">conformist_transmission</span>(<span class="at">N =</span> <span class="dv">1000</span>, <span class="at">p_0 =</span> <span class="fl">0.45</span>, <span class="at">D =</span> <span class="dv">1</span>, <span class="at">t_max =</span> <span class="dv">50</span>, <span class="at">r_max =</span> <span class="dv">10</span>)</span>
+<span id="cb51-2"><a href="biased-transmission-frequency-dependent-indirect-bias.html#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_runs</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:4-11"></span>
 <img src="IBM-cultevo_files/figure-html/4-11-1.png" alt="When trait B is always initially in the majority, it is always favoured by conformity" width="672" />
 <p class="caption">
@@ -633,15 +646,15 @@ Figure 4.4: When trait B is always initially in the majority, it is always favou
 </div>
 <p>When <span class="math inline">\(A\)</span> starts off in a minority (<span class="math inline">\(p_0=0.45\)</span>), all (or almost all) of the runs result in <span class="math inline">\(A\)</span> disappearing. These last two graphs show how initial conditions affect conformity. Whichever trait is more common is favoured by conformist transmission.</p>
 </div>
-<div id="summary-of-the-model-3" class="section level2">
+<div id="summary-of-the-model-3" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Summary of the model</h2>
 <p>In this chapter, we explored conformist biased cultural transmission. This is where individuals are disproportionately more likely to adopt the most common trait among a set of demonstrators. We can contrast this indirect bias with the direct (or content) biased transmission from [Chapter 3][Biased transmission (direct bias)], where one trait is intrinsically more likely to be copied. With conformity, the traits have no intrinsic difference in attractiveness and are preferentially copied simply because they are common.</p>
 <p>We saw how conformity increases the frequency of whichever trait is more common. Initial trait frequencies are important here: traits that are initially more common typically go to fixation. This, in turn, makes stochasticity important, which in small populations can affect initial frequencies.</p>
 <p>We also discussed the subtle but fundamental difference between unbiased copying and conformity. In both, majority traits are favoured, but it is only with conformity that they are <em>disproportionately</em> favoured. In large populations, unbiased transmission rarely leads to trait fixation, whereas conformist transmission often does. Furthermore, as we will see later, conformity also makes majority traits resistant to external disturbances, such as the introduction of other traits via innovation or migration.</p>
 </div>
-<div id="further-readings" class="section level2">
+<div id="further-readings" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Further readings</h2>
-<p><span class="citation">Boyd and Richerson (<a href="references.html#ref-boyd_culture_1985" role="doc-biblioref">1985</a>)</span> introduced conformist or positive frequency-dependent cultural transmission as defined here, and modelled it analytically with similar methods. <span class="citation">Henrich and Boyd (<a href="references.html#ref-henrich_evolution_1998" role="doc-biblioref">1998</a>)</span> modelled the evolution of conformist transmission, while <span class="citation">Efferson et al. (<a href="references.html#ref-efferson_conformists_2008" role="doc-biblioref">2008</a>)</span> provided experimental evidence that at least some people conform in a simple learning task.</p>
+<p><span class="citation"><a href="references.html#ref-boyd_culture_1985" role="doc-biblioref">Boyd and Richerson</a> (<a href="references.html#ref-boyd_culture_1985" role="doc-biblioref">1985</a>)</span> introduced conformist or positive frequency-dependent cultural transmission as defined here, and modelled it analytically with similar methods. <span class="citation"><a href="references.html#ref-henrich_evolution_1998" role="doc-biblioref">Henrich and Boyd</a> (<a href="references.html#ref-henrich_evolution_1998" role="doc-biblioref">1998</a>)</span> modelled the evolution of conformist transmission, while <span class="citation"><a href="references.html#ref-efferson_conformists_2008" role="doc-biblioref">Efferson et al.</a> (<a href="references.html#ref-efferson_conformists_2008" role="doc-biblioref">2008</a>)</span> provided experimental evidence that at least some people conform in a simple learning task.</p>
 
 </div>
 </div>

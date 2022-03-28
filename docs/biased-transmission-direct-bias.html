@@ -26,7 +26,7 @@
 <meta name="author" content="Marco Smolla" />
 
 
-<meta name="date" content="2020-12-03" />
+<meta name="date" content="2022-03-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -35,6 +35,7 @@
   
 <link rel="prev" href="unbiased-and-biased-mutation.html"/>
 <link rel="next" href="biased-transmission-frequency-dependent-indirect-bias.html"/>
+<script src="libs/header-attrs-2.5.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,24 +53,22 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -89,7 +88,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -139,7 +138,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Note to the reader</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#aim-of-the-book"><i class="fa fa-check"></i>Aim of the book</a></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#what-is-cultural-evolution"><i class="fa fa-check"></i>What is cultural evolution?</a></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#why-model"><i class="fa fa-check"></i>Why model?</a></li>
@@ -150,7 +150,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
 </ul></li>
 <li class="part"><span><b>Basics</b></span></li>
-<li class="chapter" data-level="1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html"><i class="fa fa-check"></i><b>1</b> Unbiased transmission</a><ul>
+<li class="chapter" data-level="1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html"><i class="fa fa-check"></i><b>1</b> Unbiased transmission</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#initialising-the-simulation"><i class="fa fa-check"></i><b>1.1</b> Initialising the simulation</a></li>
 <li class="chapter" data-level="1.2" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#execute-generation-turn-over-many-times"><i class="fa fa-check"></i><b>1.2</b> Execute generation turn-over many times</a></li>
 <li class="chapter" data-level="1.3" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#plotting-the-model-results"><i class="fa fa-check"></i><b>1.3</b> Plotting the model results</a></li>
@@ -160,37 +161,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.7" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#summary-of-the-model"><i class="fa fa-check"></i><b>1.7</b> Summary of the model</a></li>
 <li class="chapter" data-level="1.8" data-path="unbiased-transmission.html"><a href="unbiased-transmission.html#further-reading-1"><i class="fa fa-check"></i><b>1.8</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html"><i class="fa fa-check"></i><b>2</b> Unbiased and biased mutation</a><ul>
+<li class="chapter" data-level="2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html"><i class="fa fa-check"></i><b>2</b> Unbiased and biased mutation</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#unbiased-mutation"><i class="fa fa-check"></i><b>2.1</b> Unbiased mutation</a></li>
 <li class="chapter" data-level="2.2" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#biased-mutation"><i class="fa fa-check"></i><b>2.2</b> Biased mutation</a></li>
 <li class="chapter" data-level="2.3" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#summary-of-the-model-1"><i class="fa fa-check"></i><b>2.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="2.4" data-path="unbiased-and-biased-mutation.html"><a href="unbiased-and-biased-mutation.html#further-reading-2"><i class="fa fa-check"></i><b>2.4</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html"><i class="fa fa-check"></i><b>3</b> Biased transmission: direct bias</a><ul>
+<li class="chapter" data-level="3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html"><i class="fa fa-check"></i><b>3</b> Biased transmission: direct bias</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#a-simple-model-of-directly-biased-transmission"><i class="fa fa-check"></i><b>3.1</b> A simple model of directly biased transmission</a></li>
 <li class="chapter" data-level="3.2" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#strength-of-selection"><i class="fa fa-check"></i><b>3.2</b> Strength of selection</a></li>
 <li class="chapter" data-level="3.3" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#summary-of-the-model-2"><i class="fa fa-check"></i><b>3.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="3.4" data-path="biased-transmission-direct-bias.html"><a href="biased-transmission-direct-bias.html#further-reading-3"><i class="fa fa-check"></i><b>3.4</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html"><i class="fa fa-check"></i><b>4</b> Biased transmission: frequency-dependent indirect bias</a><ul>
+<li class="chapter" data-level="4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html"><i class="fa fa-check"></i><b>4</b> Biased transmission: frequency-dependent indirect bias</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#the-logic-of-conformity"><i class="fa fa-check"></i><b>4.1</b> The logic of conformity</a></li>
 <li class="chapter" data-level="4.2" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#testing-conformist-transmission"><i class="fa fa-check"></i><b>4.2</b> Testing conformist transmission</a></li>
 <li class="chapter" data-level="4.3" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#summary-of-the-model-3"><i class="fa fa-check"></i><b>4.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="4.4" data-path="biased-transmission-frequency-dependent-indirect-bias.html"><a href="biased-transmission-frequency-dependent-indirect-bias.html#further-readings"><i class="fa fa-check"></i><b>4.4</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html"><i class="fa fa-check"></i><b>5</b> Biased transmission: demonstrator-based indirect bias</a><ul>
+<li class="chapter" data-level="5" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html"><i class="fa fa-check"></i><b>5</b> Biased transmission: demonstrator-based indirect bias</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#a-simple-demonstrator-bias"><i class="fa fa-check"></i><b>5.1</b> A simple demonstrator bias</a></li>
 <li class="chapter" data-level="5.2" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#predicting-the-winning-trait"><i class="fa fa-check"></i><b>5.2</b> Predicting the ‘winning’ trait</a></li>
 <li class="chapter" data-level="5.3" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#summary-of-the-model-4"><i class="fa fa-check"></i><b>5.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="5.4" data-path="biased-transmission-demonstrator-based-indirect-bias.html"><a href="biased-transmission-demonstrator-based-indirect-bias.html#further-readings-1"><i class="fa fa-check"></i><b>5.4</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html"><i class="fa fa-check"></i><b>6</b> Vertical and horizontal transmission</a><ul>
+<li class="chapter" data-level="6" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html"><i class="fa fa-check"></i><b>6</b> Vertical and horizontal transmission</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#vertical-cultural-transmission"><i class="fa fa-check"></i><b>6.1</b> Vertical cultural transmission</a></li>
 <li class="chapter" data-level="6.2" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#horizontal-cultural-transmission"><i class="fa fa-check"></i><b>6.2</b> Horizontal cultural transmission</a></li>
 <li class="chapter" data-level="6.3" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#summary-of-the-model-5"><i class="fa fa-check"></i><b>6.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="6.4" data-path="vertical-and-horizontal-transmission.html"><a href="vertical-and-horizontal-transmission.html#further-reading-4"><i class="fa fa-check"></i><b>6.4</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html"><i class="fa fa-check"></i><b>7</b> Multiple traits models</a><ul>
+<li class="chapter" data-level="7" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html"><i class="fa fa-check"></i><b>7</b> Multiple traits models</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#unbiased-transmission-with-multiple-traits"><i class="fa fa-check"></i><b>7.1</b> Unbiased transmission with multiple traits</a></li>
 <li class="chapter" data-level="7.2" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#introducing-innovation"><i class="fa fa-check"></i><b>7.2</b> Introducing innovation</a></li>
 <li class="chapter" data-level="7.3" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#optimising-the-code"><i class="fa fa-check"></i><b>7.3</b> Optimising the code</a></li>
@@ -199,18 +206,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.6" data-path="multiple-traits-models.html"><a href="multiple-traits-models.html#further-readings-2"><i class="fa fa-check"></i><b>7.6</b> Further readings</a></li>
 </ul></li>
 <li class="part"><span><b>Advanced topics - The evolution of cultural evolution</b></span></li>
-<li class="chapter" data-level="8" data-path="rogers-paradox.html"><a href="rogers-paradox.html"><i class="fa fa-check"></i><b>8</b> Rogers’ Paradox</a><ul>
+<li class="chapter" data-level="8" data-path="rogers-paradox.html"><a href="rogers-paradox.html"><i class="fa fa-check"></i><b>8</b> Rogers’ Paradox</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="rogers-paradox.html"><a href="rogers-paradox.html#modelling-rogers-paradox"><i class="fa fa-check"></i><b>8.1</b> Modelling Rogers’ Paradox</a></li>
 <li class="chapter" data-level="8.2" data-path="rogers-paradox.html"><a href="rogers-paradox.html#summary-of-the-model-7"><i class="fa fa-check"></i><b>8.2</b> Summary of the model</a></li>
 <li class="chapter" data-level="8.3" data-path="rogers-paradox.html"><a href="rogers-paradox.html#further-reading-5"><i class="fa fa-check"></i><b>8.3</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html"><i class="fa fa-check"></i><b>9</b> Rogers’ Paradox: A Solution</a><ul>
+<li class="chapter" data-level="9" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html"><i class="fa fa-check"></i><b>9</b> Rogers’ Paradox: A Solution</a>
+<ul>
 <li class="chapter" data-level="9.1" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#modelling-critical-social-learners"><i class="fa fa-check"></i><b>9.1</b> Modelling critical social learners</a></li>
 <li class="chapter" data-level="9.2" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#summary-of-the-model-8"><i class="fa fa-check"></i><b>9.2</b> Summary of the model</a></li>
 <li class="chapter" data-level="9.3" data-path="rogers-paradox-a-solution.html"><a href="rogers-paradox-a-solution.html#further-reading-6"><i class="fa fa-check"></i><b>9.3</b> Further reading</a></li>
 </ul></li>
 <li class="part"><span><b>Advanced topics - Cultural inheritance</b></span></li>
-<li class="chapter" data-level="10" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html"><i class="fa fa-check"></i><b>10</b> Reproduction and transformation</a><ul>
+<li class="chapter" data-level="10" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html"><i class="fa fa-check"></i><b>10</b> Reproduction and transformation</a>
+<ul>
 <li class="chapter" data-level="10.1" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#copying-and-selection"><i class="fa fa-check"></i><b>10.1</b> Copying and selection</a></li>
 <li class="chapter" data-level="10.2" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#convergent-transformation"><i class="fa fa-check"></i><b>10.2</b> Convergent transformation</a></li>
 <li class="chapter" data-level="10.3" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#emergent-similarity"><i class="fa fa-check"></i><b>10.3</b> Emergent similarity</a></li>
@@ -218,56 +228,59 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.5" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#summary-of-the-model-9"><i class="fa fa-check"></i><b>10.5</b> Summary of the model</a></li>
 <li class="chapter" data-level="10.6" data-path="reproduction-and-transformation.html"><a href="reproduction-and-transformation.html#further-readings-3"><i class="fa fa-check"></i><b>10.6</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html"><i class="fa fa-check"></i><b>11</b> Social learning of social learning rules</a><ul>
+<li class="chapter" data-level="11" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html"><i class="fa fa-check"></i><b>11</b> Social learning of social learning rules</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#openness-and-conservatism"><i class="fa fa-check"></i><b>11.1</b> Openness and conservatism</a></li>
 <li class="chapter" data-level="11.2" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#maintaining-open-populations"><i class="fa fa-check"></i><b>11.2</b> Maintaining open populations</a></li>
 <li class="chapter" data-level="11.3" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#summary-of-the-model-10"><i class="fa fa-check"></i><b>11.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="11.4" data-path="social-learning-of-social-learning-rules.html"><a href="social-learning-of-social-learning-rules.html#further-readings-4"><i class="fa fa-check"></i><b>11.4</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html"><i class="fa fa-check"></i><b>12</b> Traits inter-dependence</a><ul>
+<li class="chapter" data-level="12" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html"><i class="fa fa-check"></i><b>12</b> Traits inter-dependence</a>
+<ul>
 <li class="chapter" data-level="12.1" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#compatible-and-incompatible-traits"><i class="fa fa-check"></i><b>12.1</b> Compatible and incompatible traits</a></li>
 <li class="chapter" data-level="12.2" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#many-traits-model"><i class="fa fa-check"></i><b>12.2</b> Many-traits model</a></li>
 <li class="chapter" data-level="12.3" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#summary-of-the-model-11"><i class="fa fa-check"></i><b>12.3</b> Summary of the model</a></li>
 <li class="chapter" data-level="12.4" data-path="traits-inter-dependence.html"><a href="traits-inter-dependence.html#further-readings-5"><i class="fa fa-check"></i><b>12.4</b> Further readings</a></li>
 </ul></li>
 <li class="part"><span><b>Advanced topics - Culture and populations</b></span></li>
-<li class="chapter" data-level="13" data-path="demography.html"><a href="demography.html"><i class="fa fa-check"></i><b>13</b> Demography</a><ul>
+<li class="chapter" data-level="13" data-path="demography.html"><a href="demography.html"><i class="fa fa-check"></i><b>13</b> Demography</a>
+<ul>
 <li class="chapter" data-level="13.1" data-path="demography.html"><a href="demography.html#the-tasmania-case"><i class="fa fa-check"></i><b>13.1</b> The Tasmania Case</a></li>
 <li class="chapter" data-level="13.2" data-path="demography.html"><a href="demography.html#modelling-the-tasmania-case"><i class="fa fa-check"></i><b>13.2</b> Modelling the Tasmania Case</a></li>
 <li class="chapter" data-level="13.3" data-path="demography.html"><a href="demography.html#calculating-critical-population-sizes-based-on-skill-complexity"><i class="fa fa-check"></i><b>13.3</b> Calculating critical population sizes based on skill complexity</a></li>
 <li class="chapter" data-level="13.4" data-path="demography.html"><a href="demography.html#summary-of-the-model-12"><i class="fa fa-check"></i><b>13.4</b> Summary of the model</a></li>
 <li class="chapter" data-level="13.5" data-path="demography.html"><a href="demography.html#further-readings-6"><i class="fa fa-check"></i><b>13.5</b> Further readings</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="social-network-structure.html"><a href="social-network-structure.html"><i class="fa fa-check"></i><b>14</b> Social network structure</a><ul>
+<li class="chapter" data-level="14" data-path="social-network-structure.html"><a href="social-network-structure.html"><i class="fa fa-check"></i><b>14</b> Social network structure</a>
+<ul>
 <li class="chapter" data-level="14.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-basics"><i class="fa fa-check"></i><b>14.1</b> Network basics</a></li>
 <li class="chapter" data-level="14.2" data-path="social-network-structure.html"><a href="social-network-structure.html#generating-networks"><i class="fa fa-check"></i><b>14.2</b> Generating networks</a></li>
-<li class="chapter" data-level="14.3" data-path="social-network-structure.html"><a href="social-network-structure.html#plotting-networks"><i class="fa fa-check"></i><b>14.3</b> Plotting networks</a><ul>
+<li class="chapter" data-level="14.3" data-path="social-network-structure.html"><a href="social-network-structure.html#plotting-networks"><i class="fa fa-check"></i><b>14.3</b> Plotting networks</a>
+<ul>
 <li class="chapter" data-level="14.3.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-layout"><i class="fa fa-check"></i><b>14.3.1</b> Network layout</a></li>
 <li class="chapter" data-level="14.3.2" data-path="social-network-structure.html"><a href="social-network-structure.html#network-styling"><i class="fa fa-check"></i><b>14.3.2</b> Network styling</a></li>
 </ul></li>
-<li class="chapter" data-level="14.4" data-path="social-network-structure.html"><a href="social-network-structure.html#analyse-social-networks"><i class="fa fa-check"></i><b>14.4</b> Analyse social networks</a><ul>
+<li class="chapter" data-level="14.4" data-path="social-network-structure.html"><a href="social-network-structure.html#analyse-social-networks"><i class="fa fa-check"></i><b>14.4</b> Analyse social networks</a>
+<ul>
 <li class="chapter" data-level="14.4.1" data-path="social-network-structure.html"><a href="social-network-structure.html#network-properties-and-characteristics"><i class="fa fa-check"></i><b>14.4.1</b> Network properties and characteristics</a></li>
 <li class="chapter" data-level="14.4.2" data-path="social-network-structure.html"><a href="social-network-structure.html#vertex-properties"><i class="fa fa-check"></i><b>14.4.2</b> Vertex properties</a></li>
 </ul></li>
-<li class="chapter" data-level="14.5" data-path="social-network-structure.html"><a href="social-network-structure.html#modelling-information-transmission-in-social-networks"><i class="fa fa-check"></i><b>14.5</b> Modelling information transmission in social networks</a><ul>
+<li class="chapter" data-level="14.5" data-path="social-network-structure.html"><a href="social-network-structure.html#modelling-information-transmission-in-social-networks"><i class="fa fa-check"></i><b>14.5</b> Modelling information transmission in social networks</a>
+<ul>
 <li class="chapter" data-level="14.5.1" data-path="social-network-structure.html"><a href="social-network-structure.html#gossip-diffusion-in-networked-populations"><i class="fa fa-check"></i><b>14.5.1</b> Gossip diffusion in networked populations</a></li>
 <li class="chapter" data-level="14.5.2" data-path="social-network-structure.html"><a href="social-network-structure.html#complex-versus-simple-contagion-information-transmission"><i class="fa fa-check"></i><b>14.5.2</b> Complex versus simple contagion information transmission</a></li>
 </ul></li>
 <li class="chapter" data-level="14.6" data-path="social-network-structure.html"><a href="social-network-structure.html#summary-of-the-model-13"><i class="fa fa-check"></i><b>14.6</b> Summary of the model</a></li>
 <li class="chapter" data-level="14.7" data-path="social-network-structure.html"><a href="social-network-structure.html#further-reading-7"><i class="fa fa-check"></i><b>14.7</b> Further Reading</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html"><i class="fa fa-check"></i><b>15</b> Group structured populations and migration</a><ul>
+<li class="chapter" data-level="15" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html"><i class="fa fa-check"></i><b>15</b> Group structured populations and migration</a>
+<ul>
 <li class="chapter" data-level="15.1" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#modelling-migration-and-contact-between-population-subsets"><i class="fa fa-check"></i><b>15.1</b> Modelling migration and contact between population subsets</a></li>
 <li class="chapter" data-level="15.2" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#subdivided-population-with-limited-contact"><i class="fa fa-check"></i><b>15.2</b> Subdivided population with limited contact</a></li>
 <li class="chapter" data-level="15.3" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#subdivided-populations-with-migration"><i class="fa fa-check"></i><b>15.3</b> Subdivided populations with migration</a></li>
 <li class="chapter" data-level="15.4" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#varying-contact-and-migration-probability-for-repeated-simulation-runs"><i class="fa fa-check"></i><b>15.4</b> Varying contact and migration probability for repeated simulation runs</a></li>
-<li class="chapter" data-level="15.5" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#model-extensions"><i class="fa fa-check"></i><b>15.5</b> Model extensions</a><ul>
-<li class="chapter" data-level="" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#innovation-or-mutation"><i class="fa fa-check"></i>Innovation or mutation</a></li>
-<li><a href="group-structured-populations-and-migration.html#copy-m-models">Copy <span class="math inline">\(m\)</span> models</a></li>
-<li class="chapter" data-level="" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#variable-migration-probability-among-subsets"><i class="fa fa-check"></i>Variable migration probability among subsets</a></li>
-</ul></li>
-<li class="chapter" data-level="15.6" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#summary-of-the-model-14"><i class="fa fa-check"></i><b>15.6</b> Summary of the model</a></li>
-<li class="chapter" data-level="15.7" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#further-reading-8"><i class="fa fa-check"></i><b>15.7</b> Further reading</a></li>
+<li class="chapter" data-level="15.5" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#summary-of-the-model-14"><i class="fa fa-check"></i><b>15.5</b> Summary of the model</a></li>
+<li class="chapter" data-level="15.6" data-path="group-structured-populations-and-migration.html"><a href="group-structured-populations-and-migration.html#further-reading-8"><i class="fa fa-check"></i><b>15.6</b> Further reading</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -290,68 +303,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="biased-transmission-direct-bias" class="section level1">
+<div id="biased-transmission-direct-bias" class="section level1" number="3">
 <h1><span class="header-section-number">Chapter 3</span> Biased transmission: direct bias</h1>
-<p>So far we have looked at unbiased transmission (<a href="unbiased-transmission.html#unbiased-transmission">Chapter 1</a>) and mutation, both unbiased and biased (<a href="unbiased-and-biased-mutation.html#unbiased-and-biased-mutation">Chapter 2</a>). Let’s complete the set by looking at biased transmission. This occurs when one trait is more likely to be copied than another trait. When the choice depends on the features of the trait, it is often called ‘direct’ or ‘content’ bias. When the choice depends on features of the demonstrators (the individuals from whom one is copying), it is often called ‘indirect’ or ‘context’ bias. Both are sometimes also called ‘cultural selection’ because one trait is selected to be copied over another trait. In this chapter, we will look at trait-based (direct, content) bias.</p>
-<p>(As an aside, there is a confusing array of terminology in the field of cultural evolution, as illustrated by the preceding paragraph. That’s why models are so useful. Words and verbal descriptions can be ambiguous. Often the writer doesn’t realise that there are hidden assumptions or unrecognised ambiguities in their descriptions. They may not realise that what they mean by ‘cultural selection’ is entirely different from how someone else uses it. Models are great because they force us to precisely specify exactly what we mean by a particular term or process. We can use the words in the paragraph above to describe biased transmission, but it’s only really clear when we model it, making all our assumptions explicit.)</p>
-<div id="a-simple-model-of-directly-biased-transmission" class="section level2">
+<p>In the previous chapters, we have looked at unbiased transmission (<a href="unbiased-transmission.html#unbiased-transmission">Chapter 1</a>) and unbiased and biased mutation (<a href="unbiased-and-biased-mutation.html#unbiased-and-biased-mutation">Chapter 2</a>). Let’s complete the set by looking at biased transmission. This occurs when one trait is more likely to be copied than another trait. When the choice depends on the features of the trait, it is often called ‘direct’ or ‘content’ bias. When the choice depends on features of the demonstrators (the individuals from whom one is copying), it is often called ‘indirect’ or ‘context’ bias. Both are sometimes also called ‘cultural selection’ because one trait is selected to be copied over another trait. In this chapter, we will look at trait-based (direct, content) bias.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<div id="a-simple-model-of-directly-biased-transmission" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> A simple model of directly biased transmission</h2>
 <p>To simulate biased transmission, following the simulations in <a href="unbiased-transmission.html#unbiased-transmission">Chapter 1</a>, we assume there are two traits <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, and that each individual chooses another individual from the previous generation at random. This time, however, we give the traits two different probabilities of being copied: we can call them <span class="math inline">\(s_a\)</span> and <span class="math inline">\(s_b\)</span> respectively. When an individual encounters another individual with trait <span class="math inline">\(A\)</span>, they will copy them with probability <span class="math inline">\(s_a\)</span>. When they encounter an individual with trait <span class="math inline">\(B\)</span>, they will copy them with probability <span class="math inline">\(s_b\)</span>.</p>
-<p>With <span class="math inline">\(s_a=s_b\)</span>, copying is unbiased, and individuals switch to the encountered alternative with the same probability. This reproduces the results of the simulations when the transmission is unbiased. If <span class="math inline">\(s_a=s_b=1\)</span>, the model is exactly the same as in <a href="unbiased-transmission.html#unbiased-transmission">Chapter 1</a>. The relevant situation in this chapter is when <span class="math inline">\(s_a&gt;s_b\)</span> (or <span class="math inline">\(s_a&lt;s_b\)</span>) so that we have biased transmission. Perhaps <span class="math inline">\(A\)</span> (or <span class="math inline">\(B\)</span>) is a more effective tool, a more memorable story, or a more easily pronounced word.</p>
+<p>With <span class="math inline">\(s_a=s_b\)</span>, copying is unbiased, and individuals switch to the encountered alternative with the same probability. This reproduces the results of the simulations when the transmission is unbiased. If <span class="math inline">\(s_a=s_b=1\)</span>, the model is exactly the same as in <a href="unbiased-transmission.html#unbiased-transmission">Chapter 1</a>. The relevant situation in this chapter is when <span class="math inline">\(s_a \neq s_b\)</span> so that we have biased transmission. Perhaps <span class="math inline">\(A\)</span> (or <span class="math inline">\(B\)</span>) is a more effective tool, a more memorable story, or a more easily pronounced word.</p>
 <p>Let’s first write the function, and then explore what happens in this case. Below is a function <code>biased_transmission_direct()</code> that implements all of these ideas.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="biased-transmission-direct-bias.html#cb35-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb35-2"><a href="biased-transmission-direct-bias.html#cb35-2"></a></span>
-<span id="cb35-3"><a href="biased-transmission-direct-bias.html#cb35-3"></a>biased_transmission_direct &lt;-<span class="st"> </span><span class="cf">function</span> (N, s_a, s_b, p_<span class="dv">0</span>, t_max, r_max) {</span>
-<span id="cb35-4"><a href="biased-transmission-direct-bias.html#cb35-4"></a>  </span>
-<span id="cb35-5"><a href="biased-transmission-direct-bias.html#cb35-5"></a>  output &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">generation =</span> <span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>t_max, r_max), </span>
-<span id="cb35-6"><a href="biased-transmission-direct-bias.html#cb35-6"></a>                   <span class="dt">p =</span> <span class="kw">as.numeric</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, t_max <span class="op">*</span><span class="st"> </span>r_max)), </span>
-<span id="cb35-7"><a href="biased-transmission-direct-bias.html#cb35-7"></a>                   <span class="dt">run =</span> <span class="kw">as.factor</span>(<span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span>r_max, <span class="dt">each =</span> t_max)))</span>
-<span id="cb35-8"><a href="biased-transmission-direct-bias.html#cb35-8"></a>  </span>
-<span id="cb35-9"><a href="biased-transmission-direct-bias.html#cb35-9"></a>  <span class="cf">for</span> (r <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>r_max) {</span>
-<span id="cb35-10"><a href="biased-transmission-direct-bias.html#cb35-10"></a>    <span class="co"># Create first generation</span></span>
-<span id="cb35-11"><a href="biased-transmission-direct-bias.html#cb35-11"></a>    population &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, </span>
-<span id="cb35-12"><a href="biased-transmission-direct-bias.html#cb35-12"></a>                                        <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_<span class="dv">0</span>, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_<span class="dv">0</span>))) </span>
-<span id="cb35-13"><a href="biased-transmission-direct-bias.html#cb35-13"></a>    </span>
-<span id="cb35-14"><a href="biased-transmission-direct-bias.html#cb35-14"></a>    <span class="co"># Add first generation&#39;s p for run r</span></span>
-<span id="cb35-15"><a href="biased-transmission-direct-bias.html#cb35-15"></a>    output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span><span class="dv">1</span> <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p &lt;-<span class="st"> </span></span>
-<span id="cb35-16"><a href="biased-transmission-direct-bias.html#cb35-16"></a><span class="st">      </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N </span>
-<span id="cb35-17"><a href="biased-transmission-direct-bias.html#cb35-17"></a></span>
-<span id="cb35-18"><a href="biased-transmission-direct-bias.html#cb35-18"></a>    <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span>t_max) {</span>
-<span id="cb35-19"><a href="biased-transmission-direct-bias.html#cb35-19"></a>      <span class="co"># Copy individuals to previous_population tibble</span></span>
-<span id="cb35-20"><a href="biased-transmission-direct-bias.html#cb35-20"></a>      previous_population &lt;-<span class="st"> </span>population </span>
-<span id="cb35-21"><a href="biased-transmission-direct-bias.html#cb35-21"></a>      </span>
-<span id="cb35-22"><a href="biased-transmission-direct-bias.html#cb35-22"></a>      <span class="co"># For each individual, pick a random individual from the previous generation</span></span>
-<span id="cb35-23"><a href="biased-transmission-direct-bias.html#cb35-23"></a>      demonstrator_trait &lt;-<span class="st"> </span></span>
-<span id="cb35-24"><a href="biased-transmission-direct-bias.html#cb35-24"></a><span class="st">        </span><span class="kw">tibble</span>(<span class="dt">trait =</span> <span class="kw">sample</span>(previous_population<span class="op">$</span>trait, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)) </span>
-<span id="cb35-25"><a href="biased-transmission-direct-bias.html#cb35-25"></a>      </span>
-<span id="cb35-26"><a href="biased-transmission-direct-bias.html#cb35-26"></a>      <span class="co"># Biased probabilities to copy:</span></span>
-<span id="cb35-27"><a href="biased-transmission-direct-bias.html#cb35-27"></a>      copy_a &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), N, <span class="dt">prob =</span> <span class="kw">c</span>(s_a, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>s_a), <span class="dt">replace =</span> <span class="ot">TRUE</span>) </span>
-<span id="cb35-28"><a href="biased-transmission-direct-bias.html#cb35-28"></a>      copy_b &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), N, <span class="dt">prob =</span> <span class="kw">c</span>(s_b, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>s_b), <span class="dt">replace =</span> <span class="ot">TRUE</span>) </span>
-<span id="cb35-29"><a href="biased-transmission-direct-bias.html#cb35-29"></a>      </span>
-<span id="cb35-30"><a href="biased-transmission-direct-bias.html#cb35-30"></a>      <span class="co"># If the demonstrator has trait A and the individual wants to copy A, then copy A</span></span>
-<span id="cb35-31"><a href="biased-transmission-direct-bias.html#cb35-31"></a>      <span class="cf">if</span> (<span class="kw">nrow</span>(population[copy_a <span class="op">&amp;</span><span class="st"> </span>demonstrator_trait<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
-<span id="cb35-32"><a href="biased-transmission-direct-bias.html#cb35-32"></a>        population[copy_a <span class="op">&amp;</span><span class="st"> </span>demonstrator_trait<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>, ]<span class="op">$</span>trait &lt;-<span class="st"> &quot;A&quot;</span> </span>
-<span id="cb35-33"><a href="biased-transmission-direct-bias.html#cb35-33"></a>      }  </span>
-<span id="cb35-34"><a href="biased-transmission-direct-bias.html#cb35-34"></a>      </span>
-<span id="cb35-35"><a href="biased-transmission-direct-bias.html#cb35-35"></a>      <span class="co"># If the demonstrator has trait B and the individual wants to copy B, then copy B</span></span>
-<span id="cb35-36"><a href="biased-transmission-direct-bias.html#cb35-36"></a>      <span class="cf">if</span> (<span class="kw">nrow</span>(population[copy_b <span class="op">&amp;</span><span class="st"> </span>demonstrator_trait<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;B&quot;</span>, ]) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
-<span id="cb35-37"><a href="biased-transmission-direct-bias.html#cb35-37"></a>        population[copy_b <span class="op">&amp;</span><span class="st"> </span>demonstrator_trait<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;B&quot;</span>, ]<span class="op">$</span>trait &lt;-<span class="st"> &quot;B&quot;</span> </span>
-<span id="cb35-38"><a href="biased-transmission-direct-bias.html#cb35-38"></a>      }  </span>
-<span id="cb35-39"><a href="biased-transmission-direct-bias.html#cb35-39"></a>      <span class="co"># Get p and put it into output slot for this generation t and run r</span></span>
-<span id="cb35-40"><a href="biased-transmission-direct-bias.html#cb35-40"></a>      output[output<span class="op">$</span>generation <span class="op">==</span><span class="st"> </span>t <span class="op">&amp;</span><span class="st"> </span>output<span class="op">$</span>run <span class="op">==</span><span class="st"> </span>r, ]<span class="op">$</span>p &lt;-<span class="st"> </span></span>
-<span id="cb35-41"><a href="biased-transmission-direct-bias.html#cb35-41"></a><span class="st">        </span><span class="kw">sum</span>(population<span class="op">$</span>trait <span class="op">==</span><span class="st"> &quot;A&quot;</span>) <span class="op">/</span><span class="st"> </span>N </span>
-<span id="cb35-42"><a href="biased-transmission-direct-bias.html#cb35-42"></a>    }</span>
-<span id="cb35-43"><a href="biased-transmission-direct-bias.html#cb35-43"></a>  }</span>
-<span id="cb35-44"><a href="biased-transmission-direct-bias.html#cb35-44"></a>  <span class="co"># Export data from function</span></span>
-<span id="cb35-45"><a href="biased-transmission-direct-bias.html#cb35-45"></a>  output </span>
-<span id="cb35-46"><a href="biased-transmission-direct-bias.html#cb35-46"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="biased-transmission-direct-bias.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb35-2"><a href="biased-transmission-direct-bias.html#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="biased-transmission-direct-bias.html#cb35-3" aria-hidden="true" tabindex="-1"></a>biased_transmission_direct <span class="ot">&lt;-</span> <span class="cf">function</span> (N, s_a, s_b, p_0, t_max, r_max) {</span>
+<span id="cb35-4"><a href="biased-transmission-direct-bias.html#cb35-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb35-5"><a href="biased-transmission-direct-bias.html#cb35-5" aria-hidden="true" tabindex="-1"></a>  output <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">generation =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>t_max, r_max), </span>
+<span id="cb35-6"><a href="biased-transmission-direct-bias.html#cb35-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">p =</span> <span class="fu">as.numeric</span>(<span class="fu">rep</span>(<span class="cn">NA</span>, t_max <span class="sc">*</span> r_max)), </span>
+<span id="cb35-7"><a href="biased-transmission-direct-bias.html#cb35-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">run =</span> <span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>r_max, <span class="at">each =</span> t_max)))</span>
+<span id="cb35-8"><a href="biased-transmission-direct-bias.html#cb35-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb35-9"><a href="biased-transmission-direct-bias.html#cb35-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (r <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>r_max) {</span>
+<span id="cb35-10"><a href="biased-transmission-direct-bias.html#cb35-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create first generation</span></span>
+<span id="cb35-11"><a href="biased-transmission-direct-bias.html#cb35-11" aria-hidden="true" tabindex="-1"></a>    population <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">trait =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), N, </span>
+<span id="cb35-12"><a href="biased-transmission-direct-bias.html#cb35-12" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> <span class="fu">c</span>(p_0, <span class="dv">1</span> <span class="sc">-</span> p_0))) </span>
+<span id="cb35-13"><a href="biased-transmission-direct-bias.html#cb35-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb35-14"><a href="biased-transmission-direct-bias.html#cb35-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add first generation&#39;s p for run r</span></span>
+<span id="cb35-15"><a href="biased-transmission-direct-bias.html#cb35-15" aria-hidden="true" tabindex="-1"></a>    output[output<span class="sc">$</span>generation <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> output<span class="sc">$</span>run <span class="sc">==</span> r, ]<span class="sc">$</span>p <span class="ot">&lt;-</span> </span>
+<span id="cb35-16"><a href="biased-transmission-direct-bias.html#cb35-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">sum</span>(population<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;A&quot;</span>) <span class="sc">/</span> N </span>
+<span id="cb35-17"><a href="biased-transmission-direct-bias.html#cb35-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-18"><a href="biased-transmission-direct-bias.html#cb35-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>t_max) {</span>
+<span id="cb35-19"><a href="biased-transmission-direct-bias.html#cb35-19" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Copy individuals to previous_population tibble</span></span>
+<span id="cb35-20"><a href="biased-transmission-direct-bias.html#cb35-20" aria-hidden="true" tabindex="-1"></a>      previous_population <span class="ot">&lt;-</span> population </span>
+<span id="cb35-21"><a href="biased-transmission-direct-bias.html#cb35-21" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb35-22"><a href="biased-transmission-direct-bias.html#cb35-22" aria-hidden="true" tabindex="-1"></a>      <span class="co"># For each individual, pick a random individual from the previous generation</span></span>
+<span id="cb35-23"><a href="biased-transmission-direct-bias.html#cb35-23" aria-hidden="true" tabindex="-1"></a>      demonstrator_trait <span class="ot">&lt;-</span> </span>
+<span id="cb35-24"><a href="biased-transmission-direct-bias.html#cb35-24" aria-hidden="true" tabindex="-1"></a>        <span class="fu">tibble</span>(<span class="at">trait =</span> <span class="fu">sample</span>(previous_population<span class="sc">$</span>trait, N, <span class="at">replace =</span> <span class="cn">TRUE</span>)) </span>
+<span id="cb35-25"><a href="biased-transmission-direct-bias.html#cb35-25" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb35-26"><a href="biased-transmission-direct-bias.html#cb35-26" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Biased probabilities to copy:</span></span>
+<span id="cb35-27"><a href="biased-transmission-direct-bias.html#cb35-27" aria-hidden="true" tabindex="-1"></a>      copy_a <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), N, <span class="at">prob =</span> <span class="fu">c</span>(s_a, <span class="dv">1</span> <span class="sc">-</span> s_a), <span class="at">replace =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb35-28"><a href="biased-transmission-direct-bias.html#cb35-28" aria-hidden="true" tabindex="-1"></a>      copy_b <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), N, <span class="at">prob =</span> <span class="fu">c</span>(s_b, <span class="dv">1</span> <span class="sc">-</span> s_b), <span class="at">replace =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb35-29"><a href="biased-transmission-direct-bias.html#cb35-29" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb35-30"><a href="biased-transmission-direct-bias.html#cb35-30" aria-hidden="true" tabindex="-1"></a>      <span class="co"># If the demonstrator has trait A and the individual wants to copy A, then copy A</span></span>
+<span id="cb35-31"><a href="biased-transmission-direct-bias.html#cb35-31" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">nrow</span>(population[copy_a <span class="sc">&amp;</span> demonstrator_trait<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;A&quot;</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb35-32"><a href="biased-transmission-direct-bias.html#cb35-32" aria-hidden="true" tabindex="-1"></a>        population[copy_a <span class="sc">&amp;</span> demonstrator_trait<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;A&quot;</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;A&quot;</span> </span>
+<span id="cb35-33"><a href="biased-transmission-direct-bias.html#cb35-33" aria-hidden="true" tabindex="-1"></a>      }  </span>
+<span id="cb35-34"><a href="biased-transmission-direct-bias.html#cb35-34" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb35-35"><a href="biased-transmission-direct-bias.html#cb35-35" aria-hidden="true" tabindex="-1"></a>      <span class="co"># If the demonstrator has trait B and the individual wants to copy B, then copy B</span></span>
+<span id="cb35-36"><a href="biased-transmission-direct-bias.html#cb35-36" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">nrow</span>(population[copy_b <span class="sc">&amp;</span> demonstrator_trait<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;B&quot;</span>, ]) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb35-37"><a href="biased-transmission-direct-bias.html#cb35-37" aria-hidden="true" tabindex="-1"></a>        population[copy_b <span class="sc">&amp;</span> demonstrator_trait<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;B&quot;</span>, ]<span class="sc">$</span>trait <span class="ot">&lt;-</span> <span class="st">&quot;B&quot;</span> </span>
+<span id="cb35-38"><a href="biased-transmission-direct-bias.html#cb35-38" aria-hidden="true" tabindex="-1"></a>      }  </span>
+<span id="cb35-39"><a href="biased-transmission-direct-bias.html#cb35-39" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Get p and put it into output slot for this generation t and run r</span></span>
+<span id="cb35-40"><a href="biased-transmission-direct-bias.html#cb35-40" aria-hidden="true" tabindex="-1"></a>      output[output<span class="sc">$</span>generation <span class="sc">==</span> t <span class="sc">&amp;</span> output<span class="sc">$</span>run <span class="sc">==</span> r, ]<span class="sc">$</span>p <span class="ot">&lt;-</span> </span>
+<span id="cb35-41"><a href="biased-transmission-direct-bias.html#cb35-41" aria-hidden="true" tabindex="-1"></a>        <span class="fu">sum</span>(population<span class="sc">$</span>trait <span class="sc">==</span> <span class="st">&quot;A&quot;</span>) <span class="sc">/</span> N </span>
+<span id="cb35-42"><a href="biased-transmission-direct-bias.html#cb35-42" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb35-43"><a href="biased-transmission-direct-bias.html#cb35-43" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb35-44"><a href="biased-transmission-direct-bias.html#cb35-44" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Export data from function</span></span>
+<span id="cb35-45"><a href="biased-transmission-direct-bias.html#cb35-45" aria-hidden="true" tabindex="-1"></a>  output </span>
+<span id="cb35-46"><a href="biased-transmission-direct-bias.html#cb35-46" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>Most of <code>biased_transmission_direct()</code> is recycled from the previous models. As before, we initialise the data structure <code>output</code> from multiple runs, and in generation <span class="math inline">\(t=1\)</span>, we create a <code>population</code> tibble to hold the trait of each individual.</p>
-<p>The major change is that we now include biased transmission. We first select at random the demonstrators from the previous generation (using the same code we used in <code>unbiased_transmission()</code>) and we store their trait in <code>demonstrator_trait</code>. Then we get the probabilities for copying <span class="math inline">\(A\)</span> and for copying <span class="math inline">\(B\)</span> for the entire population, using the same code used in <code>biased_mutation()</code>. Again using the same code as in <code>biased mutation()</code>, we have the individuals copy the trait at hand with the desired probability.</p>
-<p>Let’s run our function <code>biased_transmission_direct()</code>. As before, to plot the results, we can use the function <code>plot_multiple_runs()</code> we wrote in the first chapter.</p>
-<p>As noted above, the interesting case is when one trait is favoured over the other. We can assume, for example, <span class="math inline">\(s_a=0.1\)</span> and <span class="math inline">\(s_b=0\)</span>. This means that when individuals encounter another individual with trait <span class="math inline">\(A\)</span> they copy them 1 out every 10 times, but when individuals encounter another individual with trait <span class="math inline">\(B\)</span>, they never switch. We can also assume that the favoured trait, <span class="math inline">\(A\)</span>, is initially rare in the population (<span class="math inline">\(p_0=0.01\)</span>) to see how selection favours this initially-rare trait (Note that <span class="math inline">\(p_0\)</span> needs to be higher than 0; since there is no mutation in this model, we need to include at least some <span class="math inline">\(A\)</span>s at the beginning of the simulation, otherwise it would never appear).</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="biased-transmission-direct-bias.html#cb36-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">biased_transmission_direct</span>(<span class="dt">N =</span> <span class="dv">10000</span>, <span class="dt">s_a =</span> <span class="fl">0.1</span>, <span class="dt">s_b =</span> <span class="dv">0</span> , </span>
-<span id="cb36-2"><a href="biased-transmission-direct-bias.html#cb36-2"></a>                                         <span class="dt">p_0 =</span> <span class="fl">0.01</span>, <span class="dt">t_max =</span> <span class="dv">150</span>, <span class="dt">r_max =</span> <span class="dv">5</span>)</span>
-<span id="cb36-3"><a href="biased-transmission-direct-bias.html#cb36-3"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<p>The major change is that we now include biased transmission. We first select at random the demonstrators from the previous generation (using the same code we used in <code>unbiased_transmission()</code>) and we store their trait in <code>demonstrator_trait</code>. Then we get the probabilities for copying <span class="math inline">\(A\)</span> and for copying <span class="math inline">\(B\)</span> for the entire population, using the same code used in <code>biased_mutation()</code>. Again we have individuals copy the trait at hand with the desired probability.</p>
+<p>Let’s run our function <code>biased_transmission_direct()</code>. As before, we can plot the results with the <code>plot_multiple_runs()</code> function that we wrote in the first chapter.</p>
+<p>As noted above, the interesting case is when one trait is favoured over the other. We can assume, for example, <span class="math inline">\(s_a=0.1\)</span> and <span class="math inline">\(s_b=0\)</span>. This means that when individuals encounter another individual with trait <span class="math inline">\(A\)</span> they copy them 1 out every 10 times, but when individuals encounter another individual with trait <span class="math inline">\(B\)</span>, they never switch. We can also assume that the favoured trait, <span class="math inline">\(A\)</span>, is initially rare in the population (<span class="math inline">\(p_0=0.01\)</span>) to see how selection favours this initially-rare trait (Note that <span class="math inline">\(p_0\)</span> needs to be <span class="math inline">\(&gt;0\)</span>; since there is no mutation in this model, we need to include at least some <span class="math inline">\(A\)</span>s at the beginning of the simulation, otherwise it would never appear).</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="biased-transmission-direct-bias.html#cb36-1" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">biased_transmission_direct</span>(<span class="at">N =</span> <span class="dv">10000</span>, <span class="at">s_a =</span> <span class="fl">0.1</span>, <span class="at">s_b =</span> <span class="dv">0</span> , </span>
+<span id="cb36-2"><a href="biased-transmission-direct-bias.html#cb36-2" aria-hidden="true" tabindex="-1"></a>                                         <span class="at">p_0 =</span> <span class="fl">0.01</span>, <span class="at">t_max =</span> <span class="dv">150</span>, <span class="at">r_max =</span> <span class="dv">5</span>)</span>
+<span id="cb36-3"><a href="biased-transmission-direct-bias.html#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_runs</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:3-3"></span>
 <img src="IBM-cultevo_files/figure-html/3-3-1.png" alt="Biased transmission generates an s-shaped diffusion curve" width="672" />
 <p class="caption">
@@ -361,12 +373,12 @@ Figure 3.1: Biased transmission generates an s-shaped diffusion curve
 <p>With a moderate selection strength, we can see that <span class="math inline">\(A\)</span> gradually replaces <span class="math inline">\(B\)</span> and goes to fixation. It does this in a characteristic manner: the increase is slow at first, then picks up speed, then plateaus.</p>
 <p>Note the difference from biased mutation. Where biased mutation was r-shaped, with a steep initial increase, biased transmission is s-shaped, with an initial slow uptake. This is because the strength of biased transmission (like selection in general) is proportional to the variation in the population. When <span class="math inline">\(A\)</span> is rare initially, there is only a small chance of picking another individual with <span class="math inline">\(A\)</span>. As <span class="math inline">\(A\)</span> spreads, the chances of picking an <span class="math inline">\(A\)</span> individual increases. As <span class="math inline">\(A\)</span> becomes very common, there are few <span class="math inline">\(B\)</span> individuals left to switch. In the case of biased mutation, instead, the probability of switching is independent of the variation in the population.</p>
 </div>
-<div id="strength-of-selection" class="section level2">
+<div id="strength-of-selection" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Strength of selection</h2>
-<p>On what does the strength of selection depend? First, the strength is independent of the specific values of <span class="math inline">\(s_a\)</span> and <span class="math inline">\(s_b\)</span>. What counts is their relative difference, which in the above case is <span class="math inline">\(s_a-s_b = 0.1\)</span>. If we run a simulation with, say, <span class="math inline">\(s_a=0.6\)</span> and <span class="math inline">\(s_b=0.5\)</span>, we see the same pattern, albeit with slightly more noise. That is, the single runs are more different from one another compared to the previous simulation. This is because switches from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> are now also possible.</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="biased-transmission-direct-bias.html#cb37-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">biased_transmission_direct</span>(<span class="dt">N =</span> <span class="dv">10000</span>, <span class="dt">s_a =</span> <span class="fl">0.6</span>, <span class="dt">s_b =</span> <span class="fl">0.5</span> , </span>
-<span id="cb37-2"><a href="biased-transmission-direct-bias.html#cb37-2"></a>                                         <span class="dt">p_0 =</span> <span class="fl">0.01</span>, <span class="dt">t_max =</span> <span class="dv">150</span>, <span class="dt">r_max =</span> <span class="dv">5</span>)</span>
-<span id="cb37-3"><a href="biased-transmission-direct-bias.html#cb37-3"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<p>What does the strength of selection depend on? First, the strength is independent of the specific values of <span class="math inline">\(s_a\)</span> and <span class="math inline">\(s_b\)</span>. What counts is their relative difference, which in the above case is <span class="math inline">\(s_a-s_b = 0.1\)</span>. If we run a simulation with, say, <span class="math inline">\(s_a=0.6\)</span> and <span class="math inline">\(s_b=0.5\)</span>, we see the same pattern, albeit with slightly more noise. That is, the single runs are more different from one another compared to the previous simulation. This is because switches from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> are now also possible.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="biased-transmission-direct-bias.html#cb37-1" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">biased_transmission_direct</span>(<span class="at">N =</span> <span class="dv">10000</span>, <span class="at">s_a =</span> <span class="fl">0.6</span>, <span class="at">s_b =</span> <span class="fl">0.5</span> , </span>
+<span id="cb37-2"><a href="biased-transmission-direct-bias.html#cb37-2" aria-hidden="true" tabindex="-1"></a>                                         <span class="at">p_0 =</span> <span class="fl">0.01</span>, <span class="at">t_max =</span> <span class="dv">150</span>, <span class="at">r_max =</span> <span class="dv">5</span>)</span>
+<span id="cb37-3"><a href="biased-transmission-direct-bias.html#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_runs</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:3-4"></span>
 <img src="IBM-cultevo_files/figure-html/3-4-1.png" alt="Biased transmission depends on the relative difference between the transmission parameters of each trait" width="672" />
 <p class="caption">
@@ -374,9 +386,9 @@ Figure 3.2: Biased transmission depends on the relative difference between the t
 </p>
 </div>
 <p>To change the selection strength, we need to modify the difference between <span class="math inline">\(s_a\)</span> and <span class="math inline">\(s_b\)</span>. We can double the strength by setting <span class="math inline">\(s_a = 0.2\)</span>, and keeping <span class="math inline">\(s_b=0\)</span>.</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="biased-transmission-direct-bias.html#cb38-1"></a>data_model &lt;-<span class="st"> </span><span class="kw">biased_transmission_direct</span>(<span class="dt">N =</span> <span class="dv">10000</span>, <span class="dt">s_a =</span> <span class="fl">0.2</span>, <span class="dt">s_b =</span> <span class="dv">0</span> , </span>
-<span id="cb38-2"><a href="biased-transmission-direct-bias.html#cb38-2"></a>                                         <span class="dt">p_0 =</span> <span class="fl">0.01</span>, <span class="dt">t_max =</span> <span class="dv">150</span>, <span class="dt">r_max =</span> <span class="dv">5</span>)</span>
-<span id="cb38-3"><a href="biased-transmission-direct-bias.html#cb38-3"></a><span class="kw">plot_multiple_runs</span>(data_model)</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="biased-transmission-direct-bias.html#cb38-1" aria-hidden="true" tabindex="-1"></a>data_model <span class="ot">&lt;-</span> <span class="fu">biased_transmission_direct</span>(<span class="at">N =</span> <span class="dv">10000</span>, <span class="at">s_a =</span> <span class="fl">0.2</span>, <span class="at">s_b =</span> <span class="dv">0</span> , </span>
+<span id="cb38-2"><a href="biased-transmission-direct-bias.html#cb38-2" aria-hidden="true" tabindex="-1"></a>                                         <span class="at">p_0 =</span> <span class="fl">0.01</span>, <span class="at">t_max =</span> <span class="dv">150</span>, <span class="at">r_max =</span> <span class="dv">5</span>)</span>
+<span id="cb38-3"><a href="biased-transmission-direct-bias.html#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_multiple_runs</span>(data_model)</span></code></pre></div>
 <div class="figure"><span id="fig:3-5"></span>
 <img src="IBM-cultevo_files/figure-html/3-5-1.png" alt="Increasing the relative difference between transmission parameters increases the rate at which the favoured trait spreads" width="672" />
 <p class="caption">
@@ -385,15 +397,21 @@ Figure 3.3: Increasing the relative difference between transmission parameters i
 </div>
 <p>As we might expect, increasing the strength of selection increases the speed with which <span class="math inline">\(A\)</span> goes to fixation. Note, though, that it retains the s-shape.</p>
 </div>
-<div id="summary-of-the-model-2" class="section level2">
+<div id="summary-of-the-model-2" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> Summary of the model</h2>
 <p>We have seen how biased transmission causes a trait favoured by cultural selection to spread and go to fixation in a population, even when it is initially very rare. Biased transmission differs in its dynamics from biased mutation. Its action is proportional to the variation in the population at the time at which it acts. It is strongest when there is lots of variation (in our model, when there are equal numbers of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> at <span class="math inline">\(p=0.5\)</span>), and weakest when there is little variation (when <span class="math inline">\(p\)</span> is close to 0 or 1).</p>
 </div>
-<div id="further-reading-3" class="section level2">
+<div id="further-reading-3" class="section level2" number="3.4">
 <h2><span class="header-section-number">3.4</span> Further reading</h2>
-<p><span class="citation">Boyd and Richerson (<a href="references.html#ref-boyd_culture_1985" role="doc-biblioref">1985</a>)</span> modelled direct bias, while <span class="citation">Henrich (<a href="references.html#ref-henrich_cultural_2001" role="doc-biblioref">2001</a>)</span> added directly biased transmission to his guided variation / biased mutation model, showing that this generates s-shaped curves similar to those generated here. Note though that subsequent work has shown that s-shaped curves can be generated via other processes (e.g. <span class="citation">Reader (<a href="references.html#ref-reader_distinguishing_2004" role="doc-biblioref">2004</a>)</span>), and should not be considered definite evidence for biased transmission.</p>
+<p><span class="citation"><a href="references.html#ref-boyd_culture_1985" role="doc-biblioref">Boyd and Richerson</a> (<a href="references.html#ref-boyd_culture_1985" role="doc-biblioref">1985</a>)</span> modelled direct bias, while <span class="citation"><a href="references.html#ref-henrich_cultural_2001" role="doc-biblioref">Henrich</a> (<a href="references.html#ref-henrich_cultural_2001" role="doc-biblioref">2001</a>)</span> added directly biased transmission to his guided variation / biased mutation model, showing that this generates s-shaped curves similar to those generated here. Note though that subsequent work has shown that s-shaped curves can be generated via other processes (e.g. <span class="citation"><a href="references.html#ref-reader_distinguishing_2004" role="doc-biblioref">Reader</a> (<a href="references.html#ref-reader_distinguishing_2004" role="doc-biblioref">2004</a>)</span>), and should not be considered definite evidence for biased transmission.</p>
 
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>As an aside, there is a confusing array of terminology in the field of cultural evolution, as illustrated by the preceding paragraph. That’s why models are so useful. Words and verbal descriptions can be ambiguous. Often the writer doesn’t realise that there are hidden assumptions or unrecognised ambiguities in their descriptions. They may not realise that what they mean by ‘cultural selection’ is entirely different from how someone else uses it. Models are great because they force us to specify exactly what we mean by a particular term or process. We can use the words in the paragraph above to describe biased transmission, but it’s only really clear when we model it, making all our assumptions explicit.<a href="biased-transmission-direct-bias.html#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
