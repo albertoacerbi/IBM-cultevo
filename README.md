@@ -2,7 +2,9 @@
 
 ## A step-by-step guide using R
 
-This repository contains the code to generate, using [bookdown](https://bookdown.org), the first complete draft of the book:
+![](docs/images/cover.jpeg)
+
+This repository contains the code to generate, using [bookdown](https://bookdown.org), the book:
 
 *Individual-based models of cultural evolution. A step-by-step guide using R*
 
@@ -10,13 +12,11 @@ by
 
 Alberto Acerbi, Alex Mesoudi, and Marco Smolla
 
-The published version on the book is currently hosted at [https://acerbialberto.com/IBM-cultevo/](https://acerbialberto.com/IBM-cultevo/)
+The published version on the book is hosted at [https://acerbialberto.com/IBM-cultevo/](https://acerbialberto.com/IBM-cultevo/), and a physical copy is published by Routledge. You can purchase it [here](https://www.routledge.com/Individual-Based-Models-of-Cultural-Evolution-A-Step-by-Step-Guide-Using/Acerbi-Mesoudi-Smolla/p/book/9781032252063), and in all the usual places.
 
-Please notice this is a “living” book. It will be updated over time.
+If you would like to cite the book, you can use this reference:
 
-If you would like to cite this book, you can use this reference:
-
-Acerbi Alberto, Mesoudi Alex, and Smolla Marco (2020) *Individual-based models of cultural evolution. A step-by-step guide using R*. doi:110.31219/osf.io/32v6a
+Acerbi Alberto, Mesoudi Alex, and Smolla Marco (2022) *Individual-based models of cultural evolution. A step-by-step guide using R*. London, Routledge.
 
 --
 
@@ -36,7 +36,7 @@ Introduction
 
 * Biased transmission: demonstrator-based indirect bias
 
-* Vertical and horizontal tranmission
+* Vertical and horizontal transmission
 
 * Multiple traits models
 
