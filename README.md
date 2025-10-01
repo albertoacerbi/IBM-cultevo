@@ -12,7 +12,7 @@ by
 
 Alberto Acerbi, Alex Mesoudi, and Marco Smolla
 
-The published version on the book is hosted at [https://acerbialberto.com/IBM-cultevo/](https://acerbialberto.com/IBM-cultevo/), and a physical copy is published by Routledge. You can purchase it [here](https://www.routledge.com/Individual-Based-Models-of-Cultural-Evolution-A-Step-by-Step-Guide-Using/Acerbi-Mesoudi-Smolla/p/book/9781032252063), and in all the usual places.
+The published version on the book is hosted at [https://albertoacerbi.github.io/IBM-cultevo/](https://albertoacerbi.github.io/IBM-cultevo/), and a physical copy is published by Routledge. You can purchase it [here](https://www.routledge.com/Individual-Based-Models-of-Cultural-Evolution-A-Step-by-Step-Guide-Using/Acerbi-Mesoudi-Smolla/p/book/9781032252063), and in all the usual places.
 
 If you would like to cite the book, you can use this reference:
 
